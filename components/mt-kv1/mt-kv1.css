@@ -1,0 +1,75 @@
+.mt-kv1 {
+  padding: 6em 0 1em 8%;
+  margin-bottom: 1em; }
+  @media screen and (max-width: 767px) {
+    .mt-kv1 {
+      padding: 6em 0 1em; } }
+  .mt-kv1 .container {
+    max-width: 100%;
+    padding: 0; }
+  .mt-kv1 .kvSlider {
+    width: 100%; }
+    .mt-kv1 .kvSlider .img-container {
+      overflow: hidden;
+      position: relative;
+      position: relative;
+      width: 100%; }
+      .mt-kv1 .kvSlider .img-container:before {
+        display: block;
+        content: '';
+        line-height: 0;
+        padding-top: 33.33333%; }
+      .mt-kv1 .kvSlider .img-container img,
+      .mt-kv1 .kvSlider .img-container iframe,
+      .mt-kv1 .kvSlider .img-container video {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: auto; }
+      .mt-kv1 .kvSlider .img-container img {
+        object-fit: cover;
+        display: block; }
+      @media screen and (max-width: 991px) {
+        .mt-kv1 .kvSlider .img-container {
+          overflow: hidden;
+          position: relative; }
+          .mt-kv1 .kvSlider .img-container:before {
+            display: block;
+            content: '';
+            line-height: 0;
+            padding-top: 66.66667%; }
+          .mt-kv1 .kvSlider .img-container img,
+          .mt-kv1 .kvSlider .img-container iframe,
+          .mt-kv1 .kvSlider .img-container video {
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: auto; }
+          .mt-kv1 .kvSlider .img-container img {
+            object-fit: cover;
+            display: block; } }
+    .mt-kv1 .kvSlider .slick-dots {
+      bottom: -2em;
+      right: 0%;
+      left: calc(-4% - 15px);
+      z-index: 1; }
+      @media screen and (max-width: 767px) {
+        .mt-kv1 .kvSlider .slick-dots {
+          left: 0; } }
+    @media screen and (max-width: 767px) {
+      .mt-kv1 .kvSlider .slick-prev {
+        display: none; } }
+    @media screen and (max-width: 767px) {
+      .mt-kv1 .kvSlider .slick-next {
+        display: none; } }
+/*# sourceMappingURL=mt-kv1.css.map */

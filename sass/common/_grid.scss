@@ -1,0 +1,88 @@
+////////////////////  flex  ////////////////////
+// flex 欄位均分
+// 父層啟動 flex : @extend %flex_set;
+// 子層欄寬（均分）: @include flex-col-equal(欄數, margin , padding);
+// 子層欄寬（自由）: @include flex-col(欄數, margin , padding);
+
+// step 1、啟動 flex
+@import '../../sass/_variable'; //變數
+@import '../../sass/_mixin'; //Mixin
+[class^='flex-'] {
+    @extend %flex_set;
+    .col {
+        box-sizing: border-box;
+    }
+}
+.demo {
+    h2 {
+        text-align: center;
+        color: #aaa;
+    }
+    .col {
+        outline: 3px solid lighten($primaryColor, 30);
+        background: lighten($primaryColor, 20);
+        h3 {
+            text-align: center;
+            color: darken($primaryColor, 30);
+        }
+    }
+}
+// B - 自行設定
+// 多欄 = 12
+.flex-12 {
+    .col {
+        @include flex-col(12, $grid-margin, $grid-gutter-width);
+    }
+}
+.flex-6-6 {
+    .col {
+        @include flex-col(6, $grid-margin, $grid-gutter-width);
+        @include screen('mobile') {
+            @include flex-col(12, $grid-margin, $grid-gutter-width);
+        }
+    }
+}
+.flex-8-4 {
+    .col {
+        @include flex-col(8, $grid-margin, $grid-gutter-width);
+        @include screen('mobile') {
+            @include flex-col(12, $grid-margin, $grid-gutter-width);
+        }
+        &:nth-child(2) {
+            @include flex-col(4, $grid-margin, $grid-gutter-width);
+            @include screen('mobile') {
+                @include flex-col(12, $grid-margin, $grid-gutter-width);
+            }
+        }
+    }
+}
+.flex-4-8 {
+    .col {
+        @include flex-col(4, $grid-margin, $grid-gutter-width);
+        @include screen('mobile') {
+            @include flex-col(12, $grid-margin, $grid-gutter-width);
+        }
+        &:nth-child(2) {
+            @include flex-col(8, $grid-margin, $grid-gutter-width);
+            @include screen('mobile') {
+                @include flex-col(12, $grid-margin, $grid-gutter-width);
+            }
+        }
+    }
+}
+.flex-4-4-4 {
+    .col {
+        @include flex-col(4, $grid-margin, $grid-gutter-width);
+        @include screen('mobile') {
+            @include flex-col(12, $grid-margin, $grid-gutter-width);
+        }
+    }
+}
+.flex-3-3-3-3 {
+    .col {
+        @include flex-col(3, $grid-margin, $grid-gutter-width);
+        @include screen('mobile') {
+            @include flex-col(12, $grid-margin, $grid-gutter-width);
+        }
+    }
+}

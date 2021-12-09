@@ -1,0 +1,37 @@
+@import '../../sass/_variable'; //變數
+@import '../../sass/_mixin'; //Mixin
+//http://lab.25sprout.com/responsive_table/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    @include screen('xs_mobile') {
+        width: 100%;
+    }
+    th,
+    td {
+        padding: 0.5em;
+        text-align: left;
+    }
+    td {
+        border: #ddd 1px solid;
+        a {
+        }
+    }
+    th {
+        background-color: #f3f3f3;
+        color: #333;
+        border: #ddd 1px solid;
+        text-align: center;
+        white-space: nowrap;
+    }
+    &.table_hover {
+        tr:hover {
+            background: #f3f3f3;
+        }
+    }
+    &.table_sprite {
+        tr:nth-child(even) {
+            background: #f5f5f5;
+        }
+    }
+}

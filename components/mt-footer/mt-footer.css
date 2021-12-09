@@ -1,0 +1,80 @@
+.mt-footer .container {
+  width: 100%;
+  display: flex; }
+
+.mt-footer .footer {
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 0.875rem;
+  color: #fff;
+  align-items: flex-start;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100%;
+  background: #000;
+  padding: 2em 0; }
+  .mt-footer .footer .footer-info {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 60%; }
+    .mt-footer .footer .footer-info ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      margin-bottom: 0.25em; }
+      .mt-footer .footer .footer-info ul li {
+        display: inline-block;
+        margin-right: 1em; }
+        .mt-footer .footer .footer-info ul li:last-child a:after {
+          display: none; }
+        .mt-footer .footer .footer-info ul li a {
+          display: block;
+          position: relative;
+          padding: 0 1em 0 0;
+          color: #fff; }
+          .mt-footer .footer .footer-info ul li a:hover, .mt-footer .footer .footer-info ul li a:focus {
+            color: #d92c9d; }
+          .mt-footer .footer .footer-info ul li a:after {
+            position: absolute;
+            content: '';
+            right: 0;
+            top: 50%;
+            margin-top: -0.5em;
+            height: 1em;
+            border-left: 1px solid #ddd; }
+    .mt-footer .footer .footer-info p {
+      color: #fff;
+      margin: 0 0 0.25em;
+      font-size: 1em; }
+      .mt-footer .footer .footer-info p a {
+        color: #fff;
+        margin-right: 1em; }
+        .mt-footer .footer .footer-info p a:hover, .mt-footer .footer .footer-info p a:focus {
+          color: #d92c9d; }
+  .mt-footer .footer .footer-icon {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 40%;
+    algin-align: flex-start; }
+    @media screen and (max-width: 575px) {
+      .mt-footer .footer .footer-icon {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 100%; } }
+    .mt-footer .footer .footer-icon ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: flex-end; }
+      .mt-footer .footer .footer-icon ul li {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 1.5em;
+        margin: 0 0.5em; }
+        .mt-footer .footer .footer-icon ul li a {
+          font-size: 1.75em;
+          color: #ccc; }
+          .mt-footer .footer .footer-icon ul li a:hover, .mt-footer .footer .footer-icon ul li a:focus {
+            color: #fff; }
+/*# sourceMappingURL=mt-footer.css.map */

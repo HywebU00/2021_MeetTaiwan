@@ -1,0 +1,44 @@
+@import '../../sass/variable'; //Variable
+@import '../../sass/mixin'; //Mixin
+.mt-kv1 {
+    padding: 6em 0 1em 8%;
+    // background: rgba(0, 0, 0, 0.1);
+    margin-bottom: 1em;
+    @include screen('mobile') {
+        padding: 6em 0 1em;
+    }
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+    .kvSlider {
+        width: 100%;
+        .img-container {
+            @include aspect-ratio(3, 1);
+            position: relative;
+            width: 100%;
+            @include screen('tablet') {
+                @include aspect-ratio(3, 2);
+            }
+        }
+        .slick-dots {
+            bottom: -2em;
+            right: 0%;
+            left: calc(-4% - 15px);
+            z-index: 1;
+            @include screen('mobile') {
+                left: 0;
+            }
+        }
+        .slick-prev {
+            @include screen('mobile') {
+                display: none;
+            }
+        }
+        .slick-next {
+            @include screen('mobile') {
+                display: none;
+            }
+        }
+    }
+}

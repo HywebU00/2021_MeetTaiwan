@@ -1,0 +1,108 @@
+@import '../../sass/_variable'; //Variable
+@import '../../sass/_mixin'; //Mixin
+// mt-event-Info
+.mt-event-Info {
+    .container {
+        padding: 2em 1em 1em;
+        @include screen('tablet') {
+            padding: 2em 1em;
+        }
+    }
+    .eventList {
+        display: flex;
+        @include screen('tablet') {
+            flex-flow: row wrap;
+        }
+        .item {
+            position: relative;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 22%;
+            margin: 0 1.5% 1em;
+            display: flex;
+            align-items: stretch;
+            &.effect {
+                animation: fadeInRight 1s 0.5s both $cubic;
+            }
+            &:nth-child(2).effect {
+                animation: fadeInRight 1s 0.7s both $cubic;
+            }
+            &:nth-child(3).effect {
+                animation: fadeInRight 1s 0.9s both $cubic;
+            }
+            &:nth-child(4).effect {
+                animation: fadeInRight 1s 1.1s both $cubic;
+            }
+            @include screen('tablet') {
+                flex-basis: 47%;
+            }
+            @include screen('xs_mobile') {
+                flex-basis: 90%;
+                max-width: 320px;
+                margin: 0 auto 2em;
+            }
+            a {
+                display: block;
+                min-height: 300px;
+                padding: 2.5em 1em 1em;
+                background-color: #fff;
+                transition: 0.3s ease-out;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+                &:hover,
+                &:focus {
+                    box-shadow: rgba(50, 50, 93, 0.35) 0px 30px 60px -12px, rgba(0, 0, 0, 0.5) 0px 18px 36px -18px;
+                }
+            }
+            .mt-tag {
+                background-color: lighten($primaryColor, 15);
+                position: absolute;
+                padding: 0.5em 1em;
+                color: #fff;
+                text-align: center;
+                left: 0;
+                top: 0;
+                min-width: 12em;
+                font-size: 0.938em;
+                font-weight: bold;
+            }
+            h3 {
+                position: relative;
+                font-family: arial, sans-serif;
+                color: #333;
+                font-size: 1.25em;
+                span {
+                    @include text-line(3, 1.25em);
+                    text-align: center;
+                    height: 4.5em;
+                }
+                &:after {
+                    position: absolute;
+                    content: '';
+                    bottom: -10px;
+                    left: 50%;
+                    width: 30%;
+                    margin-left: -15%;
+                    height: 3px;
+                    background-color: lighten($primaryColor, 10);
+                }
+            }
+            .date {
+                text-align: center;
+                margin: 2em 0;
+                color: #888;
+                font-size: 0.813em;
+                time {
+                    display: inline-block;
+                }
+            }
+            .info {
+                margin-bottom: 1em;
+                p {
+                    @include text-line(6, 1.45em);
+                    font-size: 0.875em;
+                    color: #8c8c8c;
+                }
+            }
+        }
+    }
+}

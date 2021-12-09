@@ -1,0 +1,91 @@
+<!-- css -->
+<link rel="stylesheet" href="components/mt-slider-pic-left/mt-slider-pic-left.css" />
+<!-- mt-slider-pic-left -->
+<div class="mt-slider-pic-left">
+    <div class="container">
+        <div class="slider-pic-left">
+            <div class="item">
+                <div class="slider-pic">
+                    <div class="info">
+                        <h2 class="mt-h2">
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, voluptates.</span>
+                        </h2>
+                        <p> Brouse our platform of over 100 venues and find the best event place for your needs. Lorem
+                            ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati totam at molestiae doloremque
+                            suscipit odit consequatur error placeat asperiores veritatis! </p>
+                        <a href="#" class="more"><span>more</span></a>
+                    </div>
+                    <div class="img-container">
+                        <!-- 請針對縮圖產出尺寸使用不同解析度 src -->
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="../images/slider-pic-02.jpg" />
+                            <source media="(min-width: 992px)" srcset="../images/slider-pic-02.jpg" />
+                            <source media="(min-width: 576px)" srcset="../images/slider-pic-02.jpg" />
+                            <source media="(max-width: 575px)" srcset="../images/slider-pic-02.jpg" />
+                            <img data-src="../images/slider-pic-02.jpg" class="lazy" />
+                            <noscript><img src="../images/slider-pic-02.jpg" /></noscript>
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="slider-pic">
+                    <div class="info">
+                        <h2 class="mt-h2"><span>Find your venues</span></h2>
+                        <p> Brouse our platform of over 100 venues and find the best event place for your needs. Lorem
+                            ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati totam at molestiae doloremque
+                            suscipit odit consequatur error placeat asperiores veritatis! </p>
+                        <a href="#" class="more"><span>more</span></a>
+                    </div>
+                    <div class="img-container">
+                        <!-- 請針對縮圖產出尺寸使用不同解析度 src -->
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="https://lipsum.app/id/11/800x600" />
+                            <source media="(min-width: 992px)" srcset="https://lipsum.app/id/11/800x600" />
+                            <source media="(min-width: 576px)" srcset="https://lipsum.app/id/11/800x600" />
+                            <source media="(max-width: 575px)" srcset="https://lipsum.app/id/11/800x600" />
+                            <img data-src="https://lipsum.app/id/11/800x600" class="lazy" />
+                            <noscript><img src="https://lipsum.app/id/11/800x600" /></noscript>
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- JS -->
+<script>
+    $(function () {
+        $(window).on('load resize scroll', function (e) {
+            var window_H = $(window).innerHeight();
+            var windowTop = $(window).scrollTop();
+            $('.mt-slider-pic-left .img-container').each(function (index, el) {
+                var imgTop = Math.floor($(this).offset().top - windowTop - 130);
+                if (imgTop < window_H && imgTop > 0) {
+                    $(this).addClass('effect');
+                }
+            });
+        });
+        //slick
+        $('.slider-pic-left').slick({
+            arrows: true, //左右箭頭
+            autoplay: false, //自動播放
+            autoplaySpeed: 3000, //自動播放秒數
+            dots: true, //顯示圓點
+            dotsClass: 'slick-dots', //原點css
+            draggable: true, //滑鼠可以拖曳
+            infinite: true, //無限輪播
+            pauseOnHover: true, //滑鼠移過後暫停自動撥放
+            pauseOnDotsHover: false, //滑鼠移過圓點後暫停自動撥放
+            rtl: false, //改變輪播方向
+            slidesToShow: 1, //一次顯示幾張
+            slidesToScroll: 1, //一次輪播幾張
+            vertical: false, //改成垂直方向
+            lazyLoad: 'ondemand',
+            ease: 'ease-out',
+            fade: true,
+        });
+        $('.slider-pic-left').slick('refresh');
+    })
+
+</script>

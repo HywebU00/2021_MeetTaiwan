@@ -1,0 +1,109 @@
+@import '../../sass/_variable'; //Variable
+@import '../../sass/_mixin'; //Mixin
+// mt-news-tab-3
+.mt-news-tab-3 {
+    position: relative;
+    overflow: auto;
+    overflow-x: hidden;
+    .container {
+        margin: 3em auto;
+        padding: 2em 2em 0;
+        position: relative;
+        z-index: 1;
+        outline: 1px solid red;
+        @include screen('xs_mobile') {
+            padding: 2em 1em 0;
+        }
+        .news-tab-3 {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+            padding: 0em 3em;
+            background-color: #fff;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 60px -12px, rgba(0, 0, 0, 0.3) 0px 0px 36px -18px;
+            @include screen('xs_mobile') {
+                padding: 0em 2em;
+            }
+            .tabSet {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: auto;
+                align-self: flex-start;
+                max-width: 100%;
+                padding: 2em 1em 0em 1em;
+                margin: 0;
+                position: relative;
+                width: 0;
+                @include screen('tablet') {
+                    max-width: 100%;
+                    padding: 1em 0;
+                }
+                .tabs {
+                    position: relative;
+                    z-index: 3;
+                    .tabItem {
+                        a {
+                            background: #f1f1f1;
+                            color: #888;
+                        }
+                        &.active {
+                            a {
+                                background: $primaryColor;
+                                color: #fff;
+                            }
+                        }
+                    }
+                    .tabContent {
+                        padding: 1em 0em;
+                        ul {
+                            li {
+                                margin-bottom: 0.75em;
+                                border: none;
+                                time {
+                                    display: block;
+                                    margin: 0;
+                                }
+                                a {
+                                    font-weight: bold;
+                                    display: block;
+                                    color: #333;
+                                    position: relative;
+                                    padding-bottom: 0.25em;
+                                    @include text-overflow;
+                                    &:before {
+                                        position: absolute;
+                                        content: '';
+                                        width: 100%;
+                                        height: 1px;
+                                        bottom: 0;
+                                        left: 0;
+                                        background: #ddd;
+                                    }
+                                    &:after {
+                                        position: absolute;
+                                        content: '';
+                                        width: 0em;
+                                        height: 2px;
+                                        bottom: -1px;
+                                        right: 0;
+                                        background: $secondaryColor;
+                                        transition: 0.3s $cubic;
+                                    }
+                                    &:hover,
+                                    &:focus {
+                                        color: $aHover;
+                                        &:after {
+                                            width: 3em;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

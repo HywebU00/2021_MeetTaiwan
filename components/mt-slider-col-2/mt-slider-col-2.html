@@ -1,0 +1,77 @@
+<!-- css -->
+<link rel="stylesheet" href="components/mt-slider-col-2/mt-slider-col-2.css" />
+<!-- mt-slider-col-2 -->
+<div class="mt-slider-col-2">
+    <div class="container">
+        <h2 class="mt-h2">會展實用指南</h2>
+        <div class="slider-col-2">
+            <div class="item">
+                <a href="#">
+                    <h3>尋找人才</h3>
+                    <div class="img-container">
+                        <img src="images/slider-col-2-pic-01.jpg" alt="" />
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <h3>尋找場地</h3>
+                    <div class="img-container">
+                        <img src="images/slider-col-2-pic-02.jpg" alt="" />
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing</h3>
+                    <div class="img-container">
+                        <img src="https://lipsum.app/id/18/800x400" alt="" />
+                    </div>
+                </a>
+            </div>
+        </div>
+        <a href="#" class="more"><span>more</span></a>
+    </div>
+</div>
+<!-- JS -->
+<script>
+    $(function () {
+        //slick
+        $('.slider-col-2').slick({
+            mobileFirst: true,
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            autoplay: true,
+            arrow: true,
+            lazyLoaded: true,
+            lazyLoad: 'ondemand',
+            ease: 'ease',
+            responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    arrows: true,
+                },
+            }, {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    arrows: true,
+                },
+            }, {
+                breakpoint: 200,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true,
+                },
+            },],
+        });
+        $('.slider-col-2').slick('refresh');
+    })
+</script>

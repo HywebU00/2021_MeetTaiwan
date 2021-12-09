@@ -1,0 +1,77 @@
+<!-- css -->
+<link rel="stylesheet" href="components/mt-fatfooter/mt-fatfooter.css" />
+<!-- html -->
+<div class="mt-fatfooter">
+    <div class="container">
+        <!-- toggle按鈕 classname by "close"-->
+        <a href="#" class="toggleBtn"></a>
+        <ul class="fatList">
+            <li>
+                <a href="#">Why Taiwan</a>
+                <ul>
+                    <li><a href="#">Taiwan Overview </a></li>
+                    <li><a href="#">Taiwan Highlight</a></li>
+                    <li><a href="#">Bussiness Travel</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Plan your events</a>
+                <ul>
+                    <li><a href="#">Find vanues</a></li>
+                    <li><a href="#">Find Partners</a></li>
+                    <li><a href="#">Incentive</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">News room</a>
+                <ul>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Eventi nfo</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Sustainability</a>
+                <ul>
+                    <li><a href="#">Overivew</a></li>
+                    <li><a href="#">Sucess Stories</a></li>
+                    <li><a href="#">Certificate</a></li>
+                    <li><a href="#">Green Vanues</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Why Taiwan</a>
+                <ul>
+                    <li><a href="#">Taiwan Overview </a></li>
+                    <li><a href="#">Taiwan Highlight</a></li>
+                    <li><a href="#">Bussiness Travel</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">CO-VID19</a>
+                <ul>
+                    <li><a href="#">City Mice</a></li>
+                    <li><a href="#">Useful Downlaod</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Industry Reports</a>
+                <ul>
+                    <li><a href="#">City Mice </a></li>
+                    <li><a href="#">Newsletter Subcribe</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- js -->
+<script>
+    $(function () {
+        // fatfooter btn
+        $('.toggleBtn').click(function (e) {
+            $(this).parent('.container').find('.fatList>li>ul').stop(true, true).slideToggle();
+            $(this).stop(true, true).toggleClass('close');
+            e.preventDefault();
+        });
+    })
+</script>

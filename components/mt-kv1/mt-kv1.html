@@ -1,0 +1,75 @@
+<!-- css -->
+<link rel="stylesheet" href="components/mt-kv1/mt-kv1.css" />
+<link rel="stylesheet" href="vendor/slick/slick.css" />
+<link rel="stylesheet" href="vendor/slick/slick-theme.css" />
+<!-- html -->
+<div class="mt-kv1">
+    <div class="container">
+        <div class="kvSlider">
+            <div class="img-container">
+                <a href="#" title="">
+                    <picture>
+                        <source media="(min-width: 1200px)" data-srcset="images/kv_img_1.jpg" />
+                        <source media="(min-width: 992px)" data-srcset="images/kv_img_1.jpg" />
+                        <source media="(min-width: 576px)" data-srcset="images/kv_img_1.jpg" />
+                        <source media="(max-width: 575px)" data-srcset="images/kv_img_1.jpg" />
+                        <img data-src="images/kv_img_1.jpg" class="cover lazy" />
+                        <noscript><img src="images/kv_img_1.jpg" /></noscript>
+                    </picture>
+                    <span class="caption">圖說1</span>
+                </a>
+            </div>
+            <div class="img-container">
+                <a href="#" title="">
+                    <picture>
+                        <source media="(min-width: 1200px)" data-srcset="images/kv_img_2.jpg" />
+                        <source media="(min-width: 992px)" data-srcset="images/kv_img_2.jpg" />
+                        <source media="(min-width: 576px)" data-srcset="images/kv_img_2.jpg" />
+                        <source media="(max-width: 575px)" data-srcset="images/kv_img_2.jpg" />
+                        <img data-src="images/kv_img_2.jpg" class="cover lazy" />
+                        <noscript><img src="images/kv_img_2.jpg" /></noscript>
+                    </picture>
+                    <span class="caption">圖說2</span>
+                </a>
+            </div>
+            <div class="img-container">
+                <a href="#" title="">
+                    <picture>
+                        <source media="(min-width: 1200px)" data-srcset="images/kv_img_3.jpg" />
+                        <source media="(min-width: 992px)" data-srcset="images/kv_img_3.jpg" />
+                        <source media="(min-width: 576px)" data-srcset="images/kv_img_3.jpg" />
+                        <source media="(max-width: 575px)" data-srcset="images/kv_img_3.jpg" />
+                        <img data-src="images/kv_img_3.jpg" class="cover lazy" />
+                        <noscript><img src="images/kv_img_3.jpg" /></noscript>
+                    </picture>
+                    <span class="caption">圖說2</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- JS -->
+<script>
+    $(function () {
+        //slick
+        $('.kvSlider').slick({
+            arrows: true, //左右箭頭
+            autoplay: true, //自動播放
+            autoplaySpeed: 3000, //自動播放秒數
+            dots: true, //顯示圓點
+            dotsClass: 'slick-dots', //原點css
+            draggable: true, //滑鼠可以拖曳
+            infinite: true, //無限輪播
+            pauseOnHover: true, //滑鼠移過後暫停自動撥放
+            pauseOnDotsHover: false, //滑鼠移過圓點後暫停自動撥放
+            rtl: false, //改變輪播方向
+            slidesToShow: 1, //一次顯示幾張
+            slidesToScroll: 1, //一次輪播幾張
+            vertical: false, //改成垂直方向
+            lazyLoad: 'ondemand', //lazyLoad
+            fade: true, //淡入
+        });
+        $('.kvSlider').slick('refresh');
+    })
+
+</script>
