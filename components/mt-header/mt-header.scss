@@ -575,6 +575,7 @@
                     left: 0;
                     width: 100%;
                     max-width: 17em;
+                    min-width: 12em;
                     display: none;
                     animation: showMenu 0.3s $cubic;
                     li {

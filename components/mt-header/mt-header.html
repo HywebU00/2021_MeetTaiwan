@@ -1,117 +1,227 @@
 <!-- css -->
 <link rel="stylesheet" href="components/mt-header/mt-header.css" />
-<!-- html -->
-<header class="mt-header">
-    <div class="container">
-        <!-- h1 logo -->
-        <h1>
-            <a href="#">
-                <img src="images/mt_logo.png" alt="" />
-            </a>
-        </h1>
-        <!-- nav導覽列 -->
-        <nav class="mt-nav">
-            <ul>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Eng</a></li>
-            </ul>
-        </nav>
-        <!-- 查詢按鈕 -->
-        <div class="searchBtn">
-            <a href="#">
-                <i class="fas fa-search"></i>
-            </a>
-        </div>
-        <!-- mt-search -->
-        <div class="mt-search">
-            <a href="#" class="close"><i class="fas fa-times"></i></a>
-            <div class="searchBlock">
-                <div class="searchForm">
-                    <input type="text" value="" placeholder="Keywords" />
-                    <button type="button"><i class="fas fa-search"></i></button>
-                    <a href="#" class="adv_search">Advanced Search</a>
-                </div>
-                <!-- history -->
-                <div class="history">
-                    <ul>
-                        <li><a href="#">keyword</a></li>
-                        <li><a href="#">keyword</a></li>
-                        <li><a href="#">keyword</a></li>
-                        <li><a href="#">keyword</a></li>
-                        <li><a href="#">keyword</a></li>
-                    </ul>
+<!-- mt_header -->
+    <header class="mt-header">
+        <div class="container">
+            <!-- menu btn -->
+            <button class="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <!-- h1 logo -->
+            <h1>
+                <a href="#">
+                    <img src="images/mt_logo.png" alt="" />
+                </a>
+            </h1>
+            <!-- nav導覽列 -->
+            <nav class="mt-nav">
+                <ul>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#" class="langBtn"><span>Language<i class="fas fa-chevron-down"></i></a>
+                        <div class="languageBlock">
+                            <ul>
+                                <li>
+                                    <a href="#"><span>ENGLISH</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><span>繁體中文</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><span>日本語</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <!-- 查詢按鈕 -->
+            <div class="searchBtn">
+                <a href="#">
+                    <i class="fas fa-search"></i>
+                </a>
+            </div>
+            <!-- mt-search -->
+            <div class="mt-search">
+                <a href="#" class="close"><i class="fas fa-times"></i></a>
+                <div class="searchBlock">
+                    <div class="searchForm">
+                        <input type="text" value="" placeholder="Keywords" />
+                        <button type="button"><i class="fas fa-search"></i></button>
+                        <a href="#" class="adv_search">Advanced Search</a>
+                    </div>
+                    <!-- history -->
+                    <div class="history">
+                        <ul>
+                            <li><a href="#">keyword</a></li>
+                            <li><a href="#">keyword</a></li>
+                            <li><a href="#">keyword</a></li>
+                            <li><a href="#">keyword</a></li>
+                            <li><a href="#">keyword</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            <!-- mt-menu -->
+            <div class="mt-menu">
+                <ul>
+                    <li>
+                        <a href="#">Why Taiwan</a>
+                        <ul>
+                            <li><a href="#">submenu</a></li>
+                            <li><a href="#">submenu</a></li>
+                            <li><a href="#">submenu</a></li>
+                            <li><a href="#">submenu</a></li>
+                            <li><a href="#">submenu</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Plan Your Event</a>
+                        <ul>
+                            <li><a href="#">submenu</a></li>
+                            <li><a href="#">submenu</a></li>
+                            <li><a href="#">submenu</a></li>
+                            <li><a href="#">submenu</a></li>
+                            <li><a href="#">submenu</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Newsroom</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Support & Service</a></li>
+                    <li><a href="#">Knowledge Reports</a></li>
+                </ul>
+            </div>
         </div>
-        <!-- mt-menu -->
-        <div class="mt-menu">
-            <ul>
-                <li>
-                    <a href="#">Why Taiwan</a>
-                    <ul>
-                        <li><a href="#">submenu</a></li>
-                        <li><a href="#">submenu</a></li>
-                        <li><a href="#">submenu</a></li>
-                        <li><a href="#">submenu</a></li>
-                        <li><a href="#">submenu</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Plan Your Event</a>
-                    <ul>
-                        <li><a href="#">submenu</a></li>
-                        <li><a href="#">submenu</a></li>
-                        <li><a href="#">submenu</a></li>
-                        <li><a href="#">submenu</a></li>
-                        <li><a href="#">submenu</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Newsroom</a></li>
-                <li><a href="#">Sustainability</a></li>
-                <li><a href="#">Support & Service</a></li>
-                <li><a href="#">Knowledge Reports</a></li>
-            </ul>
-        </div>
-    </div>
-</header>
-<!-- JS -->
-<script>
-    $(function () {
-        //search
-        if ($('.searchBtn').length > 0) {
-            var searchStatus = false;
-            $('.searchBtn')
+    </header>
+    <!-- JS -->
+    <script>
+        $(function () {
+            // pageY > 100 header addClass
+            $(window).on('scroll', function () {
+                if ($(this).scrollTop() > 100) {
+                    $('.mt-header').stop().addClass('sticky');
+                } else {
+                    $('.mt-header').stop().removeClass('sticky');
+                }
+            });
+
+            //sidarbar setting
+            $('.mt-header').find('.mt-menu').clone().appendTo('.mt-sidebar .sidebarContent');
+            $('.mt-header').find('.mt-nav').clone().appendTo('.mt-sidebar .sidebarContent');
+            //menu open sidebar
+            var menuStatus = false;
+            $('.menuBtn')
                 .off()
                 .click(function (e) {
-                    if (!searchStatus) {
-                        $('.mt-search').stop(true, true).addClass('open');
-                        searchStatus = true;
+                    $(this).toggleClass('open');
+
+                    if (!menuStatus) {
+                        $('.mt-sidebar').stop().addClass('menuOpen');
+                        $('body').stop().addClass('noscroll');
+                        menuStatus = true;
+                    } else {
+                        $('.mt-sidebar').stop().removeClass('menuOpen');
+                        $('body').stop().removeClass('noscroll');
+                        menuStatus = false;
                     }
                     e.preventDefault();
                 });
-            $('.mt-search')
-                .find('.close')
-                .off()
-                .click(function (e) {
-                    $('.mt-search').stop(true, true).removeClass('open');
-                    searchStatus = false;
-                    e.preventDefault();
+            // click document close mainMenu
+            function closeMenu() {
+                $('.menuBtn').removeClass('open');
+                $('.mt-sidebar').stop().removeClass('menuOpen');
+                $('body').stop().removeClass('noscroll');
+            }
+            $(document.body).click(function (e) {
+                if (menuStatus) {
+                    closeMenu();
+                    menuStatus = false;
+                }
+            });
+            $('.mt-sidebar,.menuBtn').click(function (e) {
+                e.stopPropagation();
+            });
+
+            //menu Settings
+            var _menu = $('.mt-menu');
+            _menu.find('li').has('ul').addClass('hasChild');
+            var liHasChild = _menu.find('li.hasChild');
+            (function ($) {
+                function mediaSize() {
+                    if (window.matchMedia("(min-width: 992px)").matches) {
+                        // PC
+                        liHasChild.on({
+                            mouseenter: function () {
+                                $(this).children('ul').stop(true, false).fadeIn();
+                            },
+                            mouseleave: function () {
+                                $(this).parent().siblings('ul').hide();
+                                $(this).children('ul').stop(true, false).fadeOut();
+                            },
+                        });
+                    } else {
+                        // MOBILE
+                        liHasChild.click(function () {
+                            $(this).children('ul').stop(true, false).slideToggle();
+                            $(this).siblings().children('ul').stop(true, false).slideUp();
+                        });
+                    }
+                }
+                mediaSize();
+                window.addEventListener("resize", mediaSize, false);
+            })(jQuery);
+            //search
+            if ($('.searchBtn').length > 0) {
+                var searchStatus = false;
+                $('.searchBtn')
+                    .off()
+                    .click(function (e) {
+                        if (!searchStatus) {
+                            $('.mt-search').stop(true, true).addClass('open');
+                            searchStatus = true;
+                        }
+                        e.preventDefault();
+                    });
+                $('.mt-search')
+                    .find('.close')
+                    .off()
+                    .click(function (e) {
+                        $('.mt-search').stop(true, true).removeClass('open');
+                        searchStatus = false;
+                        e.preventDefault();
+                    });
+            }
+            //language
+            if ($('.langBtn').length > 0) {
+                var lanStatus = false;
+                $('.langBtn')
+                    .off()
+                    .click(function (e) {
+                        if (!lanStatus) {
+                            $('.languageBlock').stop(true, true).addClass('open').slideDown('600', 'easeOutQuint');
+                            lanStatus = true;
+                        } else {
+                            $('.languageBlock').stop(true, true).removeClass('open').slideUp('600', 'easeOutQuint');
+                            lanStatus = false;
+                        }
+                        e.preventDefault();
+                    });
+                // click document close lang
+                function closeLang() {
+                    $('.languageBlock').stop(true, true).removeClass('open').slideUp('600', 'easeOutQuint');
+                }
+                $(document.body).click(function (e) {
+                    if (lanStatus) {
+                        closeLang();
+                        lanStatus = false;
+                    }
                 });
-        }
-        //menu Settings
-        var _menu = $('.mt-menu');
-        _menu.find('li').has('ul').addClass('hasChild');
-        var liHasChild = _menu.find('li.hasChild');
-        // 副選單滑出
-        liHasChild.on({
-            mouseenter: function () {
-                $(this).children('ul').stop(true, false).fadeIn();
-            },
-            mouseleave: function () {
-                $(this).parent().siblings('ul').hide();
-                $(this).children('ul').stop(true, false).fadeOut();
-            },
-        });
-    })
-</script>
+                $('.languageBlock ,.langBtn').click(function (e) {
+                    e.stopPropagation();
+                });
+            }
+        })
+    </script>

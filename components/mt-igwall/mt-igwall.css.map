@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAGA,AACI,UADM,CACN,UAAU,CAAC;EACP,OAAO,EAAE,KAAK,GACjB;;AAHL,AAII,UAJM,CAIN,OAAO,CAAC;EACJ,UAAU,EAAE,MAAM;EAClB,UAAU,EAAE,KAAK,GACpB",
+    "mappings": "AAGA,AACI,UADM,CACN,UAAU,AAAC,CACP,OAAO,CAAE,KAAK,CACjB,AAHL,AAII,UAJM,CAIN,OAAO,AAAC,CACJ,UAAU,CAAE,MAAM,CAClB,UAAU,CAAE,KAAK,CACpB",
     "sources": [
         "mt-igwall.scss",
         "../../sass/_variable.scss",

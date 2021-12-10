@@ -14,11 +14,7 @@ $menuItems: 15;
     transition: 0.3s ease-out;
     opacity: 0;
     pointer-events: none;
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch;
-    -webkit-transform: translate3d(0, 0, 0);
-    padding: 200px;
+
     &.menuOpen {
         opacity: 1;
         pointer-events: auto;
@@ -45,10 +41,15 @@ $menuItems: 15;
     }
     .sidebarContent {
         position: absolute;
-        width: 86%;
-        left: 7%;
+        width: 90%;
+        left: 5%;
         top: 100px;
         height: calc(100% - 150px);
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch;
+        -webkit-transform: translate3d(0, 0, 0);
+        padding:.5em 1em 300px;
         .mt-menu {
             width: 100%;
             transition: 0.5s $cubic;
