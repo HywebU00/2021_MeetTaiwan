@@ -19,13 +19,18 @@
             left: 2em;
             bottom: 0;
         }
+        @include screen('xs_mobile') {
+            display: none;
+        }
     }
     .container {
         margin-bottom: 3em;
         padding: 2em 0em 0;
         position: relative;
         z-index: 1;
-        outline: 1px solid red;
+        @include screen('xs_mobile') {
+            padding: 2em 1em 0;
+        }
         h2.mt-h2 {
             text-align: left;
             &:after {
@@ -99,9 +104,15 @@
                 margin: 0;
                 position: relative;
                 width: 0;
+
                 @include screen('tablet') {
                     max-width: 100%;
                     padding: 3em 3em 1em 4em;
+                }
+                @include screen('xs_mobile') {
+                    padding: 1em 2em;
+                    background: #fff;
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 60px -12px, rgba(0, 0, 0, 0.3) 0px 0px 36px -18px;
                 }
                 .tabs {
                     position: relative;

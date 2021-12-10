@@ -4,6 +4,9 @@
     .container {
         width: 100%;
         display: flex;
+        @include screen('mobile') {
+            flex-flow: row wrap;
+        }
     }
     .footer {
         display: flex;
@@ -20,6 +23,10 @@
             flex-grow: 1;
             flex-shrink: 1;
             flex-basis: 60%;
+            @include screen('mobile') {
+                flex-basis: 100%;
+                margin-bottom: 1em;
+            }
             ul {
                 @include li-reset;
                 margin-bottom: 0.25em;
@@ -82,6 +89,9 @@
                 @include li-reset;
                 display: flex;
                 justify-content: flex-end;
+                @include screen('mobile') {
+                    justify-content: flex-start;
+                }
                 li {
                     flex-grow: 0;
                     flex-shrink: 1;

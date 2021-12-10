@@ -5,9 +5,9 @@
 @import 'common/_grid'; //格線系統
 @import 'common/_table'; //表格
 @import 'common/_tabs'; //表格
-.container {
-    outline: 1px solid red;
-}
+// .container {
+//     outline: 1px solid red;
+// }
 // font
 @mixin fontSetting($FONT-SIZE: $font-size, $WEIGHT: normal) {
     font-size: $FONT-SIZE;
@@ -34,6 +34,12 @@ body {
     overflow-y: auto !important;
     -webkit-text-size-adjust: none;
     background: url(../images/body_bg.jpg) no-repeat 0% 0% #fff;
+    padding-top: 6em;
+    @include screen('tablet') {
+        padding-top: 60px;
+        background: url(../images/body_bg.jpg) no-repeat 0% 0% #fff;
+        background-size: 50%;
+    }
     &.noscroll {
         position: static !important;
         width: 100%;

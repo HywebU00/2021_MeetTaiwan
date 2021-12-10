@@ -4,13 +4,11 @@
 .mt-slider-pic-left {
     .container {
         padding: 1em 2em;
-        outline: 1px solid red;
         min-height: 25em;
         @include screen('mobile') {
             padding: 1em 2em;
         }
         .slider-pic-left {
-            outline: 1px solid blue;
             margin-bottom: 4em;
             @include screen('mobile') {
                 box-shadow: rgba(50, 50, 93, 0.125) 0px 5px 27px -5px, rgba(0, 0, 0, 0.2) 0px 8px 16px -8px;
@@ -66,7 +64,6 @@
                 order: 2;
                 margin-left: auto;
                 display: block;
-                outline: 1px solid salmon;
                 @include screen('mobile') {
                     order: 2;
                     padding: 1em;

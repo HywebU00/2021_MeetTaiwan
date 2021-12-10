@@ -412,9 +412,6 @@ table {
       font-size: 0.813em;
       color: #666; }
 
-.container {
-  outline: 1px solid red; }
-
 * {
   box-sizing: border-box; }
 
@@ -422,7 +419,13 @@ body {
   overflow: hidden !important;
   overflow-y: auto !important;
   -webkit-text-size-adjust: none;
-  background: url(../images/body_bg.jpg) no-repeat 0% 0% #fff; }
+  background: url(../images/body_bg.jpg) no-repeat 0% 0% #fff;
+  padding-top: 6em; }
+  @media screen and (max-width: 991px) {
+    body {
+      padding-top: 60px;
+      background: url(../images/body_bg.jpg) no-repeat 0% 0% #fff;
+      background-size: 50%; } }
   body.noscroll {
     position: static !important;
     width: 100%;

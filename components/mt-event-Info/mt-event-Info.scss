@@ -37,9 +37,9 @@
                 flex-basis: 47%;
             }
             @include screen('xs_mobile') {
-                flex-basis: 90%;
-                max-width: 320px;
-                margin: 0 auto 2em;
+                flex-grow: 1;
+                flex-basis: 100%;
+                margin: 0 1em 2em;
             }
             a {
                 display: block;
@@ -47,6 +47,7 @@
                 padding: 2.5em 1em 1em;
                 background-color: #fff;
                 transition: 0.3s ease-out;
+                width: 100%;
                 box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
                 &:hover,
                 &:focus {
@@ -84,6 +85,9 @@
                     margin-left: -15%;
                     height: 3px;
                     background-color: lighten($primaryColor, 10);
+                }
+                @include screen('xs_mobile') {
+                    font-size: 1.5em;
                 }
             }
             .date {

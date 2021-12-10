@@ -31,7 +31,27 @@
             display: flex;
             flex-flow: row nowrap;
             width: 80%;
-            margin: 0 0 0 auto;
+            margin: 0 auto 0 0;
+            position: relative;
+            &:after {
+                position: absolute;
+                content: '';
+                width: 600px;
+                height: 70%;
+                background: url(../images/tabs-2-bg.jpg) no-repeat center center;
+                background-size: cover;
+                z-index: -1;
+                right: calc(-20% - 2.9em);
+                bottom: -10%;
+                @include screen('tablet') {
+                    display: none;
+                }
+            }
+            @include screen('tablet') {
+                width: auto;
+                display: block;
+                margin: 1em 0em;
+            }
             @include screen('xs_mobile') {
                 width: auto;
                 display: block;

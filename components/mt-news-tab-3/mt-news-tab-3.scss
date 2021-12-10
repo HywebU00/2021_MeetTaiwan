@@ -10,7 +10,6 @@
         padding: 2em 2em 0;
         position: relative;
         z-index: 1;
-        outline: 1px solid red;
         @include screen('xs_mobile') {
             padding: 2em 1em 0;
         }

@@ -1,9 +1,9 @@
 .mt-kv1 {
-  padding: 6em 0 1em 8%;
+  padding: 0em 0 1em 8%;
   margin-bottom: 1em; }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 991px) {
     .mt-kv1 {
-      padding: 6em 0 1em; } }
+      padding: 0em 0 1em; } }
   .mt-kv1 .container {
     max-width: 100%;
     padding: 0; }
@@ -68,8 +68,8 @@
           left: 0; } }
     @media screen and (max-width: 767px) {
       .mt-kv1 .kvSlider .slick-prev {
-        display: none; } }
+        display: none !important; } }
     @media screen and (max-width: 767px) {
       .mt-kv1 .kvSlider .slick-next {
-        display: none; } }
+        display: none !important; } }
 /*# sourceMappingURL=mt-kv1.css.map */

@@ -1,12 +1,10 @@
 .mt-slider-pic-left .container {
   padding: 1em 2em;
-  outline: 1px solid red;
   min-height: 25em; }
   @media screen and (max-width: 767px) {
     .mt-slider-pic-left .container {
       padding: 1em 2em; } }
   .mt-slider-pic-left .container .slider-pic-left {
-    outline: 1px solid blue;
     margin-bottom: 4em; }
     @media screen and (max-width: 767px) {
       .mt-slider-pic-left .container .slider-pic-left {
@@ -56,8 +54,7 @@
       z-index: 2;
       order: 2;
       margin-left: auto;
-      display: block;
-      outline: 1px solid salmon; }
+      display: block; }
       @media screen and (max-width: 767px) {
         .mt-slider-pic-left .container .slider-pic .info {
           order: 2;

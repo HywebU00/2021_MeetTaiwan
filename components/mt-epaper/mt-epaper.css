@@ -11,7 +11,7 @@
       margin: 0 2.5%; }
       @media screen and (max-width: 575px) {
         .mt-epaper .container .epaper .item {
-          flex-basis: 90%;
+          flex-basis: 100%;
           margin: 0 auto 2em;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; } }
       .mt-epaper .container .epaper .item a {

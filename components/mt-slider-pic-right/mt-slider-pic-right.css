@@ -1,12 +1,10 @@
 .mt-slider-pic-right .container {
   padding: 1em 2em;
-  outline: 1px solid red;
   min-height: 25em; }
   @media screen and (max-width: 767px) {
     .mt-slider-pic-right .container {
       padding: 1em 2em; } }
   .mt-slider-pic-right .container .slider-pic-right {
-    outline: 1px solid green;
     margin-bottom: 4em; }
     @media screen and (max-width: 767px) {
       .mt-slider-pic-right .container .slider-pic-right {
@@ -56,8 +54,7 @@
       overflow: hidden;
       min-height: 27em;
       padding: 3em 30% 2em 2em;
-      z-index: 2;
-      outline: 1px solid salmon; }
+      z-index: 2; }
       @media screen and (max-width: 767px) {
         .mt-slider-pic-right .container .slider-pic .info {
           order: 2;

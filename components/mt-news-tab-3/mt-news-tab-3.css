@@ -6,8 +6,7 @@
     margin: 3em auto;
     padding: 2em 2em 0;
     position: relative;
-    z-index: 1;
-    outline: 1px solid red; }
+    z-index: 1; }
     @media screen and (max-width: 575px) {
       .mt-news-tab-3 .container {
         padding: 2em 1em 0; } }

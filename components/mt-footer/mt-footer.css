@@ -1,6 +1,9 @@
 .mt-footer .container {
   width: 100%;
   display: flex; }
+  @media screen and (max-width: 767px) {
+    .mt-footer .container {
+      flex-flow: row wrap; } }
 
 .mt-footer .footer {
   display: flex;
@@ -17,6 +20,10 @@
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 60%; }
+    @media screen and (max-width: 767px) {
+      .mt-footer .footer .footer-info {
+        flex-basis: 100%;
+        margin-bottom: 1em; } }
     .mt-footer .footer .footer-info ul {
       margin: 0;
       padding: 0;
@@ -67,6 +74,9 @@
       list-style: none;
       display: flex;
       justify-content: flex-end; }
+      @media screen and (max-width: 767px) {
+        .mt-footer .footer .footer-icon ul {
+          justify-content: flex-start; } }
       .mt-footer .footer .footer-icon ul li {
         flex-grow: 0;
         flex-shrink: 1;
