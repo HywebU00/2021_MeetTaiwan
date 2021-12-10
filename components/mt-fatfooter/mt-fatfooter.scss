@@ -63,6 +63,7 @@
                 font-weight: bold;
                 margin-bottom: 0.5em;
                 line-height: 1.35;
+                color: #333;
                 @include screen('xs_mobile') {
                     font-size: 1.25em;
                     color: #666;
@@ -110,9 +111,7 @@
                     font-size: 0.875em;
                     line-height: 1.5;
                     font-weight: normal;
-                    @include screen('xs_mobile') {
-                        color: #888;
-                    }
+                    color: #888;
                     &:hover,
                     &:focus {
                         color: $aHover;
@@ -122,6 +121,7 @@
         }
         a {
             display: block;
+            color: #555;
             &:hover,
             &:focus {
                 color: $aHover;

@@ -3583,7 +3583,8 @@ select {
         font-size: 1.25em;
         font-weight: bold;
         margin-bottom: 0.5em;
-        line-height: 1.35; }
+        line-height: 1.35;
+        color: #333; }
         @media screen and (max-width: 575px) {
           .mt-fatfooter ul li a {
             font-size: 1.25em;
@@ -3622,14 +3623,13 @@ select {
         .mt-fatfooter ul ul li a {
           font-size: 0.875em;
           line-height: 1.5;
-          font-weight: normal; }
-          @media screen and (max-width: 575px) {
-            .mt-fatfooter ul ul li a {
-              color: #888; } }
+          font-weight: normal;
+          color: #888; }
           .mt-fatfooter ul ul li a:hover, .mt-fatfooter ul ul li a:focus {
             color: #d92c9d; }
     .mt-fatfooter ul a {
-      display: block; }
+      display: block;
+      color: #555; }
       .mt-fatfooter ul a:hover, .mt-fatfooter ul a:focus {
         color: #d92c9d; }
 
