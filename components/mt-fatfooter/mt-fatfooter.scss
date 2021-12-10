@@ -65,7 +65,12 @@
                 line-height: 1.35;
                 @include screen('xs_mobile') {
                     font-size: 1.25em;
+                    color: #666;
                     margin: 0;
+                }
+                &:hover,
+                &:focus {
+                    color: $aHover;
                 }
             }
         }
@@ -106,14 +111,17 @@
                     line-height: 1.5;
                     font-weight: normal;
                     @include screen('xs_mobile') {
-                        color: #333;
+                        color: #888;
+                    }
+                    &:hover,
+                    &:focus {
+                        color: $aHover;
                     }
                 }
             }
         }
         a {
             display: block;
-            color: #555;
             &:hover,
             &:focus {
                 color: $aHover;

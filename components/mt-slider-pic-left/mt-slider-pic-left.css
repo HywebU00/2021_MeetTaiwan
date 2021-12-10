@@ -13,7 +13,7 @@
       bottom: -2em; }
       @media screen and (max-width: 767px) {
         .mt-slider-pic-left .container .slider-pic-left .slick-dots {
-          display: none; } }
+          display: none !important; } }
     .mt-slider-pic-left .container .slider-pic-left .item {
       overflow: hidden;
       display: flex;

@@ -16,7 +16,7 @@
             .slick-dots {
                 bottom: -2em;
                 @include screen('mobile') {
-                    display: none;
+                    display: none !important;
                 }
             }
             .item {
@@ -149,7 +149,6 @@
                 z-index: 1;
                 width: 50%;
                 height: calc(100% - 30px);
-                outline: 1px solid red;
                 &.effect {
                     animation: fadeInLeft 1s 0.5s both $cubic;
                 }

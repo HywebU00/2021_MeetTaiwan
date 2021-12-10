@@ -36,6 +36,11 @@ $menuItems: 15;
                     }
                 }
             }
+            .mt-nav {
+                transform: translateX(0px);
+                opacity: 1;
+                transition-delay: 1.2s;
+            }
         }
     }
     .sidebarContent {
@@ -51,6 +56,8 @@ $menuItems: 15;
                 display: flex;
                 justify-content: flex-start;
                 flex-flow: row wrap;
+                flex: 1;
+                overflow: hidden;
                 & > li {
                     flex-grow: 1;
                     flex-shrink: 1;
@@ -89,6 +96,7 @@ $menuItems: 15;
                         display: block;
                         line-height: 1.45em;
                         position: relative;
+                        padding: 0.25em 0;
                         &:hover,
                         &:focus {
                             color: $aHover;
@@ -154,14 +162,10 @@ $menuItems: 15;
             flex-basis: auto;
             position: relative;
             padding: 2em 0;
-            border-top: 1px solid #ddd;
-            &:after {
-                position: absolute;
-                content: '';
-                width: 100%;
-                border-top: 1px solid rgba(255, 255, 255, 0.25);
-                bottom: -1em;
-            }
+            transform: translateX(-60px);
+            opacity: 0;
+            transition: transform 0.5s $cubic, opacity 0.6s $cubic;
+            max-width: 300px;
             ul {
                 display: flex;
                 flex-grow: 1;
@@ -171,13 +175,29 @@ $menuItems: 15;
                 li {
                     flex-basis: 100%;
                     padding: 0.15em;
-                    margin-bottom: 0.5em;
+                    margin-bottom: 0.25em;
+                    position: relative;
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        width: 30%;
+                        height: 1px;
+                        left: 0;
+                        bottom: 1;
+                        background: #eee;
+                    }
                     a {
                         color: #555;
+                        display: block;
                         padding: 0.25em 1em 0.25em 0em;
                         text-align: left;
-                        border: 1px solid rgba(255, 255, 255, 0.25);
                         @include text-overflow;
+                        &.langBtn {
+                            i {
+                                display: inline-block;
+                                margin-left: 0.5em;
+                            }
+                        }
                     }
                 }
             }
@@ -198,12 +218,8 @@ $menuItems: 15;
                     font-size: 0.875em;
                     color: #fff;
                     background: rgba(0, 0, 0, 0.45);
-                    &.langBtn {
-                        i {
-                            position: absolute;
-                            right: 0;
-                            top: 0.5em;
-                        }
+                    &:after {
+                        display: none;
                     }
                     &:hover,
                     &:focus {

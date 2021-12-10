@@ -100,8 +100,8 @@
               position: absolute;
               content: '';
               width: 0em;
-              height: 2px;
-              bottom: -1px;
+              height: 1px;
+              bottom: 1px;
               right: 0;
               background: #e352b2;
               transition: 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99); }

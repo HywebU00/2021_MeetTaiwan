@@ -4,6 +4,7 @@
 .mt-event-Info {
     .container {
         padding: 2em 1em 1em;
+        overflow: hidden;
         @include screen('tablet') {
             padding: 2em 1em;
         }
@@ -105,6 +106,7 @@
                     @include text-line(6, 1.45em);
                     font-size: 0.875em;
                     color: #8c8c8c;
+                    text-align: center;
                 }
             }
         }

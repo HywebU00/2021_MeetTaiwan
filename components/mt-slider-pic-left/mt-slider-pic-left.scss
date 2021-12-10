@@ -16,7 +16,7 @@
             .slick-dots {
                 bottom: -2em;
                 @include screen('mobile') {
-                    display: none;
+                    display: none !important;
                 }
             }
             .item {

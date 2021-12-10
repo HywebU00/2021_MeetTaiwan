@@ -25,8 +25,11 @@
     transform: perspective(600px) translate3d(0, 0, 0);
     animation: cookie_fadeIn 0.6s 2s both cubic-bezier(0.4, 0.01, 0.165, 0.99);
     @include screen('xs_mobile') {
-        width: calc(100% - 4em);
-        left: 2em;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        background-color: darken($primaryColor, 15);
+        border-radius: 0;
     }
     a.close {
         position: absolute;

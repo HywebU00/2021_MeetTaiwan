@@ -574,7 +574,7 @@
                     top: 2.5em;
                     left: 0;
                     width: 100%;
-                    max-width: 15em;
+                    max-width: 17em;
                     display: none;
                     animation: showMenu 0.3s $cubic;
                     li {
@@ -635,9 +635,6 @@
         }
         .mt-nav {
             display: none;
-            @include screen('tablet') {
-                display: block;
-            }
         }
         @include screen('tablet') {
             height: 60px;

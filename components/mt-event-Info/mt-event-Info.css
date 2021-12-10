@@ -1,5 +1,6 @@
 .mt-event-Info .container {
-  padding: 2em 1em 1em; }
+  padding: 2em 1em 1em;
+  overflow: hidden; }
   @media screen and (max-width: 991px) {
     .mt-event-Info .container {
       padding: 2em 1em; } }
@@ -103,5 +104,6 @@
         height: auto;
         max-height: calc(1.45em * 6);
         font-size: 0.875em;
-        color: #8c8c8c; }
+        color: #8c8c8c;
+        text-align: center; }
 /*# sourceMappingURL=mt-event-Info.css.map */

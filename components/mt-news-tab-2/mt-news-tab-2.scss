@@ -109,8 +109,8 @@
                             position: absolute;
                             content: '';
                             width: 0em;
-                            height: 2px;
-                            bottom: -1px;
+                            height: 1px;
+                            bottom: 1px;
                             right: 0;
                             background: $secondaryColor;
                             transition: 0.3s $cubic;

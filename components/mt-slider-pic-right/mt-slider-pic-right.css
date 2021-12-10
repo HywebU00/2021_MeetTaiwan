@@ -13,7 +13,7 @@
       bottom: -2em; }
       @media screen and (max-width: 767px) {
         .mt-slider-pic-right .container .slider-pic-right .slick-dots {
-          display: none; } }
+          display: none !important; } }
     .mt-slider-pic-right .container .slider-pic-right .item {
       overflow: hidden;
       display: flex;
@@ -155,8 +155,7 @@
       right: 0;
       z-index: 1;
       width: 50%;
-      height: calc(100% - 30px);
-      outline: 1px solid red; }
+      height: calc(100% - 30px); }
       .mt-slider-pic-right .container .slider-pic .img-container.effect {
         animation: fadeInLeft 1s 0.5s both cubic-bezier(0.4, 0.01, 0.165, 0.99); }
       .mt-slider-pic-right .container .slider-pic .img-container img {

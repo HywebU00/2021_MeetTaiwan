@@ -474,7 +474,7 @@
           top: 2.5em;
           left: 0;
           width: 100%;
-          max-width: 15em;
+          max-width: 17em;
           display: none;
           animation: showMenu 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99); }
           .mt-header .mt-menu > ul > li ul li {
@@ -523,9 +523,6 @@
           width: 100%; } }
     .mt-header.sticky .mt-nav {
       display: none; }
-      @media screen and (max-width: 991px) {
-        .mt-header.sticky .mt-nav {
-          display: block; } }
     @media screen and (max-width: 991px) {
       .mt-header.sticky {
         height: 60px; } }
