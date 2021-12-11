@@ -68,6 +68,15 @@
                     @include aspect-ratio(4, 5);
                     img {
                         object-fit: cover;
+                        transition: .3s ease-out;
+                    }
+                    a{
+                        display:block;
+                        &:hover,&:focus{
+                            img{
+                                transform:scale(1.1);
+                            }
+                        };
                     }
                     .caption {
                         position: absolute;

@@ -14,7 +14,6 @@ $menuItems: 15;
     transition: 0.3s ease-out;
     opacity: 0;
     pointer-events: none;
-
     &.menuOpen {
         opacity: 1;
         pointer-events: auto;
@@ -43,8 +42,8 @@ $menuItems: 15;
         position: absolute;
         width: 90%;
         left: 5%;
-        top: 100px;
-        height: calc(100% - 150px);
+        top: 80px;
+        height: calc(100% - 100px);
         overflow-x: hidden !important;
         overflow-y: auto !important;
         -webkit-overflow-scrolling: touch;
@@ -162,7 +161,7 @@ $menuItems: 15;
             flex-shrink: 1;
             flex-basis: auto;
             position: relative;
-            padding: 2em 0;
+            padding: 1.5em 0;
             transform: translateX(-60px);
             opacity: 0;
             transition: transform 0.5s $cubic, opacity 0.6s $cubic;
@@ -176,7 +175,7 @@ $menuItems: 15;
                 li {
                     flex-basis: 100%;
                     padding: 0.15em;
-                    margin-bottom: 0.25em;
+                    margin-bottom: 0.15em;
                     position: relative;
                     &:after {
                         position: absolute;

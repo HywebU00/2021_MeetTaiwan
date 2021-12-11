@@ -47,10 +47,12 @@
                     width: 80%;
                     h3,
                     p {
+                        max-width: 400px;
                         text-align: left;
+                        margin: 0 auto 0 0;
+
                     }
                     p {
-                        margin: 0 auto 0 0;
                         width: 60%;
                     }
                 }
@@ -58,10 +60,12 @@
                     width: 80%;
                     h3,
                     p {
+                        max-width: 400px;
                         text-align: right;
+                        margin: 0 0 0 auto;
                     }
                     p {
-                        margin: 0 0 0 auto;
+                        
                         width: 60%;
                     }
                 }
@@ -69,7 +73,8 @@
                     font-size: 2.5em;
                     text-align: center;
                     color: #fff;
-                    margin: 0 0 0.25em;
+                    margin: 0 auto 0.25em;
+                    max-width: 600px;
                     text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.75);
                     @include text-line(3, 1.25em);
                     @include screen('xs_mobile') {
@@ -82,6 +87,7 @@
                     color: #fff;
                     margin: 0;
                     width: 80%;
+                    max-width: 400px;
                     margin: 0 auto;
                     text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.75);
                     @include text-line(3, 1.45em);
