@@ -9,6 +9,7 @@ $(window).on('load', function () {
         fadeTime: 600,
         threshold: 0,
     });
+
     //AOS
     AOS.init({
         duration: 600, // values from 0 to 3000, with step 50ms
@@ -219,4 +220,22 @@ $(window).on('load', function () {
         });
         stickyLeft.updateSticky();
     }
+    // qa
+    $('.lp_qa')
+        .find('.qa_content')
+        .each(function (index) {
+            $(this)
+                .find('.q_block')
+                .children('a')
+                .off()
+                .click(function (e) {
+                    $('.lp_qa').find('.a_block').stop().slideUp('400', 'easeOutQuint');
+                    $(this).parents('li').siblings().find('a').removeClass('open');
+                    $(this).parents('.topic_group').siblings().find('a').removeClass('open');
+                    $(this).toggleClass('open');
+                    $(this).parent('.q_block').siblings('.a_block').stop().slideToggle('400', 'easeOutQuint');
+                    $(this).blur();
+                    e.preventDefault();
+                });
+        });
 });
