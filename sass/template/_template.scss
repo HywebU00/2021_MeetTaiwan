@@ -270,3 +270,14 @@
     max-height: 80%;
     margin: 0;
 }
+
+.fancybox-content .fancybox-image {
+    @include screen('xs_mobile') {
+        object-fit: contain;
+    }
+}
+.fancybox-content {
+    @include screen('xs_mobile') {
+        transform: translate(0px, 0px) !important;
+    }
+}

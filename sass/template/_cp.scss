@@ -11,6 +11,12 @@
                 flex-shrink: 1;
                 flex-basis: 25%;
                 padding: 0.25em;
+                @include screen('tablet') {
+                    flex-basis: 33.3333%;
+                }
+                @include screen('xs_mobile') {
+                    flex-basis: 50%;
+                }
                 .img-container {
                     @include aspect-ratio(4, 3);
                     width: 100%;

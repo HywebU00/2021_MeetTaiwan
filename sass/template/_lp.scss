@@ -144,7 +144,6 @@
                 .img-container {
                     width: 100%;
                     margin-bottom: 0.5em;
-                    background: #000;
                     @include aspect-ratio(4, 3);
                     a {
                         position: absolute;
@@ -371,6 +370,10 @@
                             img {
                                 max-width: 60%;
                                 min-width: 260px;
+                                @include screen('xs_mobile') {
+                                    min-width: 100px;
+                                    max-width: 100%;
+                                }
                             }
                         }
                     }
