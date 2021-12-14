@@ -45,8 +45,7 @@
             background: linear-gradient(90deg, rgba(1, 12, 22, 0.9) 0%, rgba(12, 51, 85, 0.8533788515406162) 30%);
             min-height: 5em;
             padding: 1rem;
-            max-width: 40em;
-            font-size: 1.5em;
+            max-width: 60em;
             color: #fff;
             text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.85);
             display: flex;
@@ -59,18 +58,20 @@
                 margin: 0 0 0.5rem 0;
                 flex-basis: 80%;
                 flex-grow: 1;
+                font-size: 2em;
                 @include text-line(2, 1.45em);
             }
             small {
                 flex-basis: 80%;
                 flex-grow: 1;
-                @include text-overflow;
+                font-size: 0.875rem;
+                @include text-line(2, 1.45em);
                 color: #fff;
             }
         }
         .mt-content {
             background: #fff;
-            padding: 1em 1.5em 5em;
+            padding: 1em 2em 5em;
             min-height: 50em;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             @include screen('xs_mobile') {
@@ -392,6 +393,115 @@
                             time {
                                 display: inline-block;
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // user
+    .lp_user {
+        ul {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-content: flex-start;
+            li {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: calc(25% - 1em);
+                margin: 0 0.5em 1em;
+                position: relative;
+                min-height: 25em;
+                overflow: hidden;
+                @include screen('notebook') {
+                    flex-basis: calc(33.3333% - 1em);
+                }
+                @include screen('tablet') {
+                    flex-basis: calc(50% - 1em);
+                }
+                @include screen('xs_mobile') {
+                    flex-basis: calc(100% - 2em);
+                    margin: 0 auto 1.5em;
+                }
+
+                &:hover {
+                    .img-container {
+                        &:after {
+                            background: rgba(0, 0, 0, 0.65);
+                        }
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
+                    .caption {
+                        .btn {
+                            transform: scale(1);
+                            opacity: 1;
+                        }
+                    }
+                }
+                .img-container {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background: $primaryColor;
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background: $primaryColor;
+                        opacity: 0.55;
+                        z-index: 1;
+                        transition: 0.3s $cubic;
+                    }
+                    img {
+                        object-fit: cover;
+                        transition: 0.3s $cubic;
+                    }
+                }
+                .caption {
+                    position: absolute;
+                    z-index: 3;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    padding: 2em;
+                    color: #fff;
+                    h3 {
+                        font-size: 1.5em;
+                        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
+                        @include text-line(6, 1.45em);
+                        margin: 0 0 1em;
+                    }
+                    .btn {
+                        position: absolute;
+                        width: 80%;
+                        bottom: 1.5em;
+                        left: 50%;
+                        margin-left: -40%;
+                        background: rgba(0, 0, 0, 0.5);
+                        border: 1px solid #ddd;
+                        color: #fff;
+                        padding: 1em;
+                        transition: 0.3s $cubic;
+                        opacity: 0;
+                        transform: scale(1.2);
+                        @include screen('mobile') {
+                            opacity: 1;
+                            transform: scale(1);
+                            bottom: 1.75em;
+                        }
+                        &:hover,
+                        &:focus {
+                            background: $secondaryColor;
+                            border: 1px solid $secondaryColor;
                         }
                     }
                 }
