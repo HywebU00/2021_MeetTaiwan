@@ -9,8 +9,19 @@
             <script src="js/html5shiv.js"></script>
             <script src="js/respond.min.js"></script>
         <![endif]-->
-        <!-- hyUI -->
-        <link rel="stylesheet" href="css/mt-css-all.css" />
+        <!--  預先載入-->
+        <link
+            rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="css/mt-css-all.min.css" />
+        <link rel="stylesheet" href="css/aos.min.css" />
+        <link rel="stylesheet" href="vendor/slick/slick.css" />
+        <link rel="stylesheet" href="vendor/slick/slick-theme.css" />
+        <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
+        <link rel="stylesheet" href="vendor/scrolltable/jquery.scroltable.min.css" />
         <!-- fav_ico -->
         <link type="image/ico" rel="icon" href="images/favicon.ico" />
         <style>
@@ -131,6 +142,11 @@
             .table_wrapper {
                 display: flex;
                 align-items: flex-start;
+                width: 100%;
+            }
+            .table_wrapper .scroltable-wrapper {
+                margin: 0;
+                flex-grow: 1;
             }
 
             @media screen and (max-width: 545px) {
@@ -233,91 +249,91 @@
                             <tr>
                                 <td></td>
                                 <td>使用者選單</td>
-                                <td><a href="mt-userpage.htm"></a></td>
+                                <td><a href="mt-userpage.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>尋找會展場地列表_Grid</td>
-                                <td><a href="mt-vanue-grid-list.htm"></a></td>
+                                <td><a href="mt-vanue-grid-list.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>尋找會展場地列表_List</td>
-                                <td><a href="mt-vanue-data-list.htm"></a></td>
+                                <td><a href="mt-vanue-data-list.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>常見尋找合作夥伴_Grid問答</td>
-                                <td><a href="mt-supplier-grid-list.htm"></a></td>
+                                <td><a href="mt-supplier-grid-list.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>尋找會展場地&合作夥伴內容頁</td>
-                                <td><a href="mt-supplier-partner.htm"></a></td>
+                                <td><a href="mt-supplier-partner.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>新聞列表</td>
-                                <td><a href="mt-news-list.htm"></a></td>
+                                <td><a href="mt-news-list.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>新聞內容</td>
-                                <td><a href="mt-article.htm"></a></td>
+                                <td><a href="mt-article.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>重大公告列表</td>
-                                <td><a href="mt-announcement-list.htm"></a></td>
+                                <td><a href="mt-announcement-list.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>重大公告內容</td>
-                                <td><a href="mt-announcement.htm"></a></td>
+                                <td><a href="mt-announcement.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>活動訊息列表</td>
-                                <td><a href="mt-event-list.htm"></a></td>
+                                <td><a href="mt-event-list.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>活動內容頁</td>
-                                <td><a href="mt-event.htm"></a></td>
+                                <td><a href="mt-event.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>會展產業與研究列表</td>
-                                <td><a href="mt-research-list.htm"></a></td>
+                                <td><a href="mt-research-list.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>會展產業與研究內容</td>
-                                <td><a href="mt-research.htm"></a></td>
+                                <td><a href="mt-research.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
@@ -342,42 +358,42 @@
                             <tr>
                                 <td></td>
                                 <td>永續會展_永續國際認證</td>
-                                <td><a href="mt-greenmice-cetificate.htm"></a></td>
+                                <td><a href="mt-greenmice-cetificate.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>永續會展_推廣案例分享List</td>
-                                <td><a href="mt-greenmice-promote-case-list.htm"></a></td>
+                                <td><a href="mt-greenmice-promote-case-list.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>永續會展_推廣案例分享內容</td>
-                                <td><a href="mt-vanue-data-list.htm"></a></td>
+                                <td><a href="mt-vanue-data-list.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>常見尋找合作夥伴_Grid問答</td>
-                                <td><a href="mt-greenmice-promote-case.htm"></a></td>
+                                <td><a href="mt-greenmice-promote-case.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>永續會展_歷屆導入案例List</td>
-                                <td><a href="mt-greenmice-sucess-case-list.htm"></a></td>
+                                <td><a href="mt-greenmice-sucess-case-list.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>永續會展_歷屆導入案例內容</td>
-                                <td><a href="mt-greenmice-sucess-case.htm"></a></td>
+                                <td><a href="mt-greenmice-sucess-case.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
@@ -402,63 +418,63 @@
                             <tr>
                                 <td></td>
                                 <td>會展獎歷屆得獎作品列表</td>
-                                <td><a href="mt-awardresult-list.htm"></a></td>
+                                <td><a href="mt-awardresult-list.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>會展獎歷屆得獎作品內容</td>
-                                <td><a href="mt-awardresult.htm"></a></td>
+                                <td><a href="mt-awardresult.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>永續會展_推廣案例分享內容</td>
-                                <td><a href="mt-special-column.htm"></a></td>
+                                <td><a href="mt-special-column.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>會展獎專刊特輯</td>
-                                <td><a href="mt-award-news-list.htm"></a></td>
+                                <td><a href="mt-award-news-list.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>會展獎媒體報導列表</td>
-                                <td><a href="mt-award-apply.htm"></a></td>
+                                <td><a href="mt-award-apply.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>會展獎報名表頁1</td>
-                                <td><a href="mt-application-form1.htm"></a></td>
+                                <td><a href="mt-application-form1.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>會展獎報名表頁2</td>
-                                <td><a href="mt-application-form2.htm"></a></td>
+                                <td><a href="mt-application-form2.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>會展獎報名表頁3</td>
-                                <td><a href="mt-application-form3.htm"></a></td>
+                                <td><a href="mt-application-form3.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>會展獎入圍資料上傳</td>
-                                <td><a href="mt-nominee-data-upload.htm"></a></td>
+                                <td><a href="mt-nominee-data-upload.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
@@ -483,35 +499,35 @@
                             <tr>
                                 <td></td>
                                 <td>電子報訂閱頁</td>
-                                <td><a href="mt-subscribe.htm"></a></td>
+                                <td><a href="mt-subscribe.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>電子報Content</td>
-                                <td><a href="mt-epaper.htm"></a></td>
+                                <td><a href="mt-epaper.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>實用下載</td>
-                                <td><a href="mt-download-list.htm"></a></td>
+                                <td><a href="mt-download-list.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>聯絡我們_徵詢業者服務</td>
-                                <td><a href="mt-frp.htm"></a></td>
+                                <td><a href="mt-frp.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>聯絡我們_辦公室資訊</td>
-                                <td><a href="mt-office-info.htm"></a></td>
+                                <td><a href="mt-office-info.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
@@ -536,28 +552,28 @@
                             <tr>
                                 <td></td>
                                 <td>一般會員註冊</td>
-                                <td><a href="mt-signup.htm"></a></td>
+                                <td><a href="mt-signup.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>一般會員註冊_第一步</td>
-                                <td><a href="mt-signup-step1.htm"></a></td>
+                                <td><a href="mt-signup-step1.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>一般會員註冊_第二步</td>
-                                <td><a href="mt-signup-step2.htm"></a></td>
+                                <td><a href="mt-signup-step2.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>一般會員註冊_註冊完成頁</td>
-                                <td><a href="mt-signup-finish.htm"></a></td>
+                                <td><a href="mt-signup-finish.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
@@ -582,133 +598,133 @@
                             <tr>
                                 <td></td>
                                 <td>忘記密碼第一步</td>
-                                <td><a href="mt-forget-password-step1.htm"></a></td>
+                                <td><a href="mt-forget-password-step1.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>忘記密碼完成頁</td>
-                                <td><a href="mt-forget-password-step2.htm"></a></td>
+                                <td><a href="mt-forget-password-step2.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>會員個人頁_一般會員修改基本資料</td>
-                                <td><a href="mt-member-info.htm"></a></td>
+                                <td><a href="mt-member-info.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>一般會會員個人頁_變更密碼員註冊_註冊完成頁</td>
-                                <td><a href="mt-member-change-password.htm"></a></td>
+                                <td><a href="mt-member-change-password.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>加入企業會員</td>
-                                <td><a href="mt-business-member.htm"></a></td>
+                                <td><a href="mt-business-member.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>企業會員基本資料</td>
-                                <td><a href="mt-business-member-info.htm"></a></td>
+                                <td><a href="mt-business-member-info.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>申請服務介紹</td>
-                                <td><a href="mt-service-info.htm"></a></td>
+                                <td><a href="mt-service-info.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>會議活動網站建置與QR Code報到服務內容頁</td>
-                                <td><a href="mt-service-qrcode.htm"></a></td>
+                                <td><a href="mt-service-qrcode.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>台灣會展圖庫內容頁</td>
-                                <td><a href="mt-service-picdata.htm"></a></td>
+                                <td><a href="mt-service-picdata.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>臺灣會展識別標誌 國貿局識別標誌 內容頁</td>
-                                <td><a href="mt-service-logo.htm"></a></td>
+                                <td><a href="mt-service-logo.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>我要發佈活動</td>
-                                <td><a href="mt-member-eventpost.htm"></a></td>
+                                <td><a href="mt-member-eventpost.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>發佈活動訊息列表</td>
-                                <td><a href="mt-member-eventpost-list.htm"></a></td>
+                                <td><a href="mt-member-eventpost-list.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>我要發佈新聞</td>
-                                <td><a href="mt-member-newspost.htm"></a></td>
+                                <td><a href="mt-member-newspost.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>發佈活動表單</td>
-                                <td><a href="mt-member-eventpost-form.htm"></a></td>
+                                <td><a href="mt-member-eventpost-form.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>發佈新聞訊息列表</td>
-                                <td><a href="mt-member-newspost-list.htm"></a></td>
+                                <td><a href="mt-member-newspost-list.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>發佈新聞表單</td>
-                                <td><a href="mt-member-newspost-form.htm"></a></td>
+                                <td><a href="mt-member-newspost-form.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>收藏管理列表</td>
-                                <td><a href="mt-member-save-list.htm"></a></td>
+                                <td><a href="mt-member-save-list.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>徵求記錄列表</td>
-                                <td><a href="mt-member-rfp-list.htm"></a></td>
+                                <td><a href="mt-member-rfp-list.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>潛在商機公告</td>
-                                <td><a href="mt-business-list.htm"></a></td>
+                                <td><a href="mt-business-list.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
@@ -733,42 +749,42 @@
                             <tr>
                                 <td></td>
                                 <td>【特別頁】台灣會展實力展現</td>
-                                <td><a href="mt-mice-ability.htm"></a></td>
+                                <td><a href="mt-mice-ability.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>【特別頁】關於台灣</td>
-                                <td><a href="mt-about-tw.htm"></a></td>
+                                <td><a href="mt-about-tw.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>【特別頁】地方城市會展</td>
-                                <td><a href="mt-citymice.htm"></a></td>
+                                <td><a href="mt-citymice.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>FAQ</td>
-                                <td><a href="mt-faq.htm"></a></td>
+                                <td><a href="mt-faq.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>相簿專區</td>
-                                <td><a href="mt-album-list.htm"></a></td>
+                                <td><a href="mt-album-list.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>影音專區</td>
-                                <td><a href="mt-video-list.htm"></a></td>
+                                <td><a href="mt-video-list.html"></a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
@@ -781,6 +797,7 @@
         <!-- JS -->
         <script src="js/jquery-3.6.0.min.js"></script>
         <script src="js/mt-js-all.min.js"></script>
+        <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
         <script>
             $(function () {
                 $('tbody')
@@ -789,6 +806,68 @@
                         var Link = $(this).attr('href');
                         $(this).text(Link);
                     });
+                // /*------------------------------------*/
+                // ///////table 加上響應式 scroltable-wrapper/////
+                // /*------------------------------------*/
+                $('table').each(function (index, el) {
+                    //判斷沒有table_list
+                    if (
+                        $(this).parents('.table_list').length == 0 &&
+                        $(this).parents('.fix_th_table').length == 0 &&
+                        $(this).parent('form').length == 0
+                    ) {
+                        $(this).scroltable();
+                    }
+                });
+                // tablearrow arrow，為了設定箭頭
+                $('.scroltable-nav-left').append('<div class="tablearrow_left" style="display:none;"></div>');
+                $('.scroltable-nav-right').append('<div class="tablearrow_right"  style="display:none;"></div>');
+                // 固定版頭
+                function table_Arrow() {
+                    if (
+                        $('table').parents('.table_list').length == 0 &&
+                        $('table').parents('.fix_th_table').length == 0 &&
+                        $(this).parent('form').length == 0
+                    ) {
+                        if ($('.scroltable-wrapper').length > 0) {
+                            var stickyArrowTop = Math.floor($('.scroltable-wrapper').offset().top),
+                                thisScroll = Math.floor($(this).scrollTop());
+                            if (thisScroll > stickyArrowTop - 230) {
+                                $('.scroltable-wrapper .tablearrow_left').css('display', 'block');
+                                $('.scroltable-wrapper .tablearrow_left').css(
+                                    { top: thisScroll - stickyArrowTop + 220 },
+                                    100,
+                                    'easeOutQuint'
+                                );
+                                $('.scroltable-wrapper .tablearrow_right').css('display', 'block');
+                                $('.scroltable-wrapper .tablearrow_right').css(
+                                    { top: thisScroll - stickyArrowTop + 220 },
+                                    100,
+                                    'easeOutQuint'
+                                );
+                            } else {
+                                $('.scroltable-wrapper .tablearrow_left').css({
+                                    top: '10px',
+                                    display: 'none',
+                                });
+                                $('.scroltable-wrapper .tablearrow_right').css({
+                                    top: '10px',
+                                    display: 'none',
+                                });
+                            }
+                        }
+                    }
+                }
+                $(window).scroll(function (event) {
+                    table_Arrow();
+                });
+                var scrollTimer;
+                _window.scroll(function () {
+                    clearTimeout(scrollTimer);
+                    scrollTimer = setTimeout(function () {
+                        table_Arrow();
+                    }, 50);
+                });
             });
         </script>
     </body>

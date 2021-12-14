@@ -1,2 +1,156 @@
-.mt-kv1{padding:0em 0 1em 8%;margin-bottom:1em;position:relative}@media screen and (max-width: 991px){.mt-kv1{padding:0em 0 1em}}.mt-kv1:after{position:absolute;content:' - Copyright © 2021 Ministry of Economic Affairs All Rights Reserved. - ';transform:rotate(90deg);top:2%;left:7%;width:32%;transform-origin:top left;color:#444;text-indent:-1em;padding-left:1em}@media screen and (max-width: 991px){.mt-kv1:after{display:none}}.mt-kv1 .container{max-width:100%;padding:0}.mt-kv1 .kvSlider{width:100%}.mt-kv1 .kvSlider .img-container{overflow:hidden;position:relative;position:relative;width:100%}.mt-kv1 .kvSlider .img-container:before{display:block;content:'';line-height:0;padding-top:33.33333%}.mt-kv1 .kvSlider .img-container img,.mt-kv1 .kvSlider .img-container iframe,.mt-kv1 .kvSlider .img-container video{display:block;position:absolute;top:0;bottom:0;right:0;left:0;width:100%;height:100%;margin:auto}.mt-kv1 .kvSlider .img-container img{object-fit:cover;display:block}@media screen and (max-width: 991px){.mt-kv1 .kvSlider .img-container{overflow:hidden;position:relative}.mt-kv1 .kvSlider .img-container:before{display:block;content:'';line-height:0;padding-top:66.66667%}.mt-kv1 .kvSlider .img-container img,.mt-kv1 .kvSlider .img-container iframe,.mt-kv1 .kvSlider .img-container video{display:block;position:absolute;top:0;bottom:0;right:0;left:0;width:100%;height:100%;margin:auto}.mt-kv1 .kvSlider .img-container img{object-fit:cover;display:block}}.mt-kv1 .kvSlider .img-container .caption{position:absolute;z-index:3;left:50%;top:50%;width:80%;transform:translate(-50%, -50%)}.mt-kv1 .kvSlider .img-container .caption.left{width:80%}.mt-kv1 .kvSlider .img-container .caption.left h3,.mt-kv1 .kvSlider .img-container .caption.left p{max-width:400px;text-align:left;margin:0 auto 0 0}.mt-kv1 .kvSlider .img-container .caption.left p{width:60%}.mt-kv1 .kvSlider .img-container .caption.right{width:80%}.mt-kv1 .kvSlider .img-container .caption.right h3,.mt-kv1 .kvSlider .img-container .caption.right p{max-width:400px;text-align:right;margin:0 0 0 auto}.mt-kv1 .kvSlider .img-container .caption.right p{width:60%}.mt-kv1 .kvSlider .img-container .caption h3{font-size:2.5em;text-align:center;color:#fff;margin:0 auto 0.25em;max-width:600px;text-shadow:0px 3px 7px rgba(0,0,0,0.75);overflow:hidden;text-overflow:-o-ellipsis-lastline;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;line-height:1.25em;height:auto;max-height:calc(1.25em * 3)}@media screen and (max-width: 575px){.mt-kv1 .kvSlider .img-container .caption h3{font-size:1.75em}}.mt-kv1 .kvSlider .img-container .caption p{font-size:1em;text-align:center;color:#fff;margin:0;width:80%;max-width:400px;margin:0 auto;text-shadow:0px 3px 7px rgba(0,0,0,0.75);overflow:hidden;text-overflow:-o-ellipsis-lastline;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;line-height:1.45em;height:auto;max-height:calc(1.45em * 3)}@media screen and (max-width: 575px){.mt-kv1 .kvSlider .img-container .caption p{width:80% !important}}.mt-kv1 .kvSlider .slick-dots{bottom:-2em;right:0%;left:calc(-4% - 15px);z-index:1}@media screen and (max-width: 767px){.mt-kv1 .kvSlider .slick-dots{left:0}}@media screen and (max-width: 767px){.mt-kv1 .kvSlider .slick-prev{display:none !important}}@media screen and (max-width: 767px){.mt-kv1 .kvSlider .slick-next{display:none !important}}
+@charset "UTF-8";
+.mt-kv1 {
+  padding: 0em 0 1em 8%;
+  margin-bottom: 1em;
+  position: relative; }
+  @media screen and (max-width: 991px) {
+    .mt-kv1 {
+      padding: 0em 0 1em; } }
+  .mt-kv1:after {
+    position: absolute;
+    content: ' - Copyright © 2021 Ministry of Economic Affairs All Rights Reserved. - ';
+    transform: rotate(90deg);
+    top: 2%;
+    left: 7%;
+    width: 32%;
+    transform-origin: top left;
+    color: #444;
+    text-indent: -1em;
+    padding-left: 1em; }
+    @media screen and (max-width: 991px) {
+      .mt-kv1:after {
+        display: none; } }
+  .mt-kv1 .container {
+    max-width: 100%;
+    padding: 0; }
+  .mt-kv1 .kvSlider {
+    width: 100%; }
+    .mt-kv1 .kvSlider .img-container {
+      overflow: hidden;
+      position: relative;
+      position: relative;
+      width: 100%; }
+      .mt-kv1 .kvSlider .img-container:before {
+        display: block;
+        content: '';
+        line-height: 0;
+        padding-top: 33.33333%; }
+      .mt-kv1 .kvSlider .img-container img,
+      .mt-kv1 .kvSlider .img-container iframe,
+      .mt-kv1 .kvSlider .img-container video {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: auto; }
+      .mt-kv1 .kvSlider .img-container img {
+        object-fit: cover;
+        display: block; }
+      @media screen and (max-width: 991px) {
+        .mt-kv1 .kvSlider .img-container {
+          overflow: hidden;
+          position: relative; }
+          .mt-kv1 .kvSlider .img-container:before {
+            display: block;
+            content: '';
+            line-height: 0;
+            padding-top: 66.66667%; }
+          .mt-kv1 .kvSlider .img-container img,
+          .mt-kv1 .kvSlider .img-container iframe,
+          .mt-kv1 .kvSlider .img-container video {
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: auto; }
+          .mt-kv1 .kvSlider .img-container img {
+            object-fit: cover;
+            display: block; } }
+      .mt-kv1 .kvSlider .img-container .caption {
+        position: absolute;
+        z-index: 3;
+        left: 50%;
+        top: 50%;
+        width: 80%;
+        transform: translate(-50%, -50%); }
+        .mt-kv1 .kvSlider .img-container .caption.left {
+          width: 80%; }
+          .mt-kv1 .kvSlider .img-container .caption.left h3,
+          .mt-kv1 .kvSlider .img-container .caption.left p {
+            max-width: 400px;
+            text-align: left;
+            margin: 0 auto 0 0; }
+          .mt-kv1 .kvSlider .img-container .caption.left p {
+            width: 60%; }
+        .mt-kv1 .kvSlider .img-container .caption.right {
+          width: 80%; }
+          .mt-kv1 .kvSlider .img-container .caption.right h3,
+          .mt-kv1 .kvSlider .img-container .caption.right p {
+            max-width: 400px;
+            text-align: right;
+            margin: 0 0 0 auto; }
+          .mt-kv1 .kvSlider .img-container .caption.right p {
+            width: 60%; }
+        .mt-kv1 .kvSlider .img-container .caption h3 {
+          font-size: 2.5em;
+          text-align: center;
+          color: #fff;
+          margin: 0 auto 0.25em;
+          max-width: 600px;
+          text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.75);
+          overflow: hidden;
+          text-overflow: -o-ellipsis-lastline;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          line-height: 1.25em;
+          height: auto;
+          max-height: calc(1.25em * 3); }
+          @media screen and (max-width: 575px) {
+            .mt-kv1 .kvSlider .img-container .caption h3 {
+              font-size: 1.75em; } }
+        .mt-kv1 .kvSlider .img-container .caption p {
+          font-size: 1em;
+          text-align: center;
+          color: #fff;
+          margin: 0;
+          width: 80%;
+          max-width: 400px;
+          margin: 0 auto;
+          text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.75);
+          overflow: hidden;
+          text-overflow: -o-ellipsis-lastline;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          line-height: 1.45em;
+          height: auto;
+          max-height: calc(1.45em * 3); }
+          @media screen and (max-width: 575px) {
+            .mt-kv1 .kvSlider .img-container .caption p {
+              width: 80% !important; } }
+    .mt-kv1 .kvSlider .slick-dots {
+      bottom: -2em;
+      right: 0%;
+      left: calc(-4% - 15px);
+      z-index: 1; }
+      @media screen and (max-width: 767px) {
+        .mt-kv1 .kvSlider .slick-dots {
+          left: 0; } }
+    @media screen and (max-width: 767px) {
+      .mt-kv1 .kvSlider .slick-prev {
+        display: none !important; } }
+    @media screen and (max-width: 767px) {
+      .mt-kv1 .kvSlider .slick-next {
+        display: none !important; } }
 /*# sourceMappingURL=mt-kv1.css.map */

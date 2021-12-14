@@ -1,3 +1,4 @@
+var _window = $(window);
 $(window).on('load', function () {
     //----------------------------------common setting-----//
     //lazyload
@@ -15,6 +16,38 @@ $(window).on('load', function () {
         easing: 'ease-out', // default easing for AOS animations
         once: true, // whether animation should happen only once - while scrolling down
     });
+
+    if ($('.search-function').length > 0) {
+        $('body').append(
+            '<div class="mobile_pop"><a href="#" class="btn-close"><i class="fas fa-times"></i></a><div class="container"></div></di></div>'
+        );
+        $('.search-function').clone().appendTo('.mobile_pop .container');
+        $('.btn-filter')
+            .off()
+            .click(function (e) {
+                $('.mobile_pop').stop().addClass('open');
+                e.preventDefault();
+            });
+        // filter function
+        $('.filter_item').each(function () {
+            $(this)
+                .find('a.filter_title')
+                .off()
+                .click(function (e) {
+                    $(this).stop().toggleClass('close');
+                    $(this).siblings('.filter_content').stop().slideToggle();
+                    e.preventDefault();
+                });
+        });
+        $('.mobile_pop')
+            .find('a.btn-close')
+            .off()
+            .click(function (e) {
+                $('.mobile_pop').stop().removeClass('open');
+                e.preventDefault();
+            });
+    }
+
     // mt-news-tab-1
     var resizeTimer1;
     function tabSet() {
@@ -79,7 +112,7 @@ $(window).on('load', function () {
         /*-----------------------------------*/
         ////////////////多組Tab////////////////
         /*-----------------------------------*/
-        var _window = $(window);
+
         _window.resize(function () {
             clearTimeout(resizeTimer1);
             resizeTimer1 = setTimeout(function () {
@@ -90,4 +123,100 @@ $(window).on('load', function () {
         $('.tabs>.tabItem:first-child>a').trigger('click');
         tabSet();
     });
+    // /*------------------------------------*/
+    // ///////table 加上響應式 scroltable-wrapper/////
+    // /*------------------------------------*/
+    $('table').each(function (index, el) {
+        //判斷沒有table_list
+        if (
+            $(this).parents('.table_list').length == 0 &&
+            $(this).parents('.fix_th_table').length == 0 &&
+            $(this).parent('form').length == 0
+        ) {
+            $(this).scroltable();
+        }
+    });
+    // tablearrow arrow，為了設定箭頭
+    $('.scroltable-nav-left').append('<div class="tablearrow_left" style="display:none;"></div>');
+    $('.scroltable-nav-right').append('<div class="tablearrow_right"  style="display:none;"></div>');
+    // 固定版頭
+    function table_Arrow() {
+        if (
+            $('table').parents('.table_list').length == 0 &&
+            $('table').parents('.fix_th_table').length == 0 &&
+            $(this).parent('form').length == 0
+        ) {
+            if ($('.scroltable-wrapper').length > 0) {
+                var stickyArrowTop = Math.floor($('.scroltable-wrapper').offset().top),
+                    thisScroll = Math.floor($(this).scrollTop());
+                if (thisScroll > stickyArrowTop - 230) {
+                    $('.scroltable-wrapper .tablearrow_left').css('display', 'block');
+                    $('.scroltable-wrapper .tablearrow_left').css(
+                        { top: thisScroll - stickyArrowTop + 220 },
+                        100,
+                        'easeOutQuint'
+                    );
+                    $('.scroltable-wrapper .tablearrow_right').css('display', 'block');
+                    $('.scroltable-wrapper .tablearrow_right').css(
+                        { top: thisScroll - stickyArrowTop + 220 },
+                        100,
+                        'easeOutQuint'
+                    );
+                } else {
+                    $('.scroltable-wrapper .tablearrow_left').css({
+                        top: '10px',
+                        display: 'none',
+                    });
+                    $('.scroltable-wrapper .tablearrow_right').css({
+                        top: '10px',
+                        display: 'none',
+                    });
+                }
+            }
+        }
+    }
+    $(window).scroll(function (event) {
+        table_Arrow();
+    });
+    var scrollTimer;
+    _window.scroll(function () {
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(function () {
+            table_Arrow();
+        }, 50);
+    });
+    // /*------------------------------------*/
+    // //////////table 加上 data-title//////////
+    // /*------------------------------------*/
+    function rwdTable() {
+        $('.table_list')
+            .find('table')
+            .each(function () {
+                var $row = $(this).find('tr');
+                rowCount = $row.length;
+                for (var n = 1; n <= rowCount; n++) {
+                    $(this)
+                        .find('th')
+                        .each(function (index) {
+                            var thText = $(this).text();
+                            $row.eq(n).find('td').eq(index).attr('data-title', thText);
+                        });
+                }
+            });
+    }
+    rwdTable();
+    //sticky sidebar
+    if ($('.left_block').length > 0) {
+        var stickyLeft = new StickySidebar('.left_block', {
+            containerSelector: '.center_block',
+            topSpacing: 0,
+            bottomSpacing: 0,
+            // containerSelector: '.container',
+            // // containerSelector: false,
+            innerWrapperSelector: '.sidebar__inner',
+            minWidth: 768,
+            resizeSensor: true,
+        });
+        stickyLeft.updateSticky();
+    }
 });
