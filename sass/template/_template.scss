@@ -64,14 +64,14 @@
                 li {
                     flex-grow: 0;
                     flex-shrink: 0;
-                    flex-basis: 2.5em;
+                    flex-basis: 2.25em;
                     a {
                         display: block;
                         text-align: center;
                         color: #888;
                         &:hover,
                         &:focus {
-                            color: $primaryColor;
+                            color: $secondaryColor;
                         }
                         &.i_facebook {
                             &:hover,
@@ -90,6 +90,9 @@
                             &:focus {
                                 color: #00a3f5;
                             }
+                        }
+                        &.active {
+                            color: $secondaryColor;
                         }
                     }
                     i {
@@ -183,7 +186,7 @@
     background-color: $inner-left-color;
     color: #fff;
     padding: 1em;
-    top: 7.5em;
+    top: 6.75em;
     position: relative;
     @include screen('mobile') {
         top: 0;

@@ -3,6 +3,7 @@
 .cp {
     font-size: 1em * 1.0666666;
     line-height: 1.65em;
+    padding-bottom: 3em;
     h1 {
         font-size: 2em;
     }
@@ -37,9 +38,16 @@
     ol {
         font-size: 1em;
         margin-bottom: 1em;
+        margin-left: 2em;
         li {
             margin-bottom: 0.5em;
         }
+    }
+    ul {
+        list-style: disc;
+    }
+    ol {
+        list-style: demical;
     }
     dd,
     th,

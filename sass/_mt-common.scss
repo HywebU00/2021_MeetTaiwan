@@ -5,6 +5,7 @@
 @import 'common/_grid'; //格線系統
 @import 'common/_table'; //表格
 @import 'common/_tabs'; //表格
+@import 'common/_typography';
 
 //element
 @import 'element/_breadcrumb';
@@ -285,6 +286,15 @@ img {
             left: 50%;
             margin-left: -80px;
             background: $secondaryColor;
+        }
+        &.text-left {
+            text-align: left;
+            &:after {
+                position: absolute;
+                content: '';
+                left: 0;
+                margin-left: 0;
+            }
         }
         @include screen('mobile') {
             font-size: 2em;
