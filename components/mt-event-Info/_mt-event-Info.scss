@@ -66,6 +66,9 @@
                 min-width: 12em;
                 font-size: 0.938em;
                 font-weight: bold;
+                &:before {
+                    display: none;
+                }
             }
             h3 {
                 position: relative;
