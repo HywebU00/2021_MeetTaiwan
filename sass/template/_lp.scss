@@ -266,7 +266,8 @@
         }
     }
     .lp_video,
-    .lp_album {
+    .lp_album,
+    .lp_download {
         & > ul {
             @include li-reset;
             display: flex;
@@ -362,6 +363,41 @@
                     height: 2.9em;
                 }
             }
+        }
+    }
+    .lp_download {
+        & > ul {
+            & > li {
+                .img-container {
+                    i {
+                        opacity: 0;
+                        transition: 0.3s ease-out;
+                        color: #fff;
+                        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+                        &:after {
+                            display: none;
+                        }
+                    }
+                    a {
+                        &:hover,
+                        &:focus {
+                            i {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .file_size {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 100%;
+            justify-content: flex-end;
+            color: #888;
+            font-size: 0.875em;
+            text-align: right;
+            padding: 0.5em 1em;
         }
     }
     // QA
