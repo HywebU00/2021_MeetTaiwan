@@ -37,6 +37,20 @@
                 background: linear-gradient(0deg, rgba(143, 165, 224, 1) 5%, rgba(143, 165, 224, 0) 100%);
             }
         }
+        &.partner {
+            background: url(../images/inner_03_partner.jpg) no-repeat center top;
+            background-size: cover;
+            &:after {
+                background: linear-gradient(0deg, rgba(78, 114, 156, 1) 5%, rgba(78, 114, 156, 0) 100%);
+            }
+        }
+        &.night {
+            background: url(../images/inner_04_night.jpg) no-repeat center top;
+            background-size: cover;
+            &:after {
+                background: linear-gradient(0deg, rgba(30, 37, 97, 1) 5%, rgba(30, 37, 97, 0) 100%);
+            }
+        }
     }
     .mt-page-function {
         display: flex;
@@ -71,7 +85,7 @@
                         color: #888;
                         &:hover,
                         &:focus {
-                            color: $secondaryColor;
+                            color: lighten($primaryColor, 10);
                         }
                         &.i_facebook {
                             &:hover,
@@ -92,7 +106,7 @@
                             }
                         }
                         &.active {
-                            color: $secondaryColor;
+                            color: lighten($primaryColor, 10);
                         }
                     }
                     i {
@@ -269,6 +283,20 @@
                         background: #ddd;
                     }
                 }
+            }
+            .sub_filter {
+                padding-left: 2em;
+                display: flex;
+                flex-flow: row wrap;
+                align-content: flex-start;
+                align-items: flex-start;
+                label {
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    flex-basis: 50%;
+                }
+            }
+            .sub_filter_title {
             }
         }
     }

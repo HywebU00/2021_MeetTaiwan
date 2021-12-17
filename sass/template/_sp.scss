@@ -1,2 +1,210 @@
 .mt-main-content {
+    .sp_epaper {
+        .subscribe {
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 95%;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 5px 27px -5px, rgba(0, 0, 0, 0.3) 0px 4px 16px -8px;
+            margin: 1em 2.5% 2em;
+            align-items: flex-start;
+            align-content: flex-start;
+            @include screen('tablet') {
+                flex-flow: row wrap;
+            }
+            @include screen('xs_mobile') {
+                max-width: 95%;
+                margin: 0 auto 1em;
+            }
+            h3 {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: auto;
+                background: $primaryColor;
+                align-self: stretch;
+                margin: 0 1em 0 0;
+                padding: 2em 1em;
+                background: url(../images/epaper_title.jpg) no-repeat center center;
+                background-size: cover;
+                white-space: nowrap;
+                position: relative;
+                @include screen('tablet') {
+                    flex-basis: 100%;
+                    margin: 0;
+                    text-align: right;
+                }
+                span {
+                    position: relative;
+                    color: darken($primaryColor, 10);
+                    font-size: 1.5em;
+                    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+                    z-index: 2;
+                }
+                &:after {
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgb(255, 255, 255);
+                    background: linear-gradient(270deg, rgba(255, 255, 255, 1) 22%, rgba(255, 255, 255, 0) 100%);
+                    z-index: 1;
+                    display: none;
+                    @include screen('tablet') {
+                        display: block;
+                        opacity: 0.7;
+                    }
+                }
+            }
+            .form_grid {
+                margin: 0 auto;
+                border: none;
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 70%;
+                padding: 3em 2em;
+                @include screen('tablet') {
+                    flex-basis: 100%;
+                }
+                .form_grp {
+                    display: flex;
+                    align-items: center;
+                    .form_title {
+                        label {
+                            margin: 0;
+                        }
+                    }
+                    .form_content {
+                        .checkbox_grp {
+                            display: flex;
+                            label {
+                                flex-grow: 0;
+                                flex-basis: auto;
+                                white-space: nowrap;
+                            }
+                        }
+                        .datepick {
+                            i {
+                                &:before {
+                                    width: 1.25em;
+                                    height: 1.25em;
+                                    top: 0.2em;
+                                    margin-top: 0;
+                                    opacity: 0.75;
+                                }
+                            }
+                        }
+                    }
+                }
+                .btn_grp {
+                    button {
+                        min-width: 10em;
+                    }
+                }
+            }
+        }
+        .epaper_list {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            @include screen('xs_mobile') {
+                padding: 0 1em 1em;
+            }
+            .item {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 28.3333%;
+                margin: 0 2.5% 1em;
+                @include screen('tablet') {
+                    flex-basis: 45%;
+                }
+                @include screen('xs_mobile') {
+                    flex-basis: 100%;
+                    margin: 0 auto 2em;
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+                }
+                a {
+                    position: relative;
+                    display: block;
+                    h3 {
+                        font-size: 1em;
+                        @include text-line(3, 1.5em);
+                        color: #333;
+                        position: relative;
+                        @include screen('xs_mobile') {
+                            width: 90%;
+                            margin: 0 auto 2em;
+                        }
+                    }
+                    .journal {
+                        position: relative;
+                        right: 0;
+                        width: 8em;
+                        background-color: rgba(0, 0, 0, 0.15);
+                        color: #333;
+                        padding: 0.25em;
+                        text-align: center;
+                        font-size: 0.813em;
+                        margin: -3em 0 1.5em auto;
+                        @include screen('mobile') {
+                            width: 100%;
+                        }
+                        @include screen('xs_mobile') {
+                            width: 8em;
+                            margin: -4em 1.5em 4em auto;
+                        }
+                    }
+                    time {
+                        font-size: 0.875em;
+                        color: #888;
+                        display: block;
+                        padding: 1em 0;
+                        border-bottom: 1px solid $primaryColor;
+                        @include screen('mobile') {
+                            margin: 0 0 3em;
+                            padding: 0;
+                        }
+                        @include screen('xs_mobile') {
+                            width: 90%;
+                            padding: 1em 0;
+                            margin: 0 auto 1em;
+                        }
+                    }
+                    &:hover,
+                    &:focus {
+                        h3 {
+                            color: $aHover;
+                        }
+                        .img-container {
+                            img {
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                }
+                .img-container {
+                    width: 100%;
+                    margin: 0 auto 1em;
+                    @include aspect-ratio(4, 3);
+                    @include screen('xs_mobile') {
+                        margin: 0 auto;
+                    }
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: 0.3s $cubic;
+                    }
+                }
+            }
+        }
+    }
 }

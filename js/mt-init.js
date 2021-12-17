@@ -36,10 +36,28 @@ $(window).on('load', function () {
                 .off()
                 .click(function (e) {
                     $(this).stop().toggleClass('close');
-                    $(this).siblings('.filter_content').stop().slideToggle();
+                    $(this).siblings('.filter_content').stop().slideToggle('400', 'easeOutQuint');
                     e.preventDefault();
                 });
         });
+        //filter_sub
+        $('.sub_group').each(function () {
+            $('.sub_filter').hide();
+            $(this)
+                .find('.sub_filter_title')
+                .find('input[type="checkbox"]')
+                .off()
+                .focus(function (e) {
+                    $(this).parent().siblings('.sub_filter').stop().slideToggle('400', 'easeOutQuint');
+                    $(this).blur();
+                    e.preventDefault();
+                });
+        });
+        $('.sub_filter')
+            .find('input[type="checkbox"]')
+            .focus(function (e) {
+                $(this).blur();
+            });
         $('.mobile_pop')
             .find('a.btn-close')
             .off()

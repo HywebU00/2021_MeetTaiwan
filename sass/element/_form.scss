@@ -1,6 +1,6 @@
 $form_title_width: 150px; // 表單title寬度
 
-@mixin formStyle($f_color: $color-word, $f_border: $color-gray, $f_radius: $btn-radius) {
+@mixin formStyle($f_color: $color-word, $f_border: #ddd, $f_radius: $btn-radius) {
     color: $f_color;
     font-size: 1em;
     border: 1px solid $f_border;
@@ -1271,7 +1271,7 @@ select:focus {
 select {
     line-height: 1.35em;
     padding: 0.5em 24px 0.5em 0.5em;
-    border: 1px solid $color-gray;
+    border: 1px solid #ddd;
     background: #fff url(../images/icon/icon_select_arrow.png) no-repeat right center;
     background-size: 16px;
 
@@ -1401,30 +1401,35 @@ input[type='file'] {
     filter: alpha(opacity=0);
 }
 
-//---------------------------------------------captcha--------//
-img.captcha {
-    display: inline-block;
-    vertical-align: middle;
-    max-height: 2.5em;
-    margin: 0.3em 0.5em 0.3em 0.3em;
-
-    & + input {
-        display: inline-block;
-        width: auto;
-        vertical-align: middle;
+.recaptcha {
+    display: flex;
+    input[type='text'] {
+        max-width: 10em;
     }
-
-    // ~.btn {
-    //     margin-top: -1px;
-    // }
-
-    ~ img {
+    img.captcha {
         display: inline-block;
         vertical-align: middle;
-        max-height: 2.4em;
-        margin-bottom: 0.5em;
+        max-height: 2.5em;
+        margin: 0.3em 0.5em 0.3em 0.3em;
+        & + input {
+            display: inline-block;
+            width: auto;
+            vertical-align: middle;
+        }
+
+        // ~.btn {
+        //     margin-top: -1px;
+        // }
+
+        ~ img {
+            display: inline-block;
+            vertical-align: middle;
+            max-height: 2.4em;
+            margin-bottom: 0.5em;
+        }
     }
 }
+//---------------------------------------------captcha--------//
 
 //---------------------------------------------必填欄位說明--------//
 abbr[title] {

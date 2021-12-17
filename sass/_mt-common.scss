@@ -84,7 +84,9 @@ body {
         }
     }
 }
-
+.hidden {
+    display: none;
+}
 //--------------------------------------------- fixed swiper wrong width
 .container {
     max-width: $container-max;
