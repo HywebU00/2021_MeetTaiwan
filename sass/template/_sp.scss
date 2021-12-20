@@ -569,9 +569,10 @@
                 flex-grow: 0;
                 flex-shrink: 1;
                 flex-basis: 40%;
-                margin: 0 5% 1em;
+                margin: 0 5% 2em;
                 padding: 3em;
                 min-height: 30em;
+                position: relative;
                 box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
                 @include screen('tablet') {
                     flex-grow: 1;
@@ -602,6 +603,11 @@
                     color: #555;
                     font-size: 0.938em;
                     line-height: 1.65em;
+                }
+                a.more {
+                    position: absolute;
+                    bottom: 1em;
+                    right: 2em;
                 }
             }
         }
