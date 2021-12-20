@@ -196,7 +196,7 @@ kbd {
     &:focus {
         padding: 1em 2em 1em 3em;
         &:before {
-            width: 2em;
+            width: 1.5em;
             left: 1em;
             background: $secondaryColor;
         }

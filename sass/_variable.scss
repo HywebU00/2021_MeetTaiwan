@@ -17,8 +17,8 @@ $color-dark: #333333;
 $color-hr: #666; //hr顏色
 $color-word: #333; //一般字的顏色
 // 連結顏色
-$aColor: #b2207f;
-$aHover: lighten($aColor, 10);
+$aColor: $primaryColor;
+$aHover: $secondaryColor;
 
 // 標題顏色
 $mt-heading-color: #102b7a;
@@ -26,8 +26,8 @@ $mt-heading-color: #102b7a;
 //左側區塊
 $inner-left-color: #0b0e30;
 // 表單focus顏色
-$form-focus: #21baff; //表單
-$form-btn: #21baff; //表單
+$form-focus: $primaryColor; //表單
+$form-btn: $primaryColor; //表單
 //-------------------------------------------------------------字型--------//
 
 // 字型設定

@@ -51,6 +51,13 @@
                 background: linear-gradient(0deg, rgba(30, 37, 97, 1) 5%, rgba(30, 37, 97, 0) 100%);
             }
         }
+        &.member {
+            background: url(../images/inner_05_member.jpg) no-repeat center top;
+            background-size: cover;
+            &:after {
+                background: linear-gradient(0deg, rgba(115, 138, 155, 1) 5%, rgba(115, 138, 155, 0) 100%);
+            }
+        }
     }
     .mt-page-function {
         display: flex;
@@ -320,4 +327,8 @@
     @include screen('xs_mobile') {
         transform: translate(0px, 0px) !important;
     }
+}
+
+.text-center {
+    text-align: center;
 }

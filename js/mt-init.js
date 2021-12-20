@@ -1,5 +1,41 @@
 var _window = $(window);
 $(window).on('load', function () {
+    //form
+    //
+    // form style
+    function _labelAni(obj) {
+        var $this = $(obj);
+        if ($this.val()) $this.addClass('used');
+        else $this.removeClass('used');
+    }
+    $('input').blur(function () {
+        _labelAni($(this));
+    });
+    $('textarea').blur(function () {
+        _labelAni($(this));
+    });
+    //
+    // 顯示密碼
+    var passShow = false;
+    $('.password_toggle').each(function (index, el) {
+        $(this)
+            .find('.showPassword a')
+            .off()
+            .click(function (e) {
+                if (!passShow) {
+                    $(this).children('i').removeClass().addClass('fas fa-eye');
+                    $(this).parents('.password_toggle').find('input[type="password"]').attr('type', 'text');
+                    passShow = true;
+                    // console.log(passShow);
+                } else {
+                    $(this).children('i').removeClass().addClass('fas fa-eye-slash');
+                    $(this).parents('.password_toggle').find('input[type="text"]').attr('type', 'password');
+                    passShow = false;
+                    // console.log(passShow);
+                }
+                e.preventDefault();
+            });
+    });
     //----------------------------------common setting-----//
     //lazyload
     var lazyLoadInstance = new LazyLoad({
