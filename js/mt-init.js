@@ -1,5 +1,6 @@
 var _window = $(window);
 $(window).on('load', function () {
+    // 內頁左側欄位 RWD設定 - 會員選單
     if ($('.member-function').length > 0) {
         $('body').append(
             '<div class="mobile_pop for_member"><a href="#" class="btn-close"><i class="fas fa-times"></i></a><div class="container"></div></di></div>'
@@ -81,6 +82,29 @@ $(window).on('load', function () {
                 $('.mobile_pop').stop().removeClass('open');
                 e.preventDefault();
             });
+    }
+    //---------------------------------- dropdown setting -----//
+    if ($('.dropdown').length > 0) {
+        $('.dropdown').each(function () {
+            $(this)
+                .find('.btn-dropdown')
+                .off()
+                .click(function (e) {
+                    $(this).siblings('.dropdown-content').stop(true, true).toggleClass('open');
+                    e.preventDefault();
+                });
+        });
+
+        // click document close Dropdown
+        function closeDropdown() {
+            $('.dropdown-content').stop(true, true).removeClass('open');
+        }
+        $(document.body).click(function (e) {
+            closeDropdown();
+        });
+        $('.dropdown').click(function (e) {
+            e.stopPropagation();
+        });
     }
     //---------------------------------- form setting -----//
     // form style label動畫
