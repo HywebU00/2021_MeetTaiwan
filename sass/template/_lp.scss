@@ -40,6 +40,8 @@
         @include screen('mobile') {
             flex-grow: 1;
             flex-basis: 100%;
+            box-shadow: none;
+            margin-bottom: 2em;
         }
         .mt-page-title {
             background: rgb(1, 12, 22);
@@ -379,7 +381,6 @@
                         }
                         &:after {
                             display: none;
-                           
                         }
                     }
                     a {

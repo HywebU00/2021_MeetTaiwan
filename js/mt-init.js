@@ -1,59 +1,39 @@
 var _window = $(window);
 $(window).on('load', function () {
-    //form
-    //
-    // form style
-    function _labelAni(obj) {
-        var $this = $(obj);
-        if ($this.val()) $this.addClass('used');
-        else $this.removeClass('used');
-    }
-    $('input').blur(function () {
-        _labelAni($(this));
-    });
-    $('textarea').blur(function () {
-        _labelAni($(this));
-    });
-    //
-    // 顯示密碼
-    var passShow = false;
-    $('.password_toggle').each(function (index, el) {
-        $(this)
-            .find('.showPassword a')
+    if ($('.member-function').length > 0) {
+        $('body').append(
+            '<div class="mobile_pop for_member"><a href="#" class="btn-close"><i class="fas fa-times"></i></a><div class="container"></div></di></div>'
+        );
+        $('.member-function').clone().appendTo('.mobile_pop .container');
+        $('.btn-member-open')
             .off()
             .click(function (e) {
-                if (!passShow) {
-                    $(this).children('i').removeClass().addClass('fas fa-eye');
-                    $(this).parents('.password_toggle').find('input[type="password"]').attr('type', 'text');
-                    passShow = true;
-                    // console.log(passShow);
-                } else {
-                    $(this).children('i').removeClass().addClass('fas fa-eye-slash');
-                    $(this).parents('.password_toggle').find('input[type="text"]').attr('type', 'password');
-                    passShow = false;
-                    // console.log(passShow);
-                }
+                $('.mobile_pop').stop().addClass('open');
                 e.preventDefault();
             });
-    });
-    //----------------------------------common setting-----//
-    //lazyload
-    var lazyLoadInstance = new LazyLoad({
-        elements_selector: 'img.lazy',
-        //placeholder: '/images/basic/placeholder.gif',
-        effect: 'fadeIn',
-        fadeTime: 600,
-        threshold: 0,
-    });
-
-    //AOS
-    AOS.init({
-        duration: 600, // values from 0 to 3000, with step 50ms
-        offset: 200, // offset (in px) from the original trigger point
-        easing: 'ease-out', // default easing for AOS animations
-        once: true, // whether animation should happen only once - while scrolling down
-    });
-
+        $('.mobile_pop')
+            .find('a.btn-close')
+            .off()
+            .click(function (e) {
+                $('.mobile_pop').stop().removeClass('open');
+                e.preventDefault();
+            });
+        // 內頁左側欄位 RWD設定 - 會員功能內頁
+        var _member_block = $('.member_block');
+        _member_block.find('li').has('ul').addClass('hasli');
+        var liHas = _member_block.find('li.hasli');
+        _member_block.each(function () {
+            $(this)
+                .find(liHas)
+                .click(function (e) {
+                    console.log('test');
+                    $(this).children('ul').stop(true, false).slideToggle('400', 'easeOutQuint');
+                    $(this).siblings().children('ul').stop(true, false).slideUp('400', 'easeOutQuint');
+                    e.preventDefault();
+                });
+        });
+    }
+    // 內頁左側欄位 RWD設定 - 搜尋欄位
     if ($('.search-function').length > 0) {
         $('body').append(
             '<div class="mobile_pop"><a href="#" class="btn-close"><i class="fas fa-times"></i></a><div class="container"></div></di></div>'
@@ -102,6 +82,89 @@ $(window).on('load', function () {
                 e.preventDefault();
             });
     }
+    //---------------------------------- form setting -----//
+    // form style label動畫
+    function _labelAni(obj) {
+        var $this = $(obj);
+        if ($this.val() != '') $this.addClass('used');
+        else $this.removeClass('used');
+    }
+    // 表單先跑一次偵測有無資料
+    $('input').each(function () {
+        _labelAni($(this));
+    });
+    $('textarea').each(function () {
+        _labelAni($(this));
+    });
+    // blur時，跑 label 動畫
+    $('input').blur(function () {
+        _labelAni($(this));
+    });
+    $('textarea').blur(function () {
+        _labelAni($(this));
+    });
+    // 如表單驗證後，點選表單取消狀態
+    $('.confirm').each(function (index, el) {
+        $(this).find('input').addClass('used');
+        $(this).find('textarea').addClass('used');
+        $(this)
+            .find('input')
+            .focus(function () {
+                $(this).parents('.confirm').removeClass('confirm');
+                $(this).parents('.error').removeClass('error');
+                $(this).siblings('i').hide();
+            });
+    });
+    // 如表單驗證後，點選表單取消狀態
+    $('.error').each(function (index, el) {
+        $(this).find('input').addClass('used');
+        $(this).find('textarea').addClass('used');
+        $(this)
+            .find('input')
+            .focus(function () {
+                $(this).parents('.confirm').removeClass('confirm');
+                $(this).parents('.error').removeClass('error');
+                $(this).siblings('i').hide();
+            });
+    });
+    // 顯示密碼 toggle
+    var passShow = false;
+    $('.password_toggle').each(function (index, el) {
+        $(this)
+            .find('.showPassword a')
+            .off()
+            .click(function (e) {
+                if (!passShow) {
+                    $(this).children('i').removeClass().addClass('fas fa-eye');
+                    $(this).parents('.password_toggle').find('input[type="password"]').attr('type', 'text');
+                    passShow = true;
+                    // console.log(passShow);
+                } else {
+                    $(this).children('i').removeClass().addClass('fas fa-eye-slash');
+                    $(this).parents('.password_toggle').find('input[type="text"]').attr('type', 'password');
+                    passShow = false;
+                    // console.log(passShow);
+                }
+                e.preventDefault();
+            });
+    });
+    //---------------------------------- common setting -----//
+    //lazyload
+    var lazyLoadInstance = new LazyLoad({
+        elements_selector: 'img.lazy',
+        //placeholder: '/images/basic/placeholder.gif',
+        effect: 'fadeIn',
+        fadeTime: 600,
+        threshold: 0,
+    });
+
+    //AOS 通用設定
+    AOS.init({
+        duration: 600, // values from 0 to 3000, with step 50ms
+        offset: 200, // offset (in px) from the original trigger point
+        easing: 'ease-out', // default easing for AOS animations
+        once: true, // whether animation should happen only once - while scrolling down
+    });
 
     // mt-news-tab-1
     var resizeTimer1;
@@ -167,7 +230,6 @@ $(window).on('load', function () {
         /*-----------------------------------*/
         ////////////////多組Tab////////////////
         /*-----------------------------------*/
-
         _window.resize(function () {
             clearTimeout(resizeTimer1);
             resizeTimer1 = setTimeout(function () {

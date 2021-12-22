@@ -1,3 +1,363 @@
+//共通設定
+.form_grid {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    border: none;
+
+    .highlight {
+        color: $color-yellow;
+    }
+    p.info {
+        font-size: 0.813rem;
+        color: #999;
+        margin: 0;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 100%;
+        padding-left: 2.5em;
+        position: relative;
+        i {
+            position: absolute;
+            font-size: 1em !important;
+            top: 0.4em !important;
+            left: 1em !important;
+        }
+    }
+    p.error {
+        font-size: 0.813rem;
+        color: $color-red;
+        margin: 0;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 100%;
+        padding-left: 2.5em;
+        position: relative;
+        i {
+            position: absolute;
+            font-size: 1em !important;
+            top: 0.4em !important;
+            left: 1em !important;
+        }
+        a {
+            color: lighten($color-orange, 0);
+        }
+    }
+    .form_grp {
+        border: none;
+        padding: 0.5em 0 0.5em;
+        display: flex;
+        flex-flow: row wrap;
+        @include screen('xs_mobile') {
+            flex-flow: row wrap;
+            padding: 0;
+        }
+        .field_name {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 10em;
+            padding: 0.75em 0.25em;
+            font-size: 0.938rem;
+            font-weight: bold;
+            align-self: flex-start;
+            color: $primaryColor;
+            @include screen('tablet') {
+                font-size: 0.813rem;
+            }
+            @include screen('xs_mobile') {
+                flex-basis: 100%;
+                padding: 0.25em 0.5em;
+                font-style: normal;
+            }
+        }
+        .form_title {
+            flex-basis: 30%;
+            text-align: right;
+            margin: 0;
+            color: $primaryColor;
+            @include screen('xs_mobile') {
+                flex-basis: 100%;
+                text-align: left;
+            }
+        }
+        .form_content {
+            align-items: flex-start;
+            position: relative;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 50%;
+            display: flex;
+            flex-flow: row wrap;
+            &.confirm {
+                input[type='text'],
+                input[type='password'] {
+                    padding-right: 3em;
+                }
+                i {
+                    position: absolute;
+                    right: 1em;
+                    width: 1em;
+                    top: 0.75em;
+                    font-size: 1.25em;
+                    color: $color-green;
+                }
+            }
+            &.error {
+                input[type='text'],
+                input[type='password'] {
+                    border: 1px solid $color-red;
+                    padding-right: 3em;
+                    color: red;
+                }
+                i {
+                    position: absolute;
+                    right: 0.85em;
+                    width: 1em;
+                    top: 0.75em;
+                    font-size: 1.25em;
+                    position: absolute;
+                    color: $color-red;
+                }
+            }
+            .form_style {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 100%;
+            }
+            .showPassword {
+                position: absolute;
+                right: 1em;
+                width: 2em;
+                top: 0.75em;
+                color: #888;
+                a {
+                    color: #888;
+                    display: block;
+                    font-size: 1.25em;
+                }
+            }
+            .company_photo {
+                max-width: 8em;
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 8em;
+                align-self: center;
+                img {
+                    max-width: 8em;
+                    max-height: 2.5em;
+                    object-fit: contain;
+                }
+            }
+            .upload_grp {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 40%;
+                @include screen('tablet') {
+                    flex-basis: 100%;
+                    width: 0;
+                    overflow: hidden;
+                }
+                input[type='text'] {
+                    width: calc(100% - 0.6em);
+                }
+                .upload_btn {
+                    top: 0.35em;
+                }
+            }
+        }
+    }
+    //地址格式
+    .address_grp {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        span {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 20%;
+            margin: 0 0.25em 0.25em 0;
+            position: relative;
+            align-items: center;
+            display: flex;
+            flex-flow: row wrap;
+            &.county {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 10em;
+                padding-right: 1em;
+                @include screen('xs_mobile') {
+                    flex-basis: 40%;
+                }
+                select {
+                    width: 100%;
+                }
+            }
+            &.township {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 10em;
+                padding-right: 1em;
+                @include screen('xs_mobile') {
+                    flex-basis: 40%;
+                }
+                select {
+                    width: 100%;
+                }
+            }
+            &.street {
+                flex-basis: 100%;
+            }
+        }
+    }
+    .tel_grp {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        @include screen('xs_mobile') {
+            flex-flow: row wrap;
+        }
+        span {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 20%;
+            min-width: 5em;
+            margin: 0 0.25em 0.25em 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            .form_style {
+                input {
+                    flex-basis: 100%;
+                    width: 100%;
+                }
+            }
+            &.tel {
+                flex-grow: 1;
+                flex-basis: 40%;
+                max-width: 15em;
+                display: flex;
+                .form_style {
+                    width: 100%;
+                }
+            }
+            &.ext {
+                max-width: 8em;
+
+                .form_style {
+                    width: 100%;
+                }
+                &:before {
+                    content: '#';
+                    margin-left: 0.25em;
+                    margin-right: 0.25em;
+                }
+            }
+            &.county_code {
+                max-width: 8em;
+                &:after {
+                    content: '-';
+                    margin-left: 0.25em;
+                    margin-right: 0.25em;
+                }
+            }
+        }
+    }
+    .password_toggle {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 100%;
+        .form_style {
+            &.confirm {
+                & ~ .showPassword {
+                    right: 3.5em;
+                }
+            }
+            &.error {
+                & ~ .showPassword {
+                    right: 3.5em;
+                }
+            }
+        }
+    }
+    .form_style {
+        position: relative;
+        &.confirm {
+            input[type='text'],
+            input[type='password'] {
+                padding-right: 3em;
+            }
+            i {
+                color: $color-green;
+            }
+        }
+        &.error {
+            input[type='text'],
+            input[type='password'] {
+                border: 1px solid $color-red;
+                padding-right: 3em;
+                color: red;
+            }
+            i {
+                color: $color-red;
+                font-size: 1.65em;
+                right: 0.75em;
+                top: 0.5em;
+            }
+        }
+        i {
+            position: absolute;
+            right: 1em;
+            width: 1em;
+            top: 0.5em;
+            font-size: 1.5em;
+        }
+        input[type='text'],
+        input[type='password'] {
+            flex-grow: 1;
+            flex-basis: 80%;
+            margin: 0;
+            height: 3em;
+            padding-left: 1em;
+            vertical-align: baseline;
+            &:focus,
+            &.used {
+                & ~ label {
+                    top: -1.35em;
+                    left: 0.5em;
+                    font-size: 0.75em;
+                    padding: 0em 0.5em;
+                    background: #fff;
+                }
+            }
+        }
+        label {
+            position: absolute;
+            top: 0.7em;
+            left: 1em;
+            transition: 0.2s $cubic;
+            pointer-events: none;
+        }
+        input[type='password'] {
+            padding-right: 10em;
+        }
+    }
+    .check_grp {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 100%;
+    }
+    .recaptcha {
+        text-align: left;
+        input {
+            marign: 0;
+        }
+    }
+}
+
 .mt-main-content {
     .sp_epaper {
         .subscribe {
@@ -209,6 +569,9 @@
     }
     // 會員
     .sp_member {
+        @include screen('xs_mobile') {
+            @include gutter;
+        }
         .btn_grp {
             margin: 1em 0 1.5em;
             display: flex;
@@ -228,6 +591,9 @@
                 padding: 0;
                 margin: 0 0.25em 0.5em;
                 font-weight: normal;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 @include screen('xs_mobile') {
                     flex-grow: 1;
                 }
@@ -263,42 +629,7 @@
                 }
             }
         }
-        .highlight {
-            color: $color-yellow;
-        }
-        p.info {
-            font-size: 0.813rem;
-            color: #999;
-            margin: 0;
-            flex-grow: 0;
-            flex-shrink: 1;
-            flex-basis: 100%;
-            padding-left: 2.5em;
-            position: relative;
-            i {
-                position: absolute;
-                top: 0.4em;
-                left: 1em;
-            }
-        }
-        p.error {
-            font-size: 0.813rem;
-            color: $color-red;
-            margin: 0;
-            flex-grow: 0;
-            flex-shrink: 1;
-            flex-basis: 100%;
-            padding-left: 2.5em;
-            position: relative;
-            i {
-                position: absolute;
-                top: 0.4em;
-                left: 1em;
-            }
-            a {
-                color: lighten($color-orange, 0);
-            }
-        }
+
         .signup_block {
             width: 90%;
             min-width: 600px;
@@ -347,6 +678,10 @@
                 text-align: center;
                 width: 80%;
                 margin: 1em auto;
+                h3 {
+                    font-size: 1.25em;
+                    line-height: 1.5em;
+                }
                 img {
                     width: 40%;
                     min-width: 120px;
@@ -430,22 +765,34 @@
             .forget_info {
                 background: url(../images/forget_img.jpg) no-repeat center center;
                 background-size: cover;
+                flex-basis: 35%;
+                @include screen('mobile') {
+                    display: none;
+                }
             }
             .login {
-                margin: 1em 0;
+                margin: 1em auto;
                 padding: 2em 3em;
                 flex-grow: 1;
                 flex-shrink: 1;
                 flex-basis: 50%;
-                font-size: 0.875em;
+                font-size: 0.938em;
+                max-width: 35em;
                 @include screen('xs_mobile') {
                     padding: 2em 0em;
                     order: 1;
+                }
+                .form_grp {
+                    padding-bottom: 0.75em;
                 }
                 .done {
                     text-align: center;
                     width: 80%;
                     margin: 1em auto;
+                    h3 {
+                        font-size: 1.25em;
+                        line-height: 1.5em;
+                    }
                     img {
                         width: 40%;
                         min-width: 120px;
@@ -454,103 +801,7 @@
                 }
             }
         }
-        .form_grid {
-            flex-grow: 1;
-            flex-shrink: 1;
-            flex-basis: auto;
-            border: none;
-            .form_grp {
-                border: none;
-                padding: 0.5em 0 0.75em;
-                @include screen('xs_mobile') {
-                    flex-flow: row wrap;
-                }
-                .form_title {
-                    flex-basis: 30%;
-                    text-align: right;
-                    margin: 0;
-                    color: $primaryColor;
-                    font-weight: bold;
-                    @include screen('xs_mobile') {
-                        flex-basis: 100%;
-                        text-align: left;
-                    }
-                }
-                .form_content {
-                    align-items: flex-start;
-                    position: relative;
-                    .showPassword {
-                        position: absolute;
-                        right: 1em;
-                        width: 2em;
-                        top: 0.75em;
-                        color: #888;
-                        a {
-                            color: #888;
-                            display: block;
-                            font-size: 1.25em;
-                        }
-                    }
-                }
-            }
-            .form_style {
-                position: relative;
-                &.conform {
-                    input[type='text'],
-                    input[type='password'] {
-                        padding-right: 3em;
-                    }
-                }
-                i {
-                    position: absolute;
-                    right: 0.5em;
-                    width: 2em;
-                    top: 0.75em;
-                    font-size: 1.25em;
-                    color: $color-green;
-                }
-                input[type='text'],
-                input[type='password'] {
-                    flex-grow: 1;
-                    flex-basis: 80%;
-                    margin: 0;
-                    height: 3em;
-                    padding-left: 1em;
-                    vertical-align: baseline;
-                    &:focus,
-                    &.used {
-                        & + label {
-                            top: -1.35em;
-                            left: 0.5em;
-                            font-size: 0.75em;
-                            padding: 0.25em 0.5em;
-                            background: #fff;
-                        }
-                    }
-                }
-                label {
-                    position: absolute;
-                    top: 0.7em;
-                    left: 1em;
-                    transition: 0.2s $cubic;
-                    pointer-events: none;
-                }
-                input[type='password'] {
-                    padding-right: 10em;
-                }
-            }
-            .check_grp {
-                flex-grow: 0;
-                flex-shrink: 1;
-                flex-basis: 100%;
-            }
-            .recaptcha {
-                text-align: left;
-                input {
-                    marign: 0;
-                }
-            }
-        }
+
         .upgrade {
             width: 90%;
             margin: 0 auto 1em;
@@ -611,6 +862,73 @@
                     right: 2em;
                 }
             }
+        }
+        .member-heading {
+            h2.mt-h2 {
+                text-align: left;
+                font-size: 1.75em;
+                &:after {
+                    left: 0;
+                    margin-left: 0;
+                }
+                small {
+                    margin-left: 0.5em;
+                    display: inline-block;
+                    &:before {
+                        content: '/';
+                        margin-right: 0.5em;
+                    }
+                }
+            }
+            .btn_grp {
+                display: none;
+                text-align: center;
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 2em;
+                margin: 0;
+                @include screen('mobile') {
+                    display: block;
+                }
+                .btn {
+                    background-color: transparent;
+                    border: none;
+                    height: auto;
+                    padding: 0;
+                    min-width: 1em;
+                    margin: 0;
+                    i {
+                        color: $primaryColor;
+                        font-size: 1.25em;
+                        margin: 0;
+                    }
+                }
+            }
+            .member_info {
+                background: #f1f1f1;
+                padding: 0.5em;
+                display: flex;
+                align-items: flex-start;
+                .member_id {
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    flex-basis: auto;
+                    padding: 0 0.5em;
+                    font-size: 0.938em;
+                    em {
+                        font-style: normal;
+                        color: $primaryColor;
+                        display: inline-block;
+                        margin: 0 0.25em;
+                    }
+                }
+            }
+        }
+        .member_content {
+            padding: 1em;
+            font-size: 0.938em;
+            max-width: 45em;
+            margin: 0 auto;
         }
     }
 }
@@ -748,6 +1066,108 @@
                     font-size: 0.938em;
                     opacity: 0.8;
                     font-size: 0.875rem;
+                }
+            }
+        }
+    }
+}
+
+.member-function {
+    background-color: #fff;
+    padding: 0;
+    h3 {
+        margin: 0 0 1em;
+        line-height: 1.5em;
+        overflow: hidden;
+        @include screen('xs_mobile') {
+            font-size: 2em;
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            background: $primaryColor;
+        }
+    }
+    .member_block {
+        .btn_grp {
+            margin: 3em 0;
+            .btn {
+                border-radius: 0;
+                font-size: 0.875em;
+                min-width: 80%;
+                border: 1px solid #ddd;
+                background-color: #fff;
+                color: #888;
+
+                &:hover,
+                &:focus {
+                    color: #fff;
+                    background-color: $secondaryColor;
+                    border: 1px solid $secondaryColor;
+                }
+                i {
+                    margin: 0 0.25em;
+                }
+            }
+        }
+        ul {
+            @include li-reset;
+            li {
+                position: relative;
+                a {
+                    display: block;
+                    padding: 1em 1.5em 1em 1em;
+                    min-height: 2.5em;
+                    border-bottom: 1px solid #ddd;
+                }
+                &.hasli {
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        right: 1em;
+                        top: 1.5em;
+                        width: 0.25em;
+                        height: 0.25em;
+                        border: 2px solid #555;
+                        border-top: none;
+                        border-left: none;
+                        transform: rotate(45deg);
+                    }
+                }
+                ul {
+                    background: $primaryColor;
+                    padding: 0.5em 0 0.5em 1.5em;
+                    display: none;
+                    li {
+                        a {
+                            min-height: 1.5em;
+                            border: none;
+                            padding: 0.5em;
+                            color: #fff;
+                            font-size: 0.938em;
+                            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.85);
+                            &:before {
+                                position: absolute;
+                                content: '';
+                                width: 0.5em;
+                                height: 2px;
+                                background: #fff;
+                                left: -2em;
+                                top: 1.2em;
+                                opacity: 0;
+                                transition: 0.3s ease-out;
+                                @include screen('xs_mobile') {
+                                    display: none;
+                                }
+                            }
+                            &:hover {
+                                &:before {
+                                    left: -0.5em;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

@@ -197,11 +197,38 @@
         -webkit-overflow-scrolling: touch;
         -webkit-transform: translate3d(0, 0, 0);
     }
-    .search-function {
+    .search-function,
+    .member-function {
         width: 100%;
     }
+    &.for_member {
+        background-color: #fff;
+        & > .btn-close {
+            color: #888;
+        }
+        .member_block {
+            width: 90%;
+            margin: 0 auto;
+            ul {
+                ul {
+                    background-color: transparent;
+                    li {
+                        a {
+                            color: #888;
+                            text-shadow: none;
+                            &:hover,
+                            &:focus {
+                                color: $aHover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
-.search-function {
+.search-function,
+.member-function {
     min-height: 40em;
     width: 100%;
     background-color: $inner-left-color;
@@ -212,6 +239,8 @@
     @include screen('mobile') {
         top: 0;
     }
+}
+.search-function {
     h3 {
         margin: 0 0 1em;
         line-height: 1.5em;

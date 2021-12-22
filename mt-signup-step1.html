@@ -211,21 +211,23 @@
                                 <div class="form_grid">
                                     <div class="form_grp">
                                         <div class="form_content">
+                                            <!-- 如果是正確 add confirm classname & add  <i class="fas fa-check"></i> -->
                                             <div class="form_style confirm">
-                                                <input type="text" id="" value="">
-                                                <i class="fas fa-check"></i>
+                                                <input type="text" id="" value="user_name">
                                                 <label for="" class="form_title">會員姓名<abbr class="necessary"
                                                         title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                                                <i class="fas fa-check"></i>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form_grp">
                                         <div class="form_content">
-                                            <div class="form_style confirm">
-                                                <input type="text" id="" value="">
-                                                <i class="fas fa-check"></i>
+                                            <!-- 如果是錯誤 add error classname & add  <i class="fas fa-times"></i> -->
+                                            <div class="form_style error">
+                                                <input type="text" id="" value="user_id">
                                                 <label for="" class="form_title">帳號設定<abbr class="necessary"
                                                         title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                                                <i class="fas fa-times"></i>
                                             </div>
                                             <p class="error"><i class="fas fa-exclamation-triangle"></i>錯誤訊息如：Email格式錯誤
                                             </p>
@@ -234,26 +236,27 @@
                                     <div class="form_grp">
                                         <div class="form_content">
                                             <div class="password_toggle">
-                                                <div class="form_style">
-                                                    <input type="password" id="" value="" placeholder="">
+                                                <div class="form_style confirm">
+                                                    <input type="password" id="" value="12345678" placeholder="">
                                                     <label for="" class="form_title">密碼設定<abbr class="necessary"
                                                             title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                                                    <i class="fas fa-check"></i>
                                                 </div>
                                                 <div class="showPassword">
                                                     <a href="#"><i class="fas fa-eye-slash"></i></a>
                                                 </div>
                                             </div>
                                             <p class="info"><i class="fas fa-info-circle"></i>請輸入6~10個字元，必須為英文及數字 </p>
-                                            <p class="error"><i class="fas fa-exclamation-triangle"></i>錯誤訊息如：密碼格式錯誤</p>
                                         </div>
                                     </div>
                                     <div class="form_grp">
                                         <div class="form_content">
                                             <div class="password_toggle">
-                                                <div class="form_style">
-                                                    <input type="password" id="" value="" placeholder="">
+                                                <div class="form_style error">
+                                                    <input type="password" id="" value="12345678" placeholder="">
                                                     <label for="" class="form_title">密碼確認<abbr class="necessary"
                                                             title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                                                    <i class="fas fa-times"></i>
                                                 </div>
                                                 <div class="showPassword">
                                                     <a href="#"><i class="fas fa-eye-slash"></i></a>
