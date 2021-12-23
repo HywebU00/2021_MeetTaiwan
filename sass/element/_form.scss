@@ -1261,8 +1261,8 @@ input[type='email']:focus,
 input[type='password']:focus,
 textarea:focus,
 select:focus {
-    border: 1px solid lighten($form-focus, 20);
-    box-shadow: 0px 0px 0px 2px lighten($form-focus, 40);
+    border: 1px solid lighten($form-focus, 15);
+    box-shadow: 0px 0px 0px 2px lighten($form-focus, 25);
     outline: none;
 }
 
@@ -1344,22 +1344,22 @@ input[type='checkbox']:focus {
 }
 
 //---------------------------------------------readonly disable -------//
-// input[readonly],
-// input[disable] {
-//     background: lighten($color-gray, 15);
-//     color: darken($color-gray, 10);
-//     border-color: darken($color-gray, 10);
+input[readonly],
+input[disable] {
+    background: darken($color-gray, 0);
+    color: darken($color-gray, 40);
+    border-color: darken($color-gray, 20);
 
-//     &~label {
-//         color: darken($color-gray, 10);
-//     }
+    & ~ label {
+        color: darken($color-gray, 30);
+    }
 
-//     &:hover,
-//     &:focus {
-//         border-color: darken($color-gray, 10);
-//         box-shadow: none; // cursor: not-allowed;
-//     }
-// }
+    &:hover,
+    &:focus {
+        border-color: darken($color-gray, 30);
+        box-shadow: none; // cursor: not-allowed;
+    }
+}
 
 // 檔案上傳
 // https://codepen.io/shubhamc_007/pen/oZyodd

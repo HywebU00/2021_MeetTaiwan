@@ -66,8 +66,8 @@
             }
             @include screen('xs_mobile') {
                 flex-basis: 100%;
-                padding: 0.25em 0.5em;
                 font-style: normal;
+                padding: 0 0.3em;
             }
         }
         .form_title {
@@ -123,6 +123,61 @@
                 flex-grow: 1;
                 flex-shrink: 1;
                 flex-basis: 100%;
+            }
+            // 日期專屬
+            .datepick {
+                position: relative;
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 45%;
+                flex-flow: row nowrap;
+                @include screen('xs_mobile') {
+                    width: 100%;
+                    display: block;
+                    padding-right: 0;
+                }
+                & + .datepick {
+                    margin-left: 1.5em;
+                    margin-right: 0;
+                    padding-right: 0;
+                    &:before {
+                        content: '~';
+                        font-size: 1.5em;
+                        color: #777;
+                        position: absolute;
+                        left: -0.75em;
+                        top: 0.5em;
+                    }
+                }
+                i {
+                    position: absolute;
+                    padding: 0.37em 0.1em !important;
+                    right: 0.6em;
+                    top: 0.4em;
+                    min-width: 1em;
+                    background: none;
+                    border: none;
+                    width: auto;
+                    width: 1;
+                    height: 1;
+                    font-size: 1.25em;
+                    pointer-events: none;
+                    &:hover,
+                    &:focus {
+                        box-shadow: none;
+                        border: none !important;
+                    }
+                }
+                > input[type='text'],
+                > input[type='date'] {
+                    width: calc(100% - 0.6em);
+                    @include screen('xs_mobile') {
+                        width: calc(100% - 0.6em);
+                    }
+                }
+                > input[type='text'] {
+                    padding-right: 2em;
+                }
             }
             .showPassword {
                 position: absolute;
@@ -935,6 +990,26 @@
                 margin: 0 0 1em;
                 .dropdown {
                     margin: 0 0.5em;
+                }
+            }
+            div.info {
+                padding: 1em 2em 1em 6em;
+                font-size: 0.938em;
+                border-radius: 0.25em;
+                background-color: #d2f1ff;
+                position: relative;
+                color: #0c568d;
+                margin-bottom: 1em;
+                &:before {
+                    position: absolute;
+                    content: '';
+                    left: 1em;
+                    top: 1.25em;
+                    width: 3em;
+                    height: 2em;
+                    background: url(../images/icon/icon_alert.svg) no-repeat center center;
+                    background-size: contain;
+                    border-right: 1px solid #266682;
                 }
             }
             //data
