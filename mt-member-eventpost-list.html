@@ -147,7 +147,7 @@
                     <div class="sp_member">
                         <!-- 會員功能表頭 -->
                         <div class="member-heading">
-                            <h2 class="mt-h2">申請服務<small>我的申請服務</small></h2>
+                            <h2 class="mt-h2">發佈訊息<small>活動訊息</small></h2>
                             <div class="member_info">
                                 <div class="member_id">Hi! <em>陳大明</em>您好</div>
                                 <!-- 左側有側欄請放這個 會員選單 -->
@@ -160,15 +160,50 @@
                         <div class="member_content">
                             <!-- 功能 -->
                             <div class="data_function">
-                                <div class="dropdown">
-                                    <a href="#" class="btn-dropdown">新增服務<i class="fas fa-plus"></i></a>
-                                    <div class="dropdown-content">
-                                        <ul>
-                                            <li><a href="#">台灣會展識別標誌 國貿局識別標誌</a></li>
-                                            <li><a href="#">台灣會展圖庫</a></li>
-                                            <li><a href="#">網站與QRcode報到</a></li>
-                                            <li><a href="#">會展文宣品暨贈品</a></li>
-                                        </ul>
+                                <a href="#" class="btn_filter_condition"><i class="fas fa-search"></i></a>
+                                <a data-fancybox data-src="#hidden-content" class="btn_add" href="javascript:;"><i
+                                        class="fas fa-plus"></i>新增訊息</a>
+                            </div>
+                            <!-- 新增訊息燈箱 -->
+                            <div class="pop_style" style="display: none;" id="hidden-content">
+                                <h2>新增訊息</h2>
+                                <p>親愛的會員您好，感謝您使用臺灣會展網刊登活動新聞服務。臺灣會展網提醒您，刊登之活動新聞，以500字左右之新聞稿為限。臺灣會展網保留對您提供之新聞訊息，修改標題及內文之權利。
+                                    您提供的資料在送出後，將有一段審核時間，您可以隨時上網查看審核情形，活動新聞將會在通過審核後，公開於臺灣會展網。</p>
+                                <div class="btn_grp">
+                                    <button type="button" class="btn btn-primary">我要發佈新聞</button>
+                                </div>
+                            </div>
+                            <!-- filter condition 條件搜尋 -->
+                            <div class="filter_condition">
+                                <h3>搜尋條件</h3>
+                                <div class="form_grid">
+                                    <div class="form_grp">
+                                        <div class="field_name">活動名稱 </div>
+                                        <div class="form_content">
+                                            <input type="text" id="" value="" placeholder="輸入活動名稱">
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="field_name">語系 </div>
+                                        <div class="form_content">
+                                            <select name="" id="selectSample">
+                                                <option value="">繁體中文</option>
+                                                <option value="">ENGLISH</option>
+                                                <option value="">日文</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="field_name">狀態 </div>
+                                        <div class="form_content">
+                                            <select name="" id="selectSample">
+                                                <option value="">核可</option>
+                                                <option value="">不核可</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <button type="button" class="btn btn-submit">搜尋</button>
                                     </div>
                                 </div>
                             </div>
@@ -179,7 +214,7 @@
                                         <tr>
                                             <th>編號</th>
                                             <th>服務名稱</th>
-                                            <th>申請日期</th>
+                                            <th>活動日期</th>
                                             <th>狀態</th>
                                             <th>動作</th>
                                         </tr>

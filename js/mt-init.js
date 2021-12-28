@@ -91,6 +91,7 @@ $(window).on('load', function () {
                 .off()
                 .click(function (e) {
                     $(this).siblings('.dropdown-content').stop(true, true).toggleClass('open');
+                    $(this).blur();
                     e.preventDefault();
                 });
         });
@@ -106,6 +107,78 @@ $(window).on('load', function () {
             e.stopPropagation();
         });
     }
+    // 關閉其他action
+    $(document).mouseup(function (e) {
+        var target = e.target,
+            container = $('.dropdown-content');
+        if (
+            !container.is(e.target) &&
+            container.has(e.target).length === 0 &&
+            (!$('.dropdown-btn').is(e.target) || !$('.btn-dropdown').is(e.target))
+        ) {
+            if (
+                !(
+                    ($('.dropdown-btn').is(e.target) || $('.btn-dropdown').is(e.target)) &&
+                    $(target).siblings('.open').length > 0
+                )
+            ) {
+                container.removeClass('open');
+            }
+        }
+    });
+    //---------------------------------- action setting -----//
+    if ($('.action').length > 0) {
+        $('.action').each(function () {
+            actionStatus = false;
+            $(this)
+                .find('.btn-action')
+                .off()
+                .click(function (e) {
+                    $(this).siblings('.action-content').stop(true, true).toggleClass('open');
+                    $(this).blur();
+                    e.preventDefault();
+                });
+            $(this).click(function (e) {
+                e.stopPropagation();
+            });
+        });
+
+        // click document close Dropdown
+        function closeAction() {
+            $('.action-content').stop(true, true).removeClass('open');
+        }
+        $(document.body).click(function (e) {
+            closeAction();
+        });
+    }
+    // 關閉其他action
+    $(document).mouseup(function (e) {
+        var target = e.target,
+            container = $('.action-content');
+        if (
+            !container.is(e.target) &&
+            container.has(e.target).length === 0 &&
+            (!$('.action-btn').is(e.target) || !$('.btn-action').is(e.target))
+        ) {
+            if (
+                !(
+                    ($('.action-btn').is(e.target) || $('.btn-action').is(e.target)) &&
+                    $(target).siblings('.open').length > 0
+                )
+            ) {
+                container.removeClass('open');
+            }
+        }
+    });
+    // btn_filter_condition
+    $('.btn_filter_condition')
+        .off()
+        .click(function (e) {
+            // $('.filter_condition').stop().slideToggle('400', 'easeOutQuint');
+            $('.filter_condition').stop().toggle();
+            $(this).blur();
+            e.preventDefault();
+        });
     //---------------------------------- form setting -----//
     // form style label動畫
     function _labelAni(obj) {
