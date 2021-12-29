@@ -89,6 +89,10 @@
                 }
             }
         }
+        .awards_info {
+            font-size: 0.938em;
+            overflow: hidden;
+        }
         .pic {
             float: left;
             margin: 0px 2em 1em 0;
@@ -98,6 +102,10 @@
             background: #f1f1f1;
             overflow: hidden;
             padding: 0.5em 0.5em 0.2em;
+            &.right {
+                float: right;
+                margin: 0px 0 1em 2em;
+            }
             a {
                 display: block;
                 color: #555;
@@ -119,7 +127,7 @@
                 float: none;
                 max-width: 100%;
                 width: auto;
-                margin: 0px auto;
+                margin: 0px auto !important;
                 display: block;
                 margin-bottom: 0.5em;
             }

@@ -58,6 +58,20 @@
                 background: linear-gradient(0deg, rgba(115, 138, 155, 1) 5%, rgba(115, 138, 155, 0) 100%);
             }
         }
+        &.sky {
+            background: url(../images/inner_06_sky.jpg) no-repeat center top;
+            background-size: cover;
+            &:after {
+                background: linear-gradient(0deg, rgb(132, 200, 245) 5%, rgba(132, 200, 245, 0) 100%);
+            }
+        }
+        &.fireworks {
+            background: url(../images/inner_07_fireworks.jpg) no-repeat center top;
+            background-size: cover;
+            &:after {
+                background: linear-gradient(0deg, rgb(203, 181, 223) 5%, rgba(1203, 181, 223, 0) 100%);
+            }
+        }
     }
     .mt-page-function {
         display: flex;

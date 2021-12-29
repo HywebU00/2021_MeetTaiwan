@@ -209,6 +209,7 @@
             align-self: center;
         }
         .form_search {
+            max-width: 70%;
             .btn {
                 position: absolute;
                 right: 0.75em;
@@ -815,8 +816,9 @@
             }
         }
     }
-    // lp partner
-    .lp_partner {
+    // lp partner lp_award
+    .lp_partner,
+    .lp_award {
         @include screen('xs_mobile') {
             padding: 0 1em;
         }
@@ -967,6 +969,33 @@
                         @include screen('xs_mobile') {
                             top: 1.25em;
                         }
+                    }
+                }
+            }
+        }
+    }
+    .lp_award {
+        ul {
+            li {
+                .info {
+                    h3 {
+                        a {
+                            @include text-line(2, 1.5em);
+                        }
+                    }
+                    .tag_award {
+                        margin: 0.5em 0;
+                        a {
+                            font-size: 0.813em;
+                            padding: 0.5em 1em;
+                            margin: 0 0.5em 0.5em 0;
+                            color: #fff;
+                            background-color: $secondaryColor;
+                        }
+                    }
+                    .award_exhibition {
+                        margin: 1em 0;
+                        color: #333;
                     }
                 }
             }
