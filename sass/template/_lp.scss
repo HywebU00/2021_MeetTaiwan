@@ -210,6 +210,9 @@
         }
         .form_search {
             max-width: 70%;
+            @include screen('mobile') {
+                max-width: 100%;
+            }
             .btn {
                 position: absolute;
                 right: 0.75em;
@@ -801,6 +804,36 @@
     }
     //lp-list
     .lp_list {
+        &.lp_media {
+            & > ul {
+                li {
+                    padding-right: 10em;
+                    @include screen('tablet') {
+                        padding-right: 1em;
+                    }
+                    .reporter {
+                        position: absolute;
+                        top: 2em;
+                        right: 1em;
+                        font-size: 0.813em;
+                        width: 8rem;
+                        color: #888;
+                        @include screen('tablet') {
+                            position: relative;
+                            top: 0;
+                            right: 0;
+                            width: auto;
+                        }
+                        a {
+                            display: block;
+                            @include screen('tablet') {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         & > ul,
         ol {
             list-style-type: none;
