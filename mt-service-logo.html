@@ -1,367 +1,469 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="MEET TAIWAN為臺灣會展網(台灣會展網)，提供國內會議展覽業者最優質服務，只要成為會員，就可以於網站發布會展活動訊息，不論是新聞、活動檔期、活動影音，都開放業者提供資料，此外，同時可申請協助建置活動網站及APP的服務，讓業者辦理活動不僅科技化，同時也能節能減碳，落實綠色會展。" />
-    <meta name="keywords" content="台灣會展、會議展覽、台灣展覽、會展網、會展產業" />
-    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="MEET TAIWAN為臺灣會展網(台灣會展網)，提供國內會議展覽業者最優質服務，只要成為會員，就可以於網站發布會展活動訊息，不論是新聞、活動檔期、活動影音，都開放業者提供資料，此外，同時可申請協助建置活動網站及APP的服務，讓業者辦理活動不僅科技化，同時也能節能減碳，落實綠色會展。"
+        />
+        <meta name="keywords" content="台灣會展、會議展覽、台灣展覽、會展網、會展產業" />
+        <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
         <script src="js/html5shiv.js"></script>
         <script src="js/respond.min.js"></script>
         <![endif]-->
-    <title>MEET TAIWAN-臺灣具有經驗豐富的會議展覽人才和完善的洽商平台，處處創造商機，時時締造成功媒合</title>
-    <!--  預先載入-->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/mt-css-all.min.css" />
-    <link rel="stylesheet" href="css/aos.min.css" />
-    <link rel="stylesheet" href="vendor/slick/slick.css" />
-    <link rel="stylesheet" href="vendor/slick/slick-theme.css" />
-    <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="vendor/scrolltable/jquery.scroltable.min.css" />
-    <!-- JS -->
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/mt-js-all.min.js"></script>
-    <!-- fav_ico -->
-    <link type="image/ico" rel="icon" href="images/favicon.ico" />
-</head>
+        <title>MEET TAIWAN-臺灣具有經驗豐富的會議展覽人才和完善的洽商平台，處處創造商機，時時締造成功媒合</title>
+        <!--  預先載入-->
+        <link
+            rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="css/mt-css-all.min.css" />
+        <link rel="stylesheet" href="css/aos.min.css" />
+        <link rel="stylesheet" href="vendor/slick/slick.css" />
+        <link rel="stylesheet" href="vendor/slick/slick-theme.css" />
+        <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
+        <link rel="stylesheet" href="vendor/scrolltable/jquery.scroltable.min.css" />
+        <!-- JS -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/mt-js-all.min.js"></script>
+        <!-- fav_ico -->
+        <link type="image/ico" rel="icon" href="images/favicon.ico" />
+    </head>
 
-<body>
-    <!-- mt_sidebar -->
-    <div id="mt_sidebar"></div>
-    <!-- mt_header -->
-    <div id="mt_header"></div>
-    <!-- mt-content -->
-    <div class="mt-main-content">
-        <div class="inner_img member"></div>
-        <div class="container">
-            <!-- 左側 -->
-            <div class="left_block">
-                <div class="sidebar__inner">
-                    <!-- member-function -->
-                    <div class="member-function">
-                        <div class="member_block">
-                            <ul>
-                                <li>
-                                    <a href="#">一般會員基本資料</a>
-                                    <ul>
-                                        <li><a href="#">修改基本資料</a></li>
-                                        <li><a href="#">變更密碼</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">企業會員基本資料</a></li>
-                                <li><a href="#">申請服務</a>
-                                    <ul>
-                                        <li><a href="#">申請服務介紹</a></li>
-                                        <li><a href="#">我的申請服務</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">發佈訊息</a>
-                                    <ul>
-                                        <li><a href="#">活動訊息</a></li>
-                                        <li><a href="#">新聞訊息</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">收藏管理</a></li>
-                                <li><a href="#">徵求業者服務</a>
-                                    <ul>
-                                        <li><a href="#">查看徵求記錄</a></li>
-                                        <li><a href="#">潛在商機公告</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <div class="btn_grp">
-                                <button type="button" class="btn">登出<i class="fas fa-sign-out-alt"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- 中間內容 -->
-            <div class="center_block">
-                <div class="mt-page-title">
-                    <h2>會員中心</h2>
-                    <small>member center</small>
-                </div>
-                <div class="mt-content">
-                    <!-- breadcrumb -->
-                    <div class="breadcrumb">
-                        <ul>
-                            <li><a href="#">首頁</a></li>
-                            <li><a href="#">節點</a></li>
-                            <li>節點</li>
-                        </ul>
-                    </div>
-                    <!-- 頁面標準功能 -->
-                    <div class="mt-page-function">
-                        <!-- 社群 -->
-                        <div class="social-media">
-                            <ul>
-                                <li>
-                                    <a href="#" class="i_facebook"><i class="fab fa-facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="i_line"><i class="fab fa-line"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="i_twitter"><i class="fab fa-twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="i_link"><i class="fas fa-external-link-square-alt"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="i_share"><i class="fas fa-share-alt"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="i_print"><i class="fas fa-print"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="i_bookmark active">
-                                        <i class="fas fa-bookmark"></i><!-- 已收藏-->
-                                        <!-- <i class="far fa-bookmark"></i>未收藏-->
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="i_bookmark">
-                                        <!-- <i class="fas fa-bookmark"></i>已收藏-->
-                                        <i class="far fa-bookmark"></i><!-- 未收藏-->
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- 語言切換 -->
-                        <div class="language-toggle">
-                            <ul>
-                                <li>
-                                    <a href="#">ENG</a>
-                                </li>
-                                <li>
-                                    <a href="#">日文</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="sp_member">
-                        <!-- 會員功能表頭 -->
-                        <div class="member-heading">
-                            <h2 class="mt-h2">申請服務<small>臺灣會展識別標誌/國貿局識別標誌</small></h2>
-                            <div class="member_info">
-                                <div class="member_id">Hi! <em>陳大明</em>您好</div>
-                                <!-- 左側有側欄請放這個 會員選單 -->
-                                <div class="btn_grp for-open-mobile-sidebar">
-                                    <a href="" class="btn btn-member-open"><i class="fas fa-bars"></i></a>
+    <body>
+        <!-- mt_sidebar -->
+        <div id="mt_sidebar"></div>
+        <!-- mt_header -->
+        <div id="mt_header"></div>
+        <!-- mt-content -->
+        <div class="mt-main-content">
+            <div class="inner_img member"></div>
+            <div class="container">
+                <!-- 左側 -->
+                <div class="left_block">
+                    <div class="sidebar__inner">
+                        <!-- member-function -->
+                        <div class="member-function">
+                            <div class="member_block">
+                                <ul>
+                                    <li>
+                                        <a href="#">一般會員基本資料</a>
+                                        <ul>
+                                            <li><a href="#">修改基本資料</a></li>
+                                            <li><a href="#">變更密碼</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">企業會員基本資料</a></li>
+                                    <li>
+                                        <a href="#">申請服務</a>
+                                        <ul>
+                                            <li><a href="#">申請服務介紹</a></li>
+                                            <li><a href="#">我的申請服務</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">發佈訊息</a>
+                                        <ul>
+                                            <li><a href="#">活動訊息</a></li>
+                                            <li><a href="#">新聞訊息</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">收藏管理</a></li>
+                                    <li>
+                                        <a href="#">徵求業者服務</a>
+                                        <ul>
+                                            <li><a href="#">查看徵求記錄</a></li>
+                                            <li><a href="#">潛在商機公告</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div class="btn_grp">
+                                    <button type="button" class="btn">登出<i class="fas fa-sign-out-alt"></i></button>
                                 </div>
                             </div>
                         </div>
-                        <!-- 會員專區內容 -->
-                        <div class="member_content">
-                            <!-- <div class="info">會議活動網站建置與QR Code報到服務 （上線時間需從申請日開始算起至少一個月，若時程允許才開放申請）Lorem, ipsum dolor sit
+                    </div>
+                </div>
+                <!-- 中間內容 -->
+                <div class="center_block">
+                    <div class="mt-page-title">
+                        <h2>會員中心</h2>
+                        <small>member center</small>
+                    </div>
+                    <div class="mt-content">
+                        <!-- breadcrumb -->
+                        <div class="breadcrumb">
+                            <ul>
+                                <li><a href="#">首頁</a></li>
+                                <li><a href="#">節點</a></li>
+                                <li>節點</li>
+                            </ul>
+                        </div>
+                        <!-- 頁面標準功能 -->
+                        <div class="mt-page-function">
+                            <!-- 社群 -->
+                            <div class="social-media">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="i_facebook"><i class="fab fa-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="i_line"><i class="fab fa-line"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="i_twitter"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="i_link"><i class="fas fa-external-link-square-alt"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="i_share"><i class="fas fa-share-alt"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="i_print"><i class="fas fa-print"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="i_bookmark active">
+                                            <i class="fas fa-bookmark"></i
+                                            ><!-- 已收藏-->
+                                            <!-- <i class="far fa-bookmark"></i>未收藏-->
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="i_bookmark">
+                                            <!-- <i class="fas fa-bookmark"></i>已收藏-->
+                                            <i class="far fa-bookmark"></i
+                                            ><!-- 未收藏-->
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 語言切換 -->
+                            <div class="language-toggle">
+                                <ul>
+                                    <li>
+                                        <a href="#">ENG</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">日文</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sp_member">
+                            <!-- 會員功能表頭 -->
+                            <div class="member-heading">
+                                <h2 class="mt-h2">申請服務<small>臺灣會展識別標誌/國貿局識別標誌</small></h2>
+                                <div class="member_info">
+                                    <div class="member_id">Hi! <em>陳大明</em>您好</div>
+                                    <!-- 左側有側欄請放這個 會員選單 -->
+                                    <div class="btn_grp for-open-mobile-sidebar">
+                                        <a href="" class="btn btn-member-open"><i class="fas fa-bars"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 會員專區內容 -->
+                            <div class="member_content">
+                                <!-- <div class="info">會議活動網站建置與QR Code報到服務 （上線時間需從申請日開始算起至少一個月，若時程允許才開放申請）Lorem, ipsum dolor sit
                                 amet consectetur adipisicing elit. Eius repellendus doloribus molestiae officiis
                                 ratione, reprehenderit voluptas minima laborum dolores et. Adipisci, illum. Beatae amet
                                 excepturi sunt, sit laudantium laborum neque. </div> -->
-                            <!-- form grid -->
-                            <div class="form_grid">
-                                <div class="form_grp">
-                                    <div class="field_name">申請公司/單位名稱</div>
-                                    <div class="form_content">
-                                        <input type="text" value="台灣大學資訊工程系" readonly>
-                                        <!-- <p class="existed">台灣大學資訊工程系<small>純文字樣式</small></p> -->
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="field_name">申請聯絡人</div>
-                                    <div class="form_content">
-                                        <input type="text" value="陳大明" readonly>
-                                        <!-- <p class="existed">陳大明<small>純文字樣式</small></p> -->
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="field_name">公司/單位名稱</div>
-                                    <div class="form_content">
-                                        <input type="text" value="XXX@gmail.com" readonly>
-                                        <!-- <p class="existed">XXX@gmail.com<small>純文字樣式</small></p> -->
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="field_name">活動名稱<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
-                                    </div>
-                                    <div class="form_content">
-                                        <input type="text" value="" placeholder="請輸入您即將舉辦的活動名稱">
-                                        <!-- <p class="existed">XXX@gmail.com<small>純文字樣式</small></p> -->
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="field_name">使用目的時間<abbr class="necessary"
-                                            title="為必填(選)欄位,不能為空白。">*</abbr>
-                                    </div>
-                                    <div class="form_content">
-                                        <div class="datepick">
-                                            <input name="" type="text" value="" class="calendar" placeholder="開始日期">
-                                            <i class="far fa-calendar-alt"></i>
-                                        </div>
-                                        <div class="datepick">
-                                            <input name="" type="text" value="" class="calendar" placeholder="結束日期">
-                                            <i class="far fa-calendar-alt"></i>
+                                <!-- form grid -->
+                                <div class="form_grid">
+                                    <div class="form_grp">
+                                        <div class="field_name">申請公司/單位名稱</div>
+                                        <div class="form_content">
+                                            <input type="text" value="台灣大學資訊工程系" readonly />
+                                            <!-- <p class="existed">台灣大學資訊工程系<small>純文字樣式</small></p> -->
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="field_name">使用目的範圍<abbr class="necessary"
-                                            title="為必填(選)欄位,不能為空白。">*</abbr>
-                                    </div>
-                                    <div class="form_content">
-                                        <div class="checkbox_grp">
-                                            <label>
-                                                <input type="checkbox" name="sampleRadio5" value=""
-                                                    checked="">平面印刷品</label>
-                                            <label>
-                                                <input type="checkbox" name="samplecheckbox5" value="">網站/電子報</label>
-                                            <label>
-                                                <input type="checkbox" name="samplecheckbox5" value="">其他</label>
-                                        </div>
-                                        <p class="info"><i class="fas fa-info-circle"></i>可複選</p>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="field_name">使用範圍方法說明<abbr class="necessary"
-                                            title="為必填(選)欄位,不能為空白。">*</abbr>
-                                    </div>
-                                    <div class="form_content">
-                                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="field_name">使用者服務條款<abbr class="necessary"
-                                            title="為必填(選)欄位,不能為空白。">*</abbr>
-                                    </div>
-                                    <div class="form_content">
-                                        <div class="checkbox_grp">
-                                            <p>請先<a data-fancybox data-src="#hidden-content"
-                                                    href="javascript:;">閱讀條款</a></p>
-                                            <label><input type="checkbox" name="sampleRadio5" value=""
-                                                    checked="">同意服務條款</label>
+                                    <div class="form_grp">
+                                        <div class="field_name">申請聯絡人</div>
+                                        <div class="form_content">
+                                            <input type="text" value="陳大明" readonly />
+                                            <!-- <p class="existed">陳大明<small>純文字樣式</small></p> -->
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="field_name">使用目的範圍<abbr class="necessary"
-                                            title="為必填(選)欄位,不能為空白。">*</abbr>
-                                    </div>
-                                    <div class="form_content">
-                                        <div class="checkbox_grp">
-                                            <label>
-                                                <input type="checkbox" name="sampleRadio5" value=""
-                                                    checked="">臺灣會展識別標誌</label>
-                                            <label>
-                                                <input type="checkbox" name="samplecheckbox5" value="">國貿局識別標誌</label>
+                                    <div class="form_grp">
+                                        <div class="field_name">公司/單位名稱</div>
+                                        <div class="form_content">
+                                            <input type="text" value="XXX@gmail.com" readonly />
+                                            <!-- <p class="existed">XXX@gmail.com<small>純文字樣式</small></p> -->
                                         </div>
-                                        <p class="info"><i class="fas fa-info-circle"></i>可複選</p>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="field_name">
+                                            活動名稱<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                        </div>
+                                        <div class="form_content">
+                                            <input type="text" value="" placeholder="請輸入您即將舉辦的活動名稱" />
+                                            <!-- <p class="existed">XXX@gmail.com<small>純文字樣式</small></p> -->
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="field_name">
+                                            使用目的時間<abbr class="necessary" title="為必填(選)欄位,不能為空白。"
+                                                >*</abbr
+                                            >
+                                        </div>
+                                        <div class="form_content">
+                                            <div class="datepick">
+                                                <input
+                                                    name=""
+                                                    type="text"
+                                                    value=""
+                                                    class="calendar"
+                                                    placeholder="開始日期"
+                                                />
+                                                <i class="far fa-calendar-alt"></i>
+                                            </div>
+                                            <div class="datepick">
+                                                <input
+                                                    name=""
+                                                    type="text"
+                                                    value=""
+                                                    class="calendar"
+                                                    placeholder="結束日期"
+                                                />
+                                                <i class="far fa-calendar-alt"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="field_name">
+                                            使用目的範圍<abbr class="necessary" title="為必填(選)欄位,不能為空白。"
+                                                >*</abbr
+                                            >
+                                        </div>
+                                        <div class="form_content">
+                                            <div class="checkbox_grp">
+                                                <label>
+                                                    <input
+                                                        type="checkbox"
+                                                        name="sampleRadio5"
+                                                        value=""
+                                                        checked=""
+                                                    />平面印刷品</label
+                                                >
+                                                <label>
+                                                    <input
+                                                        type="checkbox"
+                                                        name="samplecheckbox5"
+                                                        value=""
+                                                    />網站/電子報</label
+                                                >
+                                                <label>
+                                                    <input type="checkbox" name="samplecheckbox5" value="" />其他</label
+                                                >
+                                            </div>
+                                            <p class="info"><i class="fas fa-info-circle"></i>可複選</p>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="field_name">
+                                            使用範圍方法說明<abbr class="necessary" title="為必填(選)欄位,不能為空白。"
+                                                >*</abbr
+                                            >
+                                        </div>
+                                        <div class="form_content">
+                                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="field_name">
+                                            使用者服務條款<abbr class="necessary" title="為必填(選)欄位,不能為空白。"
+                                                >*</abbr
+                                            >
+                                        </div>
+                                        <div class="form_content">
+                                            <div class="checkbox_grp">
+                                                <p>
+                                                    請先<a data-fancybox data-src="#hidden-content" href="javascript:;"
+                                                        >閱讀條款</a
+                                                    >
+                                                </p>
+                                                <label
+                                                    ><input
+                                                        type="checkbox"
+                                                        name="sampleRadio5"
+                                                        value=""
+                                                        checked=""
+                                                    />同意服務條款</label
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="field_name">
+                                            使用目的範圍<abbr class="necessary" title="為必填(選)欄位,不能為空白。"
+                                                >*</abbr
+                                            >
+                                        </div>
+                                        <div class="form_content">
+                                            <div class="checkbox_grp">
+                                                <label>
+                                                    <input
+                                                        type="checkbox"
+                                                        name="sampleRadio5"
+                                                        value=""
+                                                        checked=""
+                                                    />臺灣會展識別標誌</label
+                                                >
+                                                <label>
+                                                    <input
+                                                        type="checkbox"
+                                                        name="samplecheckbox5"
+                                                        value=""
+                                                    />國貿局識別標誌</label
+                                                >
+                                            </div>
+                                            <p class="info"><i class="fas fa-info-circle"></i>可複選</p>
+                                        </div>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <button type="button" class="btn btn_submit">送出</button>
                                     </div>
                                 </div>
-                                <div class="btn_grp">
-                                    <button type="button" class="btn btn_submit ">送出</button>
+                                <!-- 服務條款燈箱 -->
+                                <div style="display: none" id="hidden-content" class="mt-pop">
+                                    <h3>MEET TAIWAN網站 使用者服務條款</h3>
+                                    <h4>隱私權政策內容</h4>
+                                    <p>
+                                        親愛的使用者，中華民國經濟部(以下簡稱經濟部)「臺灣會展網」竭力尊重您的隱私權，並會竭盡所能提供各種溝通途徑，確保您的個人私隱權益受到適當保障。請詳細閱讀以下經濟部「臺灣會展網」的資料隱私及資訊安全政策，本政策將幫助您瞭解，在您使用經濟部「臺灣會展網」所提供的服務時，我們收集、運用及保護您個人資料的原則與方式。
+                                    </p>
+                                    <h4>1、適用範圍</h4>
+                                    <p>
+                                        以下的資料隱私政策及資訊安全內容，適用於您在經濟部「臺灣會展網 (網址:
+                                        www.meettaiwan.com，以下簡稱為本網站)活動時，所涉及之個人資料收集、運用與保護。這個網站可能包含其他非政府機構網站的連結，他們的數據保護和隱私權益措施可能與我們的不同，對這些其他網站的內容和隱私權益措施，我們將不負任何責任。建議您在使用前查詢那些網站的隱私權益聲明。
+                                    </p>
+                                    <h4>
+                                        2、個人資料搜集原則(有關個人資料保護政策，請詳本網站 「個人資料保護聲明內容」)
+                                    </h4>
+                                    <p>2.1 個人資料類別</p>
+                                    <p>2.1.1加入會員</p>
+                                    <p>
+                                        當您註冊成為本網站的會員、以取得本網站中所提供之會員服務時，本網站會請您提供個人資訊，包括：姓名、性別、學歷、電話、地址、電子信箱等基本資料，以確保會員服務之管理作業。
+                                    </p>
+                                    <p>2.1.2訂閱電子報</p>
+                                    <p>
+                                        當您希望透過電子報訂閱以取得本網站所提供之每月訊息時，本網站將請您提供個人資訊，包括：電子信箱等基本資料，以確保可收到所需資訊。我們因作業需求，會保留您填入的資料，並提供取消訂閱或變更之服務。
+                                    </p>
+                                    <p>2.1.3聯絡我們</p>
+                                    <p>
+                                        當您使用電子郵件向本網站連絡我們頁面所列之連絡單位表達意見或提出詢問時，我們需要您提供正確的信箱或連絡資料以做為回復您的依據。
+                                    </p>
+                                    <p>2.1.4網路調查活動</p>
+                                    <p>
+                                        當您參與本網站的網路調查活動時，我們將在您的同意下，依照調查活動需求，請您提供其它資料及意見以供分析統計之用。
+                                    </p>
+                                    <p>2.1.5一般瀏覽</p>
+                                    <p>
+                                        本網站會保留使用者在上網瀏覽或查詢時，服務器自行產生的相關記錄，包括主機設備IP地址、使用時間、使用的瀏覽器、瀏覽及點選數據記錄等。本網站會對個別連網者的瀏覽器予以標示，歸納使用者瀏覽器在本網站內部所瀏覽的網頁，除非您願意告知您的個人資訊，否則本網站不會、也無法將此項記錄和您的個人資訊進行對應。
+                                    </p>
+                                    <p>2.1.6. 參與活動或業務往來</p>
+                                    <p>
+                                        當您參加會議展覽服務發展計畫所舉辦的各式活動或其他單位所舉辦的會展相關活動，或與會議展覽服務發展計畫執行單位有業務上之往來，繼而藉由介紹、拜訪等互動留下您的聯絡資訊或會員名單予會議展覽服務發展計畫執行單位作進一步聯繫。
+                                    </p>
+                                    <h3>3、 個人資訊的運用原則</h3>
+                                    <p>
+                                        本網站不會出售、出租或任意交換任何您的個人資訊給其它團體或個人。只有在以下狀況，本網站會在本政策原則之下，與第三者共享您的個人資料：
+                                        本網站根據使用者註冊、電子報訂閱、檔案下載、或服務器日誌文件，對使用者的人數、興趣和行為進行內部統計研究。此研究是根據全體使用者的資料進行統計分析與整理，以做為提供更精緻個人化服務之基礎；而我們所有的公開資訊或分析報告，將僅對全體使用者行為總和進行分析及公佈，不會提供特定對像個別資訊之分析報告。
+                                    </p>
+                                    <h4>4、 Cookies的使用原則</h4>
+                                    <p>
+                                        為提供個人化的服務，有時我們會使用Cookies技術來儲存並在某些時候追蹤使用者的數據。Cookie是從網站傳送到瀏覽器，並保存在使用者計算機硬碟中的簡短資訊。使用者可以在Netscape/Mozilla的「功能設定」之「進階」或是IE的「Internet選項」之「安全性」中選擇修改瀏覽器對Cookies的接受程度，包括接受所有Cookies、設定Cookies時得到通知、拒絕所有Cookies等。如果您選擇拒絕所有的Cookies，可能無法使用部份個人化服務或是參與部份的活動。
+                                        一般而言，我們會依據以下目的及情況，在使用者瀏覽器中寫入並讀取Cookies︰
+                                    </p>
+                                    <p>4.1為提供更好、更個人化的服務：</p>
+                                    <p>方便您參與個人化的互動活動。cookies 在您註冊或登入時建立，並在您登出時修改。</p>
+                                    <p>4.2為統計瀏覽人數及分析瀏覽模式：</p>
+                                    <p>以瞭解網頁瀏覽的情況，做為改善服務的參考。</p>
+                                    <h4>5、資訊分享的公開原則</h4>
+                                    <p>
+                                        本網站不會任意出售、交換、或出租任何您的個人數據給其它團體或個人，或為商業目的。只有在以下狀況，本網站會在本政策原則之下，與第三者揭露您的個人資料。
+                                    </p>
+                                    <p>5.1為進行服務品質加值、評估及研究</p>
+                                    <p>
+                                        為提供使用者更精確及優質之服務，本網站得按照資訊保密協議，將使用者數據與第三人數據比較對照。此外，為了向未來的合作夥伴、及其它第三方介紹我們的服務及其它的合法目的，本網站得在不具名的情形之下，揭露使用者之統計資料。
+                                    </p>
+                                    <p>5.2其它</p>
+                                    <p>
+                                        本網站有義務保護其使用者隱私及個人資訊，非經您本人同意不會自行修改、刪除或提供任何(或部份)使用者個人數據及檔案。除非經過您事先同意或符合以下情況：
+                                    </p>
+                                    <p>5.2.1中華民國司法檢調單位透過合法程序進行調閱。</p>
+                                    <p>
+                                        5.2.2違反網站相關規章且已造成脅迫性，經本網站維運小組及經濟部研析揭露您的個人資料是為了辨識、聯絡、或採取法律行動所必要者。
+                                    </p>
+                                    <p>5.2.3基於主動延伸政府網站服務效益之考慮。</p>
+                                    <p>5.2.4保護其它使用者之合法使用權益。</p>
+                                    <h4>6、資訊安全保護措施</h4>
+                                    <p>
+                                        6.1任何未經授權而企圖上載或更改本網站所提供的各項服務及相關資訊的行為，都是嚴明禁止而且可能觸犯法律。為了網站安全的目的和確保這項服務能夠繼續服務所有的網絡使用者，本網站提供了以下的安全保護措施：
+                                    </p>
+                                    <p>
+                                        6.1.1使用網絡入侵偵測系統，監控網絡流量，以確認未經授權而企圖上載或更改、
+                                        網頁資訊或蓄意破壞者。
+                                    </p>
+                                    <p>
+                                        6.2.2裝設防火牆防止非法入侵、破壞或竊取或破壞數據，以避免網站遭到非法使用，以保障使用者的權益。
+                                    </p>
+                                    <p>6.2.3裝設掃毒軟件，定期掃毒，以提供使用者更安全的網頁瀏覽環境。</p>
+                                    <p>
+                                        6.2.4不定期摹擬駭客攻擊，演練發生安全事件時的系統回復程序，並提供適當的安全防禦等級。
+                                    </p>
+                                    <p>6.2.5每日進行備份作業，將所有數據備份到備援主機。</p>
+                                    <p>
+                                        6.2.6自動接收所有來自相關操作系統廠商或應用程序廠商所寄發的安全維護電子信通知，並依照電子信的建議，安裝適當的修改程序(PATCH)。
+                                    </p>
+                                    <p>
+                                        由於網際網路資料的傳輸不能保證百分之百的安全，儘管本網站努力保護使用者的個人數據安全，在部分情況下會使用通行標準的SSL保全系統，保障資訊傳送的安全性。由於數據傳輸過程牽涉您上網環境保全之良窳，我們並無法確信或保證使用者傳送或接收本網站數據的安全，使用者須注意並承擔網路資料傳輸之風險。
+                                    </p>
+                                    <p>6.2隱私權暨資訊安全保護政策修訂：</p>
+                                    <p>
+                                        本網站會不定時修訂本項政策，以符合最新之隱私權保護規範。當我們在使用個人資料的規定做較大幅度修改時，我們會在網頁上張貼告示，通知您相關事項。
+                                    </p>
+                                    <p>6.3隱私權暨資訊安全保護政策諮詢：</p>
+                                    <p>
+                                        如果您對於我們的資料隱私政策或是有個人數據收集、運用、更新等問題，歡迎您與我們連絡。<br />E-mail：mpo@meettaiwan.com<br />連絡電話：
+                                        +886-2-2392-0788
+                                    </p>
                                 </div>
-                            </div>
-                            <!-- 服務條款燈箱 -->
-                            <div style="display: none;" id="hidden-content" class="mt-pop">
-                                <h3>MEET TAIWAN網站 使用者服務條款</h3>
-                                <h4>隱私權政策內容</h4>
-                                <p>親愛的使用者，中華民國經濟部(以下簡稱經濟部)「臺灣會展網」竭力尊重您的隱私權，並會竭盡所能提供各種溝通途徑，確保您的個人私隱權益受到適當保障。請詳細閱讀以下經濟部「臺灣會展網」的資料隱私及資訊安全政策，本政策將幫助您瞭解，在您使用經濟部「臺灣會展網」所提供的服務時，我們收集、運用及保護您個人資料的原則與方式。
-                                </p>
-                                <h4>1、適用範圍</h4>
-                                <p>以下的資料隱私政策及資訊安全內容，適用於您在經濟部「臺灣會展網 (網址:
-                                    www.meettaiwan.com，以下簡稱為本網站)活動時，所涉及之個人資料收集、運用與保護。這個網站可能包含其他非政府機構網站的連結，他們的數據保護和隱私權益措施可能與我們的不同，對這些其他網站的內容和隱私權益措施，我們將不負任何責任。建議您在使用前查詢那些網站的隱私權益聲明。
-                                </p>
-                                <h4>2、個人資料搜集原則(有關個人資料保護政策，請詳本網站 「個人資料保護聲明內容」)</h4>
-                                <p>2.1 個人資料類別</p>
-                                <p>2.1.1加入會員</p>
-                                <p>當您註冊成為本網站的會員、以取得本網站中所提供之會員服務時，本網站會請您提供個人資訊，包括：姓名、性別、學歷、電話、地址、電子信箱等基本資料，以確保會員服務之管理作業。
-                                </p>
-                                <p>2.1.2訂閱電子報</p>
-                                <p>當您希望透過電子報訂閱以取得本網站所提供之每月訊息時，本網站將請您提供個人資訊，包括：電子信箱等基本資料，以確保可收到所需資訊。我們因作業需求，會保留您填入的資料，並提供取消訂閱或變更之服務。
-                                </p>
-                                <p>2.1.3聯絡我們</p>
-                                <p>當您使用電子郵件向本網站連絡我們頁面所列之連絡單位表達意見或提出詢問時，我們需要您提供正確的信箱或連絡資料以做為回復您的依據。</p>
-                                <p>2.1.4網路調查活動</p>
-                                <p>當您參與本網站的網路調查活動時，我們將在您的同意下，依照調查活動需求，請您提供其它資料及意見以供分析統計之用。</p>
-                                <p>2.1.5一般瀏覽</p>
-                                <p>本網站會保留使用者在上網瀏覽或查詢時，服務器自行產生的相關記錄，包括主機設備IP地址、使用時間、使用的瀏覽器、瀏覽及點選數據記錄等。本網站會對個別連網者的瀏覽器予以標示，歸納使用者瀏覽器在本網站內部所瀏覽的網頁，除非您願意告知您的個人資訊，否則本網站不會、也無法將此項記錄和您的個人資訊進行對應。
-                                </p>
-                                <p>2.1.6. 參與活動或業務往來</p>
-                                <p>當您參加會議展覽服務發展計畫所舉辦的各式活動或其他單位所舉辦的會展相關活動，或與會議展覽服務發展計畫執行單位有業務上之往來，繼而藉由介紹、拜訪等互動留下您的聯絡資訊或會員名單予會議展覽服務發展計畫執行單位作進一步聯繫。
-                                </p>
-                                <h3>3、 個人資訊的運用原則</h3>
-                                <p>本網站不會出售、出租或任意交換任何您的個人資訊給其它團體或個人。只有在以下狀況，本網站會在本政策原則之下，與第三者共享您的個人資料：
-                                    本網站根據使用者註冊、電子報訂閱、檔案下載、或服務器日誌文件，對使用者的人數、興趣和行為進行內部統計研究。此研究是根據全體使用者的資料進行統計分析與整理，以做為提供更精緻個人化服務之基礎；而我們所有的公開資訊或分析報告，將僅對全體使用者行為總和進行分析及公佈，不會提供特定對像個別資訊之分析報告。
-                                </p>
-                                <h4>4、 Cookies的使用原則</h4>
-                                <p>為提供個人化的服務，有時我們會使用Cookies技術來儲存並在某些時候追蹤使用者的數據。Cookie是從網站傳送到瀏覽器，並保存在使用者計算機硬碟中的簡短資訊。使用者可以在Netscape/Mozilla的「功能設定」之「進階」或是IE的「Internet選項」之「安全性」中選擇修改瀏覽器對Cookies的接受程度，包括接受所有Cookies、設定Cookies時得到通知、拒絕所有Cookies等。如果您選擇拒絕所有的Cookies，可能無法使用部份個人化服務或是參與部份的活動。
-                                    一般而言，我們會依據以下目的及情況，在使用者瀏覽器中寫入並讀取Cookies︰</p>
-                                <p>4.1為提供更好、更個人化的服務：</p>
-                                <p>方便您參與個人化的互動活動。cookies 在您註冊或登入時建立，並在您登出時修改。</p>
-                                <p>4.2為統計瀏覽人數及分析瀏覽模式：</p>
-                                <p>以瞭解網頁瀏覽的情況，做為改善服務的參考。</p>
-                                <h4>5、資訊分享的公開原則</h4>
-                                <p>本網站不會任意出售、交換、或出租任何您的個人數據給其它團體或個人，或為商業目的。只有在以下狀況，本網站會在本政策原則之下，與第三者揭露您的個人資料。</p>
-                                <p>5.1為進行服務品質加值、評估及研究</p>
-                                <p>為提供使用者更精確及優質之服務，本網站得按照資訊保密協議，將使用者數據與第三人數據比較對照。此外，為了向未來的合作夥伴、及其它第三方介紹我們的服務及其它的合法目的，本網站得在不具名的情形之下，揭露使用者之統計資料。
-                                </p>
-                                <p>5.2其它</p>
-                                <p>本網站有義務保護其使用者隱私及個人資訊，非經您本人同意不會自行修改、刪除或提供任何(或部份)使用者個人數據及檔案。除非經過您事先同意或符合以下情況：</p>
-                                <p>5.2.1中華民國司法檢調單位透過合法程序進行調閱。</p>
-                                <p>5.2.2違反網站相關規章且已造成脅迫性，經本網站維運小組及經濟部研析揭露您的個人資料是為了辨識、聯絡、或採取法律行動所必要者。</p>
-                                <p>5.2.3基於主動延伸政府網站服務效益之考慮。</p>
-                                <p>5.2.4保護其它使用者之合法使用權益。</p>
-                                <h4>6、資訊安全保護措施</h4>
-                                <p>6.1任何未經授權而企圖上載或更改本網站所提供的各項服務及相關資訊的行為，都是嚴明禁止而且可能觸犯法律。為了網站安全的目的和確保這項服務能夠繼續服務所有的網絡使用者，本網站提供了以下的安全保護措施：
-                                </p>
-                                <p>6.1.1使用網絡入侵偵測系統，監控網絡流量，以確認未經授權而企圖上載或更改、 網頁資訊或蓄意破壞者。</p>
-                                <p>6.2.2裝設防火牆防止非法入侵、破壞或竊取或破壞數據，以避免網站遭到非法使用，以保障使用者的權益。</p>
-                                <p>6.2.3裝設掃毒軟件，定期掃毒，以提供使用者更安全的網頁瀏覽環境。</p>
-                                <p>6.2.4不定期摹擬駭客攻擊，演練發生安全事件時的系統回復程序，並提供適當的安全防禦等級。</p>
-                                <p>6.2.5每日進行備份作業，將所有數據備份到備援主機。</p>
-                                <p>6.2.6自動接收所有來自相關操作系統廠商或應用程序廠商所寄發的安全維護電子信通知，並依照電子信的建議，安裝適當的修改程序(PATCH)。</p>
-                                <p>由於網際網路資料的傳輸不能保證百分之百的安全，儘管本網站努力保護使用者的個人數據安全，在部分情況下會使用通行標準的SSL保全系統，保障資訊傳送的安全性。由於數據傳輸過程牽涉您上網環境保全之良窳，我們並無法確信或保證使用者傳送或接收本網站數據的安全，使用者須注意並承擔網路資料傳輸之風險。
-                                </p>
-                                <p>6.2隱私權暨資訊安全保護政策修訂：</p>
-                                <p>本網站會不定時修訂本項政策，以符合最新之隱私權保護規範。當我們在使用個人資料的規定做較大幅度修改時，我們會在網頁上張貼告示，通知您相關事項。</p>
-                                <p>6.3隱私權暨資訊安全保護政策諮詢：</p>
-                                <p>如果您對於我們的資料隱私政策或是有個人數據收集、運用、更新等問題，歡迎您與我們連絡。<br>E-mail：mpo@meettaiwan.com<br>連絡電話：
-                                    +886-2-2392-0788</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- fat footer -->
-    <div id="mt_fatfooter"></div>
-    <!-- footer -->
-    <div id="mt_footer"></div>
-    <!-- gotoTop -->
-    <div id="mt_gototop"></div>
-    <!-- mt-cookie  -->
-    <!-- <div id="mt_cookie"></div> -->
-</body>
-<script>
-    // for Demo load components
+        <!-- fat footer -->
+        <div id="mt_fatfooter"></div>
+        <!-- footer -->
+        <div id="mt_footer"></div>
+        <!-- gotoTop -->
+        <div id="mt_gototop"></div>
+        <!-- mt-cookie  -->
+        <!-- <div id="mt_cookie"></div> -->
+        <!-- mt-userbar  -->
+        <div id="mt_userbar"></div>
+    </body>
+    <script>
+        // for Demo load components
 
-    $(document).ready(function () {
-        $('#mt_sidebar').load('components/mt-sidebar/mt-sidebar.html');
-        $('#mt_header').load('components/mt-header/mt-header.html');
-        $('#mt_fatfooter').load('components/mt-fatfooter/mt-fatfooter.html');
-        $('#mt_footer').load('components/mt-footer/mt-footer.html');
-        $('#mt_gototop').load('components/mt-gototop/mt-gototop.html');
-        //$('#mt_cookie').load('components/mt-cookie/mt-cookie.html');
-    });
-</script>
-<!-- 呼叫元件內的function -->
-<script src="js/mt-init.js"></script>
-<!-- fancy -->
-<script src="vendor/fancybox/jquery.fancybox.min.js"></script>
-
+        $(document).ready(function () {
+            $('#mt_sidebar').load('components/mt-sidebar/mt-sidebar.html');
+            $('#mt_header').load('components/mt-header/mt-header.html');
+            $('#mt_fatfooter').load('components/mt-fatfooter/mt-fatfooter.html');
+            $('#mt_footer').load('components/mt-footer/mt-footer.html');
+            $('#mt_gototop').load('components/mt-gototop/mt-gototop.html');
+            //$('#mt_cookie').load('components/mt-cookie/mt-cookie.html');
+            $('#mt_userbar').load('components/mt-userbar/mt-userbar.html');
+        });
+    </script>
+    <!-- 呼叫元件內的function -->
+    <script src="js/mt-init.js"></script>
+    <!-- fancy -->
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
 </html>

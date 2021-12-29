@@ -1256,7 +1256,7 @@ p.error {
                 }
             }
             div.info {
-                padding: 1em 2em 1em 6em;
+                padding: 1.5em 2em 1.5em 6em;
                 font-size: 0.938em;
                 border-radius: 0.25em;
                 background-color: #d2f1ff;
@@ -2096,6 +2096,83 @@ p.error {
                         font-size: 0.938em;
                     }
                 }
+            }
+        }
+    }
+}
+
+@keyframes bounceInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    30% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.apply_step {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+    & > div {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 6em;
+        height: 6em;
+        width: 4em;
+        position: relative;
+        margin: 0 3em;
+        text-align: center;
+        &:before,
+        &:after {
+            position: absolute;
+            content: '';
+            height: 9px;
+            background: #bbb;
+            left: 50%;
+            width: 8em;
+            margin-left: -8em;
+            top: 32%;
+            z-index: 0;
+        }
+        &:after {
+            width: 8em;
+            margin-left: 0em;
+        }
+        &:first-child {
+            &:before {
+                display: none;
+            }
+        }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+        span {
+            border-radius: 50%;
+            width: 4rem;
+            height: 4rem;
+            border: 8px solid #bbb;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            margin: 0 auto 0.5rem;
+            font-size: 1.5em;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+        }
+        &.active {
+            span {
+                border: 8px solid $secondaryColor;
             }
         }
     }
