@@ -126,6 +126,15 @@ $(window).on('load', function () {
             }
         }
     });
+    //---------------------------------- 徵求記錄 查看 -----//
+    $('.btn-view').each(function () {
+        $(this)
+            .off()
+            .click(function (e) {
+                $(this).parents('tr').next('.description').stop().slideToggle('400', 'easeOutQuint');
+                e.preventDefault();
+            });
+    });
     //---------------------------------- action setting -----//
     if ($('.action').length > 0) {
         $('.action').each(function () {

@@ -1235,8 +1235,8 @@ p.error {
                         background: #0093ba;
                         border: 1px solid #0093ba;
                         color: #fff;
-                        font-size: 1em;
-                        height: 3em;
+                        font-size: 1.125em;
+                        height: 2.25em;
                         @include screen('xs_mobile') {
                             max-width: 50%;
                         }
@@ -1276,7 +1276,8 @@ p.error {
                 }
             }
             //data
-            span.allow {
+            span.allow,
+            span.ok {
                 color: #fff;
                 display: block;
                 text-align: center;
@@ -1288,7 +1289,8 @@ p.error {
                 white-space: nowrap;
                 margin: 0 auto;
             }
-            span.not-allowed {
+            span.not-allowed,
+            span.not-ok {
                 color: #fff;
                 display: block;
                 text-align: center;
@@ -1541,6 +1543,20 @@ p.error {
         }
         ul {
             @include li-reset;
+            position: relative;
+            &:before {
+                position: absolute;
+                content: '';
+                top: -0.5em;
+                width: 100%;
+                height: 0.5em;
+                left: 0;
+                background: rgb(45, 80, 187);
+                background: linear-gradient(90deg, rgba(45, 80, 187, 1) 0%, rgba(227, 82, 178, 1) 100%);
+                @include screen('mobile') {
+                    display: none;
+                }
+            }
             li {
                 position: relative;
                 a {
@@ -1567,6 +1583,9 @@ p.error {
                     background: $primaryColor;
                     padding: 0.5em 0 0.5em 1.5em;
                     display: none;
+                    &:before {
+                        display: none;
+                    }
                     li {
                         a {
                             min-height: 1.5em;
@@ -1939,5 +1958,143 @@ p.error {
     display: flex;
     font-size: 0.875em;
     button.btn {
+    }
+}
+// 查看
+.btn-view {
+    display: block;
+    min-width: 2em;
+    min-height: 2em;
+    width: 2em;
+    height: 2em;
+    max-width: 2em;
+    max-height: 2em;
+    border-radius: 50%;
+    padding: 0.5em;
+    margin: 0 auto;
+    background: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 8;
+    position: relative;
+    border: 1px solid #ccc;
+    &:hover,
+    &:focus {
+        background: #fff;
+    }
+    &:active {
+        transform: translateY(2px);
+    }
+    i {
+        position: absolute;
+        left: 48%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: #777;
+        margin: 0;
+    }
+}
+// 商機
+.business,
+.business_content {
+    margin: 1em 0;
+    .item {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 7px 27px -5px, rgba(0, 0, 0, 0.3) 0px 4px 16px -8px;
+        padding: 2em;
+        margin: 0 auto 2em;
+        border-radius: 0.5em;
+        position: relative;
+        overflow: hidden;
+        &:before {
+            position: absolute;
+            content: '';
+            top: -1em;
+            left: -1em;
+            width: 2em;
+            height: 2em;
+            background-color: lighten($primaryColor, 20);
+            transform: rotate(45deg);
+        }
+        &:hover {
+            &:before {
+                background-color: $secondaryColor;
+            }
+        }
+        ul {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-content: flex-start;
+            overflow: hidden;
+            flex: 1;
+            li {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 48%;
+                margin: 0 2% 0.5em 0;
+                display: flex;
+                color: #666;
+                @include screen('tablet') {
+                    flex-basis: 100%;
+                    margin: 0 auto 0.5em;
+                    flex-flow: row wrap;
+                }
+                span {
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    flex-basis: 8em;
+                    margin-right: 0.5em;
+                    white-space: nowrap;
+                    font-weight: bold;
+                    color: darken($primaryColor, 10);
+                    @include screen('tablet') {
+                        flex-basis: 100%;
+                        font-size: 0.938em;
+                    }
+                }
+            }
+        }
+    }
+}
+.business_content {
+    .item {
+        &:hover {
+            &:before {
+                background-color: lighten($primaryColor, 20);
+            }
+        }
+        &.basic_info {
+            background: url(../images/business_bg.jpg) no-repeat right center;
+            background-size: contain;
+            padding-right: 35%;
+            @include screen('tablet') {
+                background: none;
+                padding: 2em;
+            }
+        }
+        h3 {
+            margin: 0 0 1em;
+            color: $primaryColor;
+            font-size: 1.5em;
+        }
+        ul {
+            margin-left: 1em;
+            @include screen('mobile') {
+                margin-left: 0;
+            }
+            li {
+                flex-basis: 100%;
+                margin: 0 auto 0.5em;
+                span {
+                    flex-basis: 12em;
+                    @include screen('tablet') {
+                        flex-basis: 100%;
+                        font-size: 0.938em;
+                    }
+                }
+            }
+        }
     }
 }

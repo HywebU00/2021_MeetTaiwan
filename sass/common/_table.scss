@@ -16,7 +16,17 @@ table {
         border: #ddd 1px solid;
         border-left: none;
         border-right: none;
-        a {
+        .num {
+            display: block;
+            text-align: center;
+        }
+        .mt-category {
+            margin: 0;
+        }
+        .i_bookmark {
+            display: block;
+            text-align: center;
+            color: lighten($primaryColor, 10);
         }
     }
     th {
@@ -27,6 +37,18 @@ table {
         white-space: nowrap;
         border-left: none;
         border-right: none;
+    }
+    tr {
+        &.description {
+            display: none;
+            p {
+                font-size: 0.938em;
+                color: #666;
+                padding: 1em;
+                background: #f1f1f1;
+                border-radius: 0.25em;
+            }
+        }
     }
     &.table_hover {
         tr:hover {
