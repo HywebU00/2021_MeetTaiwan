@@ -1946,6 +1946,8 @@ p.error {
         position: relative;
         width: 100%;
         > li {
+            display: none;
+
             .content__wrapper {
                 width: 100%;
                 padding: 1em;
