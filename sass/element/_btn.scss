@@ -19,16 +19,16 @@ $btn-radius: 0.2em;
     // border-radius: $btn-radius;
     // @include gradient(lighten($btn-bg, 5), darken($btn-bg, 15), vertical);
     &:hover {
-        background: darken($btn-bg, 10); // Old browsers
-        border: 1px solid darken($btn-bg, 20);
+        background: lighten($btn-bg, 5); // Old browsers
+        border: 1px solid lighten($btn-bg, 5);
         cursor: pointer;
         color: #fff;
         outline: none;
         // @include gradient(lighten($btn-bg, 10), darken($btn-bg, 18), vertical);
     }
     &:focus {
-        background: darken($btn-bg, 10); // Old browsers
-        border: 1px solid darken($btn-bg, 20);
+        background: lighten($btn-bg, 5); // Old browsers
+        border: 1px solid lighten($btn-bg, 5);
         cursor: pointer;
         color: #fff;
         outline: none;
@@ -122,8 +122,8 @@ $btn-radius: 0.2em;
 
     &:hover,
     &:focus {
-        background: darken($primaryColor, 10) !important;
-        border: solid 1px $primaryColor !important;
+        background: lighten($primaryColor, 10) !important;
+        border: solid 1px lighten($primaryColor, 10) !important;
     }
 }
 // 次要按鈕
