@@ -1383,7 +1383,7 @@ input[disable] {
         top: 10px;
         right: 0.5em;
         @extend %btn;
-        @include btn_setting($form-focus, #fff);
+        @include btn_setting(lighten($primaryColor, 10), #fff);
         padding: 0.2em 1em !important;
         border-radius: 4px;
 

@@ -1,4 +1,44 @@
 //共通設定
+.sp_content,
+.sp_member {
+    div.info {
+        padding: 1.5em 2em 1.5em 6em;
+        font-size: 0.938em;
+        border-radius: 0.25em;
+        background-color: #d2f1ff;
+        position: relative;
+        color: #0c568d;
+        max-width: 50em;
+        margin: 0 auto 1em;
+        &:before {
+            position: absolute;
+            content: '';
+            left: 1em;
+            top: 1.25em;
+            width: 3em;
+            height: 2em;
+            background: url(../images/icon/icon_alert.svg) no-repeat center center;
+            background-size: contain;
+            border-right: 1px solid #266682;
+        }
+    }
+    .done {
+        text-align: center;
+        width: 80%;
+        margin: 1em auto;
+        h3 {
+            font-size: 1.25em;
+            line-height: 1.5em;
+        }
+        img {
+            width: 40%;
+            min-width: 120px;
+            max-width: 8em;
+            margin: 0 auto 1em;
+        }
+    }
+}
+
 p.info {
     font-size: 0.813rem;
     color: #999;
@@ -1260,26 +1300,7 @@ p.error {
                     margin: 0 0.25em;
                 }
             }
-            div.info {
-                padding: 1.5em 2em 1.5em 6em;
-                font-size: 0.938em;
-                border-radius: 0.25em;
-                background-color: #d2f1ff;
-                position: relative;
-                color: #0c568d;
-                margin-bottom: 1em;
-                &:before {
-                    position: absolute;
-                    content: '';
-                    left: 1em;
-                    top: 1.25em;
-                    width: 3em;
-                    height: 2em;
-                    background: url(../images/icon/icon_alert.svg) no-repeat center center;
-                    background-size: contain;
-                    border-right: 1px solid #266682;
-                }
-            }
+
             //data
             span.allow,
             span.ok {
@@ -2124,6 +2145,9 @@ p.error {
     justify-content: center;
     align-items: center;
     margin-bottom: 1em;
+    color: #999;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #aaa;
     @include screen('xs_mobile') {
         padding: 0 1em;
     }
@@ -2195,7 +2219,6 @@ p.error {
             }
         }
         &.active {
-            color: darken($secondaryColor, 10);
             span {
                 border: 8px solid $secondaryColor;
                 @include screen('xs_mobile') {
