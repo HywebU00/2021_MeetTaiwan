@@ -21,6 +21,15 @@
             background-size: contain;
             border-right: 1px solid #266682;
         }
+        @include screen('xs_mobile') {
+            width: calc(100% - 2em);
+        }
+    }
+    .check_grp {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 100%;
+        display: flex;
     }
     .done {
         text-align: center;
@@ -35,6 +44,15 @@
             min-width: 120px;
             max-width: 8em;
             margin: 0 auto 1em;
+        }
+    }
+    .form_grid {
+        .form_grp {
+            .form_content {
+                .upload_grp {
+                    flex-basis: 100%;
+                }
+            }
         }
     }
 }
@@ -622,6 +640,18 @@ p.error {
                 & ~ label {
                     top: -1.35em;
                     left: 0.5em;
+                    font-size: 0.75em;
+                    padding: 0em 0.5em;
+                    background: #fff;
+                }
+            }
+        }
+        textarea {
+            &:focus,
+            &.used {
+                & ~ label {
+                    top: -0.8em;
+                    left: 1em;
                     font-size: 0.75em;
                     padding: 0em 0.5em;
                     background: #fff;
@@ -2160,6 +2190,7 @@ p.error {
         position: relative;
         margin: 0 3em;
         text-align: center;
+        font-size: 0.875em;
         @include screen('xs_mobile') {
             flex-grow: 1;
             flex-basis: 30.3333%;
@@ -2221,9 +2252,6 @@ p.error {
         &.active {
             span {
                 border: 8px solid $secondaryColor;
-                @include screen('xs_mobile') {
-                    background-color: $secondaryColor;
-                }
             }
         }
     }
@@ -2287,6 +2315,17 @@ p.error {
                         flex-basis: 100%;
                         border: none;
                     }
+                }
+            }
+        }
+        .form_style {
+            @include screen('xs_mobile') {
+                margin: 0.5em 0 0;
+            }
+            & + .form_style {
+                margin-top: 0.25em;
+                @include screen('xs_mobile') {
+                    margin-top: 0.5em;
                 }
             }
         }
@@ -2424,6 +2463,9 @@ p.error {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
+        @include screen('xs_mobile') {
+            padding: 0 1em;
+        }
     }
     .btn {
         flex-grow: 1;
