@@ -1304,6 +1304,11 @@ input[type='radio'] {
     border: 1px solid $color-gray;
     border-radius: 0;
 }
+input[type='radio'] {
+    border-color: #ddd;
+    background-color: #ddd;
+    box-shadow: #fff 0 0 0 2px inset, #ddd 0 0 0 2px;
+}
 
 input[type='radio'] {
     border-radius: 50%;
@@ -1328,13 +1333,13 @@ input[type='checkbox']:checked {
 }
 
 input[type='radio']:checked {
-    box-shadow: #fff 0 0 0 1px inset, #f90 0 0 0 1px;
+    box-shadow: #fff 0 0 0 2px inset, $form-focus 0 0 0 2px;
 }
 
 input[type='radio']:focus {
     border-color: $form-focus;
     background-color: $form-focus;
-    box-shadow: #fff 0 0 0 1px inset, #f90 0 0 0 1px;
+    box-shadow: #fff 0 0 0 2px inset, $form-focus 0 0 0 2px;
 }
 
 input[type='checkbox']:focus {

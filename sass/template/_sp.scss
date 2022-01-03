@@ -59,7 +59,6 @@ p.error {
             flex-shrink: 1;
             flex-basis: 10em;
             padding: 0.75em 0.25em;
-            font-size: 0.938rem;
             font-weight: bold;
             align-self: flex-start;
             color: $primaryColor;
@@ -70,6 +69,13 @@ p.error {
                 flex-basis: 100%;
                 font-style: normal;
                 padding: 0 0.3em;
+            }
+            .info {
+                display: inline-block;
+                width: auto;
+                i {
+                    color: #ddd;
+                }
             }
         }
         .form_title {
@@ -299,14 +305,11 @@ p.error {
                 flex-shrink: 1;
                 flex-basis: 30%;
                 label {
-                    flex-grow: 0;
+                    flex-grow: 1;
                     flex-shrink: 1;
                     flex-basis: 30%;
                     @include screen('tablet') {
                         flex-basis: 40%;
-                    }
-                    @include screen('xs_mobile') {
-                        flex-basis: 80%;
                     }
                 }
             }
@@ -437,7 +440,8 @@ p.error {
                 flex-basis: 10em;
                 padding-right: 1em;
                 @include screen('xs_mobile') {
-                    flex-basis: 40%;
+                    flex-basis: 42%;
+                    padding-right: 0.25em;
                 }
                 select {
                     width: 100%;
@@ -449,7 +453,8 @@ p.error {
                 flex-basis: 10em;
                 padding-right: 1em;
                 @include screen('xs_mobile') {
-                    flex-basis: 40%;
+                    flex-basis: 42%;
+                    padding-right: 0.25em;
                 }
                 select {
                     width: 100%;
@@ -2119,6 +2124,9 @@ p.error {
     justify-content: center;
     align-items: center;
     margin-bottom: 1em;
+    @include screen('xs_mobile') {
+        padding: 0 1em;
+    }
     & > div {
         flex-grow: 0;
         flex-shrink: 0;
@@ -2128,6 +2136,12 @@ p.error {
         position: relative;
         margin: 0 3em;
         text-align: center;
+        @include screen('xs_mobile') {
+            flex-grow: 1;
+            flex-basis: 30.3333%;
+            margin: 0 1em;
+            font-size: 0.875rem;
+        }
         &:before,
         &:after {
             position: absolute;
@@ -2137,8 +2151,12 @@ p.error {
             left: 50%;
             width: 8em;
             margin-left: -8em;
-            top: 32%;
+            top: 30%;
             z-index: 0;
+            @include screen('xs_mobile') {
+                top: 11%;
+                height: 4px;
+            }
         }
         &:after {
             width: 8em;
@@ -2169,11 +2187,267 @@ p.error {
             font-weight: bold;
             position: relative;
             z-index: 1;
+            @include screen('xs_mobile') {
+                width: 1.5em;
+                height: 1.5em;
+                font-size: 1em;
+                text-indent: -9999px;
+            }
         }
         &.active {
+            color: darken($secondaryColor, 10);
             span {
                 border: 8px solid $secondaryColor;
+                @include screen('xs_mobile') {
+                    background-color: $secondaryColor;
+                }
             }
+        }
+    }
+}
+
+.sp_content {
+    .apply_form {
+        .recommend {
+            display: flex;
+            border-top: solid 1px $form-focus;
+            border-bottom: solid 1px $form-focus;
+            @include screen('xs_mobile') {
+                flex-flow: row wrap;
+                padding: 1em;
+                margin: 1em 0;
+            }
+            .sub_title {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 15em;
+                padding: 0.75em 1em;
+                font-weight: bold;
+                align-self: flex-start;
+                color: $primaryColor;
+                @include screen('tablet') {
+                    font-size: 0.813rem;
+                }
+                @include screen('xs_mobile') {
+                    flex-basis: 100%;
+                    font-style: normal;
+                    padding: 0.5em 0.3em;
+                }
+                .info {
+                    display: inline-block;
+                    width: auto;
+                    i {
+                        color: #ddd;
+                    }
+                }
+            }
+            .sub_content {
+                align-items: flex-start;
+                position: relative;
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 50%;
+                display: flex;
+                flex-flow: row wrap;
+                font-size: 0.938em;
+                .form_grp {
+                    flex-basis: 100%;
+                    border-bottom: 1px solid #ddd;
+                    .field_name {
+                        padding: 0.25em;
+                        flex-grow: 1;
+                        flex-shrink: 1;
+                        flex-basis: 100%;
+                    }
+                    .sub_content {
+                        flex-grow: 1;
+                        flex-basis: 100%;
+                        border: none;
+                    }
+                }
+            }
+        }
+        h3 {
+            text-align: center;
+            position: relative;
+            font-size: 1em;
+            span {
+                display: inline-block;
+                background-color: #fff;
+                position: relative;
+                z-index: 1;
+                padding: 0 1em;
+            }
+            &:after {
+                position: absolute;
+                content: '';
+                top: 50%;
+                width: 100%;
+                left: 50%;
+                margin-left: -50%;
+                border-top: 1px dashed #ddd;
+                z-index: 0;
+            }
+        }
+        .form_grid {
+            .form_grp {
+                &:last-child {
+                    border: none;
+                }
+            }
+        }
+        .btn_grp {
+            max-width: 50em;
+            padding: 0.25em 0 !important;
+            margin: 0 auto !important;
+            text-align: left;
+            justify-content: flex-start;
+            @include screen('xs_mobile') {
+                justify-content: center;
+            }
+            .btn-add {
+                background-color: #ddd;
+                border: 1px solid #ddd;
+                font-size: 0.938em;
+                i {
+                    margin-right: 0.5em;
+                }
+            }
+        }
+        &.apply_style {
+            .form_grid {
+                max-width: 50em;
+                padding: 1em 2.5em;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                @include screen('xs_mobile') {
+                    padding: 1em;
+                    width: 90%;
+                }
+            }
+        }
+        .form_grid {
+            max-width: 45em;
+            margin: 0 auto 3em;
+            @include screen('xs_mobile') {
+                width: 90%;
+            }
+            h4 {
+                margin: 0.5em 0 1em;
+                span {
+                    display: inline-block;
+                    margin-left: 1em;
+                    color: #888;
+                }
+            }
+            .field_name {
+                flex-basis: 15em;
+                @include screen('xs_mobile') {
+                    flex-basis: 100%;
+                }
+            }
+            .form_content {
+                &.form_inline {
+                    align-items: center;
+                    input[type='text'] {
+                        flex-grow: 1;
+                        flex-shrink: 1;
+                        flex-basis: auto;
+                        min-width: 80%;
+                        margin-right: 0.5em;
+                    }
+                    select {
+                        flex-grow: 0;
+                        flex-shrink: 1;
+                        flex-basis: auto;
+                        min-width: 60%;
+                    }
+                    .form_style {
+                        margin-top: 0.5em;
+                        padding: 0 0.25em;
+                        input[type='text'] {
+                            height: 2.5em;
+                            padding-left: 0.75em;
+                            &:focus,
+                            &.used {
+                                & ~ label {
+                                    top: -1.35em;
+                                    left: 0.75em;
+                                }
+                            }
+                        }
+                        label {
+                            top: 0.5em;
+                        }
+                        & + .form_style {
+                            margin: 1.25em 0 0.35em;
+                        }
+                    }
+                }
+                .radio_grp {
+                    margin: 0.5em 0;
+                    @include screen('xs_mobile') {
+                        flex-flow: row wrap;
+                        label {
+                            flex-basis: 100%;
+                            margin-bottom: 0.5em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .btn_grp {
+        margin: 1em 0 1.5em;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    .btn {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 120px;
+        max-width: 250px;
+        height: 42px;
+        color: #555;
+        font-size: 1.125rem;
+        padding: 0;
+        margin: 0 0.25em 0.5em;
+        font-weight: normal;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include screen('xs_mobile') {
+            flex-grow: 1;
+        }
+        &[readonly],
+        &[disabled] {
+            background: lighten($primaryColor, 20);
+            border: 1px solid lighten($primaryColor, 20);
+            &:hover,
+            &:focus {
+                border: 1px solid lighten($primaryColor, 20);
+                background: lighten($primaryColor, 20);
+            }
+            &:active {
+                transform: translateY(0);
+            }
+        }
+    }
+    .btn_submit {
+        color: #fff;
+        display: inline-block;
+        background: $primaryColor;
+        border: 1px solid $primaryColor;
+        text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.45);
+        &:hover,
+        &:focus,
+        &.btn_main {
+            background: $secondaryColor;
+            border: 1px solid $secondaryColor;
+            box-shadow: none !important;
+        }
+        &:active {
+            transform: translateY(3px);
         }
     }
 }
