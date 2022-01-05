@@ -1,0 +1,33 @@
+<!-- css -->
+<link rel="stylesheet" href="components/mt-kv3/mt-kv3.css" />
+<!-- mt_kv3 -->
+<div class="mt-kv3">
+    <div class="container">
+        <div class="img-container">
+            <!-- 請針對縮圖產出尺寸使用不同解析度 src -->
+            <picture>
+                <source media="(min-width: 1200px)" data-srcset="images/kv_video_bg.jpg" />
+                <source media="(min-width: 992px)" data-srcset="images/kv_video_bg.jpg" />
+                <source media="(min-width: 576px)" data-srcset="images/kv_video_bg.jpg" />
+                <source media="(max-width: 575px)" data-srcset="images/kv_video_bg.jpg" />
+                <img data-src="images/kv_video_bg.jpg" class="cover lazy" />
+                <noscript><img src="images/kv_video_bg.jpg" /></noscript>
+            </picture>
+            <div class="caption">
+                <div data-aos="fade-up" data-aos-delay="500" class="youtube_cover">
+                    <a data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/JhIpv3Mj4Nk"
+                        href="javascript:;">
+                        <i class="fab fa-youtube"></i>
+                        <img src="images/video_cover.png" alt="">
+                    </a>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="650" class="info">
+                    <h3>MEET TAIWAN</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus autem vero sit sunt esse
+                        exercitationem maiores atque, porro accusantium officia fugiat doloremque, quidem obcaecati.
+                        Tempora atque odit quas ab possimus!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
