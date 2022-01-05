@@ -3919,7 +3919,7 @@ select {
             display: block;
             content: '';
             line-height: 0;
-            padding-top: 120%; }
+            padding-top: 140%; }
           .mt-kv3 .container .img-container img,
           .mt-kv3 .container .img-container iframe,
           .mt-kv3 .container .img-container video {
@@ -3977,7 +3977,7 @@ select {
               flex-basis: 60%; } }
           @media screen and (max-width: 575px) {
             .mt-kv3 .container .img-container .caption .youtube_cover {
-              flex-basis: 80%; } }
+              flex-basis: 100%; } }
           .mt-kv3 .container .img-container .caption .youtube_cover a {
             overflow: hidden;
             position: relative;
