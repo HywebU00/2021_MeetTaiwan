@@ -694,7 +694,7 @@ p.error {
             overflow: hidden;
             background: #fff;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 5px 27px -5px, rgba(0, 0, 0, 0.3) 0px 4px 16px -8px;
-            margin: 1em 2.5% 2em;
+            margin: 1em 2.5% 5em;
             align-items: flex-start;
             align-content: flex-start;
             @include screen('tablet') {
@@ -822,25 +822,30 @@ p.error {
                         position: relative;
                         @include screen('xs_mobile') {
                             width: 90%;
-                            margin: 0 auto 2em;
+                            margin: -1em auto 2em;
                         }
                     }
                     .journal {
                         position: relative;
                         right: 0;
                         width: 8em;
-                        background-color: rgba(0, 0, 0, 0.15);
+                        background-color: rgba(0, 0, 0, 0.1);
                         color: #333;
                         padding: 0.25em;
                         text-align: center;
-                        font-size: 0.813em;
-                        margin: -3em 0 1.5em auto;
+                        font-size: 1em;
+                        font-weight: bold;
+                        margin: -2.5em 0 1.5em auto;
+                        @include screen('tablet') {
+                            margin: -2.5em 0 1.5em auto;
+                        }
                         @include screen('mobile') {
                             width: 100%;
+                            margin: -2em 0 1.5em auto;
                         }
                         @include screen('xs_mobile') {
                             width: 8em;
-                            margin: -4em 1.5em 4em auto;
+                            margin: -3.5em 1.5em 4em auto;
                         }
                     }
                     time {

@@ -1,0 +1,372 @@
+@import '../../sass/variable'; //Variable
+@import '../../sass/mixin'; //Mixin
+
+//mt-kv2
+.mt-kv2 {
+    padding: 0;
+    // background: rgba(0, 0, 0, 0.1);
+    margin-bottom: 1em;
+    position: relative;
+    .container {
+        max-width: 100%;
+        padding: 0;
+        .img-container {
+            @include aspect-ratio(3, 1);
+            position: relative;
+            width: 100%;
+            @include screen('notebook') {
+                @include aspect-ratio(2, 1);
+            }
+            @include screen('tablet') {
+                @include aspect-ratio(5, 4);
+            }
+            @include screen('mobile') {
+                @include aspect-ratio(5, 7);
+            }
+            &:after {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $primaryColor;
+                opacity: 0.25;
+            }
+            & > img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .caption {
+            max-width: $container-max;
+            width: 100%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            display: flex;
+            flex-flow: row wrap;
+            z-index: 2;
+            padding: 0 2em;
+            @include screen('tablet') {
+                display: flex;
+                flex-flow: row wrap;
+                transform: none;
+                top: 10%;
+                left: 0;
+            }
+            .info {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: auto;
+                padding: 1em;
+                h3 {
+                    font-size: 3.5em;
+                    text-align: center;
+                    color: #fff;
+                    margin: 0 0 1rem;
+                    text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.75);
+                    @include text-line(3, 1.25em);
+                    @include screen('tablet') {
+                        text-align: center;
+                        font-size: 2.5em;
+                    }
+                    @include screen('xs_mobile') {
+                        font-size: 1.75em;
+                    }
+                }
+                p {
+                    font-size: 1em;
+                    text-align: center;
+                    color: #fff;
+                    max-width: 40em;
+                    margin: 0 auto;
+                    text-shadow: 0px 3px 7px rgba(0, 0, 0, 1);
+                    @include text-line(3, 1.45em);
+                    @include screen('tablet') {
+                        text-align: center;
+                    }
+                }
+            }
+            .mt-search {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 100%;
+                min-height: 4em;
+                display: flex;
+                background: rgb(233, 233, 233);
+                background: linear-gradient(0deg, rgba(233, 233, 233, 1) 0%, rgba(255, 255, 255, 1) 60%);
+                box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+                align-items: stretch;
+                border-radius: 0.25em;
+                @include screen('tablet') {
+                    flex-flow: row wrap;
+                    justify-content: flex-start;
+                }
+                .condition_item {
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    flex-basis: 24%;
+                    display: flex;
+                    align-items: center;
+                    padding: 0 0.5em;
+                    position: relative;
+                    justify-content: center;
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        height: 80%;
+                        border-left: 1px solid #ddd;
+                        top: 10%;
+                        right: 0;
+                    }
+                    @include screen('tablet') {
+                        flex-grow: 0;
+                        flex-shrink: 1;
+                        flex-basis: 100%;
+                    }
+                    button.btn-condition {
+                        width: 100%;
+                        position: relative;
+                        padding-right: 1em;
+                        &:after {
+                            position: absolute;
+                            content: '';
+                            width: 0.25em;
+                            height: 0.25em;
+                            transform: rotate(45deg);
+                            border: 2px solid #555;
+                            border-top: none;
+                            border-left: none;
+                            right: 0.5em;
+                            top: 40%;
+                        }
+                    }
+                    .condition_block {
+                        &.open {
+                            top: 3.5em;
+                            opacity: 1;
+                            pointer-events: auto;
+                        }
+                        position: absolute;
+                        width: 100%;
+                        min-height: 15em;
+                        top: 6em;
+                        left: 0;
+                        padding: 2em 1em 1em;
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: 0.3s ease-out;
+                        &:before {
+                            position: absolute;
+                            content: '';
+                            top: 1em;
+                            left: 0;
+                            width: 100%;
+                            height: calc(100% - 0.5em);
+                            background-color: #fff;
+                            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+                        }
+                        &:after {
+                            position: absolute;
+                            content: '';
+                            left: 50%;
+                            top: 0.6em;
+                            margin-left: -5px;
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 0 5px 10px 5px;
+                            border-color: transparent transparent #fff transparent;
+                        }
+                        .btn_grp {
+                            justify-content: flex-end;
+                            position: relative;
+                            padding: 0.5em 0;
+                            button {
+                                margin: 0;
+                            }
+                        }
+                        p {
+                            font-size: 0.813em;
+                            position: relative;
+                            line-height: 1.35em;
+                            color: #888;
+                        }
+                    }
+                    .slider-area {
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        column-gap: 20px;
+                        background: inherit;
+                        // border: 1px solid #d4d4d4;
+                        padding: 1em 1em 4em;
+                        position: relative;
+                        z-index: 2;
+                        border-bottom: 1px solid #ddd;
+                        margin-bottom: 1em;
+                        #skip-value-lower {
+                            position: absolute;
+                            top: 3em;
+                            left: 1.5em;
+                            text-align: left;
+                            color: #888;
+                        }
+                        #skip-value-upper {
+                            position: absolute;
+                            top: 3em;
+                            right: 1.5em;
+                            text-align: right;
+                            color: #888;
+                        }
+                        .slider-title {
+                            font-size: 16px;
+                            font-weight: bold;
+                        }
+                        &-wrapper {
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+                            column-gap: 20px;
+                        }
+                        #skip-value-lower,
+                        #skip-value-upper {
+                            font-size: 16px;
+                            font-weight: bold;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        .noUi-target {
+                            flex: 1;
+                            position: relative;
+                            background: #e3e3e3;
+                            border-radius: 50px;
+                            &.noUi-horizontal {
+                                height: 10px;
+                            }
+                            .noUi-base,
+                            .noUi-connects {
+                                width: 100%;
+                                height: 100%;
+                                position: relative;
+                                z-index: 1;
+                            }
+                            .noUi-connects {
+                                border-radius: 3px;
+                                overflow: hidden;
+                                z-index: 0;
+                                .noUi-connect {
+                                    height: 100%;
+                                    width: 100%;
+                                    transform-style: preserve-3d;
+                                    transform-origin: 0 0;
+                                    transform-style: flat;
+                                    background-color: lighten($secondaryColor, 0);
+                                }
+                            }
+                            .noUi-origin {
+                                will-change: transform;
+                                position: absolute;
+                                z-index: 1;
+                                top: 0;
+                                right: 0;
+                                height: 0;
+                                width: 100%;
+                                .noUi-handle {
+                                    border-radius: 50px;
+                                    background: #fff;
+                                    cursor: default;
+                                    background-color: #fff;
+                                    box-shadow: rgba(0, 0, 0, 0.4);
+                                    backface-visibility: hidden;
+                                    position: absolute;
+                                    width: 21px;
+                                    height: 21px;
+                                    right: -10px;
+                                    top: -7px;
+                                    border: none;
+                                    .noUi-touch-area {
+                                        height: 100%;
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                        .noUi-draggable {
+                            cursor: ew-resize;
+                        }
+                    }
+                    .radio_grp {
+                        label {
+                            display: flex;
+                            align-items: center;
+                            padding: 0.25em 1em 0.75em;
+                            border-bottom: 1px solid #ddd;
+                            font-size: 0.938em;
+                            input[type='radio'] {
+                                margin-right: 0.5em;
+                            }
+                        }
+                    }
+                    .check_grp {
+                        label {
+                            display: flex;
+                            align-items: center;
+                            margin: 0;
+                            white-space: nowrap;
+                            input[type='checkbox'] {
+                                margin: 0 0.3em;
+                            }
+                            img {
+                                display: inline-block;
+                                object-fit: contain;
+                                margin: 0 0.3em;
+                                position: relative;
+                                width: 1.2em !important;
+                                height: 1.2em !important;
+                            }
+                        }
+                    }
+                }
+                & > .btn_grp {
+                    flex-grow: 0;
+                    flex-shrink: 1;
+                    flex-basis: 4em;
+                    padding: 0;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    margin: 0;
+                    .btn {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        margin: 0;
+                        border-radius: 0 0.25em 0.25em 0;
+                        &:hover,
+                        &:focus {
+                            border: 1px solid $secondaryColor !important;
+                            background-color: $secondaryColor !important;
+                        }
+                        &:active {
+                            transform: none;
+                        }
+                        i {
+                            font-size: 1.5em;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            margin: 0;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

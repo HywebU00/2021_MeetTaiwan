@@ -1,5 +1,27 @@
 var _window = $(window);
 $(window).on('load', function () {
+    //mt-search
+    if ($('.mt-search').length > 0) {
+        $('.btn-condition').each(function () {
+            $(this)
+                .off()
+                .click(function (e) {
+                    $(this).parents('.condition_item').siblings().find('.condition_block').stop().removeClass('open');
+                    $(this).siblings('.condition_block').stop().toggleClass('open');
+                    console.log('AAA');
+                    e.preventDefault();
+                    e.stopPropagation();
+                });
+        });
+        // click document close lang
+        function closeCondition() {
+            $('.mt-search')
+                .find('.condition_block')
+                .stop(true, true)
+                .removeClass('open')
+                .slideUp('600', 'easeOutQuint');
+        }
+    }
     // 內頁左側欄位 RWD設定 - 會員選單
     if ($('.member-function').length > 0) {
         $('body').append(

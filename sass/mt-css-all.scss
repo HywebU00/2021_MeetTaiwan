@@ -1,10 +1,12 @@
 @charset "utf-8";
-@import '_mt-common'; //變數
+// 共用設定 common setting
+@import '_mt-common';
 
-// components
+// 元件 component
 @import '../components/mt-sidebar/_mt-sidebar';
 @import '../components/mt-header/_mt-header';
 @import '../components/mt-kv1/_mt-kv1';
+@import '../components/mt-kv2/_mt-kv2';
 @import '../components/mt-kv3/_mt-kv3';
 @import '../components/mt-alert/_mt-alert';
 @import '../components/mt-event-Info/_mt-event-Info';
@@ -26,7 +28,7 @@
 @import '../components/mt-cookie/_mt-cookie';
 @import '../components/mt-userbar/_mt-userbar';
 
-//element
+//版型 template
 @import 'template/_template';
 @import 'template/_lp';
 @import 'template/_cp';

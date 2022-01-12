@@ -1300,8 +1300,8 @@ input[type='radio'] {
     margin: 0.3em;
     width: 1em;
     height: 1em;
-    background-color: #dcdcdc;
-    border: 1px solid $color-gray;
+    background-color: $color-gray;
+    border: 1px solid #d4d4d4;
     border-radius: 0;
 }
 input[type='radio'] {
