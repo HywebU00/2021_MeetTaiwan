@@ -125,6 +125,13 @@
                         flex-grow: 0;
                         flex-shrink: 1;
                         flex-basis: 100%;
+                        border-bottom: 1px solid #ddd;
+                        min-height: 3em;
+                        padding: 0 1em;
+                        justify-content: flex-start;
+                    }
+                    .form_grp {
+                        width: 100%;
                     }
                     button.btn-condition {
                         width: 100%;
@@ -142,12 +149,19 @@
                             right: 0.5em;
                             top: 40%;
                         }
+                        @include screen('tablet') {
+                            text-align: left;
+                        }
                     }
                     .condition_block {
                         &.open {
                             top: 3.5em;
                             opacity: 1;
                             pointer-events: auto;
+                            z-index: 9;
+                            @include screen('tablet') {
+                                top: 2em;
+                            }
                         }
                         position: absolute;
                         width: 100%;
@@ -340,6 +354,12 @@
                     align-items: center;
                     position: relative;
                     margin: 0;
+                    @include screen('tablet') {
+                        flex-grow: 0;
+                        flex-shrink: 1;
+                        flex-basis: 100%;
+                        min-height: 3em;
+                    }
                     .btn {
                         position: absolute;
                         width: 100%;
@@ -348,6 +368,9 @@
                         left: 0;
                         margin: 0;
                         border-radius: 0 0.25em 0.25em 0;
+                        @include screen('tablet') {
+                            border-radius: 0 0 0.25em 0.25em;
+                        }
                         &:hover,
                         &:focus {
                             border: 1px solid $secondaryColor !important;
