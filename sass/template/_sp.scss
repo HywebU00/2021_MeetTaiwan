@@ -24,6 +24,19 @@
         @include screen('xs_mobile') {
             width: calc(100% - 2em);
         }
+        ul {
+            li {
+                position: relative;
+                padding-left: 1em;
+                &:before {
+                    position: absolute;
+                    content: '*';
+                    font-weight: bold;
+                    top: 0.1em;
+                    left: 0;
+                }
+            }
+        }
     }
     .check_grp {
         flex-grow: 0;
@@ -154,6 +167,22 @@ p.error {
             flex-basis: 50%;
             display: flex;
             flex-flow: row wrap;
+            .inlineTitle {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 6em;
+                margin-right: 0.5em;
+                align-self: center;
+                @include screen('mobile') {
+                    flex-basis: calc(100% - 0.6em);
+                    padding-left: 0.5em;
+                }
+                & + input[type='text'] {
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    flex-basis: calc(100% - 8em);
+                }
+            }
             &.confirm {
                 input[type='text'],
                 input[type='password'] {
@@ -363,9 +392,9 @@ p.error {
                 flex-shrink: 1;
                 flex-basis: 30%;
                 label {
-                    flex-grow: 1;
+                    flex-grow: 0;
                     flex-shrink: 1;
-                    flex-basis: 30%;
+                    flex-basis: 33%;
                     @include screen('tablet') {
                         flex-basis: 40%;
                     }
@@ -375,6 +404,7 @@ p.error {
                 flex-grow: 1;
                 flex-shrink: 1;
                 flex-basis: 100%;
+                padding: 0.5em 0;
             }
             // 日期專屬
             .datepick {
@@ -453,6 +483,9 @@ p.error {
                     max-width: 8em;
                     max-height: 2.5em;
                     object-fit: contain;
+                }
+                & + .upload_grp {
+                    flex-basis: 40%;
                 }
             }
             .upload_grp {
@@ -643,6 +676,7 @@ p.error {
                     font-size: 0.75em;
                     padding: 0em 0.5em;
                     background: #fff;
+                    line-height: 1em;
                 }
             }
         }
@@ -650,18 +684,19 @@ p.error {
             &:focus,
             &.used {
                 & ~ label {
-                    top: -0.8em;
-                    left: 1em;
+                    top: -0.4em;
+                    left: 0.25em;
                     font-size: 0.75em;
                     padding: 0em 0.5em;
                     background: #fff;
+                    line-height: 1em;
                 }
             }
         }
         label {
             position: absolute;
-            top: 0.7em;
-            left: 1em;
+            top: 1em;
+            left: 0.75em;
             transition: 0.2s $cubic;
             pointer-events: none;
         }
@@ -906,6 +941,8 @@ p.error {
             display: flex;
             flex-flow: row wrap;
             justify-content: center;
+            max-width: 50em;
+            margin: 0.5em auto;
             @include screen('xs_mobile') {
                 margin: 1.5em 0;
             }
@@ -2429,7 +2466,7 @@ p.error {
                         min-width: 60%;
                     }
                     .form_style {
-                        margin-top: 0.5em;
+                        margin-top: 0.75em;
                         padding: 0 0.25em;
                         input[type='text'] {
                             height: 2.5em;
@@ -2446,7 +2483,7 @@ p.error {
                             top: 0.5em;
                         }
                         & + .form_style {
-                            margin: 1.25em 0 0.35em;
+                            margin: 1.5em 0 0.35em;
                         }
                     }
                 }
@@ -2519,5 +2556,51 @@ p.error {
         &:active {
             transform: translateY(3px);
         }
+    }
+}
+
+.progress2 {
+    width: 100%;
+    padding: 6px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5em;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 1px rgba(255, 255, 255, 0.08);
+    font-size: 0.75em;
+    color: #fff;
+    text-align: right;
+    line-height: 18px;
+}
+.progress-bar2 {
+    height: 18px;
+    border-radius: 30px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+    transition: 0.4s linear;
+    transition-property: width, background-color;
+}
+
+.progress-moved .progress-bar2 {
+    width: 85%;
+    background: #ff5f6d; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffc371, #ff5f6d); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #ffc371,
+        #ff5f6d
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    animation: progressAnimation 6s;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+@keyframes progressAnimation {
+    0% {
+        width: 5%;
+        // background-color: lighten($primaryColor, 20);
+    }
+    100% {
+        width: 85%;
+        // background-color: $primaryColor;
     }
 }
