@@ -1,31 +1,107 @@
 <!-- css -->
-<link rel="stylesheet" href="components/mt-kv3/mt-kv3.css" />
-<!-- mt_kv3 -->
-<div class="mt-kv3">
+<link rel="stylesheet" href="components/mt-kv2/mt-kv2.css" />
+<!-- mt_kv2 -->
+<div class="mt-kv2">
     <div class="container">
         <div class="img-container">
             <!-- 請針對縮圖產出尺寸使用不同解析度 src -->
             <picture>
-                <source media="(min-width: 1200px)" data-srcset="images/kv_video_bg.jpg" />
-                <source media="(min-width: 992px)" data-srcset="images/kv_video_bg.jpg" />
-                <source media="(min-width: 576px)" data-srcset="images/kv_video_bg.jpg" />
-                <source media="(max-width: 575px)" data-srcset="images/kv_video_bg.jpg" />
-                <img data-src="images/kv_video_bg.jpg" class="cover lazy" />
-                <noscript><img src="images/kv_video_bg.jpg" /></noscript>
+                <source media="(min-width: 1200px)" data-srcset="images/kv2_bg.jpg" />
+                <source media="(min-width: 992px)" data-srcset="images/kv2_bg.jpg" />
+                <source media="(min-width: 576px)" data-srcset="images/kv2_bg.jpg" />
+                <source media="(max-width: 575px)" data-srcset="images/kv2_bg.jpg" />
+                <img data-src="images/kv2_bg.jpg" class="cover lazy" />
+                <noscript><img src="images/kv2_bg.jpg" /></noscript>
             </picture>
-            <div class="caption">
-                <div data-aos="fade-up" data-aos-delay="500" class="youtube_cover">
-                    <a data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/JhIpv3Mj4Nk"
-                        href="javascript:;">
-                        <i class="fab fa-youtube"></i>
-                        <img src="images/video_cover.png" alt="">
-                    </a>
+        </div>
+        <div class="caption">
+            <div data-aos="fade-up" data-aos-delay="650" class="info">
+                <h3>MEET TAIWAN</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus autem vero sit sunt esse
+                    exercitationem maiores atque, porro accusantium officia fugiat doloremque, quidem obcaecati. Tempora
+                    atque odit quas ab possimus!
+                </p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="850" class="mt-search">
+                <div class="condition_item">
+                    <button type="button" class="btn-condition">展覽 & 會議場地</button>
+                    <div class="condition_block">
+                        <div class="radio_grp">
+                            <label><input name="radioSample" type="radio" value="" />展覽 & 會議場地</label>
+                            <label><input name="radioSample" type="radio" value="" />合作夥伴</label>
+                        </div>
+                    </div>
                 </div>
-                <div data-aos="fade-up" data-aos-delay="650" class="info">
-                    <h3>MEET TAIWAN</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus autem vero sit sunt esse
-                        exercitationem maiores atque, porro accusantium officia fugiat doloremque, quidem obcaecati.
-                        Tempora atque odit quas ab possimus!</p>
+                <div class="condition_item">
+                    <button type="button" class="btn-condition">容納人數</button>
+                    <div class="condition_block">
+                        <div class="slider-area">
+                            <div class="slider-area-wrapper">
+                                <span id="skip-value-lower"></span>
+                                <div id="skipstep" class="slider"></div>
+                                <span id="skip-value-upper"></span>
+                            </div>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid earum minima ipsa dolore
+                            animi optio sint qui.
+                        </p>
+                        <div class="btn_grp">
+                            <button type="button" class="btn btn-primary">確定</button>
+                        </div>
+                    </div>
+                    <!-- 套件：https://github.com/leongersen/noUiSlider -->
+                    <link rel="stylesheet" href="vendor/nouislider/nouislider.css" />
+                    <script src="vendor/nouislider/nouislider.min.js"></script>
+                    <script>
+                        $(function () {
+                            var skipSlider = document.getElementById('skipstep');
+                            var skipValues = [
+                                document.getElementById('skip-value-lower'),
+                                document.getElementById('skip-value-upper'),
+                            ];
+                            noUiSlider.create(skipSlider, {
+                                start: [0, 10000],
+                                connect: true,
+                                behaviour: 'drag',
+                                step: 1,
+                                range: {
+                                    min: 1,
+                                    max: 10000,
+                                },
+                                format: {
+                                    from: function (value) {
+                                        return parseInt(value);
+                                    },
+                                    to: function (value) {
+                                        return parseInt(value);
+                                    },
+                                },
+                            });
+                            skipSlider.noUiSlider.on('update', function (values, handle) {
+                                skipValues[handle].innerHTML = values[handle];
+                            });
+                        });
+                    </script>
+                </div>
+                <div class="condition_item">
+                    <div class="check_grp">
+                        <label>
+                            <input name="" type="checkbox" value="" />永續國際認證<img
+                                src="images/icon/icon_eco.svg"
+                                alt=""
+                            />
+                        </label>
+                    </div>
+                </div>
+                <div class="condition_item">
+                    <div class="form_grp">
+                        <input name="" type="text" placeholder="請輸入關鍵字" />
+                    </div>
+                </div>
+                <div class="btn_grp">
+                    <button type="button" class="btn btn-primary"><i class="fas fa-search"></i></button>
                 </div>
             </div>
         </div>

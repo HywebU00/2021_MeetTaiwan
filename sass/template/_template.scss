@@ -301,6 +301,119 @@
             }
         }
         .filter_item {
+            .filter_content {
+                .slider-area {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    column-gap: 20px;
+                    background: inherit;
+                    // border: 1px solid #d4d4d4;
+                    padding: 1em 1em 3em;
+                    position: relative;
+                    z-index: 2;
+                    // margin-bottom: 1em;
+                    #skip-value-lower,
+                    #skip-value-lower1,
+                    #skip-value-lower2 {
+                        position: absolute;
+                        top: 3em;
+                        left: 1.5em;
+                        text-align: left;
+                        color: #fff;
+                    }
+                    #skip-value-upper,
+                    #skip-value-upper1,
+                    #skip-value-upper2 {
+                        position: absolute;
+                        top: 3em;
+                        right: 1.5em;
+                        text-align: right;
+                        color: #fff;
+                    }
+                    .slider-title {
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
+                    &-wrapper {
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        column-gap: 20px;
+                    }
+                    #skip-value-lower,
+                    #skip-value-lower1,
+                    #skip-value-lower2,
+                    #skip-value-upper,
+                    #skip-value-upper1,
+                    #skip-value-upper2 {
+                        font-size: 0.875em;
+                        font-weight: bold;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .noUi-target {
+                        flex: 1;
+                        position: relative;
+                        background: #e3e3e3;
+                        border-radius: 50px;
+                        &.noUi-horizontal {
+                            height: 10px;
+                        }
+                        .noUi-base,
+                        .noUi-connects {
+                            width: 100%;
+                            height: 100%;
+                            position: relative;
+                            z-index: 1;
+                        }
+                        .noUi-connects {
+                            border-radius: 3px;
+                            overflow: hidden;
+                            z-index: 0;
+                            .noUi-connect {
+                                height: 100%;
+                                width: 100%;
+                                transform-style: preserve-3d;
+                                transform-origin: 0 0;
+                                transform-style: flat;
+                                background-color: lighten($secondaryColor, 0);
+                            }
+                        }
+                        .noUi-origin {
+                            will-change: transform;
+                            position: absolute;
+                            z-index: 1;
+                            top: 0;
+                            right: 0;
+                            height: 0;
+                            width: 100%;
+                            .noUi-handle {
+                                border-radius: 50px;
+                                background: #fff;
+                                cursor: default;
+                                background-color: #fff;
+                                box-shadow: rgba(0, 0, 0, 0.4);
+                                backface-visibility: hidden;
+                                position: absolute;
+                                width: 21px;
+                                height: 21px;
+                                right: -10px;
+                                top: -6px;
+                                border: none;
+                                .noUi-touch-area {
+                                    height: 100%;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    .noUi-draggable {
+                        cursor: ew-resize;
+                    }
+                }
+            }
             a.filter_title {
                 display: block;
                 padding: 0.5em 2em 0.5em 0.5em;

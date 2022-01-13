@@ -1,23 +1,24 @@
 // 文章標籤
-.mt-tag {
-    @extend %clearfix;
-    margin-bottom: 0.5em;
+.mt-tag,
+.mt-facility {
+    clear: both;
+    margin-bottom: 0.25em;
     position: relative;
     font-size: 0.875rem;
-    padding-left: 2em;
+    // padding-left: 2em;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-    &:before {
-        content: '';
-        width: 16px;
-        height: 16px;
-        position: absolute;
-        left: 0.65em;
-        top: 0.75em;
-        background: url(../images/basic/icon_tag.png) no-repeat center center;
-        background-size: 16px;
-    }
+    // &:before {
+    //     content: '';
+    //     width: 16px;
+    //     height: 16px;
+    //     position: absolute;
+    //     left: 0.65em;
+    //     top: 0.75em;
+    //     background: url(../images/basic/icon_tag.png) no-repeat center center;
+    //     background-size: 16px;
+    // }
     a {
         flex-grow: 0;
         flex-shrink: 1;
@@ -27,13 +28,46 @@
         padding: 0.2em 0.75em;
         color: #333;
         max-width: 12em;
-        margin: 0.25em;
+        margin: 0.25em 0.25em 0.25em 0;
         @include text-overflow;
+        span {
+            display: inline-block;
+            margin-left: 0.25em;
+            margin-right: 0.25em;
+            font-weight: bold;
+        }
         &:hover,
         &:focus {
             background-color: $primaryColor;
             color: #fff;
             border: 1px solid $primaryColor;
+        }
+    }
+}
+.mt-facility {
+    a {
+        padding: 0;
+        border: none;
+        color: $primaryColor;
+        text-overflow: clip;
+        max-width: 20em;
+        margin-top: 0.25em;
+        margin-bottom: 0;
+        margin: 0;
+        &:after {
+            content: '、';
+            margin-left: 0.25em;
+        }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+        &:hover,
+        &:focus {
+            background: #fff;
+            border: none;
+            color: $primaryColor;
         }
     }
 }
