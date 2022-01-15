@@ -23,7 +23,7 @@
         flex-grow: 0;
         flex-shrink: 1;
         flex-basis: 100%;
-        padding: 0.5em 4.5em 0 18%;
+        padding: 0.5em 4.5em 0 16%;
         position: relative;
         @include screen('mobile') {
             @include gutter(0);
@@ -229,13 +229,10 @@
             flex-flow: row wrap;
             align-content: flex-start;
             opacity: 0;
-            padding: 2em;
+            padding: 2em 1em;
             background: #fff;
             transform: translate(-50%, -40%) scale(1.25);
             transition: transform 0.5s $cubic, opacity 0.6s $cubic;
-            @include screen('mobile') {
-                padding: 2em 1em;
-            }
             &:before {
                 position: absolute;
                 content: '';
@@ -530,6 +527,7 @@
         flex-basis: 80%;
         align-self: flex-end;
         transition: 0.3s ease-out;
+        padding-right: 2em;
         @include screen('tablet') {
             display: none;
         }
@@ -565,7 +563,7 @@
                 & > a {
                     color: #222;
                     display: block;
-                    padding: 0.5em 0.75em;
+                    padding: 0.5em;
                     font-weight: bold;
                     height: 2.5em;
                     font-size: 1em;
@@ -675,8 +673,14 @@
         }
         .searchBtn {
             top: 0.6em;
+            @include screen('tablet') {
+                top: 0;
+            }
             i {
                 font-size: 1.25em;
+                @include screen('tablet') {
+                    font-size: 1.75em;
+                }
             }
         }
     }
