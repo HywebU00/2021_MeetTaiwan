@@ -146,6 +146,7 @@
         width: 4em;
         height: 3em;
         right: 0em;
+        transition: 0.3s ease-out;
         @include screen('tablet') {
             height: 100%;
             right: 0;
@@ -165,6 +166,7 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
+            transition: 0.3s ease-out;
             @include screen('mobile') {
                 font-size: 1.5em;
             }
@@ -527,6 +529,7 @@
         flex-shrink: 1;
         flex-basis: 80%;
         align-self: flex-end;
+        transition: 0.3s ease-out;
         @include screen('tablet') {
             display: none;
         }
@@ -537,8 +540,10 @@
             & > li {
                 flex-grow: 1;
                 flex-shrink: 1;
-                flex-basis: 15%;
+                flex-basis: auto;
                 position: relative;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
                 &.hasChild {
                     & > a {
                         position: relative;
@@ -637,7 +642,7 @@
         }
     }
     &.sticky {
-        height: 3em;
+        height: 4em;
         // background: rgba(0, 0, 0, 0.75);
         h1 {
             max-width: 230px;
@@ -651,6 +656,9 @@
                 width: 100%;
             }
         }
+        .mt-menu {
+            margin-bottom: 0.5em;
+        }
         .mt-nav {
             display: none;
         }
@@ -663,6 +671,12 @@
         &:hover {
             &:before {
                 opacity: 1;
+            }
+        }
+        .searchBtn {
+            top: 0.6em;
+            i {
+                font-size: 1.25em;
             }
         }
     }
