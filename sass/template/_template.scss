@@ -69,7 +69,24 @@
             background: url(../images/inner_07_fireworks.jpg) no-repeat center top;
             background-size: cover;
             &:after {
-                background: linear-gradient(0deg, rgb(203, 181, 223) 5%, rgba(1203, 181, 223, 0) 100%);
+                background: linear-gradient(0deg, rgb(203, 181, 223) 5%, rgba(203, 181, 223, 0) 100%);
+            }
+        }
+        &.hotel {
+            background: #ddd;
+            overflow: hidden;
+            img {
+                position: absolute;
+                width: 105%;
+                height: 105%;
+                top: -2.5%;
+                left: -2.5%;
+                max-width: 105%;
+                object-fit: cover;
+                filter: blur(6px);
+            }
+            &:after {
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 5%, rgba(0, 0, 0, 0) 100%);
             }
         }
     }
