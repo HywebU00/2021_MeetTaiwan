@@ -64,6 +64,9 @@ select::-ms-expand {
     .form_grp {
         border-bottom: 1px dashed #ddd;
         padding: 0.5em 0;
+        @include screen('xs_mobile') {
+            margin-bottom: 1.5em;
+        }
     }
 }
 

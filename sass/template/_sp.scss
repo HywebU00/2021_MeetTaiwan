@@ -396,7 +396,22 @@ p.error {
                     flex-shrink: 1;
                     flex-basis: 33%;
                     @include screen('tablet') {
-                        flex-basis: 40%;
+                        flex-basis: 48%;
+                    }
+                    &.full {
+                        white-space: nowrap;
+                        flex-basis: 100%;
+                        display: flex;
+                        flex-flow: row wrap;
+                        align-items: center;
+                        input[type='text'] {
+                            width: auto;
+                            flex-basis: 50%;
+                            flex-grow: 1;
+                        }
+                        textarea {
+                            flex-basis: 100%;
+                        }
                     }
                 }
             }
@@ -2050,6 +2065,30 @@ p.error {
                 width: 100%;
                 padding: 1em;
                 background-color: white;
+                ul {
+                    margin: 2em 0 2em 10%;
+                    li {
+                        display: flex;
+                        margin: 0 0 0.5em 0;
+                        flex-flow: row wrap;
+                        color: #555;
+                        @include screen('mobile') {
+                            margin: 0;
+                        }
+                        .item {
+                            flex-grow: 0;
+                            flex-shrink: 1;
+                            flex-basis: 30%;
+                            white-space: nowrap;
+                            @include screen('mobile') {
+                                flex-basis: 100%;
+                                margin-bottom: 0.5em;
+                                font-weight: bold;
+                                color: #000;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -2300,7 +2339,58 @@ p.error {
 }
 
 .sp_content {
+    .contact {
+        max-width: 960px;
+        margin: 0 auto 1em;
+        .post {
+            .tab__content {
+                // max-width: 720px;
+                margin: 0.5em auto;
+            }
+            .form_grid {
+                max-width: 45em;
+                margin: 0.5em 1em 3em 20%;
+                @include screen('mobile') {
+                    margin: 0.5em auto;
+                }
+                .form_grp {
+                    &:last-child {
+                        border: none;
+                    }
+                    .form_content {
+                        &.form_inline {
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+            h3 {
+                text-align: left;
+                position: relative;
+                font-size: 1.25em;
+                span {
+                    display: inline-block;
+                    background-color: #fff;
+                    position: relative;
+                    z-index: 1;
+                    padding: 0 1em 0 0.5em;
+                }
+                &:after {
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    width: 100%;
+                    left: 50%;
+                    margin-left: -50%;
+                    border-top: 2px solid $primaryColor;
+                    z-index: 0;
+                }
+            }
+        }
+    }
     .apply_form {
+        max-width: 960px;
+        margin: 0 auto 1em;
         .recommend {
             display: flex;
             border-top: solid 1px $form-focus;
@@ -2372,15 +2462,15 @@ p.error {
             }
         }
         h3 {
-            text-align: center;
+            text-align: left;
             position: relative;
-            font-size: 1em;
+            font-size: 1.25em;
             span {
                 display: inline-block;
                 background-color: #fff;
                 position: relative;
                 z-index: 1;
-                padding: 0 1em;
+                padding: 0 1em 0 0.5em;
             }
             &:after {
                 position: absolute;
@@ -2389,7 +2479,7 @@ p.error {
                 width: 100%;
                 left: 50%;
                 margin-left: -50%;
-                border-top: 1px dashed #ddd;
+                border-top: 2px solid $primaryColor;
                 z-index: 0;
             }
         }
@@ -2403,7 +2493,7 @@ p.error {
         .btn_grp {
             max-width: 50em;
             padding: 0.25em 0 !important;
-            margin: 0 auto !important;
+            margin: 0.5em 1em 0.5em 20% !important;
             text-align: left;
             justify-content: flex-start;
             @include screen('xs_mobile') {
@@ -2431,7 +2521,10 @@ p.error {
         }
         .form_grid {
             max-width: 45em;
-            margin: 0 auto 3em;
+            margin: 0.5em 1em 3em 20%;
+            @include screen('mobile') {
+                margin: 0.5em auto;
+            }
             @include screen('xs_mobile') {
                 width: 90%;
             }
