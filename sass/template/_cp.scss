@@ -94,6 +94,9 @@
         }
         h3.mt-edit-h3 {
             position: relative;
+            clear: both;
+            overflow: hidden;
+            margin: 3em 0 1em;
             &:after {
                 position: absolute;
                 content: '';

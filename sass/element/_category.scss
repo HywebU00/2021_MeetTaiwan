@@ -17,10 +17,10 @@
         color: #333;
         font-size: 0.875rem;
         box-sizing: border-box;
-        &:before {
-            content: '#';
-            margin-right: 0.25em;
-        }
+        // &:before {
+        //     content: '#';
+        //     margin-right: 0.25em;
+        // }
         &:hover,
         &:focus,
         &.active {

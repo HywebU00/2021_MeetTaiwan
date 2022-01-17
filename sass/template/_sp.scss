@@ -465,7 +465,7 @@ p.error {
                 position: absolute;
                 right: 1em;
                 width: 2em;
-                top: 0.75em;
+                top: 1.25em;
                 color: #888;
                 a {
                     color: #888;
@@ -650,14 +650,14 @@ p.error {
                 color: $color-red;
                 font-size: 1.65em;
                 right: 0.75em;
-                top: 0.5em;
+                top: 0.7em;
             }
         }
         i {
             position: absolute;
             right: 1em;
             width: 1em;
-            top: 0.5em;
+            top: 0.8em;
             font-size: 1.5em;
         }
         input[type='text'],
@@ -695,7 +695,7 @@ p.error {
         }
         label {
             position: absolute;
-            top: 1em;
+            top: 1.2em;
             left: 0.75em;
             transition: 0.2s $cubic;
             pointer-events: none;

@@ -11,6 +11,17 @@
     top: 0;
     left: 0;
     z-index: 9999;
+    &:before {
+        position: fixed;
+        transform: translate3d(0, 0, 0);
+        content: '';
+        top: 0em;
+        left: 0.5em;
+        width: 220px;
+        height: 100px;
+        background: url(../images/mt_logo.png) no-repeat center center;
+        background-size: contain;
+    }
     a.close {
         width: 36px;
         height: 36px;
@@ -40,11 +51,19 @@
         justify-content: center;
         position: relative;
         z-index: 2;
-        @include screen('mobile') {
+        @include screen('tablet') {
             flex-flow: row wrap;
-            margin: 3.5em 2em 0;
+            margin: 0;
+            position: fixed;
+            top: 3.5em;
+            left: 2em;
+            right: 2em;
+            height: calc(100% - 100px);
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+            -webkit-overflow-scrolling: touch;
+            -webkit-transform: translate3d(0, 0, 0);
         }
-
         .item {
             flex-grow: 1;
             flex-shrink: 1;
@@ -54,7 +73,7 @@
             min-height: 30em;
             max-width: 25em;
             display: flex;
-            @include screen('mobile') {
+            @include screen('tablet') {
                 flex-grow: 0;
                 flex-shrink: 1;
                 flex-basis: 100%;
@@ -104,7 +123,7 @@
                 backface-visibility: hidden;
                 box-shadow: rgba(17, 12, 46, 0.15) 0px 12px 30px 0px;
                 @include screen('mobile') {
-                    min-height: 15em;
+                    min-height: 22em;
                 }
             }
 
@@ -204,11 +223,11 @@
                 top: 35%;
                 backface-visibility: hidden;
                 @include screen('tablet') {
-                    padding: 1em;
+                    padding: 1em 2em;
                 }
                 @include screen('xs_mobile') {
                     padding: 1em 2em;
-                    top: 45%;
+                    top: 50%;
                 }
             }
 
@@ -222,6 +241,7 @@
                     width: 100px;
                     height: 3px;
                     left: 50%;
+                    bottom: -0.25em;
                     margin-left: -50px;
                     background: lighten($primaryColor, 15);
                 }
@@ -229,7 +249,7 @@
                     @include text-line(2, 1.45em);
                 }
                 @include screen('mobile') {
-                    font-size: 1.5em;
+                    font-size: 1.75em;
                 }
             }
 
