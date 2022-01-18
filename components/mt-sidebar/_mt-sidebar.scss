@@ -48,7 +48,7 @@ $menuItems: 15;
         overflow-y: auto !important;
         -webkit-overflow-scrolling: touch;
         -webkit-transform: translate3d(0, 0, 0);
-        padding:.5em 1em 300px;
+        padding: 0.5em 1em 300px;
         .mt-menu {
             width: 100%;
             transition: 0.5s $cubic;
@@ -78,7 +78,7 @@ $menuItems: 15;
                                 position: absolute;
                                 content: '';
                                 right: 0.5em;
-                                top: 0.45em;
+                                top: 0.65em;
                                 width: 0.25em;
                                 height: 0.25em;
                                 border: 2px solid #888;

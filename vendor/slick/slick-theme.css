@@ -23,14 +23,14 @@
     border: none;
     outline: none;
     /* background: url(icon_arrow_left_inverse.png) center center no-repeat #fff; */
-    background: #fff;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background: #transparent;
+    /* box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; */
 }
 @media screen and (max-width: 767px) {
     .slick-prev,
     .slick-next {
         transform: scale(0.9);
-        box-shadow: rgba(0, 0, 0, 0.09) 0px 0px 30px, rgba(0, 0, 0, 0.13) 0px 6px 6px;
+        /* box-shadow: rgba(0, 0, 0, 0.09) 0px 0px 30px, rgba(0, 0, 0, 0.13) 0px 6px 6px; */
     }
 }
 .slick-prev:before,
@@ -68,27 +68,27 @@
 /* 箭頭 hover及focus 樣式 */
 .slick-prev:hover,
 .slick-prev:focus {
-    background-color: #55679f;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px, rgba(0, 0, 0, 0.1) 0px 6px 6px;
+    /* background-color: #55679f; */
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px, rgba(0, 0, 0, 0.1) 0px 6px 6px; */
 }
 .slick-prev:hover:before,
 .slick-prev:focus:before {
     /* background: url(icon_arrow_left.png) center center no-repeat #8491bd;
     background-size: 28px 28px; */
-    border: 5px solid #fff;
+    border: 5px solid #55679f;
     border-top: none;
     border-right: none;
 }
 .slick-next:hover,
 .slick-next:focus {
-    background-color: #55679f;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px, rgba(0, 0, 0, 0.1) 0px 6px 6px;
+    /* background-color: #55679f; */
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px, rgba(0, 0, 0, 0.1) 0px 6px 6px; */
 }
 .slick-next:hover:before,
 .slick-next:focus:before {
     /* background: url(icon_arrow_right.png) center center no-repeat #8491bd;
     background-size: 28px 28px; */
-    border: 5px solid #fff;
+    border: 5px solid #55679f;
     border-top: none;
     border-left: none;
 }

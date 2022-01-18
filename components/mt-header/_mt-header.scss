@@ -244,9 +244,9 @@
                 height: 5em;
             }
             @include screen('mobile') {
-                width: 80%;
+                width: 90%;
                 top: 30%;
-                left: 10%;
+                left: 5%;
                 transform: translate(0%, 0%) scale(1.25);
             }
             .searchForm {
@@ -547,16 +547,20 @@
                         position: relative;
                         padding: 0.5em 1.5em 0.5em 0.75em;
                         &:after {
-                            position: absolute;
+                            // position: absolute;
                             content: '';
-                            right: 0.5em;
-                            top: 1em;
+                            // right: 0.5em;
+                            // top: 1em;
+                            margin-left: 0.5em;
                             width: 0.25em;
                             height: 0.25em;
                             border: 2px solid #999;
                             border-top: none;
                             border-left: none;
                             transform: rotate(45deg);
+                            display: inline-block;
+                            position: relative;
+                            top: -0.125em;
                         }
                     }
                 }

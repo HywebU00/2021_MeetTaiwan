@@ -30,6 +30,13 @@
     }
     .kvSlider {
         width: 100%;
+        &:hover {
+            .slick-prev,
+            .slick-next {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
         .img-container {
             @include aspect-ratio(3, 1);
             position: relative;
@@ -106,11 +113,25 @@
             }
         }
         .slick-prev {
+            opacity: 0;
+            pointer-events: none;
+            &:before {
+                border: 5px solid #fff;
+                border-top: none;
+                border-right: none;
+            }
             @include screen('mobile') {
                 display: none !important;
             }
         }
         .slick-next {
+            opacity: 0;
+            pointer-events: none;
+            &:before {
+                border: 5px solid #fff;
+                border-top: none;
+                border-left: none;
+            }
             @include screen('mobile') {
                 display: none !important;
             }

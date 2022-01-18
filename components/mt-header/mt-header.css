@@ -211,9 +211,9 @@
         height: 5em; }
       @media screen and (max-width: 767px) {
         .mt-header .mt-search .searchBlock {
-          width: 80%;
+          width: 90%;
           top: 30%;
-          left: 10%;
+          left: 5%;
           transform: translate(0%, 0%) scale(1.25); } }
       .mt-header .mt-search .searchBlock .searchForm {
         display: flex;
@@ -455,16 +455,16 @@
           position: relative;
           padding: 0.5em 1.5em 0.5em 0.75em; }
           .mt-header .mt-menu > ul > li.hasChild > a:after {
-            position: absolute;
             content: '';
-            right: 0.5em;
-            top: 1em;
+            margin-left: 0.5em;
             width: 0.25em;
             height: 0.25em;
             border: 2px solid #999;
             border-top: none;
             border-left: none;
-            transform: rotate(45deg); }
+            transform: rotate(45deg);
+            display: inline-block;
+            top: -0.125em; }
         .mt-header .mt-menu > ul > li > a {
           color: #222;
           display: block;

@@ -21,6 +21,11 @@
         height: 100px;
         background: url(../images/mt_logo.png) no-repeat center center;
         background-size: contain;
+        @include screen('tablet') {
+            width: 120px;
+            height: 50px;
+            top: 0.5em;
+        }
     }
     a.close {
         width: 36px;
