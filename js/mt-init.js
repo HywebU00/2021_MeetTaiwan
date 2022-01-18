@@ -528,4 +528,7 @@ $(window).on('load', function () {
             }
         });
     });
+    $('.mice-kv').each(function (index, el) {
+        $(this).addClass('effect');
+    });
 });

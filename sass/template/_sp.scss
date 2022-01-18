@@ -2786,23 +2786,70 @@ p.error {
     position: relative;
     width: 100%;
     min-height: 40em;
+    background-color: $primaryColor;
+    //設定第1層灰色動畫
+    &:before {
+        width: 100%;
+        height: 100%;
+        content: '';
+        position: absolute;
+        left: auto;
+        right: 0;
+        background-color: #fff;
+        z-index: 3;
+    }
+    //設定第2層綠色動畫
+    &:after {
+        width: 100%;
+        height: 100%;
+        content: '';
+        position: absolute;
+        left: auto;
+        right: 0;
+        background-color: $primaryColor;
+        z-index: 2;
+    }
+    &.effect {
+        &:before {
+            width: 0;
+            -webkit-transition: visibility 0s 0.5s, width 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            transition: visibility 0s 0.5s, width 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            visibility: hidden;
+        }
+        &:after {
+            width: 0;
+            -webkit-transition: background-color 0s 0.8s, visibility 0s 1.2s,
+                width 0.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition: background-color 0s 0.8s, visibility 0s 1.2s,
+                width 0.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+            visibility: hidden;
+        }
+    }
+    picture {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        &:after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 1);
+            opacity: 0.15;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            @include screen('xs_mobile') {
+                opacity: 0.35;
+            }
+        }
+    }
     img {
         object-fit: cover;
     }
-    &:after {
-        position: absolute;
-        content: '';
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 1);
-        opacity: 0.15;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        @include screen('xs_mobile') {
-            opacity: 0.35;
-        }
-    }
+
     .caption {
         width: 80%;
         display: flex;
