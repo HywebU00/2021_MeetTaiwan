@@ -293,6 +293,7 @@ $(window).on('load', function () {
         easing: 'ease-out', // default easing for AOS animations
         once: true, // whether animation should happen only once - while scrolling down
     });
+    window.addEventListener('load', AOS.refresh);
 
     // mt-news-tab-1
     var resizeTimer1;
@@ -599,4 +600,46 @@ $(window).on('load', function () {
         ],
     });
     $('.slider-plan').slick('refresh');
+    // common slider
+    //slick
+    $('.commonSlider').slick({
+        mobileFirst: true,
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrow: true,
+        lazyLoaded: true,
+        lazyLoad: 'ondemand',
+        ease: 'ease',
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    arrows: true,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    arrows: true,
+                },
+            },
+            {
+                breakpoint: 200,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true,
+                },
+            },
+        ],
+    });
+    $('.commonSlider').slick('refresh');
 });

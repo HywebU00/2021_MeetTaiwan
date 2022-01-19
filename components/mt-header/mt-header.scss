@@ -658,7 +658,16 @@
             }
         }
         .mt-menu {
-            margin-bottom: 0.5em;
+            & > ul {
+                & > li {
+                    & > a {
+                        height: 3em;
+                    }
+                    ul {
+                        top: 3em;
+                    }
+                }
+            }
         }
         .mt-nav {
             display: none;

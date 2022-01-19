@@ -659,7 +659,17 @@
             }
         }
         .mt-menu {
-            margin-bottom: 0.5em;
+            & > ul {
+                & > li {
+                    & > a {
+                        height: 3em;
+                    }
+                    ul {
+                        position: absolute;
+                        top: 3em;
+                    }
+                }
+            }
         }
         .mt-nav {
             display: none;
