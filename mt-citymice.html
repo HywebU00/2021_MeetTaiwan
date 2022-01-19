@@ -35,219 +35,515 @@
     <!-- mt_header -->
     <div id="mt_header"></div>
     <!-- mt-content -->
-    <!-- mice-ability KV -->
-    <div class="mice-kv">
-        <picture>
-            <source media="(min-width: 1200px)" data-srcset="images/mice-kv.jpg" />
-            <source media="(min-width: 992px)" data-srcset="images/mice-kv.jpg" />
-            <source media="(min-width: 576px)" data-srcset="images/mice-kv.jpg" />
-            <source media="(max-width: 575px)" data-srcset="images/mice-kv.jpg" />
-            <img data-src="images/mice-kv.jpg" class="lazy" />
-            <noscript><img src="images/mice-kv.jpg" /></noscript>
-        </picture>
-        <div class="caption">
-            <h3>
-                <span data-aos="fade-up" data-aos-delay="500">About Taiwan</span>
-                <small data-aos="fade-up" data-aos-delay="750">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Numquam possimus error nostrum provident eaque ex ab eius officia quas cum illum, enim dolorum
-                    architecto tenetur itaque neque non rem quae.</small>
-            </h3>
-            <div class="mice_data">
-                <div data-aos="fade-up" data-aos-delay="750" class="item">
-                    <div class="num"><span data-count="360"></span>億元+</div>
-                    <p>產值+/年</p>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="1000" class="item">
-                    <div class="num"><span data-count="1600000"></span>+</div>
-                    <p>來台參加會展外籍人士</p>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="1250" class="item">
-                    <div class="num"><span data-count="4000"></span>+</div>
-                    <p>在臺舉辦之國際會議/展覽場次</p>
-                </div>
+    <!-- mt-city -->
+    <div class="mt-city">
+        <div class="mtCityBgSlider">
+            <div class="img-container">
+                <picture>
+                    <source media="(min-width: 1200px)" data-srcset="images/mice-taipei.jpg">
+                    <source media="(min-width: 992px)" data-srcset="images/mice-taipei.jpg">
+                    <source media="(min-width: 576px)" data-srcset="images/mice-taipei.jpg">
+                    <source media="(max-width: 575px)" data-srcset="images/mice-taipei.jpg">
+                    <img data-src="images/mice-taipei.jpg" class="lazy">
+                    <noscript><img src="images/mice-taipei.jpg"></noscript>
+                </picture>
+            </div>
+            <div class="img-container">
+                <picture>
+                    <source media="(min-width: 1200px)" data-srcset="images/mice-mountain.jpg">
+                    <source media="(min-width: 992px)" data-srcset="images/mice-mountain.jpg">
+                    <source media="(min-width: 576px)" data-srcset="images/mice-mountain.jpg">
+                    <source media="(max-width: 575px)" data-srcset="images/mice-mountain.jpg">
+                    <img data-src="images/mice-mountain.jpg" class="lazy">
+                    <noscript><img src="images/mice-mountain.jpg"></noscript>
+                </picture>
             </div>
         </div>
-        <script>
-            $(function () {
-                $('.mice_data .item .num span').each(function () {
-                    var $this = $(this),
-                        countTo = $this.attr('data-count');
-                    $({ countNum: $this.text() }).animate({
-                        countNum: countTo
-                    }, {
-                        duration: 5000,
-                        easing: 'linear',
-                        step: function () {
-                            $this.text(Math.floor(this.countNum));
-                        },
-                        complete: function () {
-                            $this.text(this.countNum);
-                            //alert('finished');
-                        }
+    </div>
+    <!-- mt-sp-header -->
+    <div class="mt-sp-header">
+        <div class="container">
+            <h2>台灣會展城市</h2>
+        </div>
+    </div>
+    <!-- mt-city-tab -->
+    <div class="mt-city-tab">
+        <div class="container">
+            <div class="city">
+                <ul class="tabs">
+                    <li class="active">台北</li>
+                    <li>桃園</li>
+                    <li>台中</li>
+                    <li>台南</li>
+                    <li>高雄</li>
+                    <li>花蓮</li>
+                </ul>
+                <ul class="tab__content">
+                    <li class="active">
+                        <div class="content__wrapper">
+                            <div class="pic">
+                                <div class="img-container">
+                                    <a href="#">
+                                        <img src="https://source.unsplash.com/random/1 " alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3>台北</h3>
+                                <p>臺北位於臺灣北部，是臺灣的首都以及經濟，政治、教育和文化中心。是一個現代國際大都市與擁有活潑和多樣化的面孔，充滿活力。
+                                    臺北一個充滿現代與傳統混合的城市，從古老歷史寺廟的靜謐巷弄到現代摩登的霓虹街道生活無縫融合。從世界頂級餐廳到人聲鼎沸的夜市，盡情品嚐各式美食。距離市中心幾分鐘車程，即可沐浴於臺北盆地鬱鬱蔥蔥山腳下的溫泉世界，亦或漫步於綠蔭清幽，沈浸在森林芬多精的洗禮。
+                                    擁有多重風貌及友善微笑的臺北，等你來體驗發掘。</p>
+                                <a href="#" class="more">more</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content__wrapper">
+                            <div class="pic">
+                                <div class="img-container">
+                                    <a href="#">
+                                        <img src="https://source.unsplash.com/random/2 " alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3>桃園</h3>
+                                <p>臺北位於臺灣北部，是臺灣的首都以及經濟，政治、教育和文化中心。是一個現代國際大都市與擁有活潑和多樣化的面孔，充滿活力。
+                                    臺北一個充滿現代與傳統混合的城市，從古老歷史寺廟的靜謐巷弄到現代摩登的霓虹街道生活無縫融合。從世界頂級餐廳到人聲鼎沸的夜市，盡情品嚐各式美食。距離市中心幾分鐘車程，即可沐浴於臺北盆地鬱鬱蔥蔥山腳下的溫泉世界，亦或漫步於綠蔭清幽，沈浸在森林芬多精的洗禮。
+                                    擁有多重風貌及友善微笑的臺北，等你來體驗發掘。</p>
+                                <a href="#" class="more">more</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content__wrapper">
+                            <div class="pic">
+                                <div class="img-container">
+                                    <a href="#">
+                                        <img src="https://source.unsplash.com/random/3 " alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3>台中</h3>
+                                <p>臺北位於臺灣北部，是臺灣的首都以及經濟，政治、教育和文化中心。是一個現代國際大都市與擁有活潑和多樣化的面孔，充滿活力。
+                                    臺北一個充滿現代與傳統混合的城市，從古老歷史寺廟的靜謐巷弄到現代摩登的霓虹街道生活無縫融合。從世界頂級餐廳到人聲鼎沸的夜市，盡情品嚐各式美食。距離市中心幾分鐘車程，即可沐浴於臺北盆地鬱鬱蔥蔥山腳下的溫泉世界，亦或漫步於綠蔭清幽，沈浸在森林芬多精的洗禮。
+                                    擁有多重風貌及友善微笑的臺北，等你來體驗發掘。</p>
+                                <a href="#" class="more">more</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content__wrapper">
+                            <div class="pic">
+                                <div class="img-container">
+                                    <a href="#">
+                                        <img src="https://source.unsplash.com/random/4 " alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3>台南</h3>
+                                <p>臺北位於臺灣北部，是臺灣的首都以及經濟，政治、教育和文化中心。是一個現代國際大都市與擁有活潑和多樣化的面孔，充滿活力。
+                                    臺北一個充滿現代與傳統混合的城市，從古老歷史寺廟的靜謐巷弄到現代摩登的霓虹街道生活無縫融合。從世界頂級餐廳到人聲鼎沸的夜市，盡情品嚐各式美食。距離市中心幾分鐘車程，即可沐浴於臺北盆地鬱鬱蔥蔥山腳下的溫泉世界，亦或漫步於綠蔭清幽，沈浸在森林芬多精的洗禮。
+                                    擁有多重風貌及友善微笑的臺北，等你來體驗發掘。</p>
+                                <a href="#" class="more">more</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content__wrapper">
+                            <div class="pic">
+                                <div class="img-container">
+                                    <a href="#">
+                                        <img src="https://source.unsplash.com/random/5 " alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3>高雄</h3>
+                                <p>臺北位於臺灣北部，是臺灣的首都以及經濟，政治、教育和文化中心。是一個現代國際大都市與擁有活潑和多樣化的面孔，充滿活力。
+                                    臺北一個充滿現代與傳統混合的城市，從古老歷史寺廟的靜謐巷弄到現代摩登的霓虹街道生活無縫融合。從世界頂級餐廳到人聲鼎沸的夜市，盡情品嚐各式美食。距離市中心幾分鐘車程，即可沐浴於臺北盆地鬱鬱蔥蔥山腳下的溫泉世界，亦或漫步於綠蔭清幽，沈浸在森林芬多精的洗禮。
+                                    擁有多重風貌及友善微笑的臺北，等你來體驗發掘。</p>
+                                <a href="#" class="more">more</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content__wrapper">
+                            <div class="pic">
+                                <div class="img-container">
+                                    <a href="#">
+                                        <img src="https://source.unsplash.com/random/6 " alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3>花蓮</h3>
+                                <p>臺北位於臺灣北部，是臺灣的首都以及經濟，政治、教育和文化中心。是一個現代國際大都市與擁有活潑和多樣化的面孔，充滿活力。
+                                    臺北一個充滿現代與傳統混合的城市，從古老歷史寺廟的靜謐巷弄到現代摩登的霓虹街道生活無縫融合。從世界頂級餐廳到人聲鼎沸的夜市，盡情品嚐各式美食。距離市中心幾分鐘車程，即可沐浴於臺北盆地鬱鬱蔥蔥山腳下的溫泉世界，亦或漫步於綠蔭清幽，沈浸在森林芬多精的洗禮。
+                                    擁有多重風貌及友善微笑的臺北，等你來體驗發掘。</p>
+                                <a href="#" class="more">more</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <script>
+                $(document).ready(function () {
+                    // Variables
+                    var clickedTab = $(".city .tabs > .active");
+                    var tabWrapper = $(".city .tab__content");
+                    var activeTab = tabWrapper.find(".active");
+                    var activeTabHeight = activeTab.outerHeight();
+                    // Show tab on page load
+                    activeTab.show();
+                    // Set height of wrapper on page load
+                    tabWrapper.height(activeTabHeight);
+                    $(".city .tabs > li").on("click", function () {
+                        // Remove class from active tab
+                        $(".city .tabs > li").removeClass("active");
+                        // Add class active to clicked tab
+                        $(this).addClass("active");
+                        // Update clickedTab variable
+                        clickedTab = $(".city .tabs .active");
+                        // fade out active tab
+                        activeTab.fadeOut(250, function () {
+                            // Remove active class all tabs
+                            $(".city .tab__content > li").removeClass("active");
+                            // Get index of clicked tab
+                            var clickedTabIndex = clickedTab.index();
+                            // Add class active to corresponding tab
+                            $(".city .tab__content > li").eq(clickedTabIndex).addClass("active");
+                            // update new active tab
+                            activeTab = $(".city .tab__content > .active");
+                            // Update variable
+                            activeTabHeight = activeTab.outerHeight();
+                            // Animate height of wrapper to new tab height
+                            tabWrapper.stop().delay(50).animate({
+                                height: activeTabHeight
+                            }, 500, function () {
+                                // Fade in active tab
+                                activeTab.delay(50).fadeIn(250);
+                            });
+                        });
                     });
                 });
-            });
-        </script>
+            </script>
+        </div>
     </div>
-    <!-- mt-awards -->
-    <div class="mt-awards">
+    <!-- mt-discover -->
+    <div class="mt-discover">
         <div class="container">
-            <h2 class="mt-h2">國際獎項</h2>
-            <div data-aos="fade-up" data-aos-delay="500" class="mt-awards-list">
+            <h2 class="mt-h2">探索台北</h2>
+            <div class="discover-feature">
                 <div class="item">
                     <a href="#">
-                        <h3><span>亞洲最佳會議獎旅目的地獎</span></h3>
-                        <small>2020 Stella Awards,M&C Asia</small>
+                        <img src="images/discover_pic.jpg" alt="">
+                        <h3>龍山寺</h3>
+                        <p>艋舺龍山寺，也稱萬華龍山寺，是位於臺灣臺北市萬華區富民里的觀音寺，為清治時期臺北城三邑人的信仰與政治、軍事中心，戰後時期成為外國旅客觀光景點，今建築列為國定古蹟</p>
+                    </a>
+                </div>
+            </div>
+            <div class="discover-content">
+                <div class="item">
+                    <a href="#">
+                        <img src="images/discover_pic_02.jpg" alt="">
+                        <h3>陽明山</h3>
                     </a>
                 </div>
                 <div class="item">
                     <a href="#">
-                        <h3><span>最佳創新目的地行銷特別獎</span></h3>
-                        <small>2020 Stella Awards,M&C Asia</small>
+                        <img src="images/discover_pic_03.jpg" alt="">
+                        <h3>台北101</h3>
                     </a>
                 </div>
                 <div class="item">
                     <a href="#">
-                        <h3><span>台灣抗疫表現全球第1</span></h3>
-                        <small>2020 Stella Awards,M&C Asia</small>
+                        <img src="images/discover_pic_04.jpg" alt="">
+                        <h3>饒河夜市</h3>
                     </a>
                 </div>
                 <div class="item">
                     <a href="#">
-                        <h3><span>全球第2安全的國家</span></h3>
-                        <small>2020 Stella Awards,M&C Asia</small>
+                        <img src="images/discover_pic_05.jpg" alt="">
+                        <h3>關渡大橋</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="discover-content">
+                <div class="item">
+                    <a href="#">
+                        <img src="images/discover_pic_02.jpg" alt="">
+                        <h3>陽明山</h3>
                     </a>
                 </div>
                 <div class="item">
                     <a href="#">
-                        <h3><span>亞洲最佳會議獎旅目的地獎</span></h3>
-                        <small>2020 Stella Awards,M&C Asia</small>
+                        <img src="images/discover_pic_03.jpg" alt="">
+                        <h3>台北101</h3>
                     </a>
                 </div>
                 <div class="item">
                     <a href="#">
-                        <h3><span>最佳創新目的地行銷特別獎</span></h3>
-                        <small>2020 Stella Awards,M&C Asia</small>
+                        <img src="images/discover_pic_04.jpg" alt="">
+                        <h3>饒河夜市</h3>
                     </a>
                 </div>
                 <div class="item">
                     <a href="#">
-                        <h3><span>台灣抗疫表現全球第1</span></h3>
-                        <small>2020 Stella Awards,M&C Asia</small>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#">
-                        <h3><span>全球第2安全的國家</span></h3>
-                        <small>2020 Stella Awards,M&C Asia</small>
+                        <img src="images/discover_pic_05.jpg" alt="">
+                        <h3>關渡大橋</h3>
                     </a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- mt-success-case -->
-    <div id="mt_success_case"></div>
-    <!-- mt-content-list -->
-    <div class="mt-content-list">
+    <!-- mt-know -->
+    <div class="mt-know">
         <div class="container">
-            <h2 class="mt-h2">台灣會展環境實力</h2>
-            <div class="content">
+            <h2 class="mt-h2">認識台北</h2>
+            <div data-aos="fade-left" data-aos-delay="500" class="item">
+                <a href="#">
+                    <h3>人口數</h3>
+                    <div class="info">262萬人</div>
+                    <img src="images/icon_know_people.svg" alt="">
+                </a>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="600" class="item">
+                <a href="#">
+                    <h3>住宿容量</h3>
+                    <div class="info">39間酒店 12152間套房</div>
+                    <img src="images/icon_know_hotel.svg" alt="">
+                </a>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="700" class="item">
+                <a href="#">
+                    <h3>便捷的交通</h3>
+                    <div class="info">機場、捷運、公車、Taxi</div>
+                    <img src="images/icon_know_bus.svg" alt="">
+                </a>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="800" class="item">
+                <a href="#">
+                    <h3>國際機場</h3>
+                    <div class="info">松山國際機場、桃園國際機場</div>
+                    <img src="images/icon_know_airplane.svg" alt="">
+                </a>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="900" class="item">
+                <a href="#">
+                    <h3>場地容量</h3>
+                    <div class="info">15,350人次/臺北小巨蛋</div>
+                    <img src="images/icon_know_sport.svg" alt="">
+                </a>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="1000" class="item">
+                <a href="#">
+                    <h3>時區</h3>
+                    <div class="info">GMT+8</div>
+                    <img src="images/icon_know_clock.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- mt-table -->
+    <div class="mt-table">
+        <div class="container">
+            <h2 class="mt-h2">平均溫度</h2>
+            <table>
+                <thead>
+                    <th></th>
+                    <th>1月</th>
+                    <th>2月</th>
+                    <th>3月</th>
+                    <th>4月</th>
+                    <th>5月</th>
+                    <th>6月</th>
+                    <th>7月</th>
+                    <th>8月</th>
+                    <th>9月</th>
+                    <th>10月</th>
+                    <th>11月</th>
+                    <th>12月</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>攝氏(°C)</td>
+                        <td>16.5</td>
+                        <td>16.5</td>
+                        <td>16.5</td>
+                        <td>16.5</td>
+                        <td>16.5</td>
+                        <td>16.5</td>
+                        <td>16.5</td>
+                        <td>16.5</td>
+                        <td>16.5</td>
+                        <td>16.5</td>
+                        <td>16.5</td>
+                        <td>16.5</td>
+                    </tr>
+                    <tr>
+                        <td>攝氏(°C)</td>
+                        <td>70</td>
+                        <td>70</td>
+                        <td>70</td>
+                        <td>70</td>
+                        <td>70</td>
+                        <td>70</td>
+                        <td>70</td>
+                        <td>70</td>
+                        <td>70</td>
+                        <td>70</td>
+                        <td>70</td>
+                        <td>70</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- mt-plan -->
+    <div class="mt-plan">
+        <div class="container">
+            <h2 class="mt-h2">規劃您的活動</h2>
+            <div class="slider-plan">
                 <div class="item">
-                    <div class="pic">
-                        <div class="img-container">
-                            <img src="https://source.unsplash.com/random/1" alt="">
-                        </div>
-                    </div>
-                    <div data-aos="fade-left" data-aos-delay="500" class="info">
-                        <h3>國際標準的會展設施</h3>
-                        <p>臺灣在醫學、資訊與科學等領域之研究水準揚名國際，同時與國際相關學會、協會等密切交流，造就了臺灣專業且成熟的會議市場。根據國際會議協會(ICCA)全球協會型國際會議場次統計資料，2019年在臺舉辦協會型
-                        </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, accusamus blanditiis nobis
-                            eum eaque dolore dolor voluptate maiores exercitationem sit aliquid labore cupiditate
-                            assumenda corrupti fuga, quibusdam aliquam, iure facere!</p>
-                        <a href="#" class="more">more</a>
+                    <div class="flip-box">
+                        <a href="#">
+                            <div class="flip-box-front">
+                                <div class="inner">
+                                    <h3 class="flip-box-header">
+                                        <span>住宿搜尋</span>
+                                    </h3>
+                                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint odio repellat
+                                        voluptatem eius fuga facere dignissimos ullam, voluptas beatae enim! </p>
+                                </div>
+                            </div>
+                            <div class="flip-box-back">
+                                <div class="inner">
+                                    <h3 class="flip-box-header">
+                                        <span>住宿搜尋</span>
+                                    </h3>
+                                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint odio repellat
+                                        voluptatem eius fuga facere dignissimos ullam, voluptas beatae enim! </p>
+                                </div>
+                                <div class="img-container">
+                                    <img src="https://lipsum.app/id/12/600x800" alt="" />
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="pic">
-                        <div class="img-container">
-                            <img src="https://source.unsplash.com/random/2" alt="">
-                        </div>
-                    </div>
-                    <div data-aos="fade-right" data-aos-delay="500" class="info">
-                        <h3>國際會議活動</h3>
-                        <p>臺灣在醫學、資訊與科學等領域之研究水準揚名國際，同時與國際相關學會、協會等密切交流，造就了臺灣專業且成熟的會議市場。根據國際會議協會(ICCA)全球協會型國際會議場次統計資料，2019年在臺舉辦協會型
-                        </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, accusamus blanditiis nobis
-                            eum eaque dolore dolor voluptate maiores exercitationem sit aliquid labore cupiditate
-                            assumenda corrupti fuga, quibusdam aliquam, iure facere!</p>
-                        <a href="#" class="more">more</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pic">
-                        <div class="img-container">
-                            <img src="https://source.unsplash.com/random/3" alt="">
-                        </div>
-                    </div>
-                    <div data-aos="fade-left" data-aos-delay="500" class="info">
-                        <h3>具備競爭力產業</h3>
-                        <p>臺灣在醫學、資訊與科學等領域之研究水準揚名國際，同時與國際相關學會、協會等密切交流，造就了臺灣專業且成熟的會議市場。根據國際會議協會(ICCA)全球協會型國際會議場次統計資料，2019年在臺舉辦協會型
-                        </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, accusamus blanditiis nobis
-                            eum eaque dolore dolor voluptate maiores exercitationem sit aliquid labore cupiditate
-                            assumenda corrupti fuga, quibusdam aliquam, iure facere!</p>
-                        <a href="#" class="more">more</a>
+                    <div class="flip-box">
+                        <a href="#">
+                            <div class="flip-box-front">
+                                <div class="inner">
+                                    <h3 class="flip-box-header">
+                                        <span>尋找會展場地</span>
+                                    </h3>
+                                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint odio repellat
+                                        voluptatem eius fuga facere dignissimos ullam, voluptas beatae enim! </p>
+                                </div>
+                            </div>
+                            <div class="flip-box-back">
+                                <div class="inner">
+                                    <h3 class="flip-box-header">
+                                        <span>尋找會展場地</span>
+                                    </h3>
+                                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint odio repellat
+                                        voluptatem eius fuga facere dignissimos ullam, voluptas beatae enim! </p>
+                                </div>
+                                <div class="img-container">
+                                    <img src="https://lipsum.app/id/13/600x800" alt="" />
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="pic">
-                        <div class="img-container">
-                            <img src="https://source.unsplash.com/random/4" alt="">
-                        </div>
-                    </div>
-                    <div data-aos="fade-right" data-aos-delay="500" class="info">
-                        <h3>實務經驗豐富</h3>
-                        <p>臺灣在醫學、資訊與科學等領域之研究水準揚名國際，同時與國際相關學會、協會等密切交流，造就了臺灣專業且成熟的會議市場。根據國際會議協會(ICCA)全球協會型國際會議場次統計資料，2019年在臺舉辦協會型
-                        </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, accusamus blanditiis nobis
-                            eum eaque dolore dolor voluptate maiores exercitationem sit aliquid labore cupiditate
-                            assumenda corrupti fuga, quibusdam aliquam, iure facere!</p>
-                        <a href="#" class="more">more</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pic">
-                        <div class="img-container">
-                            <img src="https://source.unsplash.com/random/5" alt="">
-                        </div>
-                    </div>
-                    <div data-aos="fade-left" data-aos-delay="500" class="info">
-                        <h3>便捷的交通</h3>
-                        <p>臺灣位於亞洲大陸東南方、太平洋西岸的東亞島弧間，是亞太經貿運輸的重要樞紐，北中南均有國際機場，計有57家國際知名航空公司在此提供服務，每週有近5,000航班，可連接116
-                            個城市、包括1400航班飛往中國大陸49個城市，與國際間的往來非常便捷。 </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, accusamus blanditiis nobis
-                            eum eaque dolore dolor voluptate maiores exercitationem sit aliquid labore cupiditate
-                            assumenda corrupti fuga, quibusdam aliquam, iure facere!</p>
-                        <a href="#" class="more">more</a>
+                    <div class="flip-box">
+                        <a href="#">
+                            <div class="flip-box-front">
+                                <div class="inner">
+                                    <h3 class="flip-box-header">
+                                        <span>旅遊行程</span>
+                                    </h3>
+                                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint odio repellat
+                                        voluptatem eius fuga facere dignissimos ullam, voluptas beatae enim! </p>
+                                </div>
+                            </div>
+                            <div class="flip-box-back">
+                                <div class="inner">
+                                    <h3 class="flip-box-header">
+                                        <span>旅遊行程</span>
+                                    </h3>
+                                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint odio repellat
+                                        voluptatem eius fuga facere dignissimos ullam, voluptas beatae enim! </p>
+                                </div>
+                                <div class="img-container">
+                                    <img src="https://lipsum.app/id/14/600x800" alt="" />
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="pic">
-                        <div class="img-container">
-                            <img src="https://source.unsplash.com/random/6" alt="">
-                        </div>
+                    <div class="flip-box">
+                        <a href="#">
+                            <div class="flip-box-front">
+                                <div class="inner">
+                                    <h3 class="flip-box-header">
+                                        <span>周邊業者</span>
+                                    </h3>
+                                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint odio repellat
+                                        voluptatem eius fuga facere dignissimos ullam, voluptas beatae enim! </p>
+                                </div>
+                            </div>
+                            <div class="flip-box-back">
+                                <div class="inner">
+                                    <h3 class="flip-box-header">
+                                        <span>周邊業者</span>
+                                    </h3>
+                                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint odio repellat
+                                        voluptatem eius fuga facere dignissimos ullam, voluptas beatae enim! </p>
+                                </div>
+                                <div class="img-container">
+                                    <img src="https://lipsum.app/id/15/600x800" alt="" />
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                    <div data-aos="fade-right" data-aos-delay="500" class="info">
-                        <h3>多元專業展覽 薈萃無限商機</h3>
-                        <p>臺灣優勢產業實力，造就每年辦理逾80項專業展，包括資訊電子類、機械類、自行車類、汽機車類、運動類、食品類、文具禮品類及醫療健康類等等，也成就許多知 </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, accusamus blanditiis nobis
-                            eum eaque dolore dolor voluptate maiores exercitationem sit aliquid labore cupiditate
-                            assumenda corrupti fuga, quibusdam aliquam, iure facere!</p>
-                        <a href="#" class="more">more</a>
+                </div>
+                <div class="item">
+                    <div class="flip-box">
+                        <a href="#">
+                            <div class="flip-box-front">
+                                <div class="inner">
+                                    <h3 class="flip-box-header">
+                                        <span>簽證資訊</span>
+                                    </h3>
+                                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint odio repellat
+                                        voluptatem eius fuga facere dignissimos ullam, voluptas beatae enim! </p>
+                                </div>
+                            </div>
+                            <div class="flip-box-back">
+                                <div class="inner">
+                                    <h3 class="flip-box-header">
+                                        <span>簽證資訊</span>
+                                    </h3>
+                                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint odio repellat
+                                        voluptatem eius fuga facere dignissimos ullam, voluptas beatae enim! </p>
+                                </div>
+                                <div class="img-container">
+                                    <img src="https://lipsum.app/id/15/600x800" alt="" />
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
+            <a href="#" class="more"><span>more</span></a>
         </div>
     </div>
     <!-- fat footer -->
@@ -270,7 +566,7 @@
         $('#mt_fatfooter').load('components/mt-fatfooter/mt-fatfooter.html');
         $('#mt_footer').load('components/mt-footer/mt-footer.html');
         $('#mt_gototop').load('components/mt-gototop/mt-gototop.html');
-        $('#mt_success_case').load('components/mt-success-case/mt-success-case.html');
+        //$('#mt_success_case').load('components/mt-success-case/mt-success-case.html');
         //$('#mt_cookie').load('components/mt-cookie/mt-cookie.html');
         $('#mt_userbar').load('components/mt-userbar/mt-userbar.html');
     });

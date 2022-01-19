@@ -531,4 +531,72 @@ $(window).on('load', function () {
     $('.mice-kv').each(function (index, el) {
         $(this).addClass('effect');
     });
+    $(window).on('load resize scroll', function (e) {
+        var window_H = $(window).innerHeight();
+        var windowTop = $(window).scrollTop();
+        $('.mt-discover .item a').each(function (index, el) {
+            // 可以+130 讓圖進入多點再跑動畫
+            var imgTop = Math.floor($(this).offset().top - windowTop + 130);
+            //imgTop < window_H 是指進入到最底部
+            //imgTop>0 是指還沒滾到最上方
+            //同時條件成立 代表物件在看得到的地方才會trigger動畫
+            if (imgTop < window_H && imgTop > 0) {
+                $(this).addClass('effect');
+            }
+        });
+    });
+    //
+    $('.mtCityBgSlider').slick({
+        dots: false,
+        arrow: false,
+        infinite: true,
+        speed: 2000,
+        autoplay: true,
+        fade: true,
+        autoplaySpeed: 3000,
+        lazyLoad: 'ondemand',
+        ease: 'ease',
+    });
+    // mt-plan
+    //slick
+    $('.slider-plan').slick({
+        mobileFirst: true,
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrow: true,
+        lazyLoaded: true,
+        lazyLoad: 'ondemand',
+        ease: 'ease',
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    arrows: true,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    arrows: true,
+                },
+            },
+            {
+                breakpoint: 200,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true,
+                },
+            },
+        ],
+    });
+    $('.slider-plan').slick('refresh');
 });
