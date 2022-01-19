@@ -3199,7 +3199,7 @@ p.error {
     width: 100%;
     background-color: $primaryColor;
     height: 30em;
-
+    overflow: hidden;
     .mtCityBgSlider {
         position: absolute;
         width: 100%;
@@ -3244,6 +3244,7 @@ p.error {
 .mt-city-tab {
     padding: 2em 0 3em;
     background: #fff;
+    overflow: hidden;
     .container {
         max-width: $container-max;
         margin: 0 auto;
@@ -3264,6 +3265,7 @@ p.error {
                 @include screen('xs_mobile') {
                     overflow: hidden;
                     overflow-x: auto;
+                    justify-content: flex-start;
                 }
                 > li {
                     transition-duration: 0.25s;
@@ -3420,6 +3422,7 @@ p.error {
 .mt-discover {
     background: #f1f1f1;
     padding: 2em 0 3em;
+    overflow: hidden;
     .container {
         max-width: $container-max;
         margin: 0 auto;
@@ -3585,6 +3588,7 @@ p.error {
 }
 .mt-know {
     padding: 2em 0 3em;
+    overflow: hidden;
     .container {
         max-width: $container-max;
         background: #fff;
@@ -3662,6 +3666,7 @@ p.error {
 // mt-table
 .mt-table {
     padding: 2em 0;
+    overflow: hidden;
     .container {
         max-width: $container-max;
         margin: 0 auto;
@@ -3677,6 +3682,7 @@ p.error {
 // mt-plan
 .mt-plan {
     // background-color: #f1f1f1;
+    overflow: hidden;
     .container {
         padding: 1.5em 2em 1em;
         @include screen('xs_mobile') {
