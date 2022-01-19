@@ -3630,6 +3630,13 @@ p.error {
     .container {
         max-width: $container-max;
         margin: 0 auto;
+        table {
+            max: width 100px;
+            margin: 0 auto 1em;
+            td {
+                text-align: center;
+            }
+        }
     }
 }
 // mt-plan
