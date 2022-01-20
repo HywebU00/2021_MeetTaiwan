@@ -4012,3 +4012,255 @@ p.error {
         }
     }
 }
+@keyframes ripple {
+    100% {
+        opacity: 0;
+        transform: scale(4.5);
+    }
+}
+.mt-transport {
+    padding: 1.5em 0 1em;
+    overflow: hidden;
+    .container {
+        max-width: $container-max;
+        margin: 0 auto;
+        @include gutter;
+        .transport {
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto 3em;
+            padding: 0 2em 0;
+            background: #fff;
+            // box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            .tabs {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                table-layout: fixed;
+                width: 100%;
+                -webkit-transform: translateY(5px);
+                transform: translateY(5px);
+                @include screen('xs_mobile') {
+                    overflow: hidden;
+                    overflow-x: auto;
+                }
+                > li {
+                    transition-duration: 0.25s;
+                    display: table-cell;
+                    list-style: none;
+                    text-align: center;
+                    padding: 0.5em 2em;
+                    flex-grow: 0;
+                    flex-shrink: 1;
+                    flex-basis: auto;
+                    position: relative;
+                    overflow: hidden;
+                    cursor: pointer;
+                    color: #555;
+                    font-weight: bold;
+                    background: #fff;
+                    img {
+                        width: 5em;
+                        height: 5em;
+                        object-fit: contain;
+                        opacity: 0.5;
+                        @include screen('xs_mobile') {
+                            width: 3em;
+                            height: 3em;
+                        }
+                    }
+                    // border-bottom: 1px solid #ddd;
+                    @include screen('xs_mobile') {
+                        white-space: nowrap;
+                        // min-width: 6em;
+                        padding: 1em;
+                        flex-basis: 33.3333%;
+                    }
+                    &:before {
+                        z-index: -1;
+                        position: absolute;
+                        content: '';
+                        width: 100%;
+                        height: 120%;
+                        top: 0;
+                        left: 0;
+                        // background-color: rgba(255, 255, 255, 0.3);
+                        -webkit-transform: translateY(100%);
+                        transform: translateY(100%);
+                        transition-duration: 0.25s;
+                        border-radius: 5px 5px 0 0;
+                    }
+
+                    &:hover {
+                        img {
+                            opacity: 1;
+                        }
+                        &:before {
+                            -webkit-transform: translateY(70%);
+                            transform: translateY(70%);
+                        }
+                    }
+                    &.active {
+                        // background: $primaryColor;
+                        color: $primaryColor;
+                        border-bootom: 2px solid $primaryColor;
+                        img {
+                            opacity: 1;
+                        }
+                        &:before {
+                            transition-duration: 0.5s;
+                            background-color: white;
+                            -webkit-transform: translateY(0);
+                            transform: translateY(0);
+                        }
+                        &:after {
+                            position: absolute;
+                            content: '';
+                            width: 80%;
+                            height: 3px;
+                            bottom: 5px;
+                            left: 50%;
+                            margin-left: -40%;
+                            background: $primaryColor;
+                        }
+                    }
+                }
+            }
+            .tab__content {
+                background-color: white;
+                position: relative;
+                width: 100%;
+                > li {
+                    display: none;
+                }
+                .map_block {
+                    display: flex;
+                    width: 100%;
+                    align-items: flex-start;
+                    @include screen('mobile') {
+                        flex-flow: row wrap;
+                    }
+                    &.airport_map {
+                        .map {
+                            background: url(../images/transport_map.jpg) no-repeat center center;
+                            background-size: 100%;
+                        }
+                    }
+                    &.train_map {
+                        .map {
+                            background: url(../images/train_map.jpg) no-repeat center center;
+                            background-size: 100%;
+                        }
+                    }
+                    &.bicycle_map {
+                        .map {
+                            background: url(../images/bicycle_map.jpg) no-repeat center center;
+                            background-size: 100%;
+                        }
+                    }
+                    .info {
+                        flex-grow: 0;
+                        flex-shrink: 1;
+                        flex-basis: 50%;
+                        padding: 0 1em;
+                        align-self: stretch;
+                        @include screen('mobile') {
+                            flex-basis: 100%;
+                            order: 2;
+                        }
+                        h3 {
+                            color: #000;
+                            margin: 0 0 1em;
+                        }
+                        h4 {
+                            color: #666;
+                            margin: 0.5em 0;
+                        }
+                        ul {
+                            display: flex;
+                            justify-content: flex-start;
+                            flex-flow: row wrap;
+                            align-content: flex-start;
+                            align-items: flex-start;
+                            &.single-column {
+                                li {
+                                    flex-basis: 96%;
+                                }
+                            }
+                            li {
+                                flex-grow: 0;
+                                flex-shrink: 1;
+                                flex-basis: 48%;
+                                padding-left: 1em;
+                                margin: 0 0.25em 0.25em 0;
+                                @include screen('mobile') {
+                                    flex-basis: 95%;
+                                }
+                                a {
+                                    display: block;
+                                    font-size: 0.938em;
+                                    position: relative;
+                                    padding: 0 0.5em;
+                                    &:before {
+                                        position: absolute;
+                                        content: '';
+                                        width: 0.4em;
+                                        height: 2px;
+                                        opacity: 1;
+                                        left: -1em;
+                                        top: 0.65em;
+                                        background: #ddd;
+                                        transition: 0.3s ease-out;
+                                    }
+                                    &:hover,
+                                    &:focus {
+                                        &:before {
+                                            background: $secondaryColor;
+                                            left: -0.5em;
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .map {
+                        flex-grow: 0;
+                        flex-shrink: 1;
+                        flex-basis: 50%;
+                        background: url(../images/transport_map.jpg) no-repeat center center;
+                        background-size: 100%;
+                        @include aspect-ratio(1, 1);
+                        @include screen('mobile') {
+                            flex-basis: 100%;
+                            order: 1;
+                        }
+                        .dot {
+                            position: absolute;
+                            width: 0.6em;
+                            height: 0.6em;
+                            border-radius: 50%;
+                            background: #7678c7;
+                            z-index: 1;
+                            &.active {
+                                background: $secondaryColor;
+                                &:after {
+                                    position: absolute;
+                                    content: '';
+                                    width: 0.6em;
+                                    height: 0.6em;
+                                    border-radius: 50%;
+                                    background: lighten($secondaryColor, 10);
+                                    left: 0em;
+                                    top: 0em;
+                                    z-index: 0;
+                                    animation: ripple infinite 1s linear;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
