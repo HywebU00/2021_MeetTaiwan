@@ -235,10 +235,12 @@
                     .off()
                     .click(function (e) {
                         if (!lanStatus) {
-                            $('.languageBlock').stop(true, true).addClass('open').slideDown('600', 'easeOutQuint');
+                            $('.languageBlock').stop(true, true).addClass('open').slideDown('600',
+                                'easeOutQuint');
                             lanStatus = true;
                         } else {
-                            $('.languageBlock').stop(true, true).removeClass('open').slideUp('600', 'easeOutQuint');
+                            $('.languageBlock').stop(true, true).removeClass('open').slideUp('600',
+                                'easeOutQuint');
                             lanStatus = false;
                         }
                         e.preventDefault();
@@ -868,7 +870,7 @@
                         slidesToScroll: 1,
                         arrows: true,
                     },
-                },],
+                }, ],
             });
             $('.slider-col-2').slick('refresh');
         })
@@ -962,7 +964,7 @@
             </div>
         </div>
     </div>
-    <!-- mt-news-tab-1 -->
+    <!-- mt-news-tab-2 -->
     <div class="mt-news-tab-2">
         <div class="container">
             <div class="news-tab-2">
@@ -971,24 +973,58 @@
                     <ul>
                         <li>
                             <time>107-01-01</time>
+                            <!-- category -->
+                            <div class="mt-tab-category">
+                                <ul>
+                                    <li><a href="#">新聞</a></li>
+                                    <!-- <li><a href="#">展覽</a></li> -->
+                                </ul>
+                            </div>
                             <a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto explicabo
                                 ipsum vel dolorum, accusamus iusto natus earum aut praesentium culpa a odio excepturi
                                 dolor nemo quisquam maxime reiciendis itaque modi.</a>
                         </li>
                         <li>
                             <time>107-01-01</time>
+                            <!-- category -->
+                            <div class="mt-tab-category">
+                                <ul>
+                                    <li><a href="#">活動資訊</a></li>
+
+                                </ul>
+                            </div>
                             <a href="#">的了才有樹位示法這綠以是記盡排的景</a>
                         </li>
                         <li>
                             <time>107-01-01</time>
+                                      <!-- category -->
+                                      <div class="mt-tab-category">
+                                        <ul>
+                                            <li><a href="#">活動資訊</a></li>
+        
+                                        </ul>
+                                    </div>
                             <a href="#">個外的隊個人學全一畫調臺常如市車……自於根決想輪你信</a>
                         </li>
                         <li>
                             <time>107-01-01</time>
+                                      <!-- category -->
+                                      <div class="mt-tab-category">
+                                        <ul>
+                                            <li><a href="#">活動資訊</a></li>
+        
+                                        </ul>
+                                    </div>
                             <a href="#">也只標物學。許最可舞長這小幾五價黃識算們也護……中</a>
                         </li>
                         <li>
                             <time>107-01-01</time>
+                                      <!-- category -->
+                                      <div class="mt-tab-category">
+                                        <ul>
+                                            <li><a href="#">重要公告</a></li>
+                                        </ul>
+                                    </div>
                             <a href="#">麼子有著他市在大思兒個一力車一房去生</a>
                         </li>
                     </ul>
@@ -1316,7 +1352,7 @@
                         slidesToScroll: 1,
                         arrows: true,
                     },
-                },],
+                }, ],
             });
             $('.slider-card').slick('refresh');
         })
@@ -1491,8 +1527,8 @@
             //click event to scroll to top
             $('.mt-scrollToTop').click(function (e) {
                 $('html, body').animate({
-                    scrollTop: 0,
-                },
+                        scrollTop: 0,
+                    },
                     400,
                     'easeOutExpo'
                 );

@@ -506,24 +506,27 @@ $(window).on("load", function () {
     stickyLeft.updateSticky();
   }
   //sticky sidebar === mt-faq
-  var topicSidebar = new StickySidebar(".topic_sidebar", {
-    containerSelector: ".topic_fixed",
-    innerWrapperSelector: ".topic__inner",
-    topSpacing: 80,
-    minWidth: 768,
-    resizeSensor: true,
-    bottomSpacing: 0,
-  });
-  topicSidebar.updateSticky();
-  var topicSidebar2 = new StickySidebar(".topic_sidebar2", {
-    containerSelector: ".topic_fixed2",
-    innerWrapperSelector: ".topic__inner2",
-    topSpacing: 80,
-    minWidth: 768,
-    resizeSensor: true,
-    bottomSpacing: 0,
-  });
-  topicSidebar2.updateSticky();
+  if ($(".topic_group ").length > 0) {
+    var topicSidebar = new StickySidebar(".topic_sidebar", {
+      containerSelector: ".topic_fixed",
+      innerWrapperSelector: ".topic__inner",
+      topSpacing: 80,
+      minWidth: 768,
+      resizeSensor: true,
+      bottomSpacing: 0,
+    });
+    topicSidebar.updateSticky();
+    var topicSidebar2 = new StickySidebar(".topic_sidebar2", {
+      containerSelector: ".topic_fixed2",
+      innerWrapperSelector: ".topic__inner2",
+      topSpacing: 80,
+      minWidth: 768,
+      resizeSensor: true,
+      bottomSpacing: 0,
+    });
+    topicSidebar2.updateSticky();
+  }
+
   // qa
   $(".lp_qa")
     .find(".qa_content")

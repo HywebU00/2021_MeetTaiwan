@@ -86,7 +86,7 @@
                         margin: 0 0 0 1em;
                         font-size: 0.813em;
                         color: #666;
-                        display: block;
+                        // display: block;
                         margin: 0;
                     }
                     a {
@@ -125,6 +125,35 @@
                     }
                 }
             }
+            .mt-tab-category{
+                display: inline-block;
+                margin-bottom: 0.2em;
+                ul{
+                    display: flex;
+                    li{
+                        margin: 0 0.25em 0.1em 0.25em;
+                    }
+                    a{
+                        font-size: 0.7em;
+                        padding: 0em 0.5em;
+                        background:#888;//$primaryColor;
+                        color: #fff;
+         
+                        &::before{
+                            display: none;
+                            
+                        }
+                        &::after{
+                            display: none;
+                        }
+                        &:hover ,&:focus{
+                            color: #fff;
+                        }
+                    }
+                }
+            }
         }
     }
+    
+ 
 }
