@@ -712,4 +712,10 @@ $(window).on("load", function () {
     ],
   });
   $(".commonSlider").slick("refresh");
+
+  //------ 書籤蒐藏 如有蒐藏則顯示使用者書簽亮燈 ---------
+  var i_bookmark = $("ul .i_bookmark.active");
+  if (i_bookmark.length > 1) {
+    $(".mt-userbar ul li").last().children("a").addClass("hasItem");
+  }
 });

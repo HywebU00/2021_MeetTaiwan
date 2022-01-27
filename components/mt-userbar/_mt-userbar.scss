@@ -34,8 +34,8 @@
                 position: relative;
                 text-align: center;
                 transition: 0.3s ease-out;
-                &:hover,
-                &:focus {
+                &:hover{
+                // &:focus {
                     color: $secondaryColor;
                     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
                     span {
@@ -61,6 +61,20 @@
                     border-radius: 0.25rem;
                     transition: 0.3s ease-out;
                     color: #fff;
+                }
+            }
+            a.hasItem{
+                color: $secondaryColor;
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    right: 5px;
+                    top:-5px;
+                    border-radius: 50%;
+                    background-color: lighten($color-yellow,30%);
                 }
             }
         }

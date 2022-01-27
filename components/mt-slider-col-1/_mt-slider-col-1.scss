@@ -2,19 +2,39 @@
 @import '../../sass/_mixin'; //Mixin
 // mt-slider-col-1
 .mt-slider-col-1 {
-    min-height: 200px;
+    min-height: 360px;
     padding: 1em 0;
-    background: url(../../images/mt-slider-grid.jpg) no-repeat center top #f3f3f3;
+    // background: url(../../images/mt-slider-grid.jpg) no-repeat center top #f3f3f3;
+    background: url(../../images/inner_08_contanctUs.png) no-repeat center top #f3f3f3;
+    // background-size: cover;
+    background-position: center center ;
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 0;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        top:0;
+        bottom: 0;
+        // background:#d1d6e7;
+         background:#f3f3f3;
+      
+        opacity: 0.3;
+    }
     .container {
         padding: 2em 2em 1em;
+        z-index: 2;
     }
     .slider-col-1 {
         display: flex;
         flex-flow: row wrap;
+       
         .col {
             flex-grow: 0;
             flex-shrink: 1;
-            flex-basis: 30%;
+            flex-basis: 25%;//30%;
             min-width: 200px;
             display: flex;
             flex-flow: row wrap;
@@ -22,15 +42,15 @@
             h2.mt-h2 {
                 text-align: left;
                 font-size: 2em;
-                color: #222;
+                // color: #222;
                 &:after {
                     position: absolute;
                     content: '';
                     left: 0;
                     margin-left: 0;
-                    height: 2px;
+                    // height: 2px;
                     width: 100px;
-                    background: #888;
+                    // background: #888;
                 }
             }
             a.more {
