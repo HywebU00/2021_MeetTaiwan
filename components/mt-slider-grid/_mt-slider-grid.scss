@@ -110,6 +110,7 @@
                         flex-basis: auto;
                         text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.85), 0px 0px 15px rgba(0, 0, 0, 0.85);
                         margin: 0 0 1rem 0;
+                        line-height: 1;
                         @include screen('xs_mobile') {
                             font-size: 2em;
                         }

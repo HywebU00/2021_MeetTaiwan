@@ -96,7 +96,7 @@
                     max-width: 400px;
                     margin: 0 auto;
                     text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.75);
-                    @include text-line(3, 1.45em);
+                    @include text-line(3, 1.6em);
                     @include screen('xs_mobile') {
                         width: 80% !important;
                     }

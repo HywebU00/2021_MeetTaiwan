@@ -4,7 +4,8 @@
 .mt-slider-col-2 {
     // background-color: #f1f1f1;
     .container {
-        padding: 1.5em 0em 1em;
+        // padding: 1.5em 0em 1em;
+        padding: 2em 0em 1em;
         @include screen('xs_mobile') {
             padding: 1.5em 0;
         }
