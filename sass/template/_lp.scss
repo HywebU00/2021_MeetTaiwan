@@ -817,6 +817,37 @@
             }
         }
     }
+    .lp_user_features{
+        ul{
+            li{
+                min-height:8em ;
+                .caption{
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    h3{
+                        margin-bottom: 0;
+                    }
+                    &::after{
+                        position:absolute ;
+                        content: '';
+                        left: 0;
+                        bottom:0;
+                        width: 0%;
+                        height: 5px;
+                        background-color: $lightColor;
+                        transition: all 0.3s;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                        &::after{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
     //lp-list
     .lp_list {
         &.lp_media {
