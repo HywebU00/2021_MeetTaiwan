@@ -2,10 +2,11 @@
 @import '../../sass/_mixin'; //Mixin
 // mt-slider-col-1
 .mt-slider-col-1 {
-    min-height: 360px;
+    min-height:360px;//500px
     padding: 1em 0;
+  //  background: url(../../images/contanctUs_img.png) no-repeat center top #f3f3f3;
     // background: url(../../images/mt-slider-grid.jpg) no-repeat center top #f3f3f3;
-    background: url(../images/inner_08_contanctUs.png) no-repeat center top #f3f3f3;
+     background: url(../images/inner_08_contanctUs.png) no-repeat center top #f3f3f3;
     // background-size: cover;
     background-position: center center ;
     position: relative;
@@ -18,9 +19,9 @@
         width: 100%;
         top:0;
         bottom: 0;
-        // background:#d1d6e7;
-         background:#f3f3f3;
-      
+        //background:#d1d6e7;
+        background:#f3f3f3;
+     // background: #000;
         opacity: 0.3;
     }
     .container {

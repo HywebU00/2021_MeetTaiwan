@@ -149,28 +149,30 @@
                 }
             }
 
-            .flip-box:hover .flip-box-front {
-                -ms-transform: rotateY(-180deg);
-                -webkit-transform: rotateY(-180deg);
-                transform: rotateY(-180deg);
-                -webkit-transform-style: preserve-3d;
-                -ms-transform-style: preserve-3d;
-                transform-style: preserve-3d;
-            }
+            // .flip-box:hover .flip-box-front {
+            //     -ms-transform: rotateY(-180deg);
+            //     -webkit-transform: rotateY(-180deg);
+            //     transform: rotateY(-180deg);
+            //     -webkit-transform-style: preserve-3d;
+            //     -ms-transform-style: preserve-3d;
+            //     transform-style: preserve-3d;
+            // }
 
             .flip-box-back {
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
-                backface-visibility: hidden;
-                -ms-transform: rotateY(180deg);
-                -webkit-transform: rotateY(180deg);
-                transform: rotateY(180deg);
-                -webkit-transform-style: preserve-3d;
-                -ms-transform-style: preserve-3d;
-                transform-style: preserve-3d;
-                background: #000;
+                // backface-visibility: hidden;
+                // -ms-transform: rotateY(180deg);
+                // -webkit-transform: rotateY(180deg);
+                // transform: rotateY(180deg);
+                // -webkit-transform-style: preserve-3d;
+                // -ms-transform-style: preserve-3d;
+                // transform-style: preserve-3d;
+
+                background: #fff;
+                // background: #000;
                 h3 {
                     text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.85);
                 }
@@ -191,7 +193,8 @@
                     height: 100%;
                     border-radius: 0.5em;
                     overflow: hidden;
-                    opacity: 1;
+                    opacity: 0.8;
+                    transition: all 0.5s;
                     img {
                         position: absolute;
                         top: 0;
@@ -200,18 +203,30 @@
                         height: 100%;
                         object-fit: cover;
                         border-radius: 0.5em;
+                        transition: all 0.5s;
+                       
                     }
                 }
+                &:hover{
+                    img{
+                      object-position:center;
+                      transition: all 0.5s;
+                      transform: scale(1.1);
+                    }
+                    .img-container{
+                        opacity: 1;
+                    }
+                  }
             }
 
-            .flip-box:hover .flip-box-back {
-                -ms-transform: rotateY(0deg);
-                -webkit-transform: rotateY(0deg);
-                transform: rotateY(0deg);
-                -webkit-transform-style: preserve-3d;
-                -ms-transform-style: preserve-3d;
-                transform-style: preserve-3d;
-            }
+            // .flip-box:hover .flip-box-back {
+            //     -ms-transform: rotateY(0deg);
+            //     -webkit-transform: rotateY(0deg);
+            //     transform: rotateY(0deg);
+            //     -webkit-transform-style: preserve-3d;
+            //     -ms-transform-style: preserve-3d;
+            //     transform-style: preserve-3d;
+            // }
 
             .flip-box .inner {
                 position: absolute;

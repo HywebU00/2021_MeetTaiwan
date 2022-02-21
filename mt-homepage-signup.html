@@ -54,7 +54,7 @@
             <!-- nav導覽列 -->
             <nav class="mt-nav">
                 <ul>
-                    <li><a href="#">Login</a></li>
+                    <li><a href="#" id="openModal">Login</a></li>
                     <li><a href="#">FAQ</a></li>
                     <li><a href="#" class="langBtn"><span>Language<i class="fas fa-chevron-down"></i></a>
                         <div class="languageBlock">
@@ -997,34 +997,34 @@
                         </li>
                         <li>
                             <time>107-01-01</time>
-                                      <!-- category -->
-                                      <div class="mt-tab-category">
-                                        <ul>
-                                            <li><a href="#">活動資訊</a></li>
-        
-                                        </ul>
-                                    </div>
+                            <!-- category -->
+                            <div class="mt-tab-category">
+                                <ul>
+                                    <li><a href="#">活動資訊</a></li>
+
+                                </ul>
+                            </div>
                             <a href="#">個外的隊個人學全一畫調臺常如市車……自於根決想輪你信</a>
                         </li>
                         <li>
                             <time>107-01-01</time>
-                                      <!-- category -->
-                                      <div class="mt-tab-category">
-                                        <ul>
-                                            <li><a href="#">活動資訊</a></li>
-        
-                                        </ul>
-                                    </div>
+                            <!-- category -->
+                            <div class="mt-tab-category">
+                                <ul>
+                                    <li><a href="#">活動資訊</a></li>
+
+                                </ul>
+                            </div>
                             <a href="#">也只標物學。許最可舞長這小幾五價黃識算們也護……中</a>
                         </li>
                         <li>
                             <time>107-01-01</time>
-                                      <!-- category -->
-                                      <div class="mt-tab-category">
-                                        <ul>
-                                            <li><a href="#">重要公告</a></li>
-                                        </ul>
-                                    </div>
+                            <!-- category -->
+                            <div class="mt-tab-category">
+                                <ul>
+                                    <li><a href="#">重要公告</a></li>
+                                </ul>
+                            </div>
                             <a href="#">麼子有著他市在大思兒個一力車一房去生</a>
                         </li>
                     </ul>
@@ -1560,6 +1560,153 @@
                     e.preventDefault();
                 });
         })
+    </script>
+  <!--視窗-->
+  <div id="login-modal" class="modal">
+  
+    <div class="sp_member">
+        <h2 class="mt-h2">會員登入</h2>
+        <div class="login_block">
+          <div class="login_info">
+            <h3>
+              為了提供更好的服務，誠摯邀請您免費加入會員，使用網站功能。會員功能介紹如下，歡迎業者多加利用。
+            </h3>
+            <ul>
+              <li>
+                <i class="fas fa-check"></i
+                ><a href="#">會展網業者資料修改</a
+                >（公司簡介、影音、服務項目）<span class="highlight"
+                  >限會員</span
+                >
+              </li>
+              <li>
+                <i class="fas fa-check"></i>發布活動檔期 / 發布活動新聞
+              </li>
+              <li>
+                <i class="fas fa-check"></i
+                >商機資訊（商機布告、商機媒合）<span class="highlight"
+                  >限會員</span
+                >
+              </li>
+              <li>
+                <i class="fas fa-check"></i>會展活動網站及App服務 /
+                臺灣會展識別標誌申請 / 會展圖庫申請 / 國貿局識別標誌申請 /
+                徵求業者服務
+              </li>
+            </ul>
+          </div>
+          <div class="login">
+            <div class="form_grid">
+              <div class="form_grp">
+                <div class="form_content">
+                  <div class="form_style">
+                    <input type="text" id="" value="" />
+                    <label for="" class="form_title"
+                      >會員帳號<abbr
+                        class="necessary"
+                        title="為必填(選)欄位,不能為空白。"
+                        >*</abbr
+                      ></label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="form_grp">
+                <div class="form_content">
+                  <div class="password_toggle">
+                    <div class="form_style">
+                      <input
+                        type="password"
+                        id=""
+                        value=""
+                        placeholder=""
+                      />
+                      <label for="" class="form_title"
+                        >登入密碼<abbr
+                          class="necessary"
+                          title="為必填(選)欄位,不能為空白。"
+                          >*</abbr
+                        ></label
+                      >
+                    </div>
+                    <div class="showPassword">
+                      <a href="#"><i class="fas fa-eye-slash"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form_grp">
+                <div class="form_content">
+                  <div class="recaptcha">
+                    <div class="form_style">
+                      <input type="text" />
+                      <label for="username" class="form_title"
+                        >驗證碼<abbr
+                          class="necessary"
+                          title="為必填(選)欄位,不能為空白。"
+                          >*</abbr
+                        ></label
+                      >
+                    </div>
+                    <img
+                      class="captcha"
+                      src="images/basic/captcha.gif"
+                      alt=""
+                    />
+                    <button type="button" class="btn">
+                      <i class="fas fa-sync-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="btn_grp">
+                <button type="button" class="btn btn_submit">登入</button>
+                <button type="button" class="btn">加入會員</button>
+              </div>
+              <p class="info">
+                <i class="fas fa-info-circle"></i>若您忘記密碼，請使用<a
+                  href="#"
+                  >忘記密碼</a
+                >來找回密碼。<br />若您未曾註冊，請先<a href="#"
+                  >註冊帳號</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--視窗-->
+    <script>
+        //------- 登入視窗 -------------
+       
+/*-----------------------------------*/
+/////////////modal設定/////////////
+/*-----------------------------------*/
+
+    $('#login-modal').hide();                                                                //先隱藏視窗
+    // $('.modal').after('<div class="modal_overlay"></div>');                             //新增透明底
+    // $('.modal').prepend('<button type="button" class="close">關閉</button>');           //新增關閉按鈕
+    // $('.modal_overlay').hide();                                                         //隱藏透明底
+    //按鈕動作
+    $('#openModal').click(function(e) {
+        console.log('2')
+        // $('.modal_overlay').fadeIn(100);
+        $('#login-modal').fadeIn(100);
+        $('body').addClass('noscroll');
+        e.preventDefault();
+    });
+    //關閉function
+    // function closeModal(){
+    //     $('#modal1').hide();
+    //     $('.modal_overlay').hide();
+    //     $('body').removeClass('noscroll');
+    // }
+    //點選關閉按鈕及透明底都可關閉
+    // $('.modal_overlay').click(closeModal);
+    // $('.modal .close').click(closeModal);
+
+
     </script>
 </body>
 <!-- 呼叫元件內的function -->

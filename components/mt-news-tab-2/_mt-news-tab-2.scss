@@ -137,8 +137,9 @@
                         font-size: 0.7em;
                         padding: 0em 0.5em;
                         background:#888;//$primaryColor;
+                        border: 1px solid #888;
                         color: #fff;
-         
+                        line-height: 23.3px;
                         &::before{
                             display: none;
                             
@@ -148,6 +149,7 @@
                         }
                         &:hover ,&:focus{
                             color: #fff;
+                            background:$primaryColor;
                         }
                     }
                 }
