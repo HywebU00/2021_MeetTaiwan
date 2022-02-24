@@ -553,6 +553,31 @@ $(window).on("load", function () {
           e.preventDefault();
         });
     });
+
+  /*------------------------------------*/
+  ///// sticky progressBar /////
+  /*------------------------------------*/
+  // get offset top 監控對象
+  var topper = ($(".mt-content").prop("scrollHeight") / 3) * 2;
+  // scroll event
+  window.onscroll = function () {
+    scroller();
+  };
+
+  $(window).resize(function () {
+    scroller();
+  });
+  // sticky function
+  function scroller() {
+    // 監控對象 增加減少 class "sticky-fixed"
+    var contentWidth = $(".mt-content").width();
+    $(".sticky_progressbar").css("width", contentWidth);
+    $(".sticky_progressbar").toggleClass(
+      "sticky-fixed",
+      $(window).scrollTop() <= topper
+    );
+  }
+
   /*------------------------------------*/
   /////form表單 單個檔案上傳+多個檔案上傳/////
   /*------------------------------------*/
