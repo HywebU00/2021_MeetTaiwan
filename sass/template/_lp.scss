@@ -406,6 +406,7 @@
                         &:before {
                             margin-left: 0.1em;
                             opacity: 0;
+                            transition: 0.3s $cubic;
                         }
 
                         &:after {
@@ -428,6 +429,7 @@
                         i {
                             &:before {
                                 opacity: 1;
+                                transition: 0.3s $cubic;
                             }
                         }
 
@@ -648,6 +650,7 @@
                         top: 0;
                         transform: skew(-15deg);
                         background: $primaryColor;
+                        
                     }
 
                     span {
