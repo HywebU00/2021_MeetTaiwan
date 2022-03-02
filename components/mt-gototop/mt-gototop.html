@@ -1,29 +1,32 @@
 <!-- css -->
 <link rel="stylesheet" href="components/mt-gototop/mt-gototop.css" />
 <!-- scrollToTop -->
-<a href="#" class="mt-scrollToTop"><i class="fas fa-chevron-up"></i></a>
+<a href="#" class="mt-scrollToTop">
+  <i class="fas fa-arrow-up"></i>
+</a>
 <script>
-    $(function () {
-        //置頂go to top
-        $(window).bind('scroll', function () {
-            if ($(this).scrollTop() > 200) {
-                $('.mt-scrollToTop').fadeIn();
-            } else {
-                $('.mt-scrollToTop').fadeOut();
-            }
-        });
-        //click event to scroll to top
-        $('.mt-scrollToTop').click(function (e) {
-            $('html, body').animate({
-                scrollTop: 0,
-            },
-                400,
-                'easeOutExpo'
-            );
-            e.preventDefault();
-        });
-        $('.mt-scrollToTop').keydown(function (e) {
-            e.preventDefault();
-        });
-    })
+  $(function () {
+    //置頂go to top
+    $(window).bind("scroll", function () {
+      if ($(this).scrollTop() > 200) {
+        $(".mt-scrollToTop").fadeIn();
+      } else {
+        $(".mt-scrollToTop").fadeOut();
+      }
+    });
+    //click event to scroll to top
+    $(".mt-scrollToTop").click(function (e) {
+      $("html, body").animate(
+        {
+          scrollTop: 0,
+        },
+        400,
+        "easeOutExpo"
+      );
+      e.preventDefault();
+    });
+    $(".mt-scrollToTop").keydown(function (e) {
+      e.preventDefault();
+    });
+  });
 </script>

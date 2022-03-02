@@ -1,18 +1,22 @@
 @import '../../sass/_variable'; //Variable
 @import '../../sass/_mixin'; //Mixin
+
 // mt-news-tab-3
 .mt-news-tab-3 {
     position: relative;
     overflow: auto;
     overflow-x: hidden;
+
     .container {
         margin: 3em auto;
         padding: 2em 2em 0;
         position: relative;
         z-index: 1;
+
         @include screen('xs_mobile') {
             padding: 2em 1em 0;
         }
+
         .news-tab-3 {
             display: flex;
             flex-flow: row wrap;
@@ -22,9 +26,11 @@
             padding: 0em 3em;
             background-color: #fff;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 60px -12px, rgba(0, 0, 0, 0.3) 0px 0px 36px -18px;
+
             @include screen('xs_mobile') {
                 padding: 0em 2em;
             }
+
             .tabSet {
                 flex-grow: 1;
                 flex-shrink: 1;
@@ -35,31 +41,45 @@
                 margin: 0;
                 position: relative;
                 width: 0;
+
                 @include screen('tablet') {
                     max-width: 100%;
                     padding: 1em 0;
                 }
+
                 .tabs {
                     position: relative;
                     z-index: 3;
+
                     .tabItem {
                         a {
-                            //background: #f1f1f1;
-                            background:#fff;
+                            background: darken(#f1f1f1, 5%);
+
                             color: #888;
                             position: relative;
-                            &::before{
+
+                            border: 2px solid darken(#f1f1f1, 5%);
+                            border-top: 0;
+                            border-bottom: 0;
+                            @include screen('mobile'){
+                                border: 0px;
+                                border-bottom: 1px #ccc solid;
+                                &::before {
+                                    display: none;
+                                }
+                            }
+                            &::before {
                                 position: absolute;
                                 content: '';
                                 width: 100%;
                                 height: 2px;
-                                bottom: 0px;
+                                top: 0px;
                                 right: 0;
-                                background:  #f1f1f1;
-                                
+                                background: darken(#f1f1f1, 5%);
                                 transition: 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
                             }
-                            &::after{
+
+                            &::after {
                                 position: absolute;
                                 content: '';
                                 width: 0em;
@@ -69,41 +89,54 @@
                                 background: lighten(#888, 30%);
                                 transition: 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
                             }
-                            &:hover{
-                                // color: $primaryColor;
-                                &::after{
-                                    width: 100%;
-                             
-                                }
+
+                            &:hover {
+                                color: $primaryColor;
+                                
                             }
                         }
+
                         &.active {
                             a {
-                                // background: $primaryColor;
-                                color: $primaryColor;//#fff;
+
+                                color: $primaryColor; //#fff;
+                                background-color: #fff;
+                                @include screen('mobile'){
+                                    color: #fff;
+                                    background-color:$primaryColor;
+                                   }
+                                // &::before {
+                                //     background: $primaryColor;
+                                //     transition: 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+                                // }
+
                                 &::after{
                                     position: absolute;
                                     content: '';
-                                    width: 100%;
+                                    width: 120px;
                                     height: 3px;
                                     bottom: 0px;
-                                    right: 0;
+                                    right: calc(50% - 60px);
                                     background: $primaryColor;
-                                    transition: 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+                                    // transition: 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
                                 }
                             }
                         }
                     }
+
                     .tabContent {
                         padding: 1em 0em;
+
                         ul {
                             li {
                                 margin-bottom: 0.75em;
                                 border: none;
+
                                 time {
                                     display: block;
                                     margin: 0;
                                 }
+
                                 a {
                                     font-weight: bold;
                                     display: block;
@@ -111,6 +144,7 @@
                                     position: relative;
                                     padding-bottom: 0.25em;
                                     @include text-overflow;
+
                                     &:before {
                                         position: absolute;
                                         content: '';
@@ -120,6 +154,7 @@
                                         left: 0;
                                         background: #ddd;
                                     }
+
                                     &:after {
                                         position: absolute;
                                         content: '';
@@ -130,14 +165,86 @@
                                         background: $secondaryColor;
                                         transition: 0.3s $cubic;
                                     }
+
                                     &:hover,
                                     &:focus {
                                         color: $aHover;
+
                                         &:after {
                                             width: 3em;
                                         }
                                     }
                                 }
+                            }
+                        }
+                    }
+
+                    .tabItem.btn-tabItem {
+                        //新增加
+                        padding: 0 0.2em;
+                        position: relative !important;
+                        width: 200px !important;
+                        margin-bottom: 0.2em;
+                        @include screen('tablet') {
+                            position: unset !important;
+                            width: unset !important;
+                        }
+                        a {
+                            background: darken(#f1f1f1, 5%);
+
+                            color: #888;
+                            position: relative;
+
+                            border: 2px solid darken(#f1f1f1, 5%);
+                            border-top: 0;
+                            border-bottom: 0;
+
+                            //新增加
+                            border: 1px solid $primaryColor;
+                            color: $primaryColor;
+                            background-color: #fff;
+                            padding:0.8em 1.5em;
+                            border-radius: 5px;
+                            &::before {
+                                position: absolute;
+                                content: '';
+                                width: 100%;
+                                height: 2px;
+                                top: 0px;
+                                right: 0;
+                                background: darken(#f1f1f1, 5%);
+                                transition: 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+                                display: none;
+                            }
+
+                            &::after {
+                                position: absolute;
+                                content: '';
+                                width: 0em;
+                                height: 3px;
+                                bottom: 0px;
+                                right: 0;
+                                background: lighten(#888, 30%);
+                                transition: 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+                                display: none;
+                            }
+
+                            &:hover {
+                                    //新增加
+                                    background-color: lighten($primaryColor, 20%);
+                                    color: #fff;
+                                    transition: 0.5s all;
+                            }
+                        }
+
+                        &.active {
+                            a {
+
+                                color: $primaryColor; //#fff;
+                                background-color: #fff;
+                                //新增加
+                                background-color: $primaryColor;
+                                color: #fff;
                             }
                         }
                     }

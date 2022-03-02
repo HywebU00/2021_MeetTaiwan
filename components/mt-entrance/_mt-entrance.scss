@@ -51,6 +51,7 @@
         }
     }
     .container {
+        flex-wrap: wrap;
         max-width: $container-max;
         margin: 10% auto;
         display: flex;
@@ -59,6 +60,7 @@
         z-index: 2;
         @include screen('tablet') {
             flex-flow: row wrap;
+            // display: block;
             margin: 0;
             position: fixed;
             top: 3.5em;
@@ -81,10 +83,14 @@
             display: flex;
             @include screen('tablet') {
                 flex-grow: 0;
-                flex-shrink: 1;
+                // flex-shrink: 1;
                 flex-basis: 100%;
-                min-height: 10em;
+            
                 margin-bottom: 2em;
+                
+            }
+            @include screen('mobile'){
+                min-height: 23em;
             }
             a {
                 flex-grow: 0;
@@ -332,5 +338,22 @@
             //     }
             // }
         }
+        .entrance-title{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            h2{
+                text-align: center;
+                margin-bottom: 1.5em;
+            }
+            span{
+                display: block;
+                margin-bottom: 0.5em;
+            }
+            @include screen('tablet'){
+                line-height: 2em;
+            } 
+        }
     }
+    
 }

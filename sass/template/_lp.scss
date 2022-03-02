@@ -650,7 +650,7 @@
                         top: 0;
                         transform: skew(-15deg);
                         background: $primaryColor;
-                        
+
                     }
 
                     span {
@@ -1165,12 +1165,42 @@
                 .mt-category {
                     margin: 0.5em 0;
                 }
+
+                .more-btn {
+                    display: flex;
+                    width: 100%;
+                    justify-content: end;
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: #888;
+        
+                    span {
+                        border-bottom: 1px solid #ccc;
+                        margin-right: 1em;
+                        margin-top: 1em;
+                    }
+        
+                 
+                }
+                &:hover {
+                    .mt-category{
+                        +a{
+                            color:  $secondaryColor; 
+                        }
+                    }
+                    .more-btn {
+                        color:  $secondaryColor;
+                    }
+                    
+                    span {
+                        border-bottom: 1px solid $secondaryColor;
+                    }
+    
+                }
             }
         }
 
-        .more-btn {
-            flex-basis: unset;
-        }
+        
     }
 
     // lp partner lp_award

@@ -17,7 +17,7 @@
        
     }
     h3.mt-h3-subtitle{
-        color: $mt-heading-color;
+        // color: $mt-heading-color;
         margin-bottom: 1em;
         padding-bottom: 10px;
    
@@ -889,6 +889,17 @@
         // cp_like
         .cp_like {
             margin: 0 auto 1em;
+            .mt-h3{
+                text-align: center;
+                // color: $color-hr;
+                margin-bottom: 1em;
+                &::after{
+                    // display: none;
+                    width: 150px;
+                    left: calc(50% - 75px);
+                    background-color:lighten( $color-hr, 40%);
+                }
+            }
             .cp_like_slider {
                 padding: 0 2em;
                 @include screen('xs_mobile') {
@@ -904,10 +915,11 @@
                     right: 0.5em;
                 }
                 .item {
-                    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 24px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+                    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 15px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
                     position: relative;
                     min-height: 22em;
-                    margin: 1em 2em 2.5em;
+                    margin: 1em 0.8em 2.5em;
+                    // margin: 1em 2em 2.5em;
                     padding-top: 15em;
                     @include screen('xs_mobile') {
                         box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;

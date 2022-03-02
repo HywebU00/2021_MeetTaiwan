@@ -6,7 +6,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    height: 6em;
+    height: 4.8em;
     z-index: 99;
     background-color: #fff;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
@@ -120,7 +120,9 @@
             height: 100%;
             img {
                 width: 100%;
-                height: 100%;
+                // height: 100%;
+                height: 64px;
+                margin-top: 0.3em;
                 object-fit: contain;
             }
             @include screen('tablet') {
@@ -650,6 +652,9 @@
         h1 {
             max-width: 230px;
             width: 10%;
+            img{
+                margin-top: 0;
+            }
             @media screen and (max-width: 1100px) {
                 opacity: 0;
             }
@@ -664,6 +669,7 @@
                 & > li {
                     & > a {
                         height: 3em;
+                      
                     }
                     ul {
                         top: 3em;
@@ -671,9 +677,9 @@
                 }
             }
         }
-        .mt-nav {
-            display: none;
-        }
+        // .mt-nav {
+        //     display: none;
+        // }
         @include screen('tablet') {
             height: 60px;
         }
@@ -686,7 +692,8 @@
             }
         }
         .searchBtn {
-            top: 0.6em;
+            // top: 0.6em;
+            top:1.5em;
             @include screen('tablet') {
                 top: 0;
             }
