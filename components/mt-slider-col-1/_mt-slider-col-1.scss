@@ -66,10 +66,11 @@
                 height: 2.5em;
                 display: flex;
                 align-items: center;
-            
+            color: #fff;
                 justify-content: center;
-                border: 1px solid rgba(0, 0, 0, 0.5);
+                border: 1px solid  $primaryColor;
                //border: 1px solid #fff;
+               background: $primaryColor;
                 &:before {
                     top: 1.15em;
                     width: 1.5em;
@@ -78,8 +79,10 @@
                 &:hover,
                 &:focus {
                     color: #fff;
-                    border: 1px solid $primaryColor;
-                    background: $primaryColor;
+                    border: 1px solid $secondaryColor;
+                    background: $secondaryColor;
+                    // border: 1px solid $primaryColor;
+                    // background: $primaryColor;
                     cursor: pointer ;
                 }
             }

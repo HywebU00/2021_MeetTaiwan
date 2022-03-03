@@ -1150,7 +1150,15 @@
                         }
                     }
                 }
-
+                &>a.item{
+                    display: flex;
+                    flex-wrap: wrap;
+                    line-height: unset;
+                    max-height: unset;
+                  p{
+                    @include text-line(2, 1.45em);
+                  }
+                }
                 span.dept {
                     display: inline-block;
                     font-size: 1rem;
@@ -1177,7 +1185,7 @@
                     span {
                         border-bottom: 1px solid #ccc;
                         margin-right: 1em;
-                        margin-top: 1em;
+                      
                     }
         
                  
@@ -1190,13 +1198,21 @@
                     }
                     .more-btn {
                         color:  $secondaryColor;
+                        span {
+                            border-bottom: 1px solid $secondaryColor !important;
+                        }
                     }
                     
-                    span {
-                        border-bottom: 1px solid $secondaryColor;
-                    }
+                    
     
                 }
+            }
+            li.list-item{
+               &:hover{
+                span{
+                    border: none;
+                }
+               }
             }
         }
 
