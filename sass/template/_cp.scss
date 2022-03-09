@@ -962,7 +962,7 @@
                         p {
                             font-size: 0.875em;
                             color: #888;
-                            text-align: center;
+                            text-align: start;
                             @include text-line(3, 1.5em);
                         }
                     }
@@ -973,6 +973,8 @@
                         width: 80%;
                         margin: 0 auto;
                         overflow: hidden;
+                        justify-content: center;
+                        display: flex;
                         // height: 4em;
                         a {
                             width: auto;
@@ -983,6 +985,11 @@
                             font-size: 0.75em;
                             padding: 0.15em 0.5em;
                         }
+                        // ul{
+                        //     display: flex;
+                        //     justify-content: center;
+                        //     flex-wrap: wrap;
+                        // }
                     }
                 }
             }
@@ -991,25 +998,33 @@
 }
 .apply_award {
     .apply_info {
-        display: flex;
-        flex-flow: row wrap;
+        // display: flex;
+        // flex-flow: row wrap;
         width: 100%;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding: 1em;
+        // align-items: flex-start;
+        // justify-content: flex-start;
+        // padding: 1em;
         margin-bottom: 2em;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        position: relative;
+        // box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
         .pic {
-            flex-grow: 0;
-            flex-shrink: 1;
-            flex-basis: 250px;
-            margin: 0px 2em 0 0;
-            width: 35%;
-            min-width: 200px;
-            max-width: 250px;
+            width: 100%;
+            float: none;
+            // flex-grow: 0;
+            // flex-shrink: 1;
+            // flex-basis: 250px;
+            // margin: 0px 2em 0 0;
+            // width: 35%;
+            // min-width: 200px;
+            // max-width: 250px;
             background: #f1f1f1;
+          
             overflow: hidden;
-            padding: 0.5em 0.5em 0.2em;
+            margin: 0;
+            padding: 0;
+            max-width: unset;
+            max-height: 360px;
+            // padding: 0.5em 0.5em 0.2em;
             @include screen('mobile') {
                 flex-basis: 100%;
                 width: 100%;
@@ -1020,6 +1035,10 @@
             flex-grow: 1;
             flex-shrink: 1;
             flex-basis: auto;
+            //新增
+            position: absolute;
+            bottom: 0;
+            right: 0;
             h3 {
                 margin: 0.5em 0 1em;
                 font-size: 1.75em;

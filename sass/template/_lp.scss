@@ -1040,7 +1040,8 @@
             padding: 0;
 
             &>li {
-                padding: 1.5em 2em 1.5em 3.5em;
+                // padding: 1.5em 2em 1.5em 3.5em;
+                padding:1.5em ;
                 border-bottom: 1px solid #ddd;
                 position: relative; // outline: 1px solid blue;
                 clear: both;
@@ -1060,7 +1061,8 @@
                     width: 1em;
                     height: 1em;
                     right: 0.25em;
-                    top: 1em;
+                    // top: 1em;
+                    top:1.5em;
                     font-size: 1.2em;
                     color: #bbb;
                     overflow: unset;
@@ -1156,7 +1158,7 @@
                     line-height: unset;
                     max-height: unset;
                   p{
-                    @include text-line(2, 1.45em);
+                    @include text-line(2, 1.85em);
                   }
                 }
                 span.dept {
@@ -1181,7 +1183,7 @@
                     font-size: 16px;
                     font-weight: 700;
                     color: #888;
-        
+                    margin-top:1.5em;
                     span {
                         border-bottom: 1px solid #ccc;
                         margin-right: 1em;

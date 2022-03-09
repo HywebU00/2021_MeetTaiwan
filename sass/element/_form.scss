@@ -1196,9 +1196,9 @@ textarea {
     -moz-appearance: none;
     appearance: none;
 
-    @include screen('mobile') {
-        width: 100%;
-    }
+    // @include screen('mobile') {
+    //     width: 100%;
+    // }
 }
 
 .input-i {

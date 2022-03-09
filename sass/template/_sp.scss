@@ -1512,6 +1512,7 @@ p.error {
                 padding: 0.5em;
                 display: flex;
                 align-items: flex-start;
+                margin-bottom: 1em;
 
                 .member_id {
                     flex-grow: 1;
@@ -2011,9 +2012,25 @@ p.error {
                                     opacity: 1;
                                 }
                             }
+
                         }
+
                     }
+
+
                 }
+            }
+
+            li.hasicon {
+                i {
+                    margin-right: 0.5em;
+                }
+
+                a {
+                    color: #ffff;
+                }
+
+                background-color: $secondaryColor;
             }
         }
     }
@@ -3203,10 +3220,21 @@ p.error {
     transition-property: width, background-color;
 }
 
-.sticky_progressbar.sticky-fixed {
+.member-heading.sticky-fixed {
     position: fixed;
-    bottom: 0;
+    top: 76px;
+    background-color: #fff;
+    padding-top: 1em;
+    z-index: 70;
 
+    @include screen('tablet') {
+        top: 60px;
+    }
+
+}
+
+.member-heading.sticky-fixed+div {
+    margin-top: 35% !important;
 }
 
 .progress-moved .progress-bar2 {
@@ -3223,7 +3251,9 @@ p.error {
     animation: progressAnimation 6s;
     padding-left: 2em;
     padding-right: 2em;
+
 }
+
 
 @keyframes progressAnimation {
     0% {

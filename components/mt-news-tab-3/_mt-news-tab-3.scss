@@ -125,7 +125,7 @@
                     }
 
                     .tabContent {
-                        padding: 1em 0em;
+                        padding: 1em;
 
                         ul {
                             li {
@@ -179,75 +179,75 @@
                         }
                     }
 
-                    .tabItem.btn-tabItem {
-                        //新增加
-                        padding: 0 0.2em;
-                        position: relative !important;
-                        width: 200px !important;
-                        margin-bottom: 0.2em;
-                        @include screen('tablet') {
-                            position: unset !important;
-                            width: unset !important;
-                        }
-                        a {
-                            background: darken(#f1f1f1, 5%);
+                    // .tabItem.btn-tabItem {
+                    //     //新增加
+                    //     padding: 0 0.2em;
+                    //     position: relative !important;
+                    //     width: 200px !important;
+                    //     margin-bottom: 0.2em;
+                    //     @include screen('tablet') {
+                    //         position: unset !important;
+                    //         width: unset !important;
+                    //     }
+                    //     a {
+                    //         background: darken(#f1f1f1, 5%);
 
-                            color: #888;
-                            position: relative;
+                    //         color: #888;
+                    //         position: relative;
 
-                            border: 2px solid darken(#f1f1f1, 5%);
-                            border-top: 0;
-                            border-bottom: 0;
+                    //         border: 2px solid darken(#f1f1f1, 5%);
+                    //         border-top: 0;
+                    //         border-bottom: 0;
 
-                            //新增加
-                            border: 1px solid $primaryColor;
-                            color: $primaryColor;
-                            background-color: #fff;
-                            padding:0.8em 1.5em;
-                            border-radius: 5px;
-                            &::before {
-                                position: absolute;
-                                content: '';
-                                width: 100%;
-                                height: 2px;
-                                top: 0px;
-                                right: 0;
-                                background: darken(#f1f1f1, 5%);
-                                transition: 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-                                display: none;
-                            }
+                    //         //新增加
+                    //         border: 1px solid $primaryColor;
+                    //         color: $primaryColor;
+                    //         background-color: #fff;
+                    //         padding:0.8em 1.5em;
+                    //         border-radius: 5px;
+                    //         &::before {
+                    //             position: absolute;
+                    //             content: '';
+                    //             width: 100%;
+                    //             height: 2px;
+                    //             top: 0px;
+                    //             right: 0;
+                    //             background: darken(#f1f1f1, 5%);
+                    //             transition: 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+                    //             display: none;
+                    //         }
 
-                            &::after {
-                                position: absolute;
-                                content: '';
-                                width: 0em;
-                                height: 3px;
-                                bottom: 0px;
-                                right: 0;
-                                background: lighten(#888, 30%);
-                                transition: 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-                                display: none;
-                            }
+                    //         &::after {
+                    //             position: absolute;
+                    //             content: '';
+                    //             width: 0em;
+                    //             height: 3px;
+                    //             bottom: 0px;
+                    //             right: 0;
+                    //             background: lighten(#888, 30%);
+                    //             transition: 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+                    //             display: none;
+                    //         }
 
-                            &:hover {
-                                    //新增加
-                                    background-color: lighten($primaryColor, 20%);
-                                    color: #fff;
-                                    transition: 0.5s all;
-                            }
-                        }
+                    //         &:hover {
+                    //                 //新增加
+                    //                 background-color: lighten($primaryColor, 20%);
+                    //                 color: #fff;
+                    //                 transition: 0.5s all;
+                    //         }
+                    //     }
 
-                        &.active {
-                            a {
+                    //     &.active {
+                    //         a {
 
-                                color: $primaryColor; //#fff;
-                                background-color: #fff;
-                                //新增加
-                                background-color: $primaryColor;
-                                color: #fff;
-                            }
-                        }
-                    }
+                    //             color: $primaryColor; //#fff;
+                    //             background-color: #fff;
+                    //             //新增加
+                    //             background-color: $primaryColor;
+                    //             color: #fff;
+                    //         }
+                    //     }
+                    // }
                 }
             }
         }
