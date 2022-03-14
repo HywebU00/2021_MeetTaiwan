@@ -110,7 +110,13 @@
                             <li><a href="#">submenu</a></li>
                             <li><a href="#">submenu</a></li>
                             <li><a href="#">submenu</a></li>
-                            <li><a href="#">submenu</a></li>
+                            <li><a href="#">submenu2</a>
+                                <!-- <ul >
+																	<li><a href="#">第三層選單</a></li>
+																	<li><a href="#">第三層選單</a></li>
+                                    <li><a href="#">第三層選單</a></li>
+                                </ul> -->
+                            </li>
                         </ul>
                     </li>
                     <li>
@@ -184,6 +190,7 @@
             var _menu = $('.mt-menu');
             _menu.find('li').has('ul').addClass('hasChild');
             var liHasChild = _menu.find('li.hasChild');
+
             (function ($) {
                 function mediaSize() {
                     if (window.matchMedia("(min-width: 992px)").matches) {
