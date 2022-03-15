@@ -841,27 +841,43 @@
 
 	// user
 	.lp_user {
+	
+		h2.mt-h2{
+			font-size: 2em;
+		}
+		i{
+			font-size: 2.2em;
+			text-shadow: 0px 0px 5px rgba(0 ,0 ,0 ,75%);
+			margin-bottom: 0.5em;
+		}
+		p{
+			color: #fff;
+		}
 		ul {
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: flex-start;
 			align-content: flex-start;
-
+			margin-top: 2.5em;
 			li {
 				flex-grow: 0;
 				flex-shrink: 1;
-				flex-basis: calc(25% - 1em);
-				margin: 0 0.5em 1em;
+				// flex-basis: calc(25% - 1em);
+				flex-basis: calc(33.3% - 3em);
+				// margin: 0 0.5em 1em;
+				margin: 0 1.5em 3em;
 				position: relative;
 				min-height: 25em;
 				overflow: hidden;
 
 				@include screen('notebook') {
-					flex-basis: calc(33.3333% - 1em);
+					// flex-basis: calc(33.3333% - 1em);
+					flex-basis: calc(33.3333% - 3em);
 				}
 
 				@include screen('tablet') {
-					flex-basis: calc(50% - 1em);
+					// flex-basis: calc(50% - 1em);
+					flex-basis: calc(50% - 3em);
 				}
 
 				@include screen('xs_mobile') {
@@ -922,14 +938,18 @@
 					left: 0;
 					width: 100%;
 					height: 100%;
-					padding: 2em;
+					// padding: 2em;
+					padding: 25%;
+					text-align: center;
 					color: #fff;
 
 					h3 {
 						font-size: 1.5em;
 						text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
 						@include text-line(6, 1.45em);
-						margin: 0 0 1em;
+						margin-bottom:0.5em;
+						margin-top: 0.2em;
+						// margin: 0 0 1em;
 					}
 
 					.btn {
@@ -963,42 +983,7 @@
 		}
 	}
 
-	.lp_user_features {
-		ul {
-			li {
-				min-height: 8em;
-
-				.caption {
-					display: flex;
-					position: relative;
-					align-items: center;
-
-					h3 {
-						margin-bottom: 0;
-					}
-
-					&::after {
-						position: absolute;
-						content: '';
-						left: 0;
-						bottom: 0;
-						width: 0%;
-						height: 5px;
-						background-color: $lightColor;
-						transition: all 0.3s;
-					}
-
-					&:hover {
-						cursor: pointer;
-
-						&::after {
-							width: 100%;
-						}
-					}
-				}
-			}
-		}
-	}
+	
 
 	//lp-list
 	.lp_list {
@@ -1234,6 +1219,7 @@
 	}
 
 	// lp partner lp_award
+	.lp_user_article,
 	.lp_partner,
 	.lp_award {
 		@include screen('xs_mobile') {
@@ -1419,6 +1405,59 @@
 		}
 	}
 
+	.lp_user_article {
+		h2.mt-h2{
+			font-size: 2em;
+		}
+		ul>li>.img-container{
+			flex-basis: 35%;
+			height: 200px;
+			@include screen('xs_mobile'){
+				flex-basis: 100%;
+			}
+		}
+		ul>li>.info{
+			height: 100%;
+			padding-bottom: 0;
+			h3{
+				margin: 0;
+				width: 100%;
+				color: $color-word;
+			}
+			a{
+				width: 100%;
+				height: 100%;
+				display: flex;
+				flex-wrap: wrap ;
+				align-items: center;
+				justify-content: end;
+				.more-btn{
+					margin:0 1em;
+					border-bottom: 1px solid #888;
+					font-weight: 700;
+					color: #888;
+					@include screen('xs_mobile'){
+						margin-top: 2em;
+					}
+				}
+				&:hover{
+					.more-btn{
+						color: $secondaryColor;
+						border-bottom: 1px solid $secondaryColor;
+						
+					}
+					h3{
+						color: $secondaryColor;
+					}
+				}
+			}
+		}
+	  ul>li{
+			@include screen('xs_mobile'){
+				height: fit-content;
+			}
+		}
+	}
 	.lp_award {
 		ul {
 			li {
