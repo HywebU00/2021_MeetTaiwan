@@ -721,4 +721,12 @@ $(window).on("load", function () {
     }
   }
   window.onload = addClass();
+
+  //------  立即訂閱電子報按鈕  ---------------
+
+  if ($(".btn-subscribe").length != 0) {
+    $(".btn-subscribe").click(function () {
+      $(".form-subscribe").slideToggle();
+    });
+  }
 });
