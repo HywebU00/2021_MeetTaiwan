@@ -186,11 +186,19 @@ $btn-radius: 0.2em;
     }
 }
 .btn-subscribe{
-    background: $secondaryColor;
+    background: $primaryColor;
     color:#fff;
-    border: darken($secondaryColor,5%) 1px solid;
+    z-index: 5; 
+    // border: darken($secondaryColor,5%) 1px solid;
+    border: 20px #fff solid;
+    border-top: 0;
+    border-bottom: 0;
     &:hover,&:focus{
-        background: $primaryColor;
+        border: 20px #fff solid;
+        border-top: 0;
+        border-bottom: 0;
+      
+        background: $secondaryColor;
         color:#fff;
     }
   }

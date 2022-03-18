@@ -1488,4 +1488,28 @@
 			}
 		}
 	}
+	.lp_partner{
+		ul>li{
+			.img-container{
+				position: relative;
+        
+				a .i_partner{
+					position: absolute;
+					width: auto;
+					right: 15px;
+          top: 15px;
+					z-index: 2;
+					font-size: 1.3em;
+          color: #fff;
+          text-shadow: rgba(0, 0, 0, 0.1) 0.1em 0.1em 0.1em;
+          -webkit-text-stroke: 1px rgba(255, 255, 255, 0);
+				}
+        a.active .i_partner{
+          color: $secondaryColor;
+          //color: $primaryColor;
+         // -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);
+        }
+			}
+		}
+	}
 }
