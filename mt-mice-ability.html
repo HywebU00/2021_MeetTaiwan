@@ -39,6 +39,7 @@
     <!-- JS -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/mt-js-all.min.js"></script>
+    <script src="vendor/marquee/jquery.marquee.js"></script>
     <!-- fav_ico -->
     <link type="image/ico" rel="icon" href="images/favicon.ico" />
   </head>
@@ -113,7 +114,84 @@
     </div>
     <!-- mt-awards -->
     <div class="mt-awards">
-      <div class="container">
+      <!-- mt-slider-grid -->
+      <div class="mt-slider-grid mt-slider-award">
+        <div class="container">
+          <h2 class="mt-h2">
+            <span>國際獎項</span>
+          </h2>
+          <!-- slider-grid -->
+          <!-- data-aos="fade-up" data-aos-delay="500" -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="500"
+            class="slider-grid slider-award"
+          >
+            <div class="item full">
+              <a href="#">
+                <div class="img-container">
+                  <!-- 請針對縮圖產出尺寸使用不同解析度 src -->
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="images/awards_bg.jpg"
+                    />
+                    <source
+                      media="(min-width: 992px)"
+                      srcset="images/awards_bg.jpg"
+                    />
+                    <source
+                      media="(min-width: 576px)"
+                      srcset="images/awards_bg.jpg"
+                    />
+                    <source
+                      media="(max-width: 575px)"
+                      srcset="images/awards_bg.jpg"
+                    />
+                    <img data-src="images/awards_bg.jpg" class="lazy" />
+                    <noscript><img src="images/awards_bg.jpg" /></noscript>
+                  </picture>
+                </div>
+                <ul class="slider-marquee">
+                  <li>
+                    <h3><span>2020 亞洲最佳會議獎旅目的地獎</span></h3>
+                    <small>2020 Stella Awards,M&C Asia</small>
+                  </li>
+                  <li>
+                    <h3><span>2020 最佳創新目的地行銷特別獎</span></h3>
+                    <small>2020 Stella Awards,M&C Asia</small>
+                  </li>
+                  <li>
+                    <h3><span>2020 台灣抗疫表現全球第1</span></h3>
+                    <small>2020 Stella Awards,M&C Asia</small>
+                  </li>
+                  <li>
+                    <h3><span>2020 全球第2安全的國家</span></h3>
+                    <small>2020 Stella Awards,M&C Asia</small>
+                  </li>
+                  <li>
+                    <h3><span>2020 亞洲最佳會議獎旅目的地獎</span></h3>
+                    <small>2020 Stella Awards,M&C Asia</small>
+                  </li>
+                  <li>
+                    <h3><span>2020 最佳創新目的地行銷特別獎</span></h3>
+                    <small>2020 Stella Awards,M&C Asia</small>
+                  </li>
+                  <li>
+                    <h3><span>2020 台灣抗疫表現全球第1</span></h3>
+                    <small>2020 Stella Awards,M&C Asia</small>
+                  </li>
+                  <li>
+                    <h3><span>2020 全球第2安全的國家</span></h3>
+                    <small>2020 Stella Awards,M&C Asia</small>
+                  </li>
+                </ul>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="container">
         <h2 class="mt-h2">國際獎項</h2>
         <div data-aos="fade-up" data-aos-delay="500" class="mt-awards-list">
           <div class="item">
@@ -165,8 +243,9 @@
             </a>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
+
     <!-- mt-success-case -->
     <div id="mt_success_case"></div>
     <!-- mt-content-list -->
@@ -323,6 +402,19 @@
       );
       //$('#mt_cookie').load('components/mt-cookie/mt-cookie.html');
       $("#mt_userbar").load("components/mt-userbar/mt-userbar.html");
+      //Direction upward
+
+      // data-direction="up"
+      // data-pauseOnHover="true"
+      // data-pauseOnCycle="true"
+      $(".slider-marquee").marquee({
+        direction: "up",
+        // duration: 500,
+        speed: 70,
+        gap: 50,
+        delayBeforeStart: 0,
+        duplicated: true,
+      });
     });
   </script>
   <!-- 呼叫元件內的function -->

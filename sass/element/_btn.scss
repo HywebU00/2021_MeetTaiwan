@@ -114,6 +114,10 @@ $btn-radius: 0.2em;
     // @extend %btn;
     @include btn_setting(lighten($primaryColor, 5), #fff);
 }
+.btn-signUp {
+    // @extend %btn;
+    @include btn_setting($secondaryColor, #fff);
+}
 // 主要按鈕
 .btn-primary {
     background: $primaryColor !important;
