@@ -368,8 +368,7 @@
 						padding-bottom: 1.5em;
 						transition: 0.3s $cubic;
 
-						&:hover,
-						&:focus {
+						&:hover{
 							img {
 								transform: scale(1.1);
 								opacity: 1;
@@ -425,7 +424,7 @@
 						}
 					}
 
-					&:hover {
+					&:hover{
 						i {
 							&:before {
 								opacity: 1;
@@ -1040,6 +1039,7 @@
 				clear: both;
 				display: flex;
 				flex-flow: row wrap;
+				
 
 				@include screen('mobile') {
 					padding: 1em 2em 1em 2.5em;
@@ -1124,6 +1124,7 @@
 					flex-grow: 0;
 					flex-shrink: 1;
 					flex-basis: 100%;
+					
 					@include text-line(2, 1.45em);
 
 					.img-container {
@@ -1211,6 +1212,15 @@
 			}
 
 			li.list-item {
+				.mt-category{
+					a{
+						border-radius: 12px;
+						padding: 0 0.7em;
+						background: #ccc;
+						color: #000;
+						border:0px;
+					}
+				}
 				&:hover {
 					span {
 						border: none;

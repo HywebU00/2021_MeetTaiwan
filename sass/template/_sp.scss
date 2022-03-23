@@ -3030,6 +3030,7 @@ p.error {
 
   @include screen('mobile') {
     max-width: 360px;
+   
   }
 
   h2 {
@@ -3042,8 +3043,71 @@ p.error {
     font-size: 0.938em;
     color: #555;
   }
-}
+  .pop_content{
+    ul.regulations-list{
+      margin-left: 1.5em;
+  margin-bottom: 2em;
+      li{
+        position: relative;
+        margin-bottom: 0.5em;
+        &::before{
+          position: absolute;
+          content: '';
+          top: 0.2em;
+          left: -1.5em;
+          width: 1em;
+          height: 1em;
+          background: url(../../images/icon/icon_check.svg);
+          background-size: cover;
+          background-repeat: no-repeat;
 
+        }
+      }
+    }
+    ul.icon-list{
+      display: flex;
+      position: relative;
+      justify-content: center;
+      li{
+      span{
+        margin:0 0.6em;
+        display: inline-block;
+        font-size: 1.8em;
+        color: $primaryColor;
+        border: 5px solid #bbb;
+        width: 2.5em;
+        height: 2.5em;
+        padding-left: 0.7em;
+        padding-top: 0.6em;
+        border-radius: 50%;
+        background: #fff;
+        position: relative;
+        z-index: 1;
+      }
+      p{
+        text-align: center;
+      }
+      }
+      &::after{
+        position: absolute;
+        content: '';
+        width: 50%;
+        top:30%;
+        height: 5px;    
+        background:#bbb;
+      }
+    }
+    .pop_subtitle{
+      // border-bottom: 1px solid $secondaryColor;
+      // padding-bottom: 0.5em;
+      color: $mt-heading-color;
+    }
+  }
+}
+.pop_add-message{
+  max-height: 585px !important;
+  max-width: 450px !important;
+}
 .post {
   .tabs {
     display: table;
@@ -3151,7 +3215,7 @@ p.error {
   display: flex;
   font-size: 0.875em;
 
-  button.btn {}
+ 
 }
 
 // 查看
@@ -4517,14 +4581,14 @@ p.error {
 }
 
 .mt-city {
-  position: absolute;
+  // position: absolute;
   width: 100%;
   background-color: $primaryColor;
-  height: 30em;
+  // height: 30em;
   overflow: hidden;
 
   .mtCityBgSlider {
-    position: absolute;
+    // position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
@@ -4559,11 +4623,14 @@ p.error {
 
     h2 {
       font-size: 3em;
-      margin: 1em 0;
+      // margin: 1em 0;
       color: #fff;
       line-height: 1.5em;
       display: block;
       text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.75);
+      // margin-bottom: 0;
+      margin: 0;
+      margin-top:-3em;
 
       @include screen('mobile') {
         font-size: 1.75em;
@@ -4680,7 +4747,8 @@ p.error {
         background-color: white;
         position: relative;
         width: 100%;
-
+        min-height: 20em;
+        height: 100% !important;
         >li {
           display: none;
 
@@ -4724,7 +4792,8 @@ p.error {
               flex-grow: 1;
               flex-shrink: 1;
               flex-basis: auto;
-              padding: 1em 1em 1em 0;
+              padding: 2em;
+              // padding: 1em 1em 1em 0;
 
               @include screen('mobile') {
                 flex-basis: 100%;
@@ -4740,6 +4809,8 @@ p.error {
                 font-size: 0.938em;
                 color: #555;
                 line-height: 1.65em;
+                width: 80%;
+                margin-left: 10%;
               }
             }
 

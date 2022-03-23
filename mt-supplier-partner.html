@@ -59,22 +59,60 @@
         <!-- <div class="left_block"></div> -->
         <!-- 中間內容 -->
         <div class="center_block">
-          <div class="mt-page-title">
+          <!-- <div class="mt-page-title">
             <h2>會展場地</h2>
             <small>Vanues</small>
+          </div> -->
+          <div class="mt-banner-img">
+            <div class="apply_award">
+              <div class="apply_info">
+                <!-- 此圖可帶文章摘要圖片 -->
+                <div class="pic">
+                  <a
+                    href="images/apply_award.jpg"
+                    data-fancybox="gallery"
+                    data-caption="圖說"
+                  >
+                    <!-- 此範例為4:3比例 -->
+                    <picture>
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="images/case-pic02.jpg"
+                      />
+                      <source
+                        media="(max-width: 767px)"
+                        srcset="images/case-pic02.jpg"
+                      />
+                      <img data-src="images/case-pic02.jpg" class="lazy" />
+                      <noscript><img src="images/case-pic02.jpg" /></noscript>
+                    </picture>
+                  </a>
+                </div>
+                <div class="info">
+                  <h3>2022年台灣會展獎</h3>
+                  <p>有豐富多元的獎項等您來拿</p>
+                  <div class="btn_grp">
+                    <button type="button" class="btn btn-signUp">
+                      立即報名
+                    </button>
+                    <button type="button" class="btn">補件資料上傳</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="mt-content">
             <!-- breadcrumb -->
-            <div class="breadcrumb">
+            <!-- <div class="breadcrumb">
               <ul>
                 <li><a href="#">首頁</a></li>
                 <li><a href="#">節點</a></li>
                 <li>節點</li>
               </ul>
-            </div>
+            </div> -->
             <!-- 頁面標準功能 -->
-            <div class="mt-page-function">
-              <!-- 社群 -->
+            <!-- <div class="mt-page-function">
+              社群
               <div class="social-media">
                 <ul>
                   <li>
@@ -92,7 +130,7 @@
                   </li>
                   <li>
                     <a href="#" class="i_link">
-                      <!-- <i class="fas fa-external-link-square-alt"></i> -->
+                      <i class="fas fa-external-link-square-alt"></i>
                       <i class="fas fa-share-square"></i>
                     </a>
                   </li>
@@ -106,21 +144,19 @@
                   </li>
                   <li>
                     <a href="#" class="i_bookmark active">
-                      <i class="fas fa-bookmark"></i
-                      ><!-- 已收藏-->
-                      <!-- <i class="far fa-bookmark"></i>未收藏-->
+                      <i class="fas fa-bookmark"></i>已收藏
+                      <i class="far fa-bookmark"></i>未收藏
                     </a>
                   </li>
                   <li>
                     <a href="#" class="i_bookmark">
-                      <!-- <i class="fas fa-bookmark"></i>已收藏-->
-                      <i class="far fa-bookmark"></i
-                      ><!-- 未收藏-->
+                      <i class="fas fa-bookmark"></i>已收藏
+                      <i class="far fa-bookmark"></i>未收藏
                     </a>
                   </li>
                 </ul>
               </div>
-              <!-- 語言切換 -->
+              語言切換
               <div class="language-toggle">
                 <ul>
                   <li>
@@ -131,13 +167,132 @@
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> -->
             <!-- 左側有側欄請放這個 -->
             <!-- <div class="btn_grp for-open-mobile-sidebar">
                             <a href="" class="btn btn-primary btn-filter"><i class="fas fa-filter"></i>搜尋條件</a>
                     </div> -->
             <div class="cp_content">
-              <div class="hotel_name">
+              <div class="cp_pics">
+                <div class="slider-cp-pics">
+                  <div class="item">
+                    <a
+                      href="https://source.unsplash.com/random/1"
+                      data-fancybox="gallery"
+                      data-caption="圖說"
+                    >
+                      <div class="img-container">
+                        <img
+                          src="https://source.unsplash.com/random/1"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a
+                      href="https://source.unsplash.com/random/2"
+                      data-fancybox="gallery"
+                      data-caption="圖說"
+                    >
+                      <div class="img-container">
+                        <img
+                          src="https://source.unsplash.com/random/2"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a
+                      href="https://source.unsplash.com/random/3"
+                      data-fancybox="gallery"
+                      data-caption="圖說"
+                    >
+                      <div class="img-container">
+                        <img
+                          src="https://source.unsplash.com/random/3"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a
+                      href="https://source.unsplash.com/random/4"
+                      data-fancybox="gallery"
+                      data-caption="圖說"
+                    >
+                      <div class="img-container">
+                        <img
+                          src="https://source.unsplash.com/random/4"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a
+                      href="https://source.unsplash.com/random/5"
+                      data-fancybox="gallery"
+                      data-caption="圖說"
+                    >
+                      <div class="img-container">
+                        <img
+                          src="https://source.unsplash.com/random/5"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <script>
+                  $(function () {
+                    //slick
+                    $(".slider-cp-pics").slick({
+                      mobileFirst: true,
+                      dots: false,
+                      infinite: true,
+                      speed: 300,
+                      slidesToShow: 4,
+                      slidesToScroll: 1,
+                      autoplay: true,
+                      arrow: true,
+                      lazyLoaded: true,
+                      lazyLoad: "ondemand",
+                      ease: "ease",
+                      responsive: [
+                        {
+                          breakpoint: 1200,
+                          settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 1,
+                            arrows: true,
+                          },
+                        },
+                        {
+                          breakpoint: 768,
+                          settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            arrows: true,
+                          },
+                        },
+                        {
+                          breakpoint: 200,
+                          settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            arrows: true,
+                          },
+                        },
+                      ],
+                    });
+                    $(".slider-cp-pics").slick("refresh");
+                  });
+                </script>
+              </div>
+              <!-- <div class="hotel_name">
                 <img src="images/w_hotel.png" alt="" />
                 <h2>台北W飯店</h2>
                 <div class="i_eco" tooltip="永續國際認證">
@@ -150,10 +305,10 @@
                   <i class="fas fa-star"></i>
                   <i class="far fa-star"></i>
                 </div>
-              </div>
+              </div> -->
               <hr />
               <!-- 飯店社群 -->
-              <div class="hotel-social-media">
+              <!-- <div class="hotel-social-media">
                 <ul>
                   <li>
                     <a href="#" class="i_website"
@@ -179,7 +334,7 @@
                     ></a>
                   </li>
                 </ul>
-              </div>
+              </div> -->
               <!-- 飯店資料 -->
               <div class="hotel_info">
                 <!-- 飯店特色圖片 -->
@@ -692,7 +847,39 @@
                   </div>
                 </div>
                 <h3 class="mt-edit-h3"><span>影片介紹</span></h3>
-                <div class="youtube_block">
+                <div class="video_block">
+                  <!-- 飯店特色圖片 -->
+                  <div class="video-img">
+                    <a
+                      data-fancybox="gallery"
+                      data-caption="圖說"
+                      data-type="iframe"
+                      data-src="https://www.youtube.com/embed/gRoNzIaB9EE"
+                      href="javascript:;"
+                    >
+                      <i class="fas fa-play"></i>
+                      <!-- 此範例為4:3比例 -->
+                      <picture>
+                        <source
+                          media="(min-width: 768px)"
+                          srcset="images/hotel_feature.jpg"
+                        />
+                        <source
+                          media="(max-width: 767px)"
+                          srcset="images/hotel_feature.jpg"
+                        />
+                        <img data-src="images/hotel_feature.jpg" class="lazy" />
+                        <noscript
+                          ><img src="images/hotel_feature.jpg"
+                        /></noscript>
+                      </picture>
+                    </a>
+                  </div>
+                </div>
+                <p>
+                  大樓座落於台北市羅斯福路三段62號，11層樓建築並配停車場，位於捷運台電大樓與古亭站間，交通至為便捷。有容納225人大會堂，採階梯型設計，座位前則配日本進口大尺寸拉取式桌面，另有數位影音環控系統、300吋超大螢幕及超高流明投影機等設備；
+                </p>
+                <!-- <div class="youtube_block">
                   <div class="youtube_embed">
                     <iframe
                       width="100%"
@@ -710,7 +897,7 @@
                     quibusdam neque sunt impedit dolores in alias doloremque
                     eius iusto perferendis aliquam molestiae ipsam!
                   </p>
-                </div>
+                </div> -->
                 <h3 class="mt-edit-h3"><span>地點</span></h3>
                 <div class="google_map">
                   <iframe
