@@ -729,4 +729,13 @@ $(window).on("load", function () {
       $(".form-subscribe").slideToggle();
     });
   }
+
+  //------- slider-grid-btn 收合與展開 -----------
+  if ($(".slider-grid-btn").length != 0) {
+    $(".slider-grid-fn").slideUp();
+    $(".slider-grid-btn button").click(function () {
+      $(".slider-grid-fn").slideToggle();
+      $(".slider-grid-btn").toggleClass("active");
+    });
+  }
 });

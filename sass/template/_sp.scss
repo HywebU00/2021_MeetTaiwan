@@ -79,6 +79,16 @@
       }
     }
   }
+  .form_grid .form_grp .form-inline{
+    display: inline-block;
+    .form_grp{
+      border: none;
+      .field_name{
+        color: #000;
+        font-weight: 400;
+      }
+    }
+  }
 }
 
 p.info {
@@ -2409,6 +2419,8 @@ p.error {
           }
         }
       }
+     
+
     }
   }
 }

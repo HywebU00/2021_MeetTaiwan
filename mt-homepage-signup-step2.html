@@ -54,7 +54,7 @@
       <!-- nav導覽列 -->
       <nav class="mt-nav">
         <ul>
-          <li><a href="#">Login</a></li>
+          <li><a href="#" class="loginBtn">Login</a></li>
           <li><a href="#">FAQ</a></li>
           <li><a href="#" class="langBtn"><span>Language<i class="fas fa-chevron-down"></i></a>
             <div class="languageBlock">
@@ -100,6 +100,45 @@
           </div>
         </div>
       </div>
+      <!-- mt-signup -->
+      <div class="mt-signup">
+        <a href="#" class="close"><i class="fas fa-times"></i></a>
+        <div class="mt-main-content ">
+          <div class="sp_member">
+            <h2 class="mt-h2">註冊會員</h2>
+            <div class="mt-step">
+              <ul>
+                <li class="active">
+                  <div class="num">1</div>
+                  <span class="step_status">Step1</span><span>註冊帳號</span>
+                </li>
+                <li class="active now">
+                  <div class="num">2</div>
+                  <span class="step_status">Step2</span><span>註冊完成</span>
+                </li>
+                <!-- <li>
+											  <div class="num">3</div>
+											  <span class="step_status">Step3</span><span>驗證並完成註冊</span>
+										  </li> -->
+              </ul>
+            </div>
+            <div class="signup_block">
+              <div class="signup_info"></div>
+              <div class="signup">
+                <div class="done">
+                  <img src="images/icon_ok.svg" alt="" />
+                  <h3>
+                    您已完成MEETTAIWAN臺灣會展網會員申請，<br />請至註冊電子郵件信箱收取啟用信並啟用帳號，<br />謝謝您對臺灣會展網的支持。
+                  </h3>
+                </div>
+                <div class="btn_grp">
+                  <button type="button" class="btn btn_submit">回首頁</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- mt-menu -->
       <div class="mt-menu">
         <ul>
@@ -110,13 +149,7 @@
               <li><a href="#">submenu</a></li>
               <li><a href="#">submenu</a></li>
               <li><a href="#">submenu</a></li>
-              <li><a href="#">submenu2</a>
-                <ul>
-                  <li><a href="#">submenu2-1</a></li>
-                  <li><a href="#">submenu2-2</a></li>
-                  <li><a href="#">submenu2-3</a></li>
-                </ul>
-              </li>
+              <li><a href="#">submenu</a></li>
             </ul>
           </li>
           <li>
@@ -126,15 +159,7 @@
               <li><a href="#">submenu</a></li>
               <li><a href="#">submenu</a></li>
               <li><a href="#">submenu</a></li>
-              <li><a href="#">submenu</a>
-              </li>
-              <li><a href="#">submenu2</a>
-                <ul>
-                  <li><a href="#">submenu2-1</a></li>
-                  <li><a href="#">submenu2-2</a></li>
-                  <li><a href="#">submenu2-3</a></li>
-                </ul>
-              </li>
+              <li><a href="#">submenu</a></li>
             </ul>
           </li>
           <li><a href="#">Newsroom</a></li>
@@ -197,10 +222,6 @@
       var _menu = $('.mt-menu');
       _menu.find('li').has('ul').addClass('hasChild');
       var liHasChild = _menu.find('li.hasChild');
-      var liHasChild_level1 = $('.mt-sidebar .mt-menu ul').children('li.hasChild');
-      var liHasChild_level2 = $('.mt-sidebar .mt-menu ul ul').children('li.hasChild');
-      var liHasChild_level3 = $('.mt-sidebar .mt-menu ul ul ul').children('li.hasChild');
-      subMenuWidth = liHasChild.first().children('ul').outerWidth();
       (function ($) {
         function mediaSize() {
           if (window.matchMedia("(min-width: 992px)").matches) {
@@ -216,29 +237,10 @@
             });
           } else {
             // MOBILE
-            // 副選單點出
-            liHasChild.off().on('mouseenter,mouseleave');
-            liHasChild.on('touchstart', function () {
-              $(this).off('mouseenter,mouseleave');
+            liHasChild.click(function () {
+              $(this).children('ul').stop(true, false).slideToggle();
+              $(this).siblings().children('ul').stop(true, false).slideUp();
             });
-            // 第一層選單
-            liHasChild_level1.off().on('click', function (e) {
-              $(this).siblings('li').find('ul').stop(true, true).slideUp('600', 'easeOutQuint');
-              $(this).children('ul').stop(true, true).slideDown('600', 'easeOutQuint');
-            });
-            // 第二層選單
-            liHasChild_level2.off().on('click', function (e) {
-              $(this).siblings('li').children('ul').stop(true, true).slideUp('600', 'easeOutQuint');
-              $(this).children('ul').stop(true, true).slideDown('600', 'easeOutQuint');
-            });
-            // 第三層選單
-            liHasChild_level3.off().on('click', function (e) {
-              e.preventDefault();
-            });
-            // liHasChild.click(function () {
-            //     $(this).children('ul').stop(true, false).slideToggle();
-            //     $(this).siblings().children('ul').stop(true, false).slideUp();
-            // });
           }
         }
         mediaSize();
@@ -261,6 +263,27 @@
           .off()
           .click(function (e) {
             $('.mt-search').stop(true, true).removeClass('open');
+            searchStatus = false;
+            e.preventDefault();
+          });
+      }
+      //login
+      if ($('.loginBtn').length > 0) {
+        var searchStatus = false;
+        $('.loginBtn')
+          .off()
+          .click(function (e) {
+            if (!searchStatus) {
+              $('.mt-signup').stop(true, true).addClass('open');
+              searchStatus = true;
+            }
+            e.preventDefault();
+          });
+        $('.mt-signup')
+          .find('.close')
+          .off()
+          .click(function (e) {
+            $('.mt-signup').stop(true, true).removeClass('open');
             searchStatus = false;
             e.preventDefault();
           });
@@ -810,80 +833,10 @@
           </a>
         </div>
       </div>
-      <!-- slider-grid -->
-      <div class="slider-grid slider-grid-fn slider-hide">
-        <div data-aos="fade-up" data-aos-delay="500" class="item full">
-          <a href="#">
-            <div class="img-container">
-              <!-- 請針對縮圖產出尺寸使用不同解析度 src -->
-              <picture>
-                <source media="(min-width: 1200px)" srcset="images/slider-pic01.jpg" />
-                <source media="(min-width: 992px)" srcset="images/slider-pic01.jpg" />
-                <source media="(min-width: 576px)" srcset="images/slider-pic01.jpg" />
-                <source media="(max-width: 575px)" srcset="images/slider-pic01.jpg" />
-                <img data-src="images/slider-pic01.jpg" class="lazy" />
-                <noscript><img src="images/slider-pic01.jpg" /></noscript>
-              </picture>
-            </div>
-            <div class="capton">
-              <h3>Food</h3>
-              <p> Eat, Love, and Pray…For More! Foodies love Taiwan as it a major source of mouthwatering
-                cuisine and gourmet dishes to die for. </p>
-            </div>
-          </a>
-        </div>
-        <div data-aos="fade-up" data-aos-delay="750" class="item">
-          <a href="#">
-            <div class="img-container">
-              <!-- 請針對縮圖產出尺寸使用不同解析度 src -->
-              <picture>
-                <source media="(min-width: 1200px)" srcset="images/slider-pic02.jpg" />
-                <source media="(min-width: 992px)" srcset="images/slider-pic02.jpg" />
-                <source media="(min-width: 576px)" srcset="images/slider-pic02.jpg" />
-                <source media="(max-width: 575px)" srcset="images/slider-pic02.jpg" />
-                <img data-src="images/slider-pic02.jpg" class="lazy" />
-                <noscript><img src="images/slider-pic02.jpg" /></noscript>
-              </picture>
-            </div>
-            <div class="capton">
-              <h3>HAVE FUN</h3>
-              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates illo delectus
-                suscipit, quas nam rem voluptatibus ipsa. Libero placeat, veniam deleniti autem nesciunt
-                dolore id dicta consequuntur, ab ducimus voluptas. </p>
-            </div>
-          </a>
-        </div>
-        <div data-aos="fade-up" data-aos-delay="750" class="item">
-          <a href="#">
-            <div class="img-container">
-              <!-- 請針對縮圖產出尺寸使用不同解析度 src -->
-              <picture>
-                <source media="(min-width: 1200px)" srcset="images/slider-pic03.jpg" />
-                <source media="(min-width: 992px)" srcset="images/slider-pic03.jpg" />
-                <source media="(min-width: 576px)" srcset="images/slider-pic03.jpg" />
-                <source media="(max-width: 575px)" srcset="images/slider-pic03.jpg" />
-                <img data-src="images/slider-pic03.jpg" class="lazy" />
-                <noscript><img src="images/slider-pic03.jpg" /></noscript>
-              </picture>
-            </div>
-            <div class="capton">
-              <h3>HOTEL</h3>
-              <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae officia quas quae,
-                et quisquam, pariatur maxime consectetur perferendis vel eveniet, sint impedit. Vel
-                sequi sed fugit iure quos numquam impedit. </p>
-            </div>
-          </a>
-        </div>
-      </div>
       <!-- more -->
-      <div class="slider-grid-btn">
-        <button>
-          <i class="far fa-angle-down"></i>
-        </button>
-      </div>
-      <!-- <a href="#" class="more">
-         <span>more</span>
-       </a> -->
+      <a href="#" class="more">
+        <span>more</span>
+      </a>
     </div>
   </div>
   <!-- mt-slider-col-1 -->
@@ -891,13 +844,18 @@
     <div class="container">
       <div class="slider-col-1">
         <div class="col">
-          <h2 class="mt-h2">CONTACT</h2>
-          <p>歡迎您使用台灣會展網業者徵詢服務<span></span>請提供您規劃辦理活動之詳細資訊填妥回傳<span></span>我們將提供給您合適的合作夥伴 並有專人為您服務</p>
+          <h2 class="mt-h2">
+            <span>Contact Us</span>
+          </h2>
+          <a href="#" class="more">
+            <span>mail</span>
+          </a>
         </div>
         <div class="col">
-          <a href="#" class="more">
-            <span>徵求業者服務</span>
-          </a>
+          <h3>我們提供客制化服務， 請提供您規劃辦理活動之詳細資訊填妥回傳， 我們將有專人為您服務。</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam accusantium nulla hic sequi
+            error est, nisi nostrum quas ipsum dolore, nam atque maxime culpa sapiente mollitia voluptate a?
+            Fugit, dolore.</p>
         </div>
       </div>
     </div>
@@ -1011,25 +969,25 @@
             <div class="tabContent">
               <ul>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto
                     explicabo ipsum vel dolorum, accusamus iusto natus earum aut praesentium culpa a
                     odio excepturi dolor nemo quisquam maxime reiciendis itaque modi.</a>
                 </li>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">的了才有樹位示法這綠以是記盡排的景</a>
                 </li>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">個外的隊個人學全一畫調臺常如市車……自於根決想輪你信</a>
                 </li>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">也只標物學。許最可舞長這小幾五價黃識算們也護……中</a>
                 </li>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">麼子有著他市在大思兒個一力車一房去生</a>
                 </li>
               </ul>
@@ -1039,23 +997,23 @@
             <div class="tabContent">
               <ul>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">比工說態他候紀全整使直裡，標以呢間的本切離風……我的鄉從國動經產從男面鄉錯我也了</a>
                 </li>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">父未的了，我面筆地完體相，們朋今然帶，望一這記經行原總山人與地相觀時水了打、少旅歌月定男子們過念</a>
                 </li>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">電走男我所合說親的教不：個以到得：石度本；</a>
                 </li>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">用習別線營傳。之也洋玩心的明開但現受師</a>
                 </li>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">同不辦情為越裡信臉了羅懷空主張文商然明的源教規坡</a>
                 </li>
               </ul>
@@ -1074,7 +1032,7 @@
           <h2 class="mt-h2">News</h2>
           <ul>
             <li>
-              <time>2021/1/1</time>
+              <time>107-01-01</time>
               <!-- category -->
               <div class="mt-tab-category">
                 <ul>
@@ -1087,7 +1045,7 @@
                 dolor nemo quisquam maxime reiciendis itaque modi.</a>
             </li>
             <li>
-              <time>2021/1/1</time>
+              <time>107-01-01</time>
               <!-- category -->
               <div class="mt-tab-category">
                 <ul>
@@ -1098,7 +1056,7 @@
               <a href="#">的了才有樹位示法這綠以是記盡排的景</a>
             </li>
             <li>
-              <time>2021/1/1</time>
+              <time>107-01-01</time>
               <!-- category -->
               <div class="mt-tab-category">
                 <ul>
@@ -1109,7 +1067,7 @@
               <a href="#">個外的隊個人學全一畫調臺常如市車……自於根決想輪你信</a>
             </li>
             <li>
-              <time>2021/1/1</time>
+              <time>107-01-01</time>
               <!-- category -->
               <div class="mt-tab-category">
                 <ul>
@@ -1120,7 +1078,7 @@
               <a href="#">也只標物學。許最可舞長這小幾五價黃識算們也護……中</a>
             </li>
             <li>
-              <time>2021/1/1</time>
+              <time>107-01-01</time>
               <!-- category -->
               <div class="mt-tab-category">
                 <ul>
@@ -1148,25 +1106,25 @@
             <div class="tabContent">
               <ul>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto
                     explicabo ipsum vel dolorum, accusamus iusto natus earum aut praesentium culpa a
                     odio excepturi dolor nemo quisquam maxime reiciendis itaque modi.</a>
                 </li>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">的了才有樹位示法這綠以是記盡排的景</a>
                 </li>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">個外的隊個人學全一畫調臺常如市車……自於根決想輪你信</a>
                 </li>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">也只標物學。許最可舞長這小幾五價黃識算們也護……中</a>
                 </li>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">麼子有著他市在大思兒個一力車一房去生</a>
                 </li>
               </ul>
@@ -1176,23 +1134,23 @@
             <div class="tabContent">
               <ul>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">比工說態他候紀全整使直裡，標以呢間的本切離風……我的鄉從國動經產從男面鄉錯我也了</a>
                 </li>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">父未的了，我面筆地完體相，們朋今然帶，望一這記經行原總山人與地相觀時水了打、少旅歌月定男子們過念</a>
                 </li>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">電走男我所合說親的教不：個以到得：石度本；</a>
                 </li>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">用習別線營傳。之也洋玩心的明開但現受師</a>
                 </li>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">同不辦情為越裡信臉了羅懷空主張文商然明的源教規坡</a>
                 </li>
               </ul>
@@ -1202,25 +1160,25 @@
             <div class="tabContent">
               <ul>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut corrupti
                     corporis culpa aliquam numquam iste, repellendus aspernatur quae in. Ad
                     perferendis facilis facere quo eligendi rem ullam sunt velit quibusdam.</a>
                 </li>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">庭會中布買器樣試學有我路任清</a>
                 </li>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">一奇萬所像水，話用至港了比定生象驗它他種家民想排星服車負識濟客是意</a>
                 </li>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">看令國中吸濟紀。創的孩同以面引情上別文年會教</a>
                 </li>
                 <li>
-                  <time>2021/1/1</time>
+                  <time>107-01-01</time>
                   <a href="#">著人論較不從感者大海終議……飯看重雖然車然。而事</a>
                 </li>
               </ul>
@@ -1231,7 +1189,6 @@
       </div>
     </div>
   </div>
-
   <!-- mt-epaper -->
   <div class="mt-epaper">
     <div class="container">
@@ -1616,9 +1573,7 @@
     </ul>
   </div>
   <!-- scrollToTop -->
-  <a href="#" class="mt-scrollToTop">
-    <i class="fas fa-arrow-up"></i>
-  </a>
+  <a href="#" class="mt-scrollToTop"><i class="fas fa-chevron-up"></i></a>
   <script>
     $(function () {
       //置頂go to top
@@ -1666,6 +1621,8 @@
         });
     })
   </script>
+
+
 </body>
 <!-- 呼叫元件內的function -->
 <script src="js/mt-init.js"></script>

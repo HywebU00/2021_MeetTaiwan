@@ -1252,6 +1252,49 @@
   }
 }
 
+.mt-main-company-content{
+  padding-top:0;
+  
+  .container{
+    margin-top: calc(5em );
+  }
+  
+  .mt-banner-img{
+    height: calc(100vh - 76px);
+    position: relative;
+    background: linear-gradient(0deg, rgba(215, 215, 215, 1) 0%, rgb(255, 255, 255) 30%);
+
+    @include screen('tablet'){
+      height: calc(100vh - 60px);
+    }
+  }
+ .cp_content{
+  //  max-width: 1200px;
+  width: 90%;
+  max-width: 1400px;
+   height: 25%;
+   margin-top: 0;
+ .slider-cp-pics{
+  .slick-prev,.slick-next{
+    top:32%;
+  }
+ }
+ }
+ .cp_content_icon{
+  //padding-top: 10%;
+   height: 10%;
+
+.arrow-icon{
+  height: 45px;
+  position: relative;
+}
+ }
+.mt-facility{
+  font-size: 1em;
+}
+
+
+}
 .apply_award {
   .apply_info {
     width: 100%;
@@ -1383,3 +1426,233 @@
     }
   }
 }
+.company_content{
+  height: 65%;
+  .company_info{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    .pic {
+      width: 100%;
+      float: none;
+      background: #f1f1f1;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      max-width: unset;
+      position: relative;
+
+      img {
+        min-width: 100%;
+        min-height: 60vh;
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        width: 60%;
+        height: 100%;
+        background:#fff;
+        opacity: 0.85;
+        top: 0;
+        left: -10%;
+        transform: skewX(-15deg);
+      }
+
+      @include screen('mobile') {
+        flex-basis: 100%;
+        width: 100%;
+        max-width: 100%;
+
+        &::after {
+          width: 85%;
+          left: -20%;
+        }
+      }
+      @include screen('xs_mobile'){
+        &::after {
+          width: 95%;
+          left: -15%;
+        }
+      }
+    }
+
+    .info {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: auto;
+      //新增
+      position: absolute;
+      bottom: 0;
+      width: 60%;
+      top: 20%;
+      left: 15%;
+      @include screen('tablet'){
+        left: 10%;
+      }
+      .hotel_name{
+        display: flex;
+        padding-bottom: 1em;
+        margin-bottom: 1em;
+        align-items: center;
+        position: relative;
+        &::after{
+          position: absolute;
+          content: '';
+          width: 20%;
+          bottom: 0;
+          left: 0;
+          background: $secondaryColor;
+          height: 3px;
+        }
+        img{
+          max-width: 60px;
+          margin-right: 1em;
+          height: auto;
+        }
+      }
+      h3 {
+      margin: 0;
+        font-size: 2.2em;
+     
+
+        @include screen('xs_mobile') {
+          font-size: 1.8em;
+          width: 70%;
+          // margin-left: 30%;
+        }
+      }
+
+      p {
+        text-align: end;
+        font-size: 1.2em;
+        width: 50%;
+        margin-left: 50%;
+        margin-bottom: 0;
+        color: #fff;
+        margin-bottom: 0.5em;
+
+        @include screen('xs_mobile') {
+          font-size: 1em;
+          width: 70%;
+          margin-left: 30%;
+        }
+      }
+
+      ul {
+        margin: 0;
+
+        li {
+          display: flex;
+          align-items: flex-start;
+          font-size: 0.938em;
+          color: #555;
+          border-bottom: 1px solid #ddd;
+
+          span {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 10em;
+            color: darken($primaryColor, 10);
+            font-weight: bold;
+          }
+
+          em {
+            font-style: normal;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-right: 0.5em;
+            color: $secondaryColor;
+          }
+        }
+      }
+      .star{
+        color: $color-hr;
+      }
+      .i_eco{
+        width: 1.5em;
+        height: 1.5em;
+        margin-left: 0.5em;
+      }
+      .hotel_iconList{
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+      }
+      .hotel_address,.hotel_tel{
+        margin: 0.5em 0;
+        i{
+          margin-right: 1em;
+          color: $primaryColor;
+          font-size: 1em;
+        }
+      }
+      .mt-tag{
+        a{
+          border:1px solid #333;
+        }
+      }
+    }
+  }
+  
+}
+
+
+// ----- 雙箭頭動畫 --------
+$ani-speed: 2s;
+$ani-delay: 1s;
+
+.arrow {
+    opacity: 0;
+    position: absolute;
+      left: 50%;
+        // top: 50%;
+    transform-origin: 50% 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.arrow-first {
+    animation: arrow-movement $ani-speed ease-in-out infinite;
+}
+.arrow-second {
+    animation: arrow-movement $ani-speed $ani-delay ease-in-out infinite;
+}
+
+.arrow:before,
+.arrow:after {
+    background: #bbb;
+    content: '';
+    display: block;
+    height: 4px; 
+    position: absolute;
+        top: 0;
+        left: 0;
+    width: 20px;
+}
+
+.arrow:before {
+    transform: rotate(45deg) translateX(-15%);
+    transform-origin: top left;
+}
+
+.arrow:after {
+    transform: rotate(-45deg) translateX(15%);
+    transform-origin: top right;
+}
+
+// Animation
+@keyframes arrow-movement {
+    0% { 
+        opacity: 0;
+        top: 45%;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0;
+    }
+}
+

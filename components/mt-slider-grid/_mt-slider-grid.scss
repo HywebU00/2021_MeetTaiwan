@@ -13,6 +13,7 @@
         flex-flow: row wrap;
         align-items: stretch;
         justify-content: flex-start;
+        transition: all 0.5s;
         .item {
             flex-grow: 0;
             flex-shrink: 1;
@@ -123,4 +124,21 @@
             }
         }
     }
+    .slider-grid-btn{
+        text-align: center;
+       button{
+        font-size: 3.2em;
+        padding: 0;
+        color: $primaryColor;
+        &:hover{
+            color: $secondaryColor;
+        }
+       }
+        
+    }
+    .slider-grid-btn.active{
+        transform: rotate(180deg);
+        transition: all 0.5s;
+    }
+    
 }

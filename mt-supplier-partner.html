@@ -49,10 +49,192 @@
     <!-- mt_header -->
     <div id="mt_header"></div>
     <!-- mt-content -->
-    <div class="mt-main-content">
+    <div class="mt-main-content mt-main-company-content">
       <!-- 套入飯店或飯店圖片 -->
       <div class="inner_img hotel">
         <img src="images/hotel_bg.jpg" alt="" />
+      </div>
+      <div class="mt-banner-img">
+        <div class="company_content">
+          <div class="company_info">
+            <!-- 此圖可帶文章摘要圖片 -->
+            <div class="pic">
+              <a
+                href="images/hotel_feature.jpg"
+                data-fancybox="gallery"
+                data-caption="圖說"
+              >
+                <!-- 此範例為4:3比例 -->
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="images/hotel_feature.jpg"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="images/hotel_feature.jpg"
+                  />
+                  <img data-src="images/hotel_feature.jpg" class="lazy" />
+                  <noscript><img src="images/hotel_feature.jpg" /></noscript>
+                </picture>
+              </a>
+            </div>
+            <div class="info">
+              <div class="hotel_name">
+                <img src="images/w_hotel.png" alt="" />
+                <h3>台北W飯店</h3>
+              </div>
+              <div class="hotel_iconList">
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <div class="i_eco">
+                  <img src="images/icon/icon_eco.svg" alt="" />
+                </div>
+              </div>
+              <!-- 飯店細節資料 -->
+              <div class="hotel_detail">
+                <div class="hotel_address">
+                  <i class="fas fa-map-marker-alt"></i
+                  ><span>臺北市信義區忠孝東路五段10號, 台灣</span>
+                </div>
+                <div class="hotel_tel">
+                  <i class="fas fa-phone-alt"></i><span>886-2-33653666</span>
+                </div>
+                <div class="mt-tag">
+                  <a href="#">展覽館業者</a>
+                  <a href="#">會議室業者</a>
+                  <a href="#">旅館業者</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cp_content">
+          <div class="cp_pics">
+            <div class="slider-cp-pics">
+              <div class="item">
+                <a
+                  href="https://source.unsplash.com/random/1"
+                  data-fancybox="gallery"
+                  data-caption="圖說"
+                >
+                  <div class="img-container">
+                    <img src="https://source.unsplash.com/random/1" alt="" />
+                  </div>
+                </a>
+              </div>
+              <div class="item">
+                <a
+                  href="https://source.unsplash.com/random/2"
+                  data-fancybox="gallery"
+                  data-caption="圖說"
+                >
+                  <div class="img-container">
+                    <img src="https://source.unsplash.com/random/2" alt="" />
+                  </div>
+                </a>
+              </div>
+              <div class="item">
+                <a
+                  href="https://source.unsplash.com/random/3"
+                  data-fancybox="gallery"
+                  data-caption="圖說"
+                >
+                  <div class="img-container">
+                    <img src="https://source.unsplash.com/random/3" alt="" />
+                  </div>
+                </a>
+              </div>
+              <div class="item">
+                <a
+                  href="https://source.unsplash.com/random/4"
+                  data-fancybox="gallery"
+                  data-caption="圖說"
+                >
+                  <div class="img-container">
+                    <img src="https://source.unsplash.com/random/4" alt="" />
+                  </div>
+                </a>
+              </div>
+              <div class="item">
+                <a
+                  href="https://source.unsplash.com/random/5"
+                  data-fancybox="gallery"
+                  data-caption="圖說"
+                >
+                  <div class="img-container">
+                    <img src="https://source.unsplash.com/random/5" alt="" />
+                  </div>
+                </a>
+              </div>
+            </div>
+            <script>
+              $(function () {
+                //slick
+                $(".slider-cp-pics").slick({
+                  mobileFirst: true,
+                  dots: false,
+                  infinite: true,
+                  speed: 300,
+                  slidesToShow: 4,
+                  slidesToScroll: 1,
+                  autoplay: true,
+                  arrow: true,
+                  lazyLoaded: true,
+                  lazyLoad: "ondemand",
+                  ease: "ease",
+                  responsive: [
+                    {
+                      breakpoint: 1200,
+                      settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                        arrows: true,
+                      },
+                    },
+                    {
+                      breakpoint: 768,
+                      settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        arrows: true,
+                      },
+                    },
+                    {
+                      breakpoint: 575,
+                      settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        arrows: true,
+                      },
+                    },
+                    {
+                      breakpoint: 200,
+                      settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        arrows: true,
+                      },
+                    },
+                  ],
+                });
+                $(".slider-cp-pics").slick("refresh");
+              });
+            </script>
+          </div>
+        </div>
+        <div class="cp_content_icon">
+          <div class="arrow-icon">
+            <div class="arrow arrow-first"></div>
+            <div class="arrow arrow-second"></div>
+          </div>
+          <!-- <div class="scroll-down-icon"></div> -->
+        </div>
       </div>
       <div class="container">
         <!-- 左側 hidden -->
@@ -63,17 +245,17 @@
             <h2>會展場地</h2>
             <small>Vanues</small>
           </div> -->
-          <div class="mt-banner-img">
+          <!-- <div class="mt-banner-img">
             <div class="apply_award">
               <div class="apply_info">
-                <!-- 此圖可帶文章摘要圖片 -->
+                此圖可帶文章摘要圖片
                 <div class="pic">
                   <a
                     href="images/apply_award.jpg"
                     data-fancybox="gallery"
                     data-caption="圖說"
                   >
-                    <!-- 此範例為4:3比例 -->
+                    此範例為4:3比例
                     <picture>
                       <source
                         media="(min-width: 768px)"
@@ -100,7 +282,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="mt-content">
             <!-- breadcrumb -->
             <!-- <div class="breadcrumb">
@@ -173,7 +355,7 @@
                             <a href="" class="btn btn-primary btn-filter"><i class="fas fa-filter"></i>搜尋條件</a>
                     </div> -->
             <div class="cp_content">
-              <div class="cp_pics">
+              <!-- <div class="cp_pics">
                 <div class="slider-cp-pics">
                   <div class="item">
                     <a
@@ -291,7 +473,7 @@
                     $(".slider-cp-pics").slick("refresh");
                   });
                 </script>
-              </div>
+              </div> -->
               <!-- <div class="hotel_name">
                 <img src="images/w_hotel.png" alt="" />
                 <h2>台北W飯店</h2>
@@ -306,7 +488,7 @@
                   <i class="far fa-star"></i>
                 </div>
               </div> -->
-              <hr />
+              <!-- <hr /> -->
               <!-- 飯店社群 -->
               <!-- <div class="hotel-social-media">
                 <ul>
@@ -338,13 +520,13 @@
               <!-- 飯店資料 -->
               <div class="hotel_info">
                 <!-- 飯店特色圖片 -->
-                <div class="hotel_pic">
+                <!-- <div class="hotel_pic">
                   <a
                     href="images/hotel_feature.jpg"
                     data-fancybox="gallery"
                     data-caption="圖說"
                   >
-                    <!-- 此範例為4:3比例 -->
+                    此範例為4:3比例
                     <picture>
                       <source
                         media="(min-width: 768px)"
@@ -360,9 +542,9 @@
                       /></noscript>
                     </picture>
                   </a>
-                </div>
+                </div> -->
                 <!-- 飯店細節資料 -->
-                <div class="hotel_detail">
+                <!-- <div class="hotel_detail">
                   <div class="mt-tag">
                     <a href="#">展覽館業者</a>
                     <a href="#">會議室業者</a>
@@ -500,7 +682,7 @@
                       />機場接送</a
                     >
                   </div>
-                </div>
+                </div> -->
                 <!-- 飯店設施與空間數量 -->
                 <div class="hotel_room">
                   <ul>
@@ -515,7 +697,7 @@
               <!-- user_edit 後台上稿區 -->
               <div class="cp user_edit">
                 <!-- 其他照片 -->
-                <div class="cp_pics">
+                <!-- <div class="cp_pics">
                   <div class="slider-cp-pics">
                     <div class="item">
                       <a
@@ -633,6 +815,126 @@
                       $(".slider-cp-pics").slick("refresh");
                     });
                   </script>
+                </div> -->
+                <h3 class="mt-edit-h3"><span>場地服務與設施</span></h3>
+                <div class="mt-facility">
+                  <a href="#"
+                    ><img
+                      src="images/service/icon_projector.svg"
+                      alt=""
+                    />投影設備</a
+                  >
+                  <a href="#"
+                    ><img
+                      src="images/service/icon_speaker.svg"
+                      alt=""
+                    />會議音響系統</a
+                  >
+                  <a href="#"
+                    ><img
+                      src="images/service/icon_microphone.svg"
+                      alt=""
+                    />無線麥克風</a
+                  >
+                  <a href="#"
+                    ><img
+                      src="images/service/icon_translate.svg"
+                      alt=""
+                    />同步翻譯</a
+                  >
+                  <a href="#"
+                    ><img
+                      src="images/service/icon_parking.svg"
+                      alt=""
+                    />停車場</a
+                  >
+                  <a href="#"
+                    ><img
+                      src="images/service/icon_intercom.svg"
+                      alt=""
+                    />對講系統</a
+                  >
+                  <a href="#"
+                    ><img
+                      src="images/service/icon_toilet.svg"
+                      alt=""
+                    />免治馬桶</a
+                  >
+                  <a href="#"
+                    ><img src="images/service/icon_wifi.svg" alt="" />WIFI</a
+                  >
+                  <a href="#"
+                    ><img
+                      src="images/service/icon_board.svg"
+                      alt=""
+                    />電子看板</a
+                  >
+                  <a href="#"
+                    ><img
+                      src="images/service/icon_vip.svg"
+                      alt=""
+                    />貴賓室及新聞中心</a
+                  >
+                  <a href="#"
+                    ><img
+                      src="images/service/icon_food.svg"
+                      alt=""
+                    />餐飲服務</a
+                  >
+                  <a href="#"
+                    ><img
+                      src="images/service/icon_kanban.svg"
+                      alt=""
+                    />臨時廣告物設置</a
+                  >
+                  <a href="#"
+                    ><img
+                      src="images/service/icon_art.svg"
+                      alt=""
+                    />展館公共藝術</a
+                  >
+                  <a href="#"
+                    ><img
+                      src="images/service/icon_room.svg"
+                      alt=""
+                    />臨時空間</a
+                  >
+                  <a href="#"
+                    ><img
+                      src="images/service/icon_serivice.svg"
+                      alt=""
+                    />商務服務</a
+                  >
+                  <a href="#"
+                    ><img
+                      src="images/service/icon_mecca.svg"
+                      alt=""
+                    />麥加指標</a
+                  >
+                  <a href="#"
+                    ><img src="images/service/icon_pray.svg" alt="" />祈禱室</a
+                  >
+                  <a href="#"
+                    ><img src="images/service/icon_gym.svg" alt="" />健身房</a
+                  >
+                  <a href="#"
+                    ><img src="images/service/icon_spa.svg" alt="" />SPA</a
+                  >
+                  <a href="#"
+                    ><img src="images/service/icon_tub.svg" alt="" />浴缸</a
+                  >
+                  <a href="#"
+                    ><img src="images/service/icon_swim.svg" alt="" />游泳池</a
+                  >
+                  <a href="#"
+                    ><img src="images/service/icon_bar.svg" alt="" />酒吧</a
+                  >
+                  <a href="#"
+                    ><img
+                      src="images/service/icon_pickup.svg"
+                      alt=""
+                    />機場接送</a
+                  >
                 </div>
                 <h3 class="mt-edit-h3"><span>飯店介紹</span></h3>
                 <p>

@@ -53,11 +53,14 @@
     .container {
         flex-wrap: wrap;
         max-width: $container-max;
-        margin: 10% auto;
+        margin: 5% auto;
         display: flex;
         justify-content: center;
         position: relative;
         z-index: 2;
+        height: calc(100% - 100px);
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
         @include screen('tablet') {
             flex-flow: row wrap;
             // display: block;
@@ -81,6 +84,7 @@
             min-height: 30em;
             max-width: 25em;
             display: flex;
+            margin-bottom: 2em;
             @include screen('tablet') {
                 flex-grow: 0;
                 // flex-shrink: 1;
@@ -347,6 +351,13 @@
                 margin-bottom: 1.5em;
                 border-bottom: 3px solid rgb(176, 176, 176);
                 padding-bottom: 10px;
+                align-items: flex-end;
+                display: flex;
+                width: 50%;
+                line-height: 1.5em;
+                @include screen('mobile'){
+                    width: 100%;
+                } 
             }
             span{
                 display: block;

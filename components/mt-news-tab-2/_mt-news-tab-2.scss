@@ -1,38 +1,47 @@
 @import '../../sass/_variable'; //Variable
 @import '../../sass/_mixin'; //Mixin
+
 // mt-news-tab-1
 .mt-news-tab-2 {
     position: relative;
     // overflow: auto;
     overflow: hidden;
+
     .container {
         margin-bottom: 3em;
         padding: 2em 2em 0;
         position: relative;
         z-index: 1;
+
         @include screen('xs_mobile') {
             padding: 2em 1em 0;
         }
+
         h2.mt-h2 {
             text-align: left;
+
             &:after {
                 left: 0;
                 margin-left: 0;
             }
+
             @include screen('tablet') {
                 text-align: center;
+
                 &:after {
                     left: 50%;
                     margin-left: -80px;
                 }
             }
         }
+
         .news-tab-2 {
             display: flex;
             flex-flow: row nowrap;
             width: 80%;
             margin: 0 auto 0 0;
             position: relative;
+
             &:after {
                 position: absolute;
                 content: '';
@@ -43,20 +52,24 @@
                 z-index: -1;
                 right: calc(-20% - 2.9em);
                 bottom: -10%;
+
                 @include screen('tablet') {
                     display: none;
                 }
             }
+
             @include screen('tablet') {
                 width: auto;
                 display: block;
                 margin: 1em 0em;
             }
+
             @include screen('xs_mobile') {
                 width: auto;
                 display: block;
                 margin: 1em 0em;
             }
+
             .newsContent {
                 background: #fff;
                 box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 60px -12px, rgba(0, 0, 0, 0.3) 0px 0px 36px -18px;
@@ -65,23 +78,28 @@
                 flex-flow: row wrap;
                 flex: 1;
                 overflow: hidden;
+
                 @include screen('xs_mobile') {
                     padding: 1em 2em;
                 }
+
                 h2.mt-h2 {
                     flex-grow: 0;
                     flex-shrink: 1;
                     flex-basis: 100%;
                 }
             }
+
             ul {
                 @include li-reset;
+
                 li {
                     margin-bottom: 0.75em;
                     border: none;
                     margin: 0 0 1.3em 0;
                     padding: 0;
                     line-height: 1.6;
+
                     time {
                         margin: 0 0 0 1em;
                         font-size: 0.813em;
@@ -89,6 +107,7 @@
                         // display: block;
                         margin: 0;
                     }
+
                     a {
                         font-weight: bold;
                         display: block;
@@ -96,6 +115,7 @@
                         position: relative;
                         padding-bottom: 0.25em;
                         width: 100%;
+
                         &:before {
                             position: absolute;
                             content: '';
@@ -105,6 +125,7 @@
                             left: 0;
                             background: #ddd;
                         }
+
                         &:after {
                             position: absolute;
                             content: '';
@@ -115,9 +136,11 @@
                             background: $secondaryColor;
                             transition: 0.3s $cubic;
                         }
+
                         &:hover,
                         &:focus {
                             color: $aHover;
+
                             &:after {
                                 width: 3em;
                             }
@@ -125,37 +148,49 @@
                     }
                 }
             }
-            .mt-tab-category{
+
+            .mt-tab-category {
                 display: inline-block;
                 margin-bottom: 0.2em;
-                ul{
+
+                ul {
                     display: flex;
-                    li{
+
+                    li {
                         margin: 0 0.25em 0.1em 0.25em;
                     }
-                    a{
+
+                    a {
                         font-size: 0.7em;
                         padding: 0em 0.5em;
-                        background:#888;//$primaryColor;
-                        border: 1px solid #888;
-                        color: #fff;
+
+
                         line-height: 23.3px;
-                        &::before{
+                        border-radius: 12px;
+                        padding: 0 0.7em;
+                        background: #ccc;
+                        color: #000;
+                        border: 0px;
+
+                        &::before {
                             display: none;
-                            
+
                         }
-                        &::after{
+
+                        &::after {
                             display: none;
                         }
-                        &:hover ,&:focus{
+
+                        &:hover,
+                        &:focus {
                             color: #fff;
-                            background:$primaryColor;
+                            background: $primaryColor;
                         }
                     }
                 }
             }
         }
     }
-    
- 
+
+
 }
