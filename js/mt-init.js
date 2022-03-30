@@ -738,4 +738,77 @@ $(window).on("load", function () {
       $(".slider-grid-btn").toggleClass("active");
     });
   }
+
+  //mt-news-tab-5 ----------
+  class BtnTab {
+    constructor(obj) {
+      this.name = obj.name.find(".nav").find(".nav-item");
+      this.btn = obj.name.find(".nav").find(".nav-item button");
+      this.objName = obj.name;
+    }
+    attrNum() {
+      this.objName.find(".nav-link").each(function (idx, item) {
+        $(this).attr("data-btn", idx + 1);
+      });
+      this.objName.find(".tab-pane").each(function (idx, item) {
+        $(this).attr("data-tabcontent", idx + 1);
+      });
+    }
+    tabClick() {
+      let that = this;
+      this.btn.on("click", navTab);
+      this.btn.on("keyup", navTab);
+      function navTab() {
+        $(this).addClass("active");
+        $(this).parent().siblings().children().removeClass("active");
+
+        $(this).focus();
+        let activeTabBtn = that.name.find(".active");
+        let tabContent = $(this).parent().parent().next().children();
+        tabContent.each(function (index, item) {
+          if (
+            activeTabBtn.attr("data-btn") === $(this).attr("data-tabContent")
+          ) {
+            $(this).addClass("active");
+            $(this).siblings().removeClass("active");
+          }
+        });
+      }
+    }
+    tabKeydown() {
+      $(window).keydown(tabFocus);
+      function tabFocus(e) {
+        if (e.keyCode === 9) {
+          $(".nav-link").focusout(function (e) {
+            let navItem = $(this).parent();
+            let activeItem = $(this)
+              .parent()
+              .parent()
+              .next()
+              .find(".tab-pane.active");
+            activeItem.find("a").first().focus();
+            activeItem
+              .find("a")
+              .last()
+              .focusout(function (e) {
+                navItem.next().find(".nav-link").focus();
+              });
+          });
+        }
+      }
+    }
+    initial() {
+      this.attrNum();
+      this.tabClick();
+      this.tabKeydown();
+    }
+  }
+  let tab1 = new BtnTab({
+    name: $(".nav-tab"),
+  });
+  tab1.initial();
+  let tab2 = new BtnTab({
+    name: $(".nav-tab2"),
+  });
+  tab2.initial();
 });

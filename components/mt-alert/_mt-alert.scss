@@ -7,6 +7,9 @@
     }
     .container {
         padding: 1em 2em;
+        @include screen('xs_mobile'){
+            padding: 1em ;
+        }
         .alert {
             background-color: darken($color-purple, 20);
             display: flex;
@@ -16,7 +19,8 @@
             position: relative;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
             @include screen('mobile') {
-                padding: 2em 1em;
+                // padding: 2em 1em;
+                padding: 1em;
                 align-items: flex-start;
             }
             @include screen('xs_mobile') {
@@ -74,6 +78,9 @@
                     opacity: 0.5;
                 }
             }
+            @include screen('xs_mobile'){
+                display: none;
+            } 
         }
         .alert-content {
             flex-grow: 1;
@@ -87,6 +94,14 @@
             }
             @include screen('xs_mobile') {
                 flex-basis: 100%;
+            }
+            h3{
+                display: none;
+                color: #fff;
+                opacity: 0.6;
+                @include screen('xs_mobile') {
+                    display: block;
+                }
             }
             p {
                 margin: 0 1em 0 0;
@@ -104,11 +119,17 @@
                 a {
                     color: #fff;
                 }
+                @include screen('xs_mobile'){
+                    @include text-line(2, 1.45em);
+                }
             }
             a.more {
                 color: #fff;
                 &:before {
                     background: #fff;
+                }
+                @include screen('xs_mobile') {
+                    margin: 0 0 0 auto;
                 }
             }
         }

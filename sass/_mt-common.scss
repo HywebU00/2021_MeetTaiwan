@@ -55,6 +55,12 @@ body {
         background: url(../images/body_bg.jpg) no-repeat 0% 0% #fff;
         background-size: 50%;
     }
+    @include screen('xs_mobile') {
+       
+        background: url(../images/body_bg.jpg) no-repeat 0% 2% #fff;
+        background-size: 100%;
+    }
+
     &.noscroll {
         position: static !important;
         width: 100%;

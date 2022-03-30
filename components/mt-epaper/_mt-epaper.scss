@@ -3,7 +3,10 @@
 // mt-epaper
 .mt-epaper {
     .container {
-        padding: 1em 2em;
+        padding: 1em 2em;    
+        @include screen('xs_mobile'){
+            padding: 1em ;
+        }
         .epaper {
             display: flex;
             flex-flow: row wrap;
@@ -16,7 +19,8 @@
                 @include screen('xs_mobile') {
                     flex-basis: 100%;
                     margin: 0 auto 2em;
-                    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+                    // box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 0px -12px, rgba(0, 0, 0, 0.3) 0px 0px 10px 0px;
                 }
                 a {
                     position: relative;
