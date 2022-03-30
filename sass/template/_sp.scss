@@ -3580,14 +3580,17 @@ p.error {
     flex-flow: row wrap;
 
     .item {
-      margin: 1em auto;
-      width: 80%;
+      //margin: 1em auto;
+      // width: 80%;
+      margin: 1em 1%;
+      width: 31.33%;
 
       a {
         display: block;
         border-radius: 0.25rem;
         display: flex;
-        min-height: 12rem;
+        // min-height: 12rem;
+        min-height: 20rem;
         justify-content: center;
         font-size: 2em;
         align-items: center;
@@ -3597,7 +3600,7 @@ p.error {
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
         transition: 0.3s ease-out;
         line-height: 1.45em;
-
+        text-align: center;
         &:hover,
         &:focus {
           color: $aHover;
@@ -3609,6 +3612,17 @@ p.error {
           text-align: left;
           justify-content: flex-start;
         }
+      }
+
+      @include screen('tablet') {
+        width: 48%;
+      }
+      @include screen('mobile') {
+         margin: 1em auto;
+      width: 80%;
+      a{
+        min-height: 12rem;
+      }
       }
     }
   }
