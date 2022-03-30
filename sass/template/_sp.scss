@@ -79,13 +79,32 @@
       }
     }
   }
-  .form_grid .form_grp .form-inline{
+
+  .form_grid .form_grp .form-inline {
     display: inline-block;
-    .form_grp{
+
+    .form_grp {
       border: none;
-      .field_name{
+
+      .field_name {
         color: #000;
         font-weight: 400;
+      }
+    }
+  }
+
+  // member_form input+btn
+  .form_grid .form_grp .form_content.form_content_member {
+    input {
+      width: calc(100% - 216px);
+    }
+    @include screen('tablet'){
+  
+      input {
+        width: 100%;
+      }
+      button {
+        margin:1.5%;
       }
     }
   }
@@ -1602,11 +1621,13 @@ p.error {
         transform: skewX(-15deg);
         background-color: $primaryColor;
       }
-      @include screen('tablet'){
-          &::after{
-            display: none;
-          }
+
+      @include screen('tablet') {
+        &::after {
+          display: none;
+        }
       }
+
       h3 {
         font-size: 1.75em;
         margin: 0;
@@ -1716,6 +1737,9 @@ p.error {
     .form_grid {
       max-width: 45em;
       margin: 0 auto;
+
+
+
     }
 
     .service_info {
@@ -1778,6 +1802,7 @@ p.error {
         }
       }
     }
+
   }
 }
 
@@ -2270,7 +2295,7 @@ p.error {
             display: none;
           }
         }
-     
+
         .form_grid {
           width: 69%;
           max-width: 69%;
@@ -2419,7 +2444,7 @@ p.error {
           }
         }
       }
-     
+
 
     }
   }
@@ -3042,7 +3067,7 @@ p.error {
 
   @include screen('mobile') {
     max-width: 360px;
-   
+
   }
 
   h2 {
@@ -3055,14 +3080,17 @@ p.error {
     font-size: 0.938em;
     color: #555;
   }
-  .pop_content{
-    ul.regulations-list{
+
+  .pop_content {
+    ul.regulations-list {
       margin-left: 1.5em;
-  margin-bottom: 2em;
-      li{
+      margin-bottom: 2em;
+
+      li {
         position: relative;
         margin-bottom: 0.5em;
-        &::before{
+
+        &::before {
           position: absolute;
           content: '';
           top: 0.2em;
@@ -3076,50 +3104,57 @@ p.error {
         }
       }
     }
-    ul.icon-list{
+
+    ul.icon-list {
       display: flex;
       position: relative;
       justify-content: center;
-      li{
-      span{
-        margin:0 0.6em;
-        display: inline-block;
-        font-size: 1.8em;
-        color: $primaryColor;
-        border: 5px solid #bbb;
-        width: 2.5em;
-        height: 2.5em;
-        padding-left: 0.7em;
-        padding-top: 0.6em;
-        border-radius: 50%;
-        background: #fff;
-        position: relative;
-        z-index: 1;
+
+      li {
+        span {
+          margin: 0 0.6em;
+          display: inline-block;
+          font-size: 1.8em;
+          color: $primaryColor;
+          border: 5px solid #bbb;
+          width: 2.5em;
+          height: 2.5em;
+          padding-left: 0.7em;
+          padding-top: 0.6em;
+          border-radius: 50%;
+          background: #fff;
+          position: relative;
+          z-index: 1;
+        }
+
+        p {
+          text-align: center;
+        }
       }
-      p{
-        text-align: center;
-      }
-      }
-      &::after{
+
+      &::after {
         position: absolute;
         content: '';
         width: 50%;
-        top:30%;
-        height: 5px;    
-        background:#bbb;
+        top: 30%;
+        height: 5px;
+        background: #bbb;
       }
     }
-    .pop_subtitle{
+
+    .pop_subtitle {
       // border-bottom: 1px solid $secondaryColor;
       // padding-bottom: 0.5em;
       color: $mt-heading-color;
     }
   }
 }
-.pop_add-message{
+
+.pop_add-message {
   max-height: 585px !important;
   max-width: 450px !important;
 }
+
 .post {
   .tabs {
     display: table;
@@ -3227,7 +3262,7 @@ p.error {
   display: flex;
   font-size: 0.875em;
 
- 
+
 }
 
 // 查看
@@ -3601,6 +3636,7 @@ p.error {
         transition: 0.3s ease-out;
         line-height: 1.45em;
         text-align: center;
+
         &:hover,
         &:focus {
           color: $aHover;
@@ -3617,12 +3653,14 @@ p.error {
       @include screen('tablet') {
         width: 48%;
       }
+
       @include screen('mobile') {
-         margin: 1em auto;
-      width: 80%;
-      a{
-        min-height: 12rem;
-      }
+        margin: 1em auto;
+        width: 80%;
+
+        a {
+          min-height: 12rem;
+        }
       }
     }
   }
@@ -4282,13 +4320,14 @@ p.error {
   padding: 0 0 4em;
   background-color: #fff;
   overflow: hidden;
-  .slider-award{
-    .item{
+
+  .slider-award {
+    .item {
       height: 30em;
       position: relative;
       margin-bottom: 5em;
-     
-      &::after{
+
+      &::after {
         content: '';
         position: absolute;
         height: 4em;
@@ -4297,37 +4336,46 @@ p.error {
         background: lighten($primaryColor, 15%);
         bottom: -1.2em;
         left: 2.5%;
-       
+
       }
     }
+
     .item a {
       cursor: unset;
-    z-index: 1;
-      &:hover,&:active,&:focus{
-        &::before{
+      z-index: 1;
+
+      &:hover,
+      &:active,
+      &:focus {
+        &::before {
           background: rgba(0, 0, 0, 0.4);
         }
-        .img-container img{
+
+        .img-container img {
           transform: scale(1);
-         // transform: unset;
-        }      
+          // transform: unset;
+        }
       }
     }
-    ul{     
+
+    ul {
       position: absolute;
       z-index: 2;
       width: 100%;
       text-align: center;
-      li{
+
+      li {
         color: #fff;
         margin-bottom: 4em;
-        h3{
+
+        h3 {
           margin-bottom: 0.2em;
           font-weight: 500;
           letter-spacing: 0.1em;
           text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.75);
         }
-        small{
+
+        small {
           text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.75);
           font-size: 0.938rem;
           letter-spacing: 0.05em;
@@ -4335,9 +4383,11 @@ p.error {
       }
     }
   }
-  .slider-marquee{
+
+  .slider-marquee {
     height: 100% !important;
   }
+
   .container {
     max-width: $container-max;
     margin: 0 auto;
@@ -4440,7 +4490,7 @@ p.error {
     }
   }
 
-  
+
 }
 
 .mt-content-list {
@@ -4656,7 +4706,7 @@ p.error {
       text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.75);
       // margin-bottom: 0;
       margin: 0;
-      margin-top:-3em;
+      margin-top: -3em;
 
       @include screen('mobile') {
         font-size: 1.75em;
@@ -4775,6 +4825,7 @@ p.error {
         width: 100%;
         min-height: 20em;
         height: 100% !important;
+
         >li {
           display: none;
 
