@@ -16,9 +16,13 @@
             .slick-dots {
                 bottom: -2em;
                 z-index: 1;
-                @include screen('mobile') {
-                    display: none !important;
+                 @include screen('mobile') {
+                    bottom: -3em;
+                    left: -1em;
                 }
+                // @include screen('mobile') {
+                //     display: none !important;
+                // }
             }
             .item {
                 overflow: hidden;
@@ -36,6 +40,7 @@
                     left: 50%;
                     right: auto;
                     margin-left: -55px;
+                   display: none !important;
                 }
             }
             .slick-next {
@@ -47,6 +52,7 @@
                     bottom: -65px;
                     left: 50%;
                     margin-left: 5px;
+                    display: none !important;
                 }
             }
         }

@@ -28,6 +28,7 @@
             @include screen('mobile') {
                 flex-basis: 100%;
                 margin-bottom: 1em;
+                margin: 0 1em;
             }
             ul {
                 @include li-reset;
