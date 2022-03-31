@@ -7,6 +7,9 @@
         @include screen('xs_mobile'){
             padding: 1em ;
         }
+        .mt-h2{
+          margin: 0 0 0.7em;
+        }
         .epaper {
             display: flex;
             flex-flow: row wrap;
@@ -15,90 +18,223 @@
                 flex-grow: 0;
                 flex-shrink: 1;
                 flex-basis: 28.3333%;
-                margin: 0 2.5%;
+                margin: 0 2.5% 1em;
+        
+                @include screen('tablet') {
+                  flex-basis: 45%;
+                }
+        
                 @include screen('xs_mobile') {
-                    flex-basis: 100%;
-                    margin: 0 auto 2em;
-                    // box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-                    box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 0px -12px, rgba(0, 0, 0, 0.3) 0px 0px 10px 0px;
+                  flex-basis: 100%;
+                  margin: 0 auto 2em;
+                  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
                 }
+        
                 a {
+                  position: relative;
+                  display: block;
+        
+                  h3 {
+                    font-size: 1em;
+                    @include text-line(3, 1.5em);
+                    color: #333;
                     position: relative;
-                    display: block;
-                    h3 {
-                        font-size: 1em;
-                        @include text-line(3, 1.5em);
-                        color: #333;
-                        position: relative;
-                        @include screen('xs_mobile') {
-                            width: 90%;
-                            margin: 0 auto 2em;
-                        }
-                    }
-                    .journal {
-                        position: relative;
-                        right: 0;
-                        width: 8em;
-                        background-color: rgba(0, 0, 0, 0.15);
-                        color: #333;
-                        padding: 0.25em;
-                        text-align: center;
-                        font-size: 0.813em;
-                        margin: -3em 0 1.5em auto;
-                        @include screen('mobile') {
-                            width: 100%;
-                        }
-                        @include screen('xs_mobile') {
-                            width: 8em;
-                            margin: -4em 1.5em 4em auto;
-                        }
-                    }
-                    time {
-                        font-size: 0.875em;
-                        color: #888;
-                        display: block;
-                        padding: 1em 0;
-                        border-bottom: 3px solid $primaryColor;
-                        @include screen('mobile') {
-                            margin: 0 0 3em;
-                            padding: 0;
-                        }
-                        @include screen('xs_mobile') {
-                            width: 90%;
-                            padding: 1em 0;
-                            margin: 0 auto 1em;
-                        }
-                    }
-                    &:hover,
-                    &:focus {
-                        h3 {
-                            color: $aHover;
-                        }
-                        .img-container {
-                            img {
-                                transform: scale(1.1);
-                            }
-                        }
-                    }
-                }
-                .img-container {
-                    width: 100%;
-                    margin: 0 auto 1em;
-                    @include aspect-ratio(4, 3);
+        
                     @include screen('xs_mobile') {
-                        margin: 0 auto;
+                      width: 90%;
+                      margin: -1em auto 2em;
                     }
-                    img {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        transition: 0.3s $cubic;
+                  }
+                  .journal {
+                    position: absolute;
+                    z-index: 2;
+                    top: -8px;
+                    padding: 5px 32px 5px 16px;
+                    overflow: hidden;
+                   
+                    p{
+                      color: #fff;
+                      margin-top:2px;
                     }
+                    &::after {
+                      content: '';
+                      position: absolute;
+                      background: $secondaryColor;
+                      width: 84px;
+                      height: 36px;
+                      left: -8px;
+                      top: 1px;
+                      z-index: -1;
+                      transform: skewX(-18deg);
+                    }
+                  }
+                  // .journal {
+                  //   position: relative;
+                  //   right: 0;
+                  //   width: 8em;
+                  //   background-color: rgba(0, 0, 0, 0.1);
+                  //   color: #333;
+                  //   padding: 0.25em;
+                  //   text-align: center;
+                  //   font-size: 1em;
+                  //   font-weight: bold;
+                  //   margin: -2.5em 0 1.5em auto;
+        
+                  //   @include screen('tablet') {
+                  //     margin: -2.5em 0 1.5em auto;
+                  //   }
+        
+                  //   @include screen('mobile') {
+                  //     width: 100%;
+                  //     margin: -2em 0 1.5em auto;
+                  //   }
+        
+                  //   @include screen('xs_mobile') {
+                  //     width: 8em;
+                  //     margin: -3.5em 1.5em 4em auto;
+                  //   }
+                  // }
+        
+                  time {
+                    font-size: 0.875em;
+                    color: #888;
+                    display: block;
+                    @include screen('mobile') {
+                      margin: 0 0 3em;
+                      padding: 0;
+                    }
+        
+                    @include screen('xs_mobile') {
+                      width: 90%;
+                      padding: 1em 0;
+                      margin: 0 auto 1em;
+                    }
+                  }
+                  h3{
+                    margin-top: 0.5em;
+                  }
+                  &:hover,
+                  &:focus {
+                    h3 {
+                      color: $aHover;
+                    }
+        
+                    .img-container {
+                      img {
+                        transform: scale(1.1);
+                      }
+                    }
+                  }
                 }
-            }
+        
+                .img-container {
+                  width: 100%;
+                  margin: 0 auto 1em;
+                  @include aspect-ratio(4, 3);
+        
+                  @include screen('xs_mobile') {
+                    margin: 0 auto;
+                  }
+                
+                  img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: 0.3s $cubic;
+                  }
+                }
+              }
+            // .item {
+            //     flex-grow: 0;
+            //     flex-shrink: 1;
+            //     flex-basis: 28.3333%;
+            //     margin: 0 2.5%;
+            //     @include screen('xs_mobile') {
+            //         flex-basis: 100%;
+            //         margin: 0 auto 2em;
+            //         // box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+            //         box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 0px -12px, rgba(0, 0, 0, 0.3) 0px 0px 10px 0px;
+            //     }
+            //     a {
+            //         position: relative;
+            //         display: block;
+            //         h3 {
+            //             font-size: 1em;
+            //             @include text-line(3, 1.5em);
+            //             color: #333;
+            //             position: relative;
+            //             @include screen('xs_mobile') {
+            //                 width: 90%;
+            //                 margin: 0 auto 2em;
+            //             }
+            //         }
+            //         .journal {
+            //             position: relative;
+            //             right: 0;
+            //             width: 8em;
+            //             background-color: rgba(0, 0, 0, 0.15);
+            //             color: #333;
+            //             padding: 0.25em;
+            //             text-align: center;
+            //             font-size: 0.813em;
+            //             margin: -3em 0 1.5em auto;
+            //             @include screen('mobile') {
+            //                 width: 100%;
+            //             }
+            //             @include screen('xs_mobile') {
+            //                 width: 8em;
+            //                 margin: -4em 1.5em 4em auto;
+            //             }
+            //         }
+            //         time {
+            //             font-size: 0.875em;
+            //             color: #888;
+            //             display: block;
+            //             padding: 1em 0;
+            //             border-bottom: 3px solid $primaryColor;
+            //             @include screen('mobile') {
+            //                 margin: 0 0 3em;
+            //                 padding: 0;
+            //             }
+            //             @include screen('xs_mobile') {
+            //                 width: 90%;
+            //                 padding: 1em 0;
+            //                 margin: 0 auto 1em;
+            //             }
+            //         }
+            //         &:hover,
+            //         &:focus {
+            //             h3 {
+            //                 color: $aHover;
+            //             }
+            //             .img-container {
+            //                 img {
+            //                     transform: scale(1.1);
+            //                 }
+            //             }
+            //         }
+            //     }
+            //     .img-container {
+            //         width: 100%;
+            //         margin: 0 auto 1em;
+            //         @include aspect-ratio(4, 3);
+            //         @include screen('xs_mobile') {
+            //             margin: 0 auto;
+            //         }
+            //         img {
+            //             position: absolute;
+            //             top: 0;
+            //             left: 0;
+            //             width: 100%;
+            //             height: 100%;
+            //             object-fit: cover;
+            //             transition: 0.3s $cubic;
+            //         }
+            //     }
+            // }
         }
     }
 }
