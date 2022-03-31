@@ -2284,6 +2284,7 @@ p.error {
       display: flex;
       flex-flow: row wrap;
       align-items: flex-start;
+      justify-content: center;
 
       @media (max-width:1200px) {
         width: 90%;
@@ -2355,6 +2356,13 @@ p.error {
           bottom: 1em;
           right: 2em;
         }
+      }
+      .item-finish{
+        min-height: 16em;
+        display: flex;
+        align-items: center;
+        // background: url(../../images/body_bg.jpg) no-repeat;
+        // background-size: cover;
       }
     }
 
