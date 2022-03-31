@@ -6015,28 +6015,31 @@ p.error {
 
             .dot {
               position: absolute;
-              width: 0.6em;
-              height: 0.6em;
+              // width: 0.6em;
+              // height: 0.6em;
+              width: 0.5em;
+              height: 0.5em;
               border-radius: 50%;
-              background: #7678c7;
+              background: #000;
+              // background: #7678c7;
               z-index: 1;
 
-              &.active {
-                background: $secondaryColor;
+              // &.active {
+              //   background: $secondaryColor;
 
-                &:after {
-                  position: absolute;
-                  content: '';
-                  width: 0.6em;
-                  height: 0.6em;
-                  border-radius: 50%;
-                  background: lighten($secondaryColor, 10);
-                  left: 0em;
-                  top: 0em;
-                  z-index: 0;
-                  animation: ripple infinite 1s linear;
-                }
-              }
+              //   &:after {
+              //     position: absolute;
+              //     content: '';
+              //     width: 0.6em;
+              //     height: 0.6em;
+              //     border-radius: 50%;
+              //     background: lighten($secondaryColor, 10);
+              //     left: 0em;
+              //     top: 0em;
+              //     z-index: 0;
+              //     animation: ripple infinite 1s linear;
+              //   }
+              // }
             }
           }
         }
