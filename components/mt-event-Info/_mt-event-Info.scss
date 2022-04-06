@@ -5,21 +5,34 @@
     .container {
         padding: 2em 1em 1em;
         overflow: hidden;
-        @include screen('tablet') {
-            padding: 2em 1em;
+        @media screen and (max-width: 1200px){
+            padding: 2em 0em;
         }
+        @include screen('tablet') {
+            // padding: 2em 1em;
+            padding: 2em 0em;
+        }
+        
     }
     .eventList {
         display: flex;
         @include screen('tablet') {
             flex-flow: row wrap;
         }
+        @include screen('xs_mobile') {
+            .slick-dots{
+                position: relative !important;
+               top: 15px !important;
+               bottom:0 !important;
+            }
+        }
         .item {
             position: relative;
             flex-grow: 1;
             flex-shrink: 1;
             flex-basis: 22%;
-            margin: 0 1.5% 1em;
+            // margin: 0 1.5% 1em;
+            margin: 0 1em 1em;
             display: flex;
             align-items: stretch;
             &.effect {
@@ -34,25 +47,31 @@
             &:nth-child(4).effect {
                 animation: fadeInRight 1s 1.1s both $cubic;
             }
+          
             @include screen('tablet') {
                 flex-basis: 47%;
+                margin: 0 1em 1em;
             }
             @include screen('xs_mobile') {
                 flex-grow: 1;
                 flex-basis: 100%;
-                margin: 0 1em 2em;
+                // margin: 0 1em 2em;
+                margin: 0 1em 1em;
             }
             a {
                 display: block;
-                min-height: 300px;
+                // min-height: 300px;
+                height: 350px;
                 padding: 2.5em 1em 1em;
                 background-color: #fff;
                 transition: 0.3s ease-out;
                 width: 100%;
-                box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+                box-shadow: rgba(50, 50, 93, 0.25)  0px 10px 30px -12px, rgba(0, 0, 0, 0.3) 0px 17px 10px -20px;
+                // box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
                 &:hover,
                 &:focus {
-                    box-shadow: rgba(50, 50, 93, 0.35) 0px 30px 60px -12px, rgba(0, 0, 0, 0.5) 0px 18px 36px -18px;
+                    box-shadow: rgba(50, 50, 93, 0.35) 0px 10px 20px 0px, rgba(0, 0, 0, 0.5) 0px 17px 10px -20px;
+                    // box-shadow: rgba(50, 50, 93, 0.35) 0px 30px 60px -12px, rgba(0, 0, 0, 0.5) 0px 18px 36px -18px;
                     @include screen('xs_mobile'){
                         box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 0px -12px, rgba(0, 0, 0, 0.3) 0px 0px 10px 0px;
                     }
@@ -97,6 +116,8 @@
                     height: 3px;
                     background-color: lighten($primaryColor, 10);
                 }
+               
+               
                 @include screen('xs_mobile') {
                     font-size: 1.75em;
                 }
@@ -113,7 +134,7 @@
             .info {
                 margin-bottom: 1em;
                 p {
-                    @include text-line(6, 1.6em);
+                    @include text-line(4, 1.6em);
                     font-size: 0.875em;
                     color: #8c8c8c;
                     text-align: center;

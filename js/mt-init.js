@@ -804,11 +804,11 @@ $(window).on("load", function () {
     }
   }
   let tab1 = new BtnTab({
-    name: $(".nav-tab"),
+    name: $(".nav-tab1"),
   });
   tab1.initial();
-  let tab2 = new BtnTab({
-    name: $(".nav-tab2"),
+  let tab3 = new BtnTab({
+    name: $(".nav-tab3"),
   });
-  tab2.initial();
+  tab3.initial();
 });

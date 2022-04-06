@@ -465,6 +465,68 @@
       </a>
     </div>
   </div>
+  <!-- JS -->
+  <script>
+    $(function () {
+      //slick
+      $('.eventList').slick({
+        // mobileFirst: true,
+        // dots: false,
+        // infinite: true,
+        // speed: 300,
+        slidesToShow: 4,
+        // slidesToScroll: 1,
+        autoplay: false,
+        arrow: false,
+        lazyLoaded: true,
+        lazyLoad: 'ondemand',
+        ease: 'ease',
+        responsive: [{
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 3.5,
+              slidesToScroll: 1,
+              arrows: false,
+            },
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 2.5,
+              slidesToScroll: 1,
+              arrows: false,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2.5,
+              slidesToScroll: 1,
+              arrows: false,
+            },
+          },
+          {
+            breakpoint: 575,
+            settings: {
+              slidesToShow: 1.5,
+              slidesToScroll: 1,
+              arrows: false,
+            },
+          },
+          {
+            breakpoint: 375,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false,
+              dots: true, //顯示圓點
+            },
+          },
+        ],
+      });
+      $('.slider-col-2').slick('refresh');
+    })
+  </script>
   <!-- mt-slider-pic-right -->
   <div class="mt-slider-pic-right">
     <div class="container">
@@ -740,6 +802,163 @@
       <a href="#" class="more"><span>more</span></a>
     </div>
   </div>
+  <!-- mt-success-case-mobile -->
+  <div class="mt-success-case mt-success-case-mobile">
+    <div class="container">
+      <h2 class="mt-h2">
+        <span>Success Stories</span>
+      </h2>
+      <div class="successCase">
+        <div data-aos="fade-up" class="item">
+          <a href="#">
+            <div class="img-container">
+              <!-- 請針對縮圖產出尺寸使用不同解析度 src -->
+              <picture>
+                <source media="(min-width: 1200px)" srcset="images/case-pic01.jpg" />
+                <source media="(min-width: 992px)" srcset="images/case-pic01.jpg" />
+                <source media="(min-width: 576px)" srcset="images/case-pic01.jpg" />
+                <source media="(max-width: 575px)" srcset="images/case-pic01.jpg" />
+                <img data-src="images/case-pic01.jpg" class="lazy" />
+                <noscript><img src="images/case-pic01.jpg" /></noscript>
+              </picture>
+            </div>
+            <h3>
+              <span>Taiwan MICE Awards The 4th World Conference of Women's Shelters Taiwan MICE Awards The
+                4th World Conference of Women's Shelters</span>
+            </h3>
+            <p> Impact * Solidarity" was the theme of the 4th World Conference of Women's Shelters held in
+              Kaohsiung during November 5–8, 2019. </p>
+          </a>
+        </div>
+        <div data-aos="fade-up" class="item">
+          <a href="#">
+            <div class="img-container">
+              <!-- 請針對縮圖產出尺寸使用不同解析度 src -->
+              <picture>
+                <source media="(min-width: 1200px)" srcset="images/case-pic02.jpg" />
+                <source media="(min-width: 992px)" srcset="images/case-pic02.jpg" />
+                <source media="(min-width: 576px)" srcset="images/case-pic02.jpg" />
+                <source media="(max-width: 575px)" srcset="images/case-pic02.jpg" />
+                <img data-src="images/case-pic02.jpg" class="lazy" />
+                <noscript><img src="images/case-pic02.jpg" /></noscript>
+              </picture>
+            </div>
+            <h3>
+              <span>Taiwan MICE Awards The 4th World Conference of Women's Shelters Taiwan MICE Awards The
+                4th World Conference of Women's Shelters</span>
+            </h3>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium maiores corporis
+              architecto. Similique facilis esse vitae corrupti dolorum dolorem odio quaerat! Beatae
+              nostrum praesentium provident! Soluta laudantium fugiat laborum hic. </p>
+          </a>
+        </div>
+        <div data-aos="fade-up" class="item">
+          <a href="#">
+            <div class="img-container">
+              <!-- 請針對縮圖產出尺寸使用不同解析度 src -->
+              <picture>
+                <source media="(min-width: 1200px)" srcset="images/case-pic03.jpg" />
+                <source media="(min-width: 992px)" srcset="images/case-pic03.jpg" />
+                <source media="(min-width: 576px)" srcset="images/case-pic03.jpg" />
+                <source media="(max-width: 575px)" srcset="images/case-pic03.jpg" />
+                <img data-src="images/case-pic03.jpg" class="lazy" />
+                <noscript><img src="images/case-pic03.jpg" /></noscript>
+              </picture>
+            </div>
+            <h3>
+              <span>Taiwan MICE Awards The 4th World Conference of Women's Shelters Taiwan MICE Awards The
+                4th World Conference of Women's Shelters</span>
+            </h3>
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, provident assumenda!
+              Facere, omnis iusto eligendi at soluta nostrum quaerat commodi eius. Incidunt blanditiis
+              obcaecati nihil amet voluptates repellat suscipit quam? </p>
+          </a>
+        </div>
+        <div data-aos="fade-up" class="item">
+          <a href="#">
+            <div class="img-container">
+              <!-- 請針對縮圖產出尺寸使用不同解析度 src -->
+              <picture>
+                <source media="(min-width: 1200px)" srcset="images/case-pic04.jpg" />
+                <source media="(min-width: 992px)" srcset="images/case-pic04.jpg" />
+                <source media="(min-width: 576px)" srcset="images/case-pic04.jpg" />
+                <source media="(max-width: 575px)" srcset="images/case-pic04.jpg" />
+                <img data-src="images/case-pic04.jpg" class="lazy" />
+                <noscript><img src="images/case-pic04.jpg" /></noscript>
+              </picture>
+            </div>
+            <h3>
+              <span>Taiwan MICE Awards The 4th World Conference of Women's Shelters Taiwan MICE Awards The
+                4th World Conference of Women's Shelters</span>
+            </h3>
+            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod quae porro, quisquam culpa,
+              obcaecati nobis quaerat suscipit nesciunt inventore eveniet beatae magni excepturi
+              perspiciatis voluptas consequatur earum maiores perferendis? Modi? </p>
+          </a>
+        </div>
+      </div>
+      <!-- more -->
+      <a href="#" class="more"><span>more</span></a>
+    </div>
+  </div>
+    <!-- JS -->
+    <script>
+      $(function () {
+        //slick
+        $('.mt-success-case-mobile .successCase').slick({
+          slidesToShow: 1.5,
+          arrow: false,
+          lazyLoaded: true,
+          lazyLoad: 'ondemand',
+          ease: 'ease',
+          autoplay: false,
+          responsive: [{
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 1.5,
+                slidesToScroll: 1,
+                arrows: false,
+              },
+            },
+            {
+              breakpoint: 991,
+              settings: {
+                slidesToShow: 1.5,
+                slidesToScroll: 1,
+                arrows: false,
+              },
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1.5,
+                slidesToScroll: 1,
+                arrows: false,
+              },
+            },
+            {
+              breakpoint: 575,
+              settings: {
+                slidesToShow: 1.5,
+                slidesToScroll: 1,
+                arrows: false,
+            
+              },
+            },
+            {
+              breakpoint: 375,
+              settings: {
+                slidesToShow: 1,
+                dots: true, //顯示圓點
+                slidesToScroll: 1,
+                arrows: false,
+              },
+            },
+          ],
+        });
+        $('.mt-success-case-mobile .successCase').slick('refresh');
+      })
+    </script>
   <!-- mt-slider-grid -->
   <div class="mt-slider-grid">
     <div class="container">
@@ -894,14 +1113,14 @@
         <div class="col">
           <h2 class="mt-h2">CONTACT</h2>
           <p>歡迎您使用台灣會展網業者徵詢服務<span></span>請提供您規劃辦理活動之詳細資訊 <span></span>填妥回傳我們將提供給您合適的合作夥伴 並有專人為您服務</p>
-        </div>     
-        <div class="col">       
+        </div>
+        <div class="col">
           <a href="#" class="more">
             <span>徵求業者服務</span>
           </a>
         </div>
       </div>
-     
+
     </div>
   </div>
   <!-- mt-slider-col-2 -->
@@ -1007,63 +1226,70 @@
         <!-- tab Start -->
         <div class="tabSet">
           <h2 class="mt-h2">News</h2>
-          <section class="tabs">
-            <div class="tabItem active"><a href="#">第一個頁籤</a></div>
-            <!--選到的頁籤項目-->
-            <div class="tabContent">
-              <ul>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto
-                    explicabo ipsum vel dolorum, accusamus iusto natus earum aut praesentium culpa a
-                    odio excepturi dolor nemo quisquam maxime reiciendis itaque modi.</a>
-                </li>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">的了才有樹位示法這綠以是記盡排的景</a>
-                </li>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">個外的隊個人學全一畫調臺常如市車……自於根決想輪你信</a>
-                </li>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">也只標物學。許最可舞長這小幾五價黃識算們也護……中</a>
-                </li>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">麼子有著他市在大思兒個一力車一房去生</a>
-                </li>
-              </ul>
-              <a href="#" class="more"><span>more</span></a>
+          <div class="nav-tab nav-tab1">
+            <ul class="nav nav-list" role="tablist">
+              <li class="nav-item">
+                <button class="nav-link active">重大公告</button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link">新聞專區</button>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active">
+                <ul>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto
+                      explicabo ipsum vel dolorum, accusamus iusto natus earum aut praesentium culpa a
+                      odio excepturi dolor nemo quisquam maxime reiciendis itaque modi.</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">的了才有樹位示法這綠以是記盡排的景</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">個外的隊個人學全一畫調臺常如市車……自於根決想輪你信</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">也只標物學。許最可舞長這小幾五價黃識算們也護……中</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">麼子有著他市在大思兒個一力車一房去生</a>
+                  </li>
+                </ul>
+                <a href="#" class="more"><span>more</span></a>
+              </div>
+              <div class="tab-pane">
+                <ul>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">比工說態他候紀全整使直裡，標以呢間的本切離風……我的鄉從國動經產從男面鄉錯我也了</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">父未的了，我面筆地完體相，們朋今然帶，望一這記經行原總山人與地相觀時水了打、少旅歌月定男子們過念</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">電走男我所合說親的教不：個以到得：石度本；</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">用習別線營傳。之也洋玩心的明開但現受師</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">同不辦情為越裡信臉了羅懷空主張文商然明的源教規坡</a>
+                  </li>
+                </ul>
+                <a href="#" class="more"><span>more</span></a>
+              </div>
             </div>
-            <div class="tabItem"><a href="#">第二個頁籤</a></div>
-            <div class="tabContent">
-              <ul>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">比工說態他候紀全整使直裡，標以呢間的本切離風……我的鄉從國動經產從男面鄉錯我也了</a>
-                </li>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">父未的了，我面筆地完體相，們朋今然帶，望一這記經行原總山人與地相觀時水了打、少旅歌月定男子們過念</a>
-                </li>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">電走男我所合說親的教不：個以到得：石度本；</a>
-                </li>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">用習別線營傳。之也洋玩心的明開但現受師</a>
-                </li>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">同不辦情為越裡信臉了羅懷空主張文商然明的源教規坡</a>
-                </li>
-              </ul>
-              <a href="#" class="more"><span>more</span></a>
-            </div>
-          </section>
+          </div>
         </div>
       </div>
     </div>
@@ -1116,7 +1342,6 @@
               <div class="mt-tab-category">
                 <ul>
                   <li><a href="#">活動資訊</a></li>
-
                 </ul>
               </div>
               <a href="#">也只標物學。許最可舞長這小幾五價黃識算們也護……中</a>
@@ -1137,206 +1362,111 @@
       </div>
     </div>
   </div>
+
   <!-- mt-news-tab-3 -->
-  <div class="mt-news-tab-3">
+  <section class="mt-news-tab-3">
     <div class="container">
       <div class="news-tab-3">
-        <!-- tab Start -->
         <div class="tabSet">
           <h2 class="mt-h2">News</h2>
-          <section class="tabs">
-            <div class="tabItem active"><a href="#">重大公告</a></div>
-            <!--選到的頁籤項目-->
-            <div class="tabContent">
-              <ul>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto
-                    explicabo ipsum vel dolorum, accusamus iusto natus earum aut praesentium culpa a
-                    odio excepturi dolor nemo quisquam maxime reiciendis itaque modi.</a>
-                </li>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">的了才有樹位示法這綠以是記盡排的景</a>
-                </li>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">個外的隊個人學全一畫調臺常如市車……自於根決想輪你信</a>
-                </li>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">也只標物學。許最可舞長這小幾五價黃識算們也護……中</a>
-                </li>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">麼子有著他市在大思兒個一力車一房去生</a>
-                </li>
-              </ul>
-              <a href="#" class="more"><span>more</span></a>
+          <div class="nav-tab nav-tab3">
+            <ul class="nav nav-list" role="tablist">
+              <li class="nav-item">
+                <button class="nav-link active">重大公告</button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link">新聞專區</button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link">活動資訊</button>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active">
+                <ul>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto
+                      explicabo ipsum vel dolorum, accusamus iusto natus earum aut praesentium culpa a
+                      odio excepturi dolor nemo quisquam maxime reiciendis itaque modi.</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">的了才有樹位示法這綠以是記盡排的景</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">個外的隊個人學全一畫調臺常如市車……自於根決想輪你信</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">也只標物學。許最可舞長這小幾五價黃識算們也護……中</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">麼子有著他市在大思兒個一力車一房去生</a>
+                  </li>
+                </ul>
+                <a href="#" class="more"><span>more</span></a>
+              </div>
+              <div class="tab-pane">
+                <ul>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">比工說態他候紀全整使直裡，標以呢間的本切離風……我的鄉從國動經產從男面鄉錯我也了</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">父未的了，我面筆地完體相，們朋今然帶，望一這記經行原總山人與地相觀時水了打、少旅歌月定男子們過念</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">電走男我所合說親的教不：個以到得：石度本；</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">用習別線營傳。之也洋玩心的明開但現受師</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">同不辦情為越裡信臉了羅懷空主張文商然明的源教規坡</a>
+                  </li>
+                </ul>
+                <a href="#" class="more"><span>more</span></a>
+              </div>
+              <div class="tab-pane">
+                <ul>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut corrupti
+                      corporis culpa aliquam numquam iste, repellendus aspernatur quae in. Ad
+                      perferendis facilis facere quo eligendi rem ullam sunt velit quibusdam.</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">庭會中布買器樣試學有我路任清</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">一奇萬所像水，話用至港了比定生象驗它他種家民想排星服車負識濟客是意</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">看令國中吸濟紀。創的孩同以面引情上別文年會教</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">著人論較不從感者大海終議……飯看重雖然車然。而事</a>
+                  </li>
+                </ul>
+                <a href="#" class="more"><span>more</span></a>
+              </div>
             </div>
-            <div class="tabItem"><a href="#">新聞專區</a></div>
-            <div class="tabContent">
-              <ul>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">比工說態他候紀全整使直裡，標以呢間的本切離風……我的鄉從國動經產從男面鄉錯我也了</a>
-                </li>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">父未的了，我面筆地完體相，們朋今然帶，望一這記經行原總山人與地相觀時水了打、少旅歌月定男子們過念</a>
-                </li>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">電走男我所合說親的教不：個以到得：石度本；</a>
-                </li>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">用習別線營傳。之也洋玩心的明開但現受師</a>
-                </li>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">同不辦情為越裡信臉了羅懷空主張文商然明的源教規坡</a>
-                </li>
-              </ul>
-              <a href="#" class="more"><span>more</span></a>
-            </div>
-            <div class="tabItem"><a href="#">活動資訊</a></div>
-            <div class="tabContent">
-              <ul>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut corrupti
-                    corporis culpa aliquam numquam iste, repellendus aspernatur quae in. Ad
-                    perferendis facilis facere quo eligendi rem ullam sunt velit quibusdam.</a>
-                </li>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">庭會中布買器樣試學有我路任清</a>
-                </li>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">一奇萬所像水，話用至港了比定生象驗它他種家民想排星服車負識濟客是意</a>
-                </li>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">看令國中吸濟紀。創的孩同以面引情上別文年會教</a>
-                </li>
-                <li>
-                  <time>2021/1/1</time>
-                  <a href="#">著人論較不從感者大海終議……飯看重雖然車然。而事</a>
-                </li>
-              </ul>
-              <a href="#" class="more"><span>more</span></a>
-            </div>
-          </section>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- <section class="demosection col-4-4-4">
-    <div class="container">
-      <div class="nav-tab nav-tab1">
-        <ul class="nav nav-list" role="tablist">
-          <li class="nav-item">
-            <button class="nav-link active">第一頁籤</button>
-          </li>
-          <li class="nav-item">
-            <button class="nav-link">第二頁籤</button>
-          </li>
-          <li class="nav-item">
-            <button class="nav-link">第三頁籤</button>
-          </li>
-          <li class="nav-item">
-            <button class="nav-link">第四頁籤</button>
-          </li>
-        </ul>
-        <div class="tab-content">
-          <div class="tab-pane active">
-            <ul>
-              <li>
-                <a href="#">1第一則消息</a><time>107-01-01</time>
-              </li>
-              <li>
-                <a href="#">第二則消息</a><time>107-01-01</time>
-              </li>
-              <li>
-                <a href="#">第三則消息</a><time>107-01-01</time>
-              </li>
-              <li>
-                <a href="#">第四則消息</a><time>107-01-01</time>
-              </li>
-              <li>
-                <a href="#">第五則消息</a><time>107-01-01</time>
-              </li>
-            </ul>
-            <div class="more"><a href="#">更多</a></div>
-          </div>
-          <div class="tab-pane">
-            <ul>
-              <li>
-                <a href="#">2第一則消息</a><time>107-01-01</time>
-              </li>
-              <li>
-                <a href="#">第二則消息</a><time>107-01-01</time>
-              </li>
-              <li>
-                <a href="#">第三則消息</a><time>107-01-01</time>
-              </li>
-              <li>
-                <a href="#">第四則消息</a><time>107-01-01</time>
-              </li>
-              <li>
-                <a href="#">第五則消息</a><time>107-01-01</time>
-              </li>
-            </ul>
-            <div class="more"><a href="#">更多</a></div>
-          </div>
-          <div class="tab-pane">
-            <ul>
-              <li>
-                <a href="#">3第一則消息</a><time>107-01-01</time>
-              </li>
-              <li>
-                <a href="#">第二則消息</a><time>107-01-01</time>
-              </li>
-              <li>
-                <a href="#">第三則消息</a><time>107-01-01</time>
-              </li>
-              <li>
-                <a href="#">第四則消息</a><time>107-01-01</time>
-              </li>
-              <li>
-                <a href="#">第五則消息</a><time>107-01-01</time>
-              </li>
-            </ul>
-            <div class="more"><a href="#">更多</a></div>
-          </div>
-          <div class="tab-pane">
-            <ul>
-              <li>
-                <a href="#">4第一則消息</a><time>107-01-01</time>
-              </li>
-              <li>
-                <a href="#">第二則消息</a><time>107-01-01</time>
-              </li>
-              <li>
-                <a href="#">第三則消息</a><time>107-01-01</time>
-              </li>
-              <li>
-                <a href="#">第四則消息</a><time>107-01-01</time>
-              </li>
-              <li>
-                <a href="#">第五則消息</a><time>107-01-01</time>
-              </li>
-            </ul>
-            <div class="more"><a href="#">更多</a></div>
           </div>
         </div>
       </div>
     </div>
-  </section> -->
-
+  </section>
   <!-- mt-epaper -->
   <div class="mt-epaper">
     <div class="container">
@@ -1344,7 +1474,9 @@
       <div data-aos="fade-up" data-aos-delay="500" class="epaper">
         <div class="item">
           <a href="#">
-            <div class="journal"><p>116期</p></div>
+            <div class="journal">
+              <p>116期</p>
+            </div>
             <div class="img-container">
               <!-- 請針對縮圖產出尺寸使用不同解析度 src -->
               <picture>
@@ -1357,7 +1489,7 @@
               </picture>
             </div>
             <time>2021/10/28</time>
-          
+
             <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, voluptatem. Sequi laudantium
               dolorum sed doloribus enim non, architecto accusamus nemo, optio natus assumenda sapiente
               officiis voluptatibus est quos provident id! </h3>
@@ -1365,7 +1497,9 @@
         </div>
         <div class="item">
           <a href="#">
-            <div class="journal"><p>116期</p></div>
+            <div class="journal">
+              <p>116期</p>
+            </div>
             <div class="img-container">
               <!-- 請針對縮圖產出尺寸使用不同解析度 src -->
               <picture>
@@ -1378,7 +1512,7 @@
               </picture>
             </div>
             <time>2021/10/28</time>
-          
+
             <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, voluptatem. Sequi laudantium
               dolorum sed doloribus enim non, architecto accusamus nemo, optio natus assumenda sapiente
               officiis voluptatibus est quos provident id! </h3>
@@ -1386,7 +1520,9 @@
         </div>
         <div class="item">
           <a href="#">
-            <div class="journal"><p>116期</p></div>
+            <div class="journal">
+              <p>116期</p>
+            </div>
             <div class="img-container">
               <!-- 請針對縮圖產出尺寸使用不同解析度 src -->
               <picture>
@@ -1399,7 +1535,7 @@
               </picture>
             </div>
             <time>2021/10/28</time>
-          
+
             <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, voluptatem. Sequi laudantium
               dolorum sed doloribus enim non, architecto accusamus nemo, optio natus assumenda sapiente
               officiis voluptatibus est quos provident id! </h3>
@@ -1409,6 +1545,73 @@
       <a href="#" class="more"><span>more</span></a>
     </div>
   </div>
+    <!-- JS -->
+    <script>
+      $(function () {
+        //slick
+        $('.mt-epaper .epaper').slick({
+          // mobileFirst: true,
+          // dots: false,
+          // infinite: true,
+          // speed: 300,
+          slidesToShow: 3,
+          // slidesToScroll: 1,
+          autoplay: false,
+          arrow: false,
+          lazyLoaded: true,
+          lazyLoad: 'ondemand',
+          ease: 'ease',
+          responsive: [{
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 2.5,
+                slidesToScroll: 1,
+                arrows: false,
+                autoplay: false,
+              },
+            },
+            {
+              breakpoint: 991,
+              settings: {
+                slidesToShow: 2.5,
+                slidesToScroll: 1,
+                arrows: false,
+                autoplay: false,
+              },
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1.5,
+                slidesToScroll: 1,
+                arrows: false,
+                autoplay: false,
+              },
+            },
+            {
+              breakpoint: 575,
+              settings: {
+                slidesToShow: 1.5,
+                slidesToScroll: 1,
+                arrows: false,
+                autoplay: false,
+              },
+            },
+            {
+              breakpoint: 375,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: true, //顯示圓點
+                autoplay: false,
+              },
+            },
+          ],
+        });
+        $('.mt-epaper .epaper').slick('refresh');
+      })
+    </script>
   <!-- mt-slider-card -->
   <div class="mt-slider-card">
     <div class="container">
