@@ -216,9 +216,10 @@
                     {
                       breakpoint: 200,
                       settings: {
-                        slidesToShow: 2,
+                        slidesToShow: 2.5,
                         slidesToScroll: 1,
-                        arrows: true,
+                        arrows: false,
+                        autoplay: false,
                       },
                     },
                   ],
@@ -686,10 +687,30 @@
                 <!-- 飯店設施與空間數量 -->
                 <div class="hotel_room">
                   <ul>
-                    <li><span>展覽館數量</span><em>1</em></li>
-                    <li><span>房間數</span><em>321</em></li>
-                    <li><span>會議室數量</span><em>9</em></li>
-                    <li><span>單一會議室可容納人數</span><em>128</em></li>
+                    <li>
+                      <span class="icon">
+                        <i class="fas fa-landmark"></i>
+                      </span>
+                      <span>展覽館數量</span><em>1</em>
+                    </li>
+                    <li>
+                      <span class="icon">
+                        <i class="fas fa-bed"></i>
+                      </span>
+                      <span>房間數</span><em>321</em>
+                    </li>
+                    <li>
+                      <span class="icon">
+                        <i class="fas fa-door-open"></i>
+                      </span>
+                      <span>會議室數量</span><em>9</em>
+                    </li>
+                    <li>
+                      <span class="icon">
+                        <i class="fas fa-users"></i>
+                      </span>
+                      <span>單一會議室可容納人數</span><em>128</em>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -818,123 +839,157 @@
                 </div> -->
                 <h3 class="mt-edit-h3"><span>場地服務與設施</span></h3>
                 <div class="mt-facility">
+                  <a href="#">
+                    <span class=""
+                      ><img src="images/service/icon_projector.svg" alt=""
+                    /></span>
+                    <span>投影設備</span>
+                  </a>
+                  <a href="#">
+                    <span>
+                      <img src="images/service/icon_speaker.svg" alt="" />
+                    </span>
+                    <span> 會議音響系統 </span>
+                  </a>
+                  <a href="#">
+                    <span>
+                      <img src="images/service/icon_microphone.svg" alt="" />
+                    </span>
+
+                    <span> 無線麥克風 </span>
+                  </a>
+
                   <a href="#"
-                    ><img
-                      src="images/service/icon_projector.svg"
-                      alt=""
-                    />投影設備</a
-                  >
+                    ><span>
+                      <img src="images/service/icon_translate.svg" alt="" />
+                    </span>
+                    <span> 同步翻譯 </span>
+                  </a>
+
                   <a href="#"
-                    ><img
-                      src="images/service/icon_speaker.svg"
-                      alt=""
-                    />會議音響系統</a
-                  >
+                    ><span>
+                      <img src="images/service/icon_parking.svg" alt="" />
+                    </span>
+                    <span> 停車場 </span>
+                  </a>
+
+                  <a href="#">
+                    <span>
+                      <img src="images/service/icon_intercom.svg" alt="" />
+                    </span>
+
+                    <span> 對講系統 </span>
+                  </a>
+
+                  <a href="#">
+                    <span>
+                      <img src="images/service/icon_toilet.svg" alt="" />
+                    </span>
+
+                    <span> 免治馬桶 </span>
+                  </a>
                   <a href="#"
-                    ><img
-                      src="images/service/icon_microphone.svg"
-                      alt=""
-                    />無線麥克風</a
-                  >
+                    ><span>
+                      <img src="images/service/icon_wifi.svg" alt="" />
+                    </span>
+                    <span> WIFI </span>
+                  </a>
+                  <a href="#">
+                    <span>
+                      <img src="images/service/icon_board.svg" alt="" />
+                    </span>
+                    <span> 電子看板 </span>
+                  </a>
+                  <a href="#">
+                    <span>
+                      <img src="images/service/icon_vip.svg" alt="" />
+                    </span>
+                    <span> 貴賓室及新聞中心 </span>
+                  </a>
+
+                  <a href="#">
+                    <span>
+                      <img src="images/service/icon_food.svg" alt="" />
+                    </span>
+                    <span> 餐飲服務 </span>
+                  </a>
+
                   <a href="#"
-                    ><img
-                      src="images/service/icon_translate.svg"
-                      alt=""
-                    />同步翻譯</a
-                  >
+                    ><span>
+                      <img src="images/service/icon_kanban.svg" alt="" />
+                    </span>
+                    <span> 臨時廣告物設置 </span>
+                  </a>
+
                   <a href="#"
-                    ><img
-                      src="images/service/icon_parking.svg"
-                      alt=""
-                    />停車場</a
-                  >
+                    ><span>
+                      <img src="images/service/icon_art.svg" alt="" />
+                    </span>
+                    <span> 展館公共藝術 </span>
+                  </a>
+
+                  <a href="#">
+                    <span>
+                      <img src="images/service/icon_room.svg" alt="" />
+                    </span>
+                    <span> 臨時空間 </span>
+                  </a>
+                  <a href="#">
+                    <span>
+                      <img src="images/service/icon_serivice.svg" alt="" />
+                    </span>
+                    <span> 商務服務 </span>
+                  </a>
+
                   <a href="#"
-                    ><img
-                      src="images/service/icon_intercom.svg"
-                      alt=""
-                    />對講系統</a
-                  >
+                    ><span>
+                      <img src="images/service/icon_mecca.svg" alt="" />
+                    </span>
+                    <span> 麥加指標 </span>
+                  </a>
+
+                  <a href="#">
+                    <span>
+                      <img src="images/service/icon_pray.svg" alt="" />
+                    </span>
+                    <span> 祈禱室 </span>
+                  </a>
                   <a href="#"
-                    ><img
-                      src="images/service/icon_toilet.svg"
-                      alt=""
-                    />免治馬桶</a
-                  >
+                    ><span>
+                      <img src="images/service/icon_gym.svg" alt="" />
+                    </span>
+                    <span> 健身房 </span>
+                  </a>
                   <a href="#"
-                    ><img src="images/service/icon_wifi.svg" alt="" />WIFI</a
-                  >
+                    ><span>
+                      <img src="images/service/icon_spa.svg" alt="" />
+                    </span>
+                    <span> SPA </span>
+                  </a>
                   <a href="#"
-                    ><img
-                      src="images/service/icon_board.svg"
-                      alt=""
-                    />電子看板</a
-                  >
+                    ><span>
+                      <img src="images/service/icon_tub.svg" alt="" />
+                    </span>
+                    <span> 浴缸 </span>
+                  </a>
                   <a href="#"
-                    ><img
-                      src="images/service/icon_vip.svg"
-                      alt=""
-                    />貴賓室及新聞中心</a
-                  >
+                    ><span>
+                      <img src="images/service/icon_swim.svg" alt="" />
+                    </span>
+                    <span> 游泳池 </span>
+                  </a>
                   <a href="#"
-                    ><img
-                      src="images/service/icon_food.svg"
-                      alt=""
-                    />餐飲服務</a
-                  >
+                    ><span>
+                      <img src="images/service/icon_bar.svg" alt="" />
+                    </span>
+                    <span> 酒吧 </span>
+                  </a>
                   <a href="#"
-                    ><img
-                      src="images/service/icon_kanban.svg"
-                      alt=""
-                    />臨時廣告物設置</a
-                  >
-                  <a href="#"
-                    ><img
-                      src="images/service/icon_art.svg"
-                      alt=""
-                    />展館公共藝術</a
-                  >
-                  <a href="#"
-                    ><img
-                      src="images/service/icon_room.svg"
-                      alt=""
-                    />臨時空間</a
-                  >
-                  <a href="#"
-                    ><img
-                      src="images/service/icon_serivice.svg"
-                      alt=""
-                    />商務服務</a
-                  >
-                  <a href="#"
-                    ><img
-                      src="images/service/icon_mecca.svg"
-                      alt=""
-                    />麥加指標</a
-                  >
-                  <a href="#"
-                    ><img src="images/service/icon_pray.svg" alt="" />祈禱室</a
-                  >
-                  <a href="#"
-                    ><img src="images/service/icon_gym.svg" alt="" />健身房</a
-                  >
-                  <a href="#"
-                    ><img src="images/service/icon_spa.svg" alt="" />SPA</a
-                  >
-                  <a href="#"
-                    ><img src="images/service/icon_tub.svg" alt="" />浴缸</a
-                  >
-                  <a href="#"
-                    ><img src="images/service/icon_swim.svg" alt="" />游泳池</a
-                  >
-                  <a href="#"
-                    ><img src="images/service/icon_bar.svg" alt="" />酒吧</a
-                  >
-                  <a href="#"
-                    ><img
-                      src="images/service/icon_pickup.svg"
-                      alt=""
-                    />機場接送</a
-                  >
+                    ><span>
+                      <img src="images/service/icon_pickup.svg" alt="" />
+                    </span>
+                    <span> 機場接送 </span>
+                  </a>
                 </div>
                 <h3 class="mt-edit-h3"><span>飯店介紹</span></h3>
                 <p>
@@ -1011,8 +1066,8 @@
                         </picture>
                       </div>
                       <div class="space_info">
-                        <div class="type">劇院型</div>
                         <h4>會議室</h4>
+                        <div class="type">劇院型</div>
                         <p>
                           適合研討會、座談會、說明會、演講、晚會、頒獎典禮及一般教學使用
                         </p>
@@ -1048,8 +1103,8 @@
                         </picture>
                       </div>
                       <div class="space_info">
-                        <div class="type">教室型</div>
                         <h4>64人教室</h4>
+                        <div class="type">教室型</div>
                         <p>
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           elit. Obcaecati similique odit quae voluptatum, esse
@@ -1092,8 +1147,8 @@
                         </picture>
                       </div>
                       <div class="space_info">
-                        <div class="type">劇院型</div>
                         <h4>會議室</h4>
+                        <div class="type">劇院型</div>
                         <p>
                           適合研討會、座談會、說明會、演講、晚會、頒獎典禮及一般教學使用
                         </p>
@@ -1129,8 +1184,8 @@
                         </picture>
                       </div>
                       <div class="space_info">
-                        <div class="type">教室型</div>
                         <h4>64人教室</h4>
+                        <div class="type">教室型</div>
                         <p>
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           elit. Obcaecati similique odit quae voluptatum, esse

@@ -394,6 +394,8 @@
 
           a {
             margin: 0 0.25em 0.25em 0.25em;
+
+
           }
         }
       }
@@ -1250,52 +1252,188 @@
       }
     }
   }
-  
+
 }
 
-.mt-main-company-content{
-  padding-top:0;
-  
-  .container{
-    margin-top: calc(5em );
+.mt-main-company-content {
+  padding-top: 0;
+
+  .container {
+    margin-top: calc(5em);
   }
-  
-  .mt-banner-img{
+
+  .mt-banner-img {
     height: calc(100vh - 76px);
     position: relative;
     background: linear-gradient(0deg, rgba(215, 215, 215, 1) 0%, rgb(255, 255, 255) 30%);
 
-    @include screen('tablet'){
+    @include screen('tablet') {
       height: calc(100vh - 60px);
     }
   }
- .cp_content{
-  //  max-width: 1200px;
-  width: 90%;
-  max-width: 1400px;
-   height: 25%;
-   margin-top: 0;
- .slider-cp-pics{
-  .slick-prev,.slick-next{
-    top:32%;
+
+  .cp_content {
+    //  max-width: 1200px;
+    width: 90%;
+    max-width: 1400px;
+    height: 23%;
+    margin: 1.5% 1em 1em 5%;
+    padding: 0;
+
+    .slider-cp-pics {
+      padding: 0 2.5em;
+
+      .slick-prev,
+      .slick-next {
+        top: 32%;
+      }
+
+      .item {
+        a {
+          height: 20vh;
+        }
+      }
+    }
+
+    .hotel_info {
+      .hotel_room {
+        ul>li {
+          align-items: center;
+
+          .icon {
+            border: 1px solid #555;
+            padding: 0.5em;
+            height: 2.5em;
+            width: 2.5em;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0em;
+            color: #888;
+          }
+
+          span {
+            margin-top: 0.5em;
+            &::after {
+              display: none;
+            }
+          }
+          em{
+            margin-top: 0.5em;
+          }
+          @include screen('tablet'){
+            span {
+              margin-top: 0em;
+            }
+            em{
+              margin-top: 0em;
+            }
+          }
+          @include screen('mobile'){
+margin-left: 2em;
+          }
+        }
+      }
+    }
+    .space_info {
+      .item{
+        margin-bottom: 1em;
+        .space_info{
+          padding: 1.5em 1em 1em;
+          h4{
+            margin-bottom: 0.2em ;
+          }
+          .type{
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1em;
+            @include screen('mobile') {
+              margin-left: 0.5em;
+            }
+          }
+        }
+      }
+    }
+
+    @include screen('xs_mobile') {
+
+      margin: 2% 0 1em 0;
+      width: 100%;
+
+      .slider-cp-pics {
+        padding: 0;
+
+      }
+    }
   }
- }
- }
- .cp_content_icon{
-  //padding-top: 10%;
-   height: 10%;
 
-.arrow-icon{
-  height: 45px;
-  position: relative;
-}
- }
-.mt-facility{
-  font-size: 1em;
-}
+  .cp_content_icon {
+    //padding-top: 10%;
+    height: 10%;
+
+    .arrow-icon {
+      height: 45px;
+      position: relative;
+    }
+  }
+
+  .mt-facility {
+    font-size: 1em;
+    align-items: flex-start;
+
+    a {
+      flex-wrap: wrap;
+      width: calc(10% - 0.5em);
+      margin: 0.25em 0.25em 1em 0.25em;
+      flex-wrap: wrap;
+
+      &:after {
+        display: none;
+      }
+
+      span {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        white-space: normal;
+
+        img {
+          border: 1px solid #555;
+          padding: 0.5em;
+          height: 2.5em;
+          width: 2.5em;
+          border-radius: 50%;
+        }
+
+        font-weight: normal;
+      }
+
+    }
+
+    @include screen('tablet') {
+      a {
+        width: calc(14.285% - 0.5em);
+      }
+    }
+
+    @include screen('mobile') {
+      a {
+        width: calc(20% - 0.5em);
+      }
+    }
+
+    @include screen('xs_mobile') {
+      a {
+        width: calc(33.3% - 0.5em);
+      }
+    }
+  }
 
 
 }
+
 .apply_award {
   .apply_info {
     width: 100%;
@@ -1427,14 +1565,17 @@
     }
   }
 }
-.company_content{
+
+.company_content {
   height: 65%;
-  .company_info{
+
+  .company_info {
     width: 100%;
     height: 100%;
     position: relative;
     display: flex;
     justify-content: center;
+
     .pic {
       width: 100%;
       float: none;
@@ -1455,11 +1596,18 @@
         content: '';
         width: 60%;
         height: 100%;
-        background:#fff;
+        background: #fff;
         opacity: 0.85;
         top: 0;
         left: -10%;
         transform: skewX(-15deg);
+      }
+
+      @include screen('tablet') {
+        &::after {
+          width: 75%;
+
+        }
       }
 
       @include screen('mobile') {
@@ -1468,15 +1616,29 @@
         max-width: 100%;
 
         &::after {
-          width: 85%;
-          left: -20%;
+          width: 90%;
+          left: -10%;
         }
       }
-      @include screen('xs_mobile'){
+
+      @include screen('xs_mobile') {
         &::after {
           width: 95%;
           left: -15%;
         }
+      }
+
+      @media screen and (max-width: 480px) {
+        &::after {
+          width: 100%;
+          left: 0;
+          transform: none;
+          //更改背景遮罩顏色
+          background: #000;
+          opacity: 0.6;
+
+        }
+
       }
     }
 
@@ -1487,19 +1649,25 @@
       //新增
       position: absolute;
       bottom: 0;
-      width: 60%;
       top: 20%;
       left: 15%;
-      @include screen('tablet'){
+
+      @include screen('tablet') {
         left: 10%;
       }
-      .hotel_name{
+
+      @media screen and (max-width: 480px) {
+        color: #fff;
+      }
+
+      .hotel_name {
         display: flex;
         padding-bottom: 1em;
         margin-bottom: 1em;
         align-items: center;
         position: relative;
-        &::after{
+
+        &::after {
           position: absolute;
           content: '';
           width: 20%;
@@ -1508,21 +1676,27 @@
           background: $secondaryColor;
           height: 3px;
         }
-        img{
+
+        img {
           max-width: 60px;
           margin-right: 1em;
           height: auto;
         }
       }
+
       h3 {
-      margin: 0;
+        margin: 0;
         font-size: 2.2em;
-     
+
 
         @include screen('xs_mobile') {
           font-size: 1.8em;
           width: 70%;
-          // margin-left: 30%;
+
+        }
+
+        @media screen and (max-width: 480px) {
+          color: #fff;
         }
       }
 
@@ -1569,35 +1743,55 @@
           }
         }
       }
-      .star{
+
+      .star {
         color: $color-hr;
+
+        @media screen and (max-width: 480px) {
+          color: $color-gray;
+        }
       }
-      .i_eco{
+
+      .i_eco {
         width: 1.5em;
         height: 1.5em;
         margin-left: 0.5em;
       }
-      .hotel_iconList{
+
+      .hotel_iconList {
         display: flex;
         align-items: center;
         margin-bottom: 1em;
       }
-      .hotel_address,.hotel_tel{
+
+      .hotel_address,
+      .hotel_tel {
         margin: 0.5em 0;
-        i{
+
+        i {
           margin-right: 1em;
           color: $primaryColor;
           font-size: 1em;
+
+          @media screen and (max-width: 480px) {
+            color: lighten($primaryColor, 20%);
+          }
         }
       }
-      .mt-tag{
-        a{
-          border:1px solid #333;
+
+      .mt-tag {
+        a {
+          border: 1px solid #333;
+
+          @media screen and (max-width: 480px) {
+            border: 1px solid #fff;
+            color: #fff;
+          }
         }
       }
     }
   }
-  
+
 }
 
 
@@ -1606,54 +1800,56 @@ $ani-speed: 2s;
 $ani-delay: 1s;
 
 .arrow {
-    opacity: 0;
-    position: absolute;
-      left: 50%;
-        // top: 50%;
-    transform-origin: 50% 50%;
-    transform: translate3d(-50%, -50%, 0);
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  // top: 50%;
+  transform-origin: 50% 50%;
+  transform: translate3d(-50%, -50%, 0);
 }
 
 .arrow-first {
-    animation: arrow-movement $ani-speed ease-in-out infinite;
+  animation: arrow-movement $ani-speed ease-in-out infinite;
 }
+
 .arrow-second {
-    animation: arrow-movement $ani-speed $ani-delay ease-in-out infinite;
+  animation: arrow-movement $ani-speed $ani-delay ease-in-out infinite;
 }
 
 .arrow:before,
 .arrow:after {
-    background: #bbb;
-    content: '';
-    display: block;
-    height: 4px; 
-    position: absolute;
-        top: 0;
-        left: 0;
-    width: 20px;
+  background: #bbb;
+  content: '';
+  display: block;
+  height: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
 }
 
 .arrow:before {
-    transform: rotate(45deg) translateX(-15%);
-    transform-origin: top left;
+  transform: rotate(45deg) translateX(-15%);
+  transform-origin: top left;
 }
 
 .arrow:after {
-    transform: rotate(-45deg) translateX(15%);
-    transform-origin: top right;
+  transform: rotate(-45deg) translateX(15%);
+  transform-origin: top right;
 }
 
 // Animation
 @keyframes arrow-movement {
-    0% { 
-        opacity: 0;
-        top: 45%;
-    }
-    70% {
-        opacity: 1;
-    }
-    100% { 
-        opacity: 0;
-    }
-}
+  0% {
+    opacity: 0;
+    top: 45%;
+  }
 
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
