@@ -1079,17 +1079,19 @@ p.error {
               margin: -1em auto 2em;
             }
           }
+
           .journal {
             position: absolute;
             z-index: 2;
             top: -8px;
             padding: 5px 32px 5px 16px;
             overflow: hidden;
-           
-            p{
+
+            p {
               color: #fff;
-              margin-top:2px;
+              margin-top: 2px;
             }
+
             &::after {
               content: '';
               position: absolute;
@@ -1102,6 +1104,7 @@ p.error {
               transform: skewX(-18deg);
             }
           }
+
           // .journal {
           //   position: relative;
           //   right: 0;
@@ -1133,6 +1136,7 @@ p.error {
             font-size: 0.875em;
             color: #888;
             display: block;
+
             @include screen('mobile') {
               margin: 0 0 3em;
               padding: 0;
@@ -1144,9 +1148,11 @@ p.error {
               margin: 0 auto 1em;
             }
           }
-          h3{
+
+          h3 {
             margin-top: 0.5em;
           }
+
           &:hover,
           &:focus {
             h3 {
@@ -1169,7 +1175,7 @@ p.error {
           @include screen('xs_mobile') {
             margin: 0 auto;
           }
-        
+
           img {
             position: absolute;
             top: 0;
@@ -1186,13 +1192,16 @@ p.error {
         @include screen('xs_mobile') {
           padding: 0 1em;
         }
+
         @include screen('tablet') {
           margin: 0 1.3em;
         }
-        @include screen('mobile'){
+
+        @include screen('mobile') {
           margin: 0;
           padding: 0;
         }
+
         margin: 0 1.8em;
 
         ul {
@@ -1232,7 +1241,8 @@ p.error {
               @include screen('xs_mobile') {
                 flex-basis: 100%;
               }
-              @include screen('tablet'){
+
+              @include screen('tablet') {
                 min-width: 100%;
               }
 
@@ -1267,11 +1277,12 @@ p.error {
               z-index: 2;
               top: 10px;
               padding: 5px 15px;
-             
-              p{
+
+              p {
                 color: #fff;
-                margin-top:2px;
+                margin-top: 2px;
               }
+
               &::after {
                 content: '';
                 position: absolute;
@@ -1320,10 +1331,10 @@ p.error {
                 @include text-line(5, 1.45em);
               }
 
-              time{
-               display: inline-block;
-               padding: 1em 0;
-              
+              time {
+                display: inline-block;
+                padding: 1em 0;
+
               }
 
             }
@@ -1931,10 +1942,15 @@ p.error {
           padding: 0;
           margin-bottom: 1em;
           padding: 1em;
+
+          a {
+            min-height: unset !important;
+          }
         }
 
         a {
-          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+          //box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
           padding: 3em;
           min-height: 20em;
           display: block;
@@ -1978,6 +1994,38 @@ p.error {
   }
 }
 
+//table 列表樣式轉換
+.table_list{
+  .mobile_list{
+      display: none;
+  }
+  @include screen('mobile') {
+    .pc_list{
+      display: none;
+    }
+    .mobile_list{
+      display: block;
+      .card{
+        border-bottom: #ccc solid 1px;
+        padding-bottom: 1em;
+        h4{
+          margin-bottom: 0.5em;
+        }
+        span{
+          margin-right: 0.5em;
+          // display: inline-block;
+        }
+        div{
+          &:last-child{
+            span{
+              margin: 0.5em 0 0 0;
+            }
+          }
+        }
+      }
+  }
+  }
+}
 //}
 
 
@@ -2357,7 +2405,8 @@ p.error {
           right: 2em;
         }
       }
-      .item-finish{
+
+      .item-finish {
         min-height: 16em;
         display: flex;
         align-items: center;
@@ -3259,6 +3308,11 @@ p.error {
     img {
       height: 2.8em;
     }
+    @include screen('mobile') {
+      img{
+        height: 2em;
+      }
+    }
   }
 
   p {
@@ -3310,6 +3364,9 @@ p.error {
           background: #fff;
           position: relative;
           z-index: 1;
+          @include screen('mobile') {
+            font-size: 1.5em;
+          }
         }
 
         p {
@@ -3819,20 +3876,47 @@ p.error {
         justify-content: center;
         font-size: 2em;
         align-items: center;
-        color: #222;
+        color: #fff;
         padding: 1em;
         font-weight: bold;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
         transition: 0.3s ease-out;
         line-height: 1.45em;
         text-align: center;
+        position: relative;
+        overflow: hidden;
 
+        .img-container{
+          width: 100%;
+          position: absolute;
+          height: 100%;
+          top: 0;
+          bottom: 0;
+          left: 0;
+        }
+        .caption{
+          z-index: 2;
+          text-align: center;
+        }
         &:hover,
         &:focus {
-          color: $aHover;
+          // color: $aHover;
           box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 25px;
         }
 
+        &::before{
+          position: absolute;
+          content: '';
+          width: 100%;
+          top:0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.35);
+          z-index: 1;
+
+        }
         @include screen('xs_mobile') {
           font-size: 1.5em;
           text-align: left;
@@ -3849,7 +3933,8 @@ p.error {
         width: 80%;
 
         a {
-          min-height: 12rem;
+          min-height: 20rem;
+          // min-height: 12rem;
         }
       }
     }
@@ -4614,7 +4699,8 @@ p.error {
         min-height: 18em;
         padding: 1em 2em;
         border-radius: 0.25em;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+        //box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
         background: #fff;
         position: relative;
 
@@ -5346,7 +5432,8 @@ p.error {
       }
 
       a {
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+        //box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
         display: block;
         width: 100%;
         border-radius: 0.25em;
@@ -5664,7 +5751,8 @@ p.error {
         display: block;
         width: 100%;
         position: relative;
-        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+        //box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 
         &:hover,
         &:focus {

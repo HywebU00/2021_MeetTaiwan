@@ -100,10 +100,26 @@
     display: none;
     @include screen('tablet') {
         display: block;
+
     }
     .successCase {
         .item{
             margin: 0 1em !important;
+            @include screen('tablet'){
+                margin: 0 0.5em !important;
+                a h3{
+                    width: 100%;
+                    padding: 1em;
+                    &::before{
+                        display: none;
+                    }
+                    &:after{
+                        left: 0;
+                        transform: rotate(0);
+                    }
+                }
+            }
+           
         }
     }
     @include screen('xs_mobile') {

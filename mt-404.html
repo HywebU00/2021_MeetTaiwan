@@ -43,6 +43,8 @@
       @media screen and (max-width: 940px) {
         .wrapper {
           flex-direction: column-reverse;
+          overflow-y: scroll;
+          margin-top: 10em;
         }
       }
       .wrapper h1 {
@@ -66,11 +68,12 @@
           flex-flow: column;
           text-align: center;
         }
-        .title h1 {
+        .wrapper .title h1 {
           line-height: 1em;
+          font-size: 5em;
         }
-        .title h2 {
-          padding: 0 0 1.5em 0;
+        .wrapper .title h2 {
+          padding: 0 0 0em 0;
         }
       }
 
@@ -124,7 +127,7 @@
         }
 
         .wrapper .error {
-          margin-top: 2em;
+          margin-top: 1em;
         }
       }
       @media screen and (max-width: 422px) {

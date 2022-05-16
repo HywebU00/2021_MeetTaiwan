@@ -923,7 +923,7 @@
             {
               breakpoint: 991,
               settings: {
-                slidesToShow: 1.5,
+                slidesToShow: 2.5,
                 slidesToScroll: 1,
                 arrows: false,
               },
@@ -1127,7 +1127,7 @@
   <div class="mt-slider-col-2">
     <div class="container">
       <h2 class="mt-h2">會展實用指南</h2>
-      <div class="slider-col-2">
+      <div class="slider-col-2 slider-col-2-pc">
         <div class="item">
           <a href="#">
             <h3>尋找人才</h3>
@@ -1153,6 +1153,32 @@
           </a>
         </div>
       </div>
+      <div class="slider-col-2 slider-col-2-mobile">
+        <div class="item">
+          <a href="#">
+            <h3>尋找人才</h3>
+            <div class="img-container">
+              <img src="images/slider-col-2-pic-01.jpg" alt="" />
+            </div>
+          </a>
+        </div>
+        <div class="item">
+          <a href="#">
+            <h3>尋找場地</h3>
+            <div class="img-container">
+              <img src="images/slider-col-2-pic-02.jpg" alt="" />
+            </div>
+          </a>
+        </div>
+        <div class="item">
+          <a href="#">
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing</h3>
+            <div class="img-container">
+              <img src="https://lipsum.app/id/18/800x400" alt="" />
+            </div>
+          </a>
+        </div>    
+      </div>
       <a href="#" class="more"><span>more</span></a>
     </div>
   </div>
@@ -1160,15 +1186,15 @@
   <script>
     $(function () {
       //slick
-      $('.slider-col-2').slick({
+      $('.slider-col-2.slider-col-2-pc').slick({
         mobileFirst: true,
         dots: false,
         infinite: true,
         speed: 300,
-        slidesToShow: 2,
+        slidesToShow: 1.5,
         slidesToScroll: 1,
         autoplay: true,
-        arrow: true,
+        arrow: false,
         lazyLoaded: true,
         lazyLoad: 'ondemand',
         ease: 'ease',
@@ -1179,23 +1205,42 @@
             slidesToScroll: 1,
             arrows: true,
           },
-        }, {
+        },
+        {
           breakpoint: 768,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
             arrows: true,
           },
-        }, {
+        },
+        {
+          breakpoint: 575,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false,
+          },
+        },
+        {
+          breakpoint: 375,
+          settings: {
+            slidesToShow: 1.5,
+            slidesToScroll: 1,
+            arrows: false,
+          },
+        },
+        {
           breakpoint: 200,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 1.5,
             slidesToScroll: 1,
-            arrows: true,
+            arrows: false,
           },
-        }, ],
+        }
+      ],
       });
-      $('.slider-col-2').slick('refresh');
+      $('.slider-col-2.slider-col-2-pc').slick('refresh');
     })
   </script>
   <!-- mt-news-tab-1 -->
@@ -1616,7 +1661,117 @@
   <div class="mt-slider-card">
     <div class="container">
       <h2 class="mt-h2">常用資訊</h2>
-      <div class="slider-card">
+      <div class="slider-card slider-card-pc">
+        <div class="item">
+          <div class="flip-box">
+            <a href="#">
+              <div class="flip-box-front">
+                <div class="inner">
+                  <h3 class="flip-box-header">
+                    <span>尋找合作夥伴</span>
+                  </h3>
+                  <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint odio repellat
+                    voluptatem eius fuga facere dignissimos ullam, voluptas beatae enim! </p>
+                </div>
+              </div>
+              <div class="flip-box-back">
+                <div class="inner">
+                  <h3 class="flip-box-header">
+                    <span>尋找合作夥伴</span>
+                  </h3>
+                  <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint odio repellat
+                    voluptatem eius fuga facere dignissimos ullam, voluptas beatae enim! </p>
+                </div>
+                <div class="img-container">
+                  <img src="https://lipsum.app/id/12/600x800" alt="" />
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="flip-box">
+            <a href="#">
+              <div class="flip-box-front">
+                <div class="inner">
+                  <h3 class="flip-box-header">
+                    <span>Covid-19 公告</span>
+                  </h3>
+                  <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint odio repellat
+                    voluptatem eius fuga facere dignissimos ullam, voluptas beatae enim! </p>
+                </div>
+              </div>
+              <div class="flip-box-back">
+                <div class="inner">
+                  <h3 class="flip-box-header">
+                    <span>Covid-19 公告</span>
+                  </h3>
+                  <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint odio repellat
+                    voluptatem eius fuga facere dignissimos ullam, voluptas beatae enim! </p>
+                </div>
+                <div class="img-container">
+                  <img src="https://lipsum.app/id/13/600x800" alt="" />
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="flip-box">
+            <a href="#">
+              <div class="flip-box-front">
+                <div class="inner">
+                  <h3 class="flip-box-header">
+                    <span>成功案例</span>
+                  </h3>
+                  <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint odio repellat
+                    voluptatem eius fuga facere dignissimos ullam, voluptas beatae enim! </p>
+                </div>
+              </div>
+              <div class="flip-box-back">
+                <div class="inner">
+                  <h3 class="flip-box-header">
+                    <span>成功案例</span>
+                  </h3>
+                  <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint odio repellat
+                    voluptatem eius fuga facere dignissimos ullam, voluptas beatae enim! </p>
+                </div>
+                <div class="img-container">
+                  <img src="https://lipsum.app/id/14/600x800" alt="" />
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="flip-box">
+            <a href="#">
+              <div class="flip-box-front">
+                <div class="inner">
+                  <h3 class="flip-box-header">
+                    <span>成功案例2</span>
+                  </h3>
+                  <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint odio repellat
+                    voluptatem eius fuga facere dignissimos ullam, voluptas beatae enim! </p>
+                </div>
+              </div>
+              <div class="flip-box-back">
+                <div class="inner">
+                  <h3 class="flip-box-header">
+                    <span>成功案例2</span>
+                  </h3>
+                  <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint odio repellat
+                    voluptatem eius fuga facere dignissimos ullam, voluptas beatae enim! </p>
+                </div>
+                <div class="img-container">
+                  <img src="https://lipsum.app/id/15/600x800" alt="" />
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="slider-card slider-card-mobile">
         <div class="item">
           <div class="flip-box">
             <a href="#">
@@ -1733,7 +1888,7 @@
   <script>
     $(function () {
       //slick
-      $('.slider-card').slick({
+      $('.slider-card.slider-card-pc').slick({
         mobileFirst: true,
         dots: false,
         infinite: true,
@@ -1755,20 +1910,20 @@
         }, {
           breakpoint: 768,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 2.5,
             slidesToScroll: 1,
-            arrows: true,
+            arrows: false,
           },
         }, {
           breakpoint: 200,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 1.5,
             slidesToScroll: 1,
-            arrows: true,
+            arrows: false,
           },
         }, ],
       });
-      $('.slider-card').slick('refresh');
+      $('.slider-card.slider-card-pc').slick('refresh');
     })
   </script>
   <!-- mt-igwall -->

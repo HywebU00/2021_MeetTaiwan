@@ -104,7 +104,7 @@
 				margin-bottom: 0;
 				font-weight: 400;
 				color: #fff;
-
+				margin-right: 2em;
 				span {
 					display: block;
 					margin-bottom: 0.5em;
@@ -138,12 +138,21 @@
 
 	@include screen('mobile') {
 		height: auto;
-
+		
+		&::before{
+			left: -20%;
+		}
 		.slider-col-1 {
 			flex-wrap: wrap;
 
 			.col h2.mt-h2 {
 				font-size: 2em;
+			}
+			.col p{
+				font-size: 14px;
+			}
+			.col a.more{
+				margin-top: 2em;
 			}
 		}
 	}

@@ -81,4 +81,35 @@
             margin: 0 0 0 auto;
         }
     }
+  
+    .container .slider-col-2-pc{
+        display: block;
+        @include screen('tablet') {
+            display: none;
+        }
+    }
+    .container .slider-col-2-mobile{
+        display: none;
+        @include screen('tablet') {
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: space-between;
+        }
+        padding: 1em;
+        .item{
+            padding:0;
+            width: 100%;
+            margin: 0 1.5% 2em;
+            a{
+                max-height: 368px;
+                min-height: 258px;
+            }
+        }
+        .item:nth-child(3n),.item:nth-child(3n - 1) {
+           width: calc(50% - 3%);
+        //    @include screen('mobile'){
+        //         width: 100%;
+        //    }
+        }
+    }
 }

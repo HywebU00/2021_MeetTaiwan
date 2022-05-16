@@ -25,7 +25,8 @@
 			width: 100%;
 			padding: 0em 3em;
 			background-color: #fff;
-			box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 60px -12px, rgba(0, 0, 0, 0.3) 0px 0px 36px -18px;
+			box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+			//box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 60px -12px, rgba(0, 0, 0, 0.3) 0px 0px 36px -18px;
 
 			@include screen('xs_mobile') {
 				padding: 0em 2em;
