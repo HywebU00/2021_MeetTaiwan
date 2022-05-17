@@ -4643,7 +4643,7 @@ select {
     padding: 0; }
     @media screen and (max-width: 991px) {
       .mt-kv2 .container {
-        margin-bottom: 8em; } }
+        padding-bottom: 8em; } }
     .mt-kv2 .container .img-container {
       overflow: hidden;
       position: relative;
@@ -4699,7 +4699,7 @@ select {
         .mt-kv2 .container .img-container {
           overflow: hidden;
           position: relative;
-          height: 60vh; }
+          height: 65vh; }
           .mt-kv2 .container .img-container:before {
             display: block;
             content: '';
@@ -4763,6 +4763,7 @@ select {
       width: 100%;
       left: 50%;
       top: 50%;
+      bottom: 0;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
       position: absolute;
@@ -4847,6 +4848,7 @@ select {
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
         min-height: 4em;
+        max-height: 225px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -6602,32 +6604,27 @@ select {
           padding-left: 1em;
           padding-right: 1em; }
   @media screen and (max-width: 991px) {
-    .mt-success-case {
-      display: none; } }
-
-.mt-success-case-mobile {
-  display: none; }
-  @media screen and (max-width: 991px) {
-    .mt-success-case-mobile {
-      display: block; } }
-  .mt-success-case-mobile .successCase .item {
-    margin: 0 1em !important; }
-    @media screen and (max-width: 991px) {
-      .mt-success-case-mobile .successCase .item {
-        margin: 0 0.5em !important; }
-        .mt-success-case-mobile .successCase .item a h3 {
+    .mt-success-case .successCase {
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+      overflow-x: scroll;
+      -ms-overflow-style: none; }
+      .mt-success-case .successCase::-webkit-scrollbar {
+        display: none; }
+      .mt-success-case .successCase .item {
+        min-width: 320px; }
+        .mt-success-case .successCase .item a h3 {
           width: 100%;
           padding: 1em; }
-          .mt-success-case-mobile .successCase .item a h3::before {
-            display: none; }
-          .mt-success-case-mobile .successCase .item a h3:after {
-            left: 0;
+          .mt-success-case .successCase .item a h3::before {
             -webkit-transform: rotate(0);
-                    transform: rotate(0); } }
-  @media screen and (max-width: 575px) {
-    .mt-success-case-mobile .slick-dots {
-      position: relative !important;
-      bottom: 0 !important; } }
+                    transform: rotate(0); }
+          .mt-success-case .successCase .item a h3::after {
+            -webkit-transform: rotate(0);
+                    transform: rotate(0);
+            left: 0; }
+          .mt-success-case .successCase .item a h3:hover::before {
+            left: 0; } }
 
 .tabSet, .mt-category, .divider,
 .divider-vertical, .pagination, .mt-main-content .cp_content .file_download, .mt-main-content .cp_content .web_link, .mt-main-content .cp_content .mt-tag, .sitemap {
@@ -9216,7 +9213,7 @@ select {
   min-height: 40em; }
   @media screen and (max-width: 575px) {
     .mt-main-content {
-      padding-top: 2em; } }
+      padding-top: 3em; } }
   .mt-main-content .inner_img {
     position: fixed;
     width: 100vw;
@@ -15072,23 +15069,34 @@ p.error {
           height: auto;
           max-height: calc(1.45em * 5); }
 
-.table_list .mobile_list {
+.table_list table tbody td span {
   display: none; }
 
 @media screen and (max-width: 767px) {
-  .table_list .pc_list {
+  .table_list table thead {
     display: none; }
-  .table_list .mobile_list {
-    display: block; }
-    .table_list .mobile_list .card {
-      border-bottom: #ccc solid 1px;
-      padding-bottom: 1em; }
-      .table_list .mobile_list .card h4 {
-        margin-bottom: 0.5em; }
-      .table_list .mobile_list .card span {
-        margin-right: 0.5em; }
-      .table_list .mobile_list .card div:last-child span {
-        margin: 0.5em 0 0 0; } }
+  .table_list table tbody tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    border-bottom: #ddd 1px solid;
+    padding: 0.5em 0 1em 0; }
+    .table_list table tbody tr span.allow, .table_list table tbody tr span.not-allowed {
+      margin: 0 !important; }
+  .table_list table tbody td {
+    width: 100%;
+    border: 0px;
+    padding-bottom: 0; }
+    .table_list table tbody td:first-child {
+      font-weight: 500;
+      font-size: 1.2em; }
+    .table_list table tbody td span {
+      display: inline-block;
+      margin-right: 0.5em; }
+    .table_list table tbody td:last-child {
+      display: none; } }
 
 .mt-signup {
   overflow-y: scroll; }
@@ -15170,8 +15178,9 @@ p.error {
         -webkit-transform: translateY(3px);
                 transform: translateY(3px); }
   .mt-signup .sp_member .signup_block {
-    width: 60%;
+    width: 75%;
     min-width: 600px;
+    max-width: 960px;
     min-height: 480px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -15204,12 +15213,12 @@ p.error {
               flex-grow: 0;
       -ms-flex-negative: 1;
           flex-shrink: 1;
-      -ms-flex-preferred-size: 35%;
-          flex-basis: 35%;
+      -ms-flex-preferred-size: 45%;
+          flex-basis: 45%;
       background: url(../images/signup_img.jpg) no-repeat center center;
       background-size: cover;
-      min-height: 30em; }
-      @media screen and (max-width: 767px) {
+      min-height: 43.7em; }
+      @media screen and (max-width: 991px) {
         .mt-signup .sp_member .signup_block .signup_info {
           display: none; } }
   .mt-signup .sp_member .signup {
@@ -15222,10 +15231,13 @@ p.error {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     font-size: 0.875em;
-    min-height: 40em;
+    height: 50em;
     -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 27px -5px, rgba(0, 0, 0, 0.3) 0px 0px 16px -8px;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 27px -5px, rgba(0, 0, 0, 0.3) 0px 0px 16px -8px;
     background: #fff; }
+    @media screen and (max-width: 767px) {
+      .mt-signup .sp_member .signup {
+        height: auto; } }
     @media screen and (max-width: 575px) {
       .mt-signup .sp_member .signup {
         -webkit-box-shadow: none;
@@ -15238,8 +15250,12 @@ p.error {
       border: none; }
     .mt-signup .sp_member .signup .done {
       text-align: center;
-      width: 80%;
-      margin: 1em auto; }
+      width: 70%;
+      margin: 6em auto; }
+      @media screen and (max-width: 991px) {
+        .mt-signup .sp_member .signup .done {
+          width: 80%;
+          margin: 3em auto; } }
       .mt-signup .sp_member .signup .done h3 {
         font-size: 1.25em;
         line-height: 1.5em; }
@@ -15250,9 +15266,10 @@ p.error {
   .mt-signup .sp_member .login_block {
     -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 27px -5px, rgba(0, 0, 0, 0.3) 0px 0px 16px -8px;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 27px -5px, rgba(0, 0, 0, 0.3) 0px 0px 16px -8px;
-    width: 60%;
+    width: 75%;
     min-width: 600px;
     min-height: 480px;
+    max-width: 960px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

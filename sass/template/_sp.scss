@@ -54,9 +54,9 @@
 
   .done {
     text-align: center;
-    width: 80%;
-    margin: 1em auto;
-
+   width: 80%;
+ margin: 1em auto;
+ 
     h3 {
       font-size: 1.25em;
       line-height: 1.5em;
@@ -1996,35 +1996,51 @@ p.error {
 
 //table 列表樣式轉換
 .table_list{
-  .mobile_list{
-      display: none;
-  }
-  @include screen('mobile') {
-    .pc_list{
-      display: none;
+  table{
+    tbody td{
+      span{
+        display: none;
+      }
     }
-    .mobile_list{
-      display: block;
-      .card{
-        border-bottom: #ccc solid 1px;
-        padding-bottom: 1em;
-        h4{
-          margin-bottom: 0.5em;
-        }
-        span{
-          margin-right: 0.5em;
-          // display: inline-block;
-        }
-        div{
-          &:last-child{
-            span{
-              margin: 0.5em 0 0 0;
-            }
+  }
+  @include screen('mobile'){
+    table{
+      thead{
+        display: none;
+      }
+      tbody{
+        tr{
+          display: flex;
+          flex-wrap: wrap;
+          border-bottom: #ddd 1px solid;
+          padding: 0.5em 0 1em 0;
+          span.allow, span.not-allowed{
+            margin: 0 !important;
           }
+        
+        }
+        td{
+          &:first-child{
+            font-weight: 500;
+            font-size: 1.2em;
+          }
+          width: 100%;
+          border: 0px ;
+          padding-bottom: 0;
+          span{
+            display:inline-block;
+            margin-right: 0.5em;
+           
+          }
+          &:last-child{
+            display: none;
+          }
+          
         }
       }
+    }
   }
-  }
+  
 }
 //}
 
@@ -2108,8 +2124,10 @@ p.error {
     }
 
     .signup_block {
-      width: 60%;
+      width: 75%;
+      // width: 60%;
       min-width: 600px;
+      max-width: 960px;
       min-height: 480px;
       display: flex;
       flex-flow: row nowrap;
@@ -2132,12 +2150,14 @@ p.error {
       .signup_info {
         flex-grow: 0;
         flex-shrink: 1;
-        flex-basis: 35%;
+        // flex-basis: 35%;
+        flex-basis: 45%;
         background: url(../images/signup_img.jpg) no-repeat center center;
         background-size: cover;
-        min-height: 30em;
+        min-height: 43.7em;
+        // min-height: 30em;
 
-        @include screen('mobile') {
+        @include screen('tablet') {
           display: none;
         }
       }
@@ -2149,10 +2169,16 @@ p.error {
       flex-shrink: 1;
       flex-basis: 50%;
       font-size: 0.875em;
-      min-height: 40em;
+      // min-height: 40em;
+      height: 50em;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 27px -5px, rgba(0, 0, 0, 0.3) 0px 0px 16px -8px;
       background: #fff;
-
+      @include screen('mobile') {
+        height:auto;
+      }
+//       @media screen and (max-width: 1028px) {
+// height: 60em;
+//       }
       @include screen('xs_mobile') {
         box-shadow: none;
         padding: 2em 1em;
@@ -2165,9 +2191,14 @@ p.error {
 
       .done {
         text-align: center;
-        width: 80%;
-        margin: 1em auto;
-
+        // width: 80%;
+        // margin: 1em auto;
+        width: 70%;
+        margin: 6em auto;
+        @include screen('tablet') {
+          width: 80%;
+          margin: 3em auto;
+        }
         h3 {
           font-size: 1.25em;
           line-height: 1.5em;
@@ -2184,9 +2215,10 @@ p.error {
     .login_block {
       box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 27px -5px, rgba(0, 0, 0, 0.3) 0px 0px 16px -8px;
       // width: 90%;
-      width: 60%;
+      width: 75%;
       min-width: 600px;
       min-height: 480px;
+      max-width: 960px;
       display: flex;
       flex-flow: row nowrap;
       margin: 2em auto;

@@ -11,7 +11,7 @@
         max-width: 100%;
         padding: 0;
         @include screen('tablet'){
-            margin-bottom: 8em; 
+            padding-bottom: 8em; 
         }
         .img-container {
             @include aspect-ratio(3, 1);
@@ -22,7 +22,8 @@
             }
             @include screen('tablet') {
                 @include aspect-ratio(5, 4);
-                height: 60vh;
+                // height: 60vh;
+                height: 65vh;
             }
             @include screen('mobile') {
                 @include aspect-ratio(5, 7);
@@ -47,6 +48,7 @@
             width: 100%;
             left: 50%;
             top: 50%;
+            bottom: 0;
             transform: translate(-50%, -50%);
             position: absolute;
             display: flex;
@@ -99,6 +101,7 @@
                 flex-shrink: 1;
                 flex-basis: 100%;
                 min-height: 4em;
+                max-height: 225px;
                 display: flex;
                 background: rgb(233, 233, 233);
                 background: linear-gradient(0deg, rgba(233, 233, 233, 1) 0%, rgba(255, 255, 255, 1) 60%);
