@@ -123,6 +123,7 @@ $(window).on("load", function () {
         e.preventDefault();
       });
   }
+
   //---------------------------------- dropdown setting -----//
   if ($(".dropdown").length > 0) {
     $(".dropdown").each(function () {
