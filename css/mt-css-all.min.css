@@ -7893,9 +7893,10 @@ select {
             border-bottom: 0; }
             @media screen and (max-width: 767px) {
               .mt-news-tab-3 .container .news-tab-3 .tabSet .nav-tab .nav-list .nav-item {
-                border: 0px;
-                border-bottom: 1px #ccc solid;
+                border: 2px #ccc solid;
+                background: #fff;
                 margin: 0 1px;
+                margin-bottom: 2px;
                 width: 33.333%; }
                 .mt-news-tab-3 .container .news-tab-3 .tabSet .nav-tab .nav-list .nav-item::before {
                   display: none; } }
@@ -7923,12 +7924,6 @@ select {
             color: #55679f;
             background-color: #fff;
             height: 100%; }
-            @media screen and (max-width: 767px) {
-              .mt-news-tab-3 .container .news-tab-3 .tabSet .nav-tab .nav-list .nav-link.active {
-                color: #fff;
-                background-color: #55679f; }
-                .mt-news-tab-3 .container .news-tab-3 .tabSet .nav-tab .nav-list .nav-link.active:hover {
-                  color: #fff; } }
             .mt-news-tab-3 .container .news-tab-3 .tabSet .nav-tab .nav-list .nav-link.active::after {
               position: absolute;
               content: '';
@@ -13031,8 +13026,9 @@ select {
     width: 90%;
     max-width: 1400px;
     height: 23%;
-    margin: 1.5% 1em 1em 5%;
-    padding: 0; }
+    margin-top: 2%;
+    padding: 0;
+    padding-bottom: 1.5%; }
     .mt-main-company-content .cp_content .slider-cp-pics {
       padding: 0 2.5em; }
       .mt-main-company-content .cp_content .slider-cp-pics .slick-prev,
