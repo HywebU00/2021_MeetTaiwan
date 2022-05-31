@@ -9453,6 +9453,23 @@ select {
           text-shadow: none; }
           .mobile_pop.for_member .member_block ul ul li a:hover, .mobile_pop.for_member .member_block ul ul li a:focus {
             color: #e352b2; }
+  .mobile_pop .btn_grp.search-function_submit {
+    display: none; }
+    @media screen and (max-width: 767px) {
+      .mobile_pop .btn_grp.search-function_submit {
+        display: block;
+        z-index: 999; }
+        .mobile_pop .btn_grp.search-function_submit .btn {
+          border-radius: 0;
+          font-size: 0.875em;
+          min-width: 80%;
+          border: 1px solid #ddd;
+          background-color: #fff;
+          color: #0b0e30; }
+          .mobile_pop .btn_grp.search-function_submit .btn:hover {
+            color: #fff;
+            background-color: #e352b2;
+            border: 1px solid #e352b2; } }
 
 .search-function,
 .member-function {
@@ -9749,6 +9766,19 @@ select {
             transform: translate3d(0, 0, 0);
     will-change: position, transform;
     padding-bottom: 10.5em; }
+    .mt-main-content .left_block .sidebar__inner .search-function .btn_grp.btn_submit {
+      display: none; }
+      .mt-main-content .left_block .sidebar__inner .search-function .btn_grp.btn_submit .btn {
+        border-radius: 0;
+        font-size: 0.875em;
+        min-width: 80%;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        color: #0b0e30; }
+        .mt-main-content .left_block .sidebar__inner .search-function .btn_grp.btn_submit .btn:hover {
+          color: #fff;
+          background-color: #e352b2;
+          border: 1px solid #e352b2; }
 
 .mt-main-content .center_block {
   -webkit-box-flex: 1;
@@ -9858,6 +9888,39 @@ select {
         margin: 0 auto; }
         .mt-main-content .for-open-mobile-sidebar .btn i {
           margin-right: 0.5em; } }
+
+.mt-main-content .btn_grp.search-function_submit {
+  display: none; }
+  @media screen and (max-width: 767px) {
+    .mt-main-content .btn_grp.search-function_submit {
+      display: block;
+      position: fixed;
+      z-index: 999; }
+      .mt-main-content .btn_grp.search-function_submit .btn {
+        border-radius: 0;
+        font-size: 0.875em;
+        min-width: 80%;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        color: #0b0e30; }
+        .mt-main-content .btn_grp.search-function_submit .btn:hover {
+          color: #fff;
+          background-color: #e352b2;
+          border: 1px solid #e352b2; } }
+
+@media screen and (max-width: 767px) {
+  .mt-main-content .for-open-mobile-sidebar.form_btn {
+    width: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+    .mt-main-content .for-open-mobile-sidebar.form_btn .btn {
+      width: auto;
+      margin: unset;
+      margin-right: 1.5em; } }
 
 .mt-main-content .adv_function {
   background: #f1f1f1;
@@ -10058,6 +10121,7 @@ select {
     max-width: 70%; }
     @media screen and (max-width: 767px) {
       .mt-main-content .adv_function .form_search {
+        display: none;
         max-width: 100%; } }
     .mt-main-content .adv_function .form_search .btn {
       position: absolute;
@@ -10094,6 +10158,18 @@ select {
   @media screen and (max-width: 575px) {
     .mt-main-content .adv_function .datepick {
       margin-bottom: 0.5em; } }
+  .mt-main-content .adv_function .form_btn {
+    display: none; }
+    @media screen and (max-width: 767px) {
+      .mt-main-content .adv_function .form_btn {
+        display: block;
+        padding-left: 0; }
+        .mt-main-content .adv_function .form_btn .btn {
+          -webkit-box-flex: 0;
+              -ms-flex: none;
+                  flex: none;
+          width: 30%;
+          margin-left: 0; } }
 
 .mt-main-content .lp_album .sheets {
   -webkit-box-flex: 0;
@@ -10895,6 +10971,11 @@ select {
       .mt-main-content .lp_list > ul > li .i_bookmark.active,
       .mt-main-content .lp_list ol > li .i_bookmark.active {
         color: #7383b4; }
+      @media screen and (max-width: 767px) {
+        .mt-main-content .lp_list > ul > li .i_bookmark,
+        .mt-main-content .lp_list ol > li .i_bookmark {
+          top: 0.8em;
+          font-size: 1.5em; } }
     .mt-main-content .lp_list > ul > li time,
     .mt-main-content .lp_list ol > li time {
       display: block;
