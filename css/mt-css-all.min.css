@@ -2964,7 +2964,7 @@ em[tooltip] {
   .tooltip p > em {
     color: red; }
 
-.map_block {
+.map_select_block {
   display: none;
   z-index: 9999;
   padding: 1.5em;
@@ -2975,35 +2975,35 @@ em[tooltip] {
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; }
   @media screen and (max-width: 991px) {
-    .map_block {
+    .map_select_block {
       left: 35%; } }
   @media screen and (max-width: 767px) {
-    .map_block {
+    .map_select_block {
       display: none !important; } }
-  .map_block .taiwan_map .map {
+  .map_select_block .taiwan_map .map {
     width: 35%;
     min-width: 420px;
     -webkit-transform: scale(0.9);
             transform: scale(0.9); }
-    .map_block .taiwan_map .map:before {
+    .map_select_block .taiwan_map .map:before {
       display: none; }
-    .map_block .taiwan_map .map:after {
+    .map_select_block .taiwan_map .map:after {
       display: none; }
-  .map_block .taiwan_map .road_list .road_search {
+  .map_select_block .taiwan_map .road_list .road_search {
     background: rgba(0, 0, 0, 0.25); }
-  .map_block .taiwan_map .road_list .category ul li a {
+  .map_select_block .taiwan_map .road_list .category ul li a {
     background: rgba(0, 0, 0, 0.75);
     color: #eee; }
-    .map_block .taiwan_map .road_list .category ul li a:hover, .map_block .taiwan_map .road_list .category ul li a:focus, .map_block .taiwan_map .road_list .category ul li a.active {
+    .map_select_block .taiwan_map .road_list .category ul li a:hover, .map_select_block .taiwan_map .road_list .category ul li a:focus, .map_select_block .taiwan_map .road_list .category ul li a.active {
       background: #e352b2;
       color: #fff; }
-  .map_block .map_closebtn {
+  .map_select_block .map_closebtn {
     color: #fff;
     font-size: 1.6em;
     position: absolute;
     right: 0px;
     top: 0px; }
-    .map_block .map_closebtn:hover {
+    .map_select_block .map_closebtn:hover {
       color: #e352b2; }
 
 .taiwan_map .map {
@@ -3605,7 +3605,7 @@ em[tooltip] {
           background: #55679f;
           color: #fff; }
 
-.map_block.show {
+.map_select_block.show {
   display: block; }
 
 .btn-place + div {
@@ -11470,11 +11470,15 @@ select {
       .mt-main-content .lp_user ul li {
         -ms-flex-preferred-size: calc(50% - 3em);
             flex-basis: calc(50% - 3em); } }
+    @media screen and (max-width: 767px) {
+      .mt-main-content .lp_user ul li {
+        -ms-flex-preferred-size: calc(50% - 1em);
+            flex-basis: calc(50% - 1em);
+        margin: 0 auto 1.5em;
+        min-height: 13em; } }
     @media screen and (max-width: 575px) {
       .mt-main-content .lp_user ul li {
-        -ms-flex-preferred-size: calc(100% - 2em);
-            flex-basis: calc(100% - 2em);
-        margin: 0 auto 1.5em; } }
+        min-height: 9em; } }
     .mt-main-content .lp_user ul li:hover .img-container:after {
       background: rgba(0, 0, 0, 0.65); }
     .mt-main-content .lp_user ul li:hover .img-container img {
@@ -11532,6 +11536,18 @@ select {
         max-height: calc(1.45em * 6);
         margin-bottom: 0.5em;
         margin-top: 0.2em; }
+        @media screen and (max-width: 767px) {
+          .mt-main-content .lp_user ul li .caption h3 {
+            font-size: 1.3em;
+            overflow: hidden;
+            text-overflow: -o-ellipsis-lastline;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            line-height: 1.45em;
+            height: auto;
+            max-height: calc(1.45em * 2); } }
       .mt-main-content .lp_user ul li .caption .btn {
         position: absolute;
         width: 80%;
@@ -11549,13 +11565,19 @@ select {
                 transform: scale(1.2); }
         @media screen and (max-width: 767px) {
           .mt-main-content .lp_user ul li .caption .btn {
-            opacity: 1;
-            -webkit-transform: scale(1);
-                    transform: scale(1);
-            bottom: 1.75em; } }
+            display: none; } }
         .mt-main-content .lp_user ul li .caption .btn:hover, .mt-main-content .lp_user ul li .caption .btn:focus {
           background: #e352b2;
           border: 1px solid #e352b2; }
+      @media screen and (max-width: 767px) {
+        .mt-main-content .lp_user ul li .caption p {
+          display: none; } }
+      @media screen and (max-width: 767px) {
+        .mt-main-content .lp_user ul li .caption {
+          padding: 15%; } }
+      @media screen and (max-width: 575px) {
+        .mt-main-content .lp_user ul li .caption {
+          padding: 10%; } }
 
 .mt-main-content .lp_list.lp_media > ul li {
   padding-right: 10em; }
@@ -12158,6 +12180,21 @@ select {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content; } }
+
+.mt-main-content .lp_user_article .lp_article_slider li {
+  margin: 0 1em;
+  border-bottom: 0px; }
+  .mt-main-content .lp_user_article .lp_article_slider li .info h3 {
+    margin-right: 0;
+    overflow: hidden;
+    text-overflow: -o-ellipsis-lastline;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-height: 1.45em;
+    height: auto;
+    max-height: calc(1.45em * 3); }
 
 .mt-main-content .lp_award ul li .info h3 a {
   overflow: hidden;

@@ -228,7 +228,7 @@
                 </div>
               </div>
               <script>
-                $(function () {
+                 $(function () {
                   //slick
                   $('.cp_like_slider').slick({
                     mobileFirst: true,
@@ -252,21 +252,24 @@
                     }, {
                       breakpoint: 768,
                       settings: {
-                        slidesToShow: 2,
+                        slidesToShow: 2.5,
                         slidesToScroll: 1,
-                        arrows: true,
+                        arrows: false,
+                        autoplay: false,
                       },
                     }, {
                       breakpoint: 200,
                       settings: {
-                        slidesToShow: 1,
+                        slidesToShow: 1.5,
                         slidesToScroll: 1,
-                        arrows: true,
+                        arrows: false,
+                        autoplay: false,
                       },
                     }, ],
                   });
                   $('.cp_like_slider').slick('refresh');
                 })
+                 
               </script>
             </div>
           </div>

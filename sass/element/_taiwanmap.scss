@@ -1,4 +1,4 @@
-.map_block{
+.map_select_block{
     display: none;
     z-index: 9999;
     padding: 1.5em;
@@ -814,7 +814,7 @@
         }
     }
 }
-.map_block.show{
+.map_select_block.show{
     display: block;
 }
 .btn-place + div{
