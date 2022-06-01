@@ -20,12 +20,21 @@ if ($(".member-heading") != null) {
 // sticky function
 function scroller() {
   var contentWidth = $(".mt-content").width();
+  var windowWidth = $(window).width();
+  if (windowWidth < 575) {
+    console.log(windowWidth);
+    console.log(contentWidth);
+    contentWidth = $(".mt-content").width() - 32;
+    console.log(contentWidth);
+  }
   $(".member-heading").css("width", contentWidth);
   $(".member-heading").toggleClass(
     "sticky-fixed",
     $(window).scrollTop() >= topper
   );
+
   if ($(window).scrollTop() > contentHeight - $(".member-heading").height()) {
+    console.log(contentWidth);
     $(".member-heading").removeClass("sticky-fixed");
   }
 }

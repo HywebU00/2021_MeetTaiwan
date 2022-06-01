@@ -14331,10 +14331,6 @@ select {
       color: #000;
       font-weight: 400; }
 
-.sp_content .form_grid .form_grp .form_content.form_content_member input,
-.sp_member .form_grid .form_grp .form_content.form_content_member input {
-  width: calc(100% - 216px); }
-
 @media screen and (max-width: 991px) {
   .sp_content .form_grid .form_grp .form_content.form_content_member input,
   .sp_member .form_grid .form_grp .form_content.form_content_member input {
@@ -15899,6 +15895,10 @@ p.error {
     .mt-main-content .member_content .data_function .btn_add,
     .mt-main-content .member_content .data_function .btn_filter_condition {
       margin: 0 0.25em; }
+  .mt-main-content .member_content .changeMember_btn {
+    background: #55679f;
+    color: #fff;
+    margin-left: calc(100% - 192px); }
   .mt-main-content .member_content span.allow,
   .mt-main-content .member_content span.ok {
     color: #fff;

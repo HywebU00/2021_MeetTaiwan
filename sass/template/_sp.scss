@@ -95,9 +95,9 @@
 
   // member_form input+btn
   .form_grid .form_grp .form_content.form_content_member {
-    input {
-      width: calc(100% - 216px);
-    }
+    // input {
+    //   width: calc(100% - 216px);
+    // }
 
     @include screen('tablet') {
 
@@ -1887,7 +1887,11 @@ p.error {
         margin: 0 0.25em;
       }
     }
-
+    .changeMember_btn{
+      background: $primaryColor;
+      color: #fff;
+      margin-left:calc(100% - 192px);
+    }
     //         //data
     span.allow,
     span.ok {
