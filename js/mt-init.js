@@ -526,7 +526,6 @@ $(window).on("load", function () {
     });
     topicSidebar2.updateSticky();
   }
-
   // qa
   $(".lp_qa")
     .find(".qa_content")
@@ -585,6 +584,41 @@ $(window).on("load", function () {
         $(this).find('input[type="checkbox"]').blur();
       });
   });
+  /*-----------------------------*/
+  ///   Taiwan map Open&Close   ////
+  /*-----------------------------*/
+  if ($(".btn-place").length != 0) {
+    $(".btn-place").click(function () {
+      $(".map_block").toggleClass("show");
+    });
+
+    $(window).scroll(function () {
+      var scrollVal = $(this).scrollTop();
+      var mapTop = $(".search-function").position().top;
+      var mapheight = $(".search-function").height();
+      var mapCloseHeight = mapheight + mapTop;
+      if (scrollVal > mapCloseHeight) {
+        closeMap();
+      }
+    });
+  }
+  if ($(".map").length != 0) {
+    $(".map .el").each(function () {
+      $(this).click(function () {
+        $(this).toggleClass("active");
+      });
+    });
+  }
+  if ($(".map_closebtn").length != 0) {
+    $(".map_closebtn").click(function () {
+      closeMap();
+    });
+  }
+  function closeMap() {
+    $(".map_block").removeClass("show");
+    $(".btn-place").next().css("display", "none");
+  }
+
   // effect 遮罩動畫
   $(window).on("load resize scroll", function (e) {
     var window_H = $(window).innerHeight();
