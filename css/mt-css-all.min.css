@@ -9867,11 +9867,14 @@ select {
     background: #d1d1d1;
     background: -webkit-gradient(linear, left bottom, left top, from(rgba(220, 220, 220, 0)), to(gainsboro));
     background: linear-gradient(0deg, rgba(220, 220, 220, 0) 0%, gainsboro 100%); }
+    .mt-main-content .inner_img img, .mt-main-content .inner_img picture {
+      width: 100%;
+      height: inherit; }
     .mt-main-content .inner_img:after {
       position: absolute;
       content: '';
-      background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, #8fa5e0), to(rgba(143, 165, 224, 0)));
-      background: linear-gradient(0deg, #8fa5e0 5%, rgba(143, 165, 224, 0) 100%);
+      background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, #2d270a), to(rgba(45, 39, 10, 0)));
+      background: linear-gradient(0deg, #2d270a 5%, rgba(45, 39, 10, 0) 100%);
       width: 100%;
       height: 50%;
       left: 0;
