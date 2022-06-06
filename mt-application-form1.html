@@ -135,13 +135,13 @@
                             <a href="" class="btn btn-primary btn-filter"><i class="fas fa-filter"></i>搜尋條件</a>
                         </div> -->
             <div class="sp_content">
+              <h2 class="mt-h2">報名台灣會展獎</h2>
               <!-- 申請步驟 -->
               <div class="apply_step">
                 <div class="active"><span>01</span>填寫報名表</div>
                 <div><span>02</span>上傳報名資料</div>
                 <div><span>03</span>報名完成</div>
               </div>
-              <h2 class="mt-h2">台灣會展獎報名表</h2>
               <!-- apply form -->
               <div class="apply_form">
                 <h3><span>參選專案基本資料</span></h3>
@@ -318,11 +318,6 @@
               <!-- apply form -->
               <div class="apply_form apply_style">
                 <h3><span>參選單位基本資料</span></h3>
-                <div class="btn_grp">
-                  <a href="#" class="btn btn-add"
-                    ><i class="fas fa-plus"></i>新增參選單位</a
-                  >
-                </div>
                 <div class="form_grid apply_unit">
                   <h4>
                     單位一<span>預設為空(帶入下列表單中英文單位名稱)</span>
@@ -424,8 +419,8 @@
                         <div class="form_content">
                           <!-- 上傳之後再顯示 company_photo-->
                           <!-- <div class="company_photo">
-                                                                                    <img src="images/mt_logo.png" alt="">
-                                                                                </div> -->
+                            <img src="images/mt_logo.png" alt="">
+                          </div> -->
                           <div class="upload_grp">
                             <input
                               class="upload_file"
@@ -433,7 +428,7 @@
                               readonly=""
                             />
                             <div class="upload_btn">
-                              <span>upload</span>
+                              <span><i class="fas fa-paper-plane"></i></span>
                               <input type="file" class="check_file" />
                             </div>
                           </div>
@@ -477,7 +472,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="form_grp">
+                  <!-- <div class="form_grp">
                     <div class="field_name">
                       單位負責人姓名<abbr
                         class="necessary"
@@ -623,18 +618,17 @@
                             <option value="中山區">中山區</option>
                           </select>
                         </span>
-                        <!-- <span class="township">
-                                                                                    <div class="form_style">
-                                                                                        <input type="text" value="">
-                                                                                        <label for="" class="form_title">郵遞區號</label>
-                                                                                    </div>
-                                                                                </span> -->
                         <span class="street">
                           <input type="text" value="" />
                         </span>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
+                </div>
+                <div class="btn_grp">
+                  <a href="#" class="btn btn-add"
+                    ><i class="fas fa-plus"></i>新增參選單位</a
+                  >
                 </div>
               </div>
               <!-- apply form -->
@@ -708,21 +702,20 @@
                   </div>
                   <div class="form_grp">
                     <div class="check_grp">
-                      <p>
-                        請先<a
-                          data-fancybox=""
-                          data-src="#hidden-content"
-                          href="javascript:;"
-                          >閱讀條款</a
-                        >
-                      </p>
                       <label
                         ><input
                           type="checkbox"
                           name="sampleRadio5"
                           value=""
                           checked=""
-                        />同意服務條款</label
+                        />已閱讀且同意服務條款</label
+                      >
+                      <a
+                        class="btn btn-readlist"
+                        data-fancybox=""
+                        data-src="#hidden-content"
+                        href="javascript:;"
+                        >閱讀條款</a
                       >
                     </div>
                     <div

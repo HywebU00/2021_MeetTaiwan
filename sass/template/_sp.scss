@@ -44,7 +44,43 @@
       }
     }
   }
+  div.apply-info{
+    padding: 1.5em 2em 1.5em 2em;
+    .title{
+      color: $primaryColor;
+      font-size: 1.5em;
+      text-align: center;
+      font-weight: 600;
+      span{
+        margin: 0 1em;
+      }
+    }
+    p{
+      font-size: 1.2em;
+      padding-top: 1em;
+      line-height: 1.3em;
+      width: 70%;
+      text-align: center;
+      margin: 0 auto;
+      @include screen('xs_mobile'){
+        width: 100%;
+      }
+    }
+    &::before{
+      display: none;
+    }
+    + .btn_grp{
+      @include screen('xs_mobile'){
+        display: block;
+      button{
+        padding: 0 1em;
+        font-size: 1em;
+      }
+      }
+    }
 
+  }
+  
   .check_grp {
     flex-grow: 0;
     flex-shrink: 1;
@@ -75,6 +111,18 @@
       .form_content {
         .upload_grp {
           flex-basis: 100%;
+          .upload_btn{
+            input{
+              position: absolute;
+              top: 0;
+              right: 0;
+              margin: 0;
+              padding: 0;
+              font-size: 1.25em;
+              cursor: pointer;
+              opacity: 0;
+            }
+          }
         }
       }
     }
@@ -183,7 +231,8 @@ p.error {
     .field_name {
       flex-grow: 0;
       flex-shrink: 1;
-      flex-basis: 10em;
+      // flex-basis: 10em;
+      flex-basis: 100%;
       padding: 0.75em 0.25em;
       font-weight: bold;
       align-self: flex-start;
@@ -496,7 +545,9 @@ p.error {
           @include screen('tablet') {
             flex-basis: 48%;
           }
-
+          @include screen('xs_mobile') {
+            flex-basis: 100%;
+          }
           &.full {
             white-space: nowrap;
             flex-basis: 100%;
@@ -529,7 +580,8 @@ p.error {
         position: relative;
         flex-grow: 0;
         flex-shrink: 1;
-        flex-basis: 45%;
+        // flex-basis: 45%;
+        // flex-basis: 50%;
         flex-flow: row nowrap;
 
         @include screen('xs_mobile') {
@@ -542,7 +594,7 @@ p.error {
           margin-left: 1.5em;
           margin-right: 0;
           padding-right: 0;
-
+          // flex-basis:calc(100% - 52.6%);
           &:before {
             content: '~';
             font-size: 1.5em;
@@ -1613,6 +1665,7 @@ p.error {
         .form_grp {
           padding-bottom: 0.75em;
           border: none;
+          
         }
 
         .done {
@@ -1630,6 +1683,41 @@ p.error {
             min-width: 120px;
             margin: 0 auto 1em;
           }
+        }
+        .nav-login .nav-list{
+        display: flex;
+        .nav-item{
+          width: 50%;
+          button{
+            width: 100%;
+          }
+        }
+
+          .nav-link{   
+            color: #999;
+            border-bottom: 3px solid #fff;
+            transition: all 0.5s;
+            font-size: 1.2em;
+          }
+          .nav-link.active{
+            border-bottom: 3px solid $primaryColor;
+            color: $primaryColor;
+            border-radius: 0px;
+            transition: all 0.5s;
+          }
+
+        }
+        .nav-login .tab-content{
+          .form_grid{
+            margin-top: 1em;
+          }
+          .tab-pane{
+            display: none;
+          }
+          .tab-pane.active{
+            display: block;
+          }
+          
         }
       }
     }
@@ -1908,6 +1996,8 @@ p.error {
     }
 
     span.not-allowed,
+    span.reject-allowed,
+    span.wait-allowed,
     span.not-ok {
       color: #fff;
       display: block;
@@ -1920,10 +2010,15 @@ p.error {
       white-space: nowrap;
       margin: 0 auto;
     }
-
+    span.wait-allowed{
+      background: #0fa5e9;
+    }
+    span.reject-allowed{
+      background: $color-deep-gray;
+    }
     // form
     .form_grid {
-      max-width: 45em;
+      // max-width: 45em;
       margin: 0 auto;
 
 
@@ -1995,7 +2090,12 @@ p.error {
         }
       }
     }
-
+    .table_list{
+      @include screen('xs_mobile') {
+        overflow: scroll;
+      }
+      
+    }
   }
 }
 
@@ -2102,6 +2202,7 @@ p.error {
       justify-content: center;
       max-width: 50em;
       margin: 0.5em auto;
+      width: 100%;
 
       @include screen('xs_mobile') {
         margin: 1.5em 0;
@@ -2166,14 +2267,20 @@ p.error {
 
     .signup_block {
       width: 75%;
-      // width: 60%;
-      min-width: 600px;
-      max-width: 960px;
-      min-height: 480px;
+      // // width: 60%;
+      // // min-height: 480px;
+
+      // min-width: 600px;
+      // max-width: 960px;
+     
       display: flex;
       flex-flow: row nowrap;
+      justify-content: center;
       margin: 2em auto;
-      align-items: flex-start;
+      min-height: 460px;
+      // align-items: flex-start;
+      // height: 42em;
+      // //height: 32em;
 
       @include screen('tablet') {
         // width: 100%;
@@ -2189,13 +2296,15 @@ p.error {
       }
 
       .signup_info {
-        flex-grow: 0;
-        flex-shrink: 1;
-        // flex-basis: 35%;
-        flex-basis: 45%;
+        // flex-grow: 0;
+        // flex-shrink: 1;
+        // // flex-basis: 35%;
+        // flex-basis: 45%;
+        width: 500px;
         background: url(../images/signup_img.jpg) no-repeat center center;
-        background-size: cover;
-        min-height: 43.7em;
+        // background-size: cover;
+        // height: 100%;
+        // min-height: 43.7em;
         // min-height: 30em;
 
         @include screen('tablet') {
@@ -2206,12 +2315,13 @@ p.error {
 
     .signup {
       padding: 2em 3em;
-      flex-grow: 1;
-      flex-shrink: 1;
-      flex-basis: 50%;
+      // flex-grow: 1;
+      // flex-shrink: 1;
+      // flex-basis: 50%;
       font-size: 0.875em;
+      // height: 100%;
       // min-height: 40em;
-      height: 50em;
+      // height: 50em;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 27px -5px, rgba(0, 0, 0, 0.3) 0px 0px 16px -8px;
       background: #fff;
 
@@ -2238,7 +2348,7 @@ p.error {
         // margin: 1em auto;
         width: 70%;
         margin: 6em auto;
-
+       
         @include screen('tablet') {
           width: 80%;
           margin: 3em auto;
@@ -2256,7 +2366,17 @@ p.error {
         }
       }
     }
-
+    .signup.done{
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      margin: 0;
+      max-width: 500px;
+      h2 +div{
+        display: block;
+        width:100%;
+      }
+    }
     .login_block {
       box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 27px -5px, rgba(0, 0, 0, 0.3) 0px 0px 16px -8px;
       // width: 90%;
@@ -2688,7 +2808,7 @@ p.error {
 
       // form
       .form_grid {
-        max-width: 45em;
+        // max-width: 45em;
         margin: 0 auto;
       }
 
@@ -3271,7 +3391,7 @@ p.error {
 .action {
   position: relative;
 
-  .btn-action {
+  .btn-action,.btn-function {
     display: block;
     min-width: 2em;
     min-height: 2em;
@@ -3314,7 +3434,22 @@ p.error {
       margin: 0;
     }
   }
-
+  .btn-function{
+    border:1px solid #dedede;
+    border-radius: 0.25em;
+    padding: 0em 1.25em;
+    width: 8em;
+    max-width: 8em;
+    font-size: 0.938em ;
+    color: #333;
+    transition: all 0.5s;
+    // min-width: 4em;
+    //max-width: 6em;
+    &:active,&:hover{
+      background: $primaryColor;
+      color: #fff;
+    }
+  }
   .action-content {
     position: absolute;
     top: 0em;
@@ -4104,9 +4239,9 @@ p.error {
       }
 
       .form_grid {
-        max-width: 45em;
-        margin: 0.5em 1em 3em 20%;
-
+        // max-width: 45em;
+        //margin: 0.5em 1em 3em 20%;
+        margin: 0.5em 1em 3em 1em;
         @include screen('mobile') {
           margin: 0.5em auto;
         }
@@ -4159,7 +4294,7 @@ p.error {
       display: flex;
       border-top: solid 1px $form-focus;
       border-bottom: solid 1px $form-focus;
-
+      flex-wrap: wrap;
       @include screen('xs_mobile') {
         flex-flow: row wrap;
         padding: 1em;
@@ -4170,11 +4305,14 @@ p.error {
         flex-grow: 0;
         flex-shrink: 1;
         flex-basis: 15em;
-        padding: 0.75em 1em;
+        // padding: 0.75em 1em;
         font-weight: bold;
         align-self: flex-start;
-        color: $primaryColor;
-
+        //color: $primaryColor;
+        color: #333;
+        flex-basis: 100%;
+        padding: 0.75em 0.25em 0 0;
+      
         @include screen('tablet') {
           font-size: 0.813rem;
         }
@@ -4204,13 +4342,14 @@ p.error {
         display: flex;
         flex-flow: row wrap;
         font-size: 0.938em;
-
+        
         .form_grp {
           flex-basis: 100%;
           border-bottom: 1px solid #ddd;
 
           .field_name {
             padding: 0.25em;
+            padding-bottom:0.75em;
             flex-grow: 1;
             flex-shrink: 1;
             flex-basis: 100%;
@@ -4275,9 +4414,11 @@ p.error {
     .btn_grp {
       max-width: 50em;
       padding: 0.25em 0 !important;
-      margin: 0.5em 1em 0.5em 20% !important;
+      // margin: 0.5em 1em 0.5em 20% !important;
       text-align: left;
-      justify-content: flex-start;
+      // justify-content: flex-start;
+      margin: 0 auto !important;
+      justify-content: center;
 
       @include screen('xs_mobile') {
         justify-content: center;
@@ -4296,7 +4437,7 @@ p.error {
 
     &.apply_style {
       .form_grid {
-        max-width: 50em;
+        // max-width: 50em;
         padding: 1em 2.5em;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
@@ -4308,8 +4449,9 @@ p.error {
     }
 
     .form_grid {
-      max-width: 45em;
-      margin: 0.5em 1em 3em 20%;
+      // max-width: 45em;
+      // margin: 0.5em 1em 3em 20%;
+      margin: 0.5em 1em 3em 0.5em;
 
       @include screen('mobile') {
         margin: 0.5em auto;
@@ -4330,8 +4472,8 @@ p.error {
       }
 
       .field_name {
-        flex-basis: 15em;
-
+        // flex-basis: 15em;
+        flex-basis: 100%;
         @include screen('xs_mobile') {
           flex-basis: 100%;
         }
@@ -4345,25 +4487,27 @@ p.error {
             flex-grow: 1;
             flex-shrink: 1;
             flex-basis: auto;
-            min-width: 80%;
+            // min-width: 80%;
             margin-right: 0.5em;
+            // min-width: 100%;
           }
 
           select {
             flex-grow: 0;
             flex-shrink: 1;
             flex-basis: auto;
-            min-width: 60%;
+            min-width: 50%;
+            // min-width: 60%;
           }
 
           .form_style {
             margin-top: 0.75em;
             padding: 0 0.25em;
-
+           
             input[type='text'] {
               height: 2.5em;
               padding-left: 0.75em;
-
+              width: 100%;
               &:focus,
               &.used {
                 &~label {
@@ -4396,7 +4540,22 @@ p.error {
           }
         }
       }
+      .form_grp{
+        .check_grp{
+          display: flex;
+          align-items: center;
+          label{
+            align-items: center;
+          }
+        }
+        .btn-readlist{
+          max-width: 120px;
+          font-size: 1em;
+        }
+      }
+      
     }
+   
   }
 
   .btn_grp {

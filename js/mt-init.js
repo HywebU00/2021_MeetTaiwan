@@ -849,6 +849,11 @@ $(window).on("load", function () {
   });
   tab3.initial();
 
+  let tabLogin = new BtnTab({
+    name: $(".nav-login"),
+  });
+  tabLogin.initial();
+
   // lp_user_article 根據手機與桌機版本切換不同樣式 ----------
   if ($(".lp_user_article").length != 0) {
     articleSlider();
