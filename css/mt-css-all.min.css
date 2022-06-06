@@ -6329,7 +6329,7 @@ select {
               flex-shrink: 1;
           -ms-flex-preferred-size: 100%;
               flex-basis: 100%;
-          padding-left: 2em; } }
+          padding-right: 2em; } }
       .mt-alert .container .alert-content p a {
         color: #fff; }
       @media screen and (max-width: 575px) {
@@ -14353,6 +14353,9 @@ select {
     min-width: 120px;
     max-width: 8em;
     margin: 0 auto 1em; }
+  .sp_content .done .form_grp p,
+  .sp_member .done .form_grp p {
+    text-align: start; }
 
 .sp_content .form_grid .form_grp .form_content .upload_grp,
 .sp_member .form_grid .form_grp .form_content .upload_grp {
@@ -15123,6 +15126,9 @@ p.error {
         flex-shrink: 1;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%; }
+    .form_grid .password_toggle .form_style input[type='text'],
+    .form_grid .password_toggle .form_style input[type='password'] {
+      padding-right: 5em; }
     .form_grid .password_toggle .form_style.confirm ~ .showPassword {
       right: 3.5em; }
     .form_grid .password_toggle .form_style.error ~ .showPassword {
@@ -15131,7 +15137,7 @@ p.error {
     position: relative; }
     .form_grid .form_style.confirm input[type='text'],
     .form_grid .form_style.confirm input[type='password'] {
-      padding-right: 3em; }
+      padding-right: 5em; }
     .form_grid .form_style.confirm i {
       color: #5cb85c; }
     .form_grid .form_style.error input[type='text'],
@@ -16158,7 +16164,8 @@ p.error {
       -ms-flex-preferred-size: 120px;
           flex-basis: 120px;
       max-width: 250px;
-      height: 42px;
+      min-height: 42px;
+      white-space: normal;
       color: #555;
       font-size: 1.125rem;
       padding: 0;
@@ -16252,6 +16259,11 @@ p.error {
         -webkit-box-ordinal-group: 2;
             -ms-flex-order: 1;
                 order: 1; } }
+    .mt-signup .sp_member .signup .mt-h2 {
+      font-size: 2em; }
+      @media screen and (max-width: 575px) {
+        .mt-signup .sp_member .signup .mt-h2 {
+          font-size: 1.5em; } }
     .mt-signup .sp_member .signup .form_grp {
       border: none; }
     .mt-signup .sp_member .signup .done {

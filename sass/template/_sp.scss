@@ -104,6 +104,11 @@
       max-width: 8em;
       margin: 0 auto 1em;
     }
+    .form_grp{
+      p{
+        text-align: start;
+      }
+    }
   }
 
   .form_grid {
@@ -303,6 +308,7 @@ p.error {
         input[type='text'],
         input[type='password'] {
           padding-right: 3em;
+          
         }
 
         i {
@@ -825,6 +831,11 @@ p.error {
     flex-basis: 100%;
 
     .form_style {
+      input[type='text'],
+      input[type='password'] {
+        // padding-right: 3em;
+        padding-right:5em;
+      }
       &.confirm {
         &~.showPassword {
           right: 3.5em;
@@ -846,7 +857,8 @@ p.error {
 
       input[type='text'],
       input[type='password'] {
-        padding-right: 3em;
+        // padding-right: 3em;
+        padding-right:5em;
       }
 
       i {
@@ -2213,7 +2225,9 @@ p.error {
         flex-shrink: 1;
         flex-basis: 120px;
         max-width: 250px;
-        height: 42px;
+        // height: 42px;
+        min-height: 42px;
+        white-space: normal;
         color: #555;
         font-size: 1.125rem;
         padding: 0;
@@ -2299,7 +2313,7 @@ p.error {
         // flex-grow: 0;
         // flex-shrink: 1;
         // // flex-basis: 35%;
-        // flex-basis: 45%;
+        // flex-basis: 50%;
         width: 500px;
         background: url(../images/signup_img.jpg) no-repeat center center;
         // background-size: cover;
@@ -2337,7 +2351,12 @@ p.error {
         padding: 2em 1em;
         order: 1;
       }
-
+      .mt-h2{
+        font-size: 2em;
+        @include screen('xs_mobile'){
+          font-size: 1.5em;
+        }
+      }
       .form_grp {
         border: none;
       }
