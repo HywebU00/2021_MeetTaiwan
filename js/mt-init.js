@@ -13,7 +13,6 @@ $(window).on("load", function () {
             .stop()
             .removeClass("open");
           $(this).siblings(".condition_block").stop().toggleClass("open");
-
           e.preventDefault();
           e.stopPropagation();
         });

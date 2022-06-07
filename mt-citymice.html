@@ -119,13 +119,6 @@
           <ul class="tab__content">
             <li class="active">
               <div class="content__wrapper">
-                <!-- <div class="pic">
-                  <div class="img-container">
-                    <a href="#">
-                      <img src="https://source.unsplash.com/random/1 " alt="" />
-                    </a>
-                  </div>
-                </div> -->
                 <div class="info">
                   <h2 class="mt-h2">台北</h2>
                   <p>
@@ -133,15 +126,16 @@
                     臺北一個充滿現代與傳統混合的城市，從古老歷史寺廟的靜謐巷弄到現代摩登的霓虹街道生活無縫融合。從世界頂級餐廳到人聲鼎沸的夜市，盡情品嚐各式美食。距離市中心幾分鐘車程，即可沐浴於臺北盆地鬱鬱蔥蔥山腳下的溫泉世界，亦或漫步於綠蔭清幽，沈浸在森林芬多精的洗禮。
                     擁有多重風貌及友善微笑的臺北，等你來體驗發掘。
                   </p>
-                  <a href="#" class="more">more</a>
+                  <!-- <a href="#" class="more">more</a> -->
                 </div>
               </div>
+              <!-- mt-discover -->
               <div class="mt-discover">
                 <div class="container">
                   <h2 class="mt-h2">探索台北</h2>
                   <div class="discover-feature">
-                    <div class="item">
-                      <a href="#">
+                    <div class="item" data-fancybox data-src="#item_pop8">
+                      <a href="javascript:;">
                         <img src="images/discover_pic.jpg" alt="" />
                         <h3>龍山寺</h3>
                         <p>
@@ -149,61 +143,363 @@
                         </p>
                       </a>
                     </div>
+                    <div
+                      class="discover-pop"
+                      id="item_pop8"
+                      style="display: none"
+                    >
+                      <picture>
+                        <source
+                          media="(min-width: 1200px)"
+                          data-srcset="images/discover_pic.jpg"
+                        />
+                        <source
+                          media="(min-width: 992px)"
+                          data-srcset="images/discover_pic.jpg"
+                        />
+                        <source
+                          media="(min-width: 576px)"
+                          data-srcset="images/discover_pic.jpg"
+                        />
+                        <source
+                          media="(max-width: 575px)"
+                          data-srcset="images/discover_pic.jpg"
+                        />
+                        <img data-src="images/discover_pic.jpg" class="lazy" />
+                        <noscript
+                          ><img src="images/discover_pic.jpg"
+                        /></noscript>
+                      </picture>
+                      <p>
+                        艋舺龍山寺，也稱萬華龍山寺，是位於臺灣臺北市萬華區富民里的觀音寺，為清治時期臺北城三邑人的信仰與政治、軍事中心，戰後時期成為外國旅客觀光景點，今建築列為國定古蹟
+                      </p>
+                    </div>
                   </div>
                   <div class="discover-content">
-                    <div class="item">
-                      <a href="#">
+                    <div class="item" data-fancybox data-src="#item_pop1">
+                      <a href="javascript:;">
                         <img src="images/discover_pic_02.jpg" alt="" />
                         <h3>陽明山</h3>
                       </a>
                     </div>
-                    <div class="item">
-                      <a href="#">
+                    <div class="item" data-fancybox data-src="#item_pop2">
+                      <a href="javascript:;">
                         <img src="images/discover_pic_03.jpg" alt="" />
                         <h3>台北101</h3>
                       </a>
                     </div>
-                    <div class="item">
-                      <a href="#">
+                    <div class="item" data-fancybox data-src="#item_pop3">
+                      <a href="javascript:;">
                         <img src="images/discover_pic_04.jpg" alt="" />
                         <h3>饒河夜市</h3>
                       </a>
                     </div>
-                    <div class="item">
-                      <a href="#">
+                    <div class="item" data-fancybox data-src="#item_pop4">
+                      <a href="javascript:;">
                         <img src="images/discover_pic_05.jpg" alt="" />
                         <h3>關渡大橋</h3>
                       </a>
                     </div>
+                    <div
+                      class="discover-pop"
+                      id="item_pop1"
+                      style="display: none"
+                    >
+                      <picture>
+                        <source
+                          media="(min-width: 1200px)"
+                          data-srcset="images/discover_pic_02.jpg"
+                        />
+                        <source
+                          media="(min-width: 992px)"
+                          data-srcset="images/discover_pic_02.jpg"
+                        />
+                        <source
+                          media="(min-width: 576px)"
+                          data-srcset="images/discover_pic_02.jpg"
+                        />
+                        <source
+                          media="(max-width: 575px)"
+                          data-srcset="images/discover_pic_02.jpg"
+                        />
+                        <img
+                          data-src="images/discover_pic_02.jpg"
+                          class="lazy"
+                        />
+                        <noscript
+                          ><img src="images/discover_pic_02.jpg"
+                        /></noscript>
+                      </picture>
+                      <p>
+                        陽明山位於臺灣北部，是臺灣的首都以及經濟，政治、教育和文化中心。是一個現代國際大都市與擁有活潑和多樣化的面孔，充滿活力。
+                        臺北一個充滿現代與傳統混合的城市，從古老歷史寺廟的靜謐巷弄到現代摩登的霓虹街道生活無縫融合。
+                      </p>
+                    </div>
+                    <div
+                      class="discover-pop"
+                      id="item_pop2"
+                      style="display: none"
+                    >
+                      <picture>
+                        <source
+                          media="(min-width: 1200px)"
+                          data-srcset="images/discover_pic_03.jpg"
+                        />
+                        <source
+                          media="(min-width: 992px)"
+                          data-srcset="images/discover_pic_03.jpg"
+                        />
+                        <source
+                          media="(min-width: 576px)"
+                          data-srcset="images/discover_pic_03.jpg"
+                        />
+                        <source
+                          media="(max-width: 575px)"
+                          data-srcset="images/discover_pic_03.jpg"
+                        />
+                        <img data-src="images/discover_pic_03.jpg"" class="
+                        lazy" />
+                        <noscript
+                          ><img src="images/discover_pic_03.jpg"
+                        /></noscript>
+                      </picture>
+                      <p>
+                        陽明山位於臺灣北部，是臺灣的首都以及經濟，政治、教育和文化中心。是一個現代國際大都市與擁有活潑和多樣化的面孔，充滿活力。
+                        臺北一個充滿現代與傳統混合的城市，從古老歷史寺廟的靜謐巷弄到現代摩登的霓虹街道生活無縫融合。
+                      </p>
+                    </div>
+                    <div
+                      class="discover-pop"
+                      id="item_pop3"
+                      style="display: none"
+                    >
+                      <picture>
+                        <source
+                          media="(min-width: 1200px)"
+                          data-srcset="images/discover_pic_04.jpg"
+                        />
+                        <source
+                          media="(min-width: 992px)"
+                          data-srcset="images/discover_pic_04.jpg"
+                        />
+                        <source
+                          media="(min-width: 576px)"
+                          data-srcset="images/discover_pic_04.jpg"
+                        />
+                        <source
+                          media="(max-width: 575px)"
+                          data-srcset="images/discover_pic_04.jpg"
+                        />
+                        <img
+                          data-src="images/discover_pic_04.jpg"
+                          class="lazy"
+                        />
+                        <noscript
+                          ><img src="images/discover_pic_04.jpg"
+                        /></noscript>
+                      </picture>
+                      <p>
+                        陽明山位於臺灣北部，是臺灣的首都以及經濟，政治、教育和文化中心。是一個現代國際大都市與擁有活潑和多樣化的面孔，充滿活力。
+                        臺北一個充滿現代與傳統混合的城市，從古老歷史寺廟的靜謐巷弄到現代摩登的霓虹街道生活無縫融合。
+                      </p>
+                    </div>
+                    <div
+                      class="discover-pop"
+                      id="item_pop4"
+                      style="display: none"
+                    >
+                      <picture>
+                        <source
+                          media="(min-width: 1200px)"
+                          data-srcset="images/discover_pic_05.jpg"
+                        />
+                        <source
+                          media="(min-width: 992px)"
+                          data-srcset="images/discover_pic_05.jpg"
+                        />
+                        <source
+                          media="(min-width: 576px)"
+                          data-srcset="images/discover_pic_05.jpg"
+                        />
+                        <source
+                          media="(max-width: 575px)"
+                          data-srcset="images/discover_pic_05.jpg"
+                        />
+                        <img
+                          data-src="images/discover_pic_05.jpg"
+                          class="lazy"
+                        />
+                        <noscript
+                          ><img src="images/discover_pic_05.jpg"
+                        /></noscript>
+                      </picture>
+                      <p>
+                        陽明山位於臺灣北部，是臺灣的首都以及經濟，政治、教育和文化中心。是一個現代國際大都市與擁有活潑和多樣化的面孔，充滿活力。
+                        臺北一個充滿現代與傳統混合的城市，從古老歷史寺廟的靜謐巷弄到現代摩登的霓虹街道生活無縫融合。
+                      </p>
+                    </div>
                   </div>
                   <div class="discover-content">
-                    <div class="item">
-                      <a href="#">
+                    <div class="item" data-fancybox data-src="#item_pop5">
+                      <a href="javascript:;">
                         <img src="images/discover_pic_02.jpg" alt="" />
                         <h3>陽明山</h3>
                       </a>
                     </div>
-                    <div class="item">
-                      <a href="#">
+                    <div class="item" data-fancybox data-src="#item_pop6">
+                      <a href="javascript:;">
                         <img src="images/discover_pic_03.jpg" alt="" />
                         <h3>台北101</h3>
                       </a>
                     </div>
-                    <div class="item">
-                      <a href="#">
+                    <div class="item" data-fancybox data-src="#item_pop7">
+                      <a href="javascript:;">
                         <img src="images/discover_pic_04.jpg" alt="" />
                         <h3>饒河夜市</h3>
                       </a>
                     </div>
-                    <div class="item">
-                      <a href="#">
+                    <div class="item" data-fancybox data-src="#item_pop8">
+                      <a href="javascript:;">
                         <img src="images/discover_pic_05.jpg" alt="" />
                         <h3>關渡大橋</h3>
                       </a>
+                    </div>
+                    <div
+                      class="discover-pop"
+                      id="item_pop5"
+                      style="display: none"
+                    >
+                      <picture>
+                        <source
+                          media="(min-width: 1200px)"
+                          data-srcset="images/discover_pic_02.jpg"
+                        />
+                        <source
+                          media="(min-width: 992px)"
+                          data-srcset="images/discover_pic_02.jpg"
+                        />
+                        <source
+                          media="(min-width: 576px)"
+                          data-srcset="images/discover_pic_02.jpg"
+                        />
+                        <source
+                          media="(max-width: 575px)"
+                          data-srcset="images/discover_pic_02.jpg"
+                        />
+                        <img data-src="images/discover_pic_02.jpg"" class="
+                        lazy" />
+                        <noscript
+                          ><img src="images/discover_pic_02.jpg"
+                        /></noscript>
+                      </picture>
+                      <p>
+                        陽明山位於臺灣北部，是臺灣的首都以及經濟，政治、教育和文化中心。是一個現代國際大都市與擁有活潑和多樣化的面孔，充滿活力。
+                        臺北一個充滿現代與傳統混合的城市，從古老歷史寺廟的靜謐巷弄到現代摩登的霓虹街道生活無縫融合。
+                      </p>
+                    </div>
+                    <div
+                      class="discover-pop"
+                      id="item_pop6"
+                      style="display: none"
+                    >
+                      <picture>
+                        <source
+                          media="(min-width: 1200px)"
+                          data-srcset="images/discover_pic_03.jpg"
+                        />
+                        <source
+                          media="(min-width: 992px)"
+                          data-srcset="images/discover_pic_03.jpg"
+                        />
+                        <source
+                          media="(min-width: 576px)"
+                          data-srcset="images/discover_pic_03.jpg"
+                        />
+                        <source
+                          media="(max-width: 575px)"
+                          data-srcset="images/discover_pic_03.jpg"
+                        />
+                        <img data-src="images/discover_pic_03.jpg"" class="
+                        lazy" />
+                        <noscript
+                          ><img src="images/discover_pic_03.jpg"
+                        /></noscript>
+                      </picture>
+                      <p>
+                        陽明山位於臺灣北部，是臺灣的首都以及經濟，政治、教育和文化中心。是一個現代國際大都市與擁有活潑和多樣化的面孔，充滿活力。
+                        臺北一個充滿現代與傳統混合的城市，從古老歷史寺廟的靜謐巷弄到現代摩登的霓虹街道生活無縫融合。
+                      </p>
+                    </div>
+                    <div
+                      class="discover-pop"
+                      id="item_pop7"
+                      style="display: none"
+                    >
+                      <picture>
+                        <source
+                          media="(min-width: 1200px)"
+                          data-srcset="images/discover_pic_04.jpg"
+                        />
+                        <source
+                          media="(min-width: 992px)"
+                          data-srcset="images/discover_pic_04.jpg"
+                        />
+                        <source
+                          media="(min-width: 576px)"
+                          data-srcset="images/discover_pic_04.jpg"
+                        />
+                        <source
+                          media="(max-width: 575px)"
+                          data-srcset="images/discover_pic_04.jpg"
+                        />
+                        <img data-src="images/discover_pic_04.jpg"" class="
+                        lazy" />
+                        <noscript
+                          ><img src="images/discover_pic_04.jpg"
+                        /></noscript>
+                      </picture>
+                      <p>
+                        陽明山位於臺灣北部，是臺灣的首都以及經濟，政治、教育和文化中心。是一個現代國際大都市與擁有活潑和多樣化的面孔，充滿活力。
+                        臺北一個充滿現代與傳統混合的城市，從古老歷史寺廟的靜謐巷弄到現代摩登的霓虹街道生活無縫融合。
+                      </p>
+                    </div>
+                    <div
+                      class="discover-pop"
+                      id="item_pop8"
+                      style="display: none"
+                    >
+                      <picture>
+                        <source
+                          media="(min-width: 1200px)"
+                          data-srcset="images/discover_pic_05.jpg"
+                        />
+                        <source
+                          media="(min-width: 992px)"
+                          data-srcset="images/discover_pic_05.jpg"
+                        />
+                        <source
+                          media="(min-width: 576px)"
+                          data-srcset="images/discover_pic_05.jpg"
+                        />
+                        <source
+                          media="(max-width: 575px)"
+                          data-srcset="images/discover_pic_05.jpg"
+                        />
+                        <img data-src="images/discover_pic_05.jpg"" class="
+                        lazy" />
+                        <noscript
+                          ><img src="images/discover_pic_05.jpg"
+                        /></noscript>
+                      </picture>
+                      <p>
+                        陽明山位於臺灣北部，是臺灣的首都以及經濟，政治、教育和文化中心。是一個現代國際大都市與擁有活潑和多樣化的面孔，充滿活力。
+                        臺北一個充滿現代與傳統混合的城市，從古老歷史寺廟的靜謐巷弄到現代摩登的霓虹街道生活無縫融合。
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
+
               <!-- mt-know -->
               <div class="mt-know">
                 <div class="container">
@@ -212,42 +508,48 @@
                     <a href="#">
                       <h3>人口數</h3>
                       <div class="info">262萬人</div>
-                      <img src="images/icon_know_people.svg" alt="" />
+                      <i class="fal fa-users"></i>
+                      <!-- <img src="images/icon_know_people.svg" alt="" /> -->
                     </a>
                   </div>
                   <div data-aos="fade-left" data-aos-delay="600" class="item">
                     <a href="#">
                       <h3>住宿容量</h3>
                       <div class="info">39間酒店 12152間套房</div>
-                      <img src="images/icon_know_hotel.svg" alt="" />
+                      <i class="fal fa-hotel"></i>
+                      <!-- <img src="images/icon_know_hotel.svg" alt="" /> -->
                     </a>
                   </div>
                   <div data-aos="fade-left" data-aos-delay="700" class="item">
                     <a href="#">
                       <h3>便捷的交通</h3>
                       <div class="info">機場、捷運、公車、Taxi</div>
-                      <img src="images/icon_know_bus.svg" alt="" />
+                      <i class="fal fa-bus"></i>
+                      <!-- <img src="images/icon_know_bus.svg" alt="" /> -->
                     </a>
                   </div>
                   <div data-aos="fade-left" data-aos-delay="800" class="item">
                     <a href="#">
                       <h3>國際機場</h3>
                       <div class="info">松山國際機場、桃園國際機場</div>
-                      <img src="images/icon_know_airplane.svg" alt="" />
+                      <i class="fal fa-plane-alt"></i>
+                      <!-- <img src="images/icon_know_airplane.svg" alt="" /> -->
                     </a>
                   </div>
                   <div data-aos="fade-left" data-aos-delay="900" class="item">
                     <a href="#">
                       <h3>場地容量</h3>
                       <div class="info">15,350人次/臺北小巨蛋</div>
-                      <img src="images/icon_know_sport.svg" alt="" />
+                      <i class="fal fa-swimmer"></i>
+                      <!-- <img src="images/icon_know_sport.svg" alt="" /> -->
                     </a>
                   </div>
                   <div data-aos="fade-left" data-aos-delay="1000" class="item">
                     <a href="#">
                       <h3>時區</h3>
                       <div class="info">GMT+8</div>
-                      <img src="images/icon_know_clock.svg" alt="" />
+                      <i class="fal fa-clock"></i>
+                      <!-- <img src="images/icon_know_clock.svg" alt="" /> -->
                     </a>
                   </div>
                 </div>
@@ -507,1923 +809,14 @@
                 </div>
               </div>
             </li>
-            <li>
-              <div class="content__wrapper">
-                <div class="info">
-                  <h2 class="mt-h2">桃園</h2>
-                  <p>
-                    臺北位於臺灣北部，是臺灣的首都以及經濟，政治、教育和文化中心。是一個現代國際大都市與擁有活潑和多樣化的面孔，充滿活力。
-                    臺北一個充滿現代與傳統混合的城市，從古老歷史寺廟的靜謐巷弄到現代摩登的霓虹街道生活無縫融合。從世界頂級餐廳到人聲鼎沸的夜市，盡情品嚐各式美食。距離市中心幾分鐘車程，即可沐浴於臺北盆地鬱鬱蔥蔥山腳下的溫泉世界，亦或漫步於綠蔭清幽，沈浸在森林芬多精的洗禮。
-                    擁有多重風貌及友善微笑的臺北，等你來體驗發掘。
-                  </p>
-                  <a href="#" class="more">more</a>
-                </div>
-              </div>
-              <div class="mt-discover">
-                <div class="container">
-                  <h2 class="mt-h2">探索桃園</h2>
-                  <div class="discover-feature">
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic.jpg" alt="" />
-                        <h3>龍山寺</h3>
-                        <p>
-                          艋舺龍山寺，也稱萬華龍山寺，是位於臺灣臺北市萬華區富民里的觀音寺，為清治時期臺北城三邑人的信仰與政治、軍事中心，戰後時期成為外國旅客觀光景點，今建築列為國定古蹟
-                        </p>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="discover-content">
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_02.jpg" alt="" />
-                        <h3>陽明山</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_03.jpg" alt="" />
-                        <h3>台北101</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_04.jpg" alt="" />
-                        <h3>饒河夜市</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_05.jpg" alt="" />
-                        <h3>關渡大橋</h3>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="discover-content">
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_02.jpg" alt="" />
-                        <h3>陽明山</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_03.jpg" alt="" />
-                        <h3>台北101</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_04.jpg" alt="" />
-                        <h3>饒河夜市</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_05.jpg" alt="" />
-                        <h3>關渡大橋</h3>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- mt-know -->
-              <div class="mt-know">
-                <div class="container">
-                  <h2 class="mt-h2">認識桃園</h2>
-                  <div data-aos="fade-left" data-aos-delay="500" class="item">
-                    <a href="#">
-                      <h3>人口數</h3>
-                      <div class="info">262萬人</div>
-                      <img src="images/icon_know_people.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="600" class="item">
-                    <a href="#">
-                      <h3>住宿容量</h3>
-                      <div class="info">39間酒店 12152間套房</div>
-                      <img src="images/icon_know_hotel.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="700" class="item">
-                    <a href="#">
-                      <h3>便捷的交通</h3>
-                      <div class="info">機場、捷運、公車、Taxi</div>
-                      <img src="images/icon_know_bus.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="800" class="item">
-                    <a href="#">
-                      <h3>國際機場</h3>
-                      <div class="info">松山國際機場、桃園國際機場</div>
-                      <img src="images/icon_know_airplane.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="900" class="item">
-                    <a href="#">
-                      <h3>場地容量</h3>
-                      <div class="info">15,350人次/臺北小巨蛋</div>
-                      <img src="images/icon_know_sport.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="1000" class="item">
-                    <a href="#">
-                      <h3>時區</h3>
-                      <div class="info">GMT+8</div>
-                      <img src="images/icon_know_clock.svg" alt="" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- mt-table -->
-              <div class="mt-table">
-                <div class="container">
-                  <h2 class="mt-h2">平均溫度</h2>
-                  <table>
-                    <thead>
-                      <th></th>
-                      <th>1月</th>
-                      <th>2月</th>
-                      <th>3月</th>
-                      <th>4月</th>
-                      <th>5月</th>
-                      <th>6月</th>
-                      <th>7月</th>
-                      <th>8月</th>
-                      <th>9月</th>
-                      <th>10月</th>
-                      <th>11月</th>
-                      <th>12月</th>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>攝氏(°C)</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                      </tr>
-                      <tr>
-                        <td>華氏(°F)</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <!-- mt-plan -->
-              <div class="mt-plan">
-                <div class="container">
-                  <h2 class="mt-h2">規劃您的活動</h2>
-                  <div class="slider-plan">
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>住宿搜尋</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>住宿搜尋</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/12/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>尋找會展場地</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>尋找會展場地</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/13/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>旅遊行程</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>旅遊行程</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/14/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>周邊業者</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>周邊業者</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/15/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>簽證資訊</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>簽證資訊</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/15/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <a href="#" class="more"><span>more</span></a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="content__wrapper">
-                <div class="info">
-                  <h2 class="mt-h2">台中</h2>
-                  <p>
-                    臺北位於臺灣北部，是臺灣的首都以及經濟，政治、教育和文化中心。是一個現代國際大都市與擁有活潑和多樣化的面孔，充滿活力。
-                    臺北一個充滿現代與傳統混合的城市，從古老歷史寺廟的靜謐巷弄到現代摩登的霓虹街道生活無縫融合。從世界頂級餐廳到人聲鼎沸的夜市，盡情品嚐各式美食。距離市中心幾分鐘車程，即可沐浴於臺北盆地鬱鬱蔥蔥山腳下的溫泉世界，亦或漫步於綠蔭清幽，沈浸在森林芬多精的洗禮。
-                    擁有多重風貌及友善微笑的臺北，等你來體驗發掘。
-                  </p>
-                  <a href="#" class="more">more</a>
-                </div>
-              </div>
-              <div class="mt-discover">
-                <div class="container">
-                  <h2 class="mt-h2">探索台中</h2>
-                  <div class="discover-feature">
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic.jpg" alt="" />
-                        <h3>龍山寺</h3>
-                        <p>
-                          艋舺龍山寺，也稱萬華龍山寺，是位於臺灣臺北市萬華區富民里的觀音寺，為清治時期臺北城三邑人的信仰與政治、軍事中心，戰後時期成為外國旅客觀光景點，今建築列為國定古蹟
-                        </p>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="discover-content">
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_02.jpg" alt="" />
-                        <h3>陽明山</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_03.jpg" alt="" />
-                        <h3>台北101</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_04.jpg" alt="" />
-                        <h3>饒河夜市</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_05.jpg" alt="" />
-                        <h3>關渡大橋</h3>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="discover-content">
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_02.jpg" alt="" />
-                        <h3>陽明山</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_03.jpg" alt="" />
-                        <h3>台北101</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_04.jpg" alt="" />
-                        <h3>饒河夜市</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_05.jpg" alt="" />
-                        <h3>關渡大橋</h3>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- mt-know -->
-              <div class="mt-know">
-                <div class="container">
-                  <h2 class="mt-h2">認識台中</h2>
-                  <div data-aos="fade-left" data-aos-delay="500" class="item">
-                    <a href="#">
-                      <h3>人口數</h3>
-                      <div class="info">262萬人</div>
-                      <img src="images/icon_know_people.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="600" class="item">
-                    <a href="#">
-                      <h3>住宿容量</h3>
-                      <div class="info">39間酒店 12152間套房</div>
-                      <img src="images/icon_know_hotel.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="700" class="item">
-                    <a href="#">
-                      <h3>便捷的交通</h3>
-                      <div class="info">機場、捷運、公車、Taxi</div>
-                      <img src="images/icon_know_bus.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="800" class="item">
-                    <a href="#">
-                      <h3>國際機場</h3>
-                      <div class="info">松山國際機場、桃園國際機場</div>
-                      <img src="images/icon_know_airplane.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="900" class="item">
-                    <a href="#">
-                      <h3>場地容量</h3>
-                      <div class="info">15,350人次/臺北小巨蛋</div>
-                      <img src="images/icon_know_sport.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="1000" class="item">
-                    <a href="#">
-                      <h3>時區</h3>
-                      <div class="info">GMT+8</div>
-                      <img src="images/icon_know_clock.svg" alt="" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- mt-table -->
-              <div class="mt-table">
-                <div class="container">
-                  <h2 class="mt-h2">平均溫度</h2>
-                  <table>
-                    <thead>
-                      <th></th>
-                      <th>1月</th>
-                      <th>2月</th>
-                      <th>3月</th>
-                      <th>4月</th>
-                      <th>5月</th>
-                      <th>6月</th>
-                      <th>7月</th>
-                      <th>8月</th>
-                      <th>9月</th>
-                      <th>10月</th>
-                      <th>11月</th>
-                      <th>12月</th>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>攝氏(°C)</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                      </tr>
-                      <tr>
-                        <td>華氏(°F)</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <!-- mt-plan -->
-              <div class="mt-plan">
-                <div class="container">
-                  <h2 class="mt-h2">規劃您的活動</h2>
-                  <div class="slider-plan">
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>住宿搜尋</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>住宿搜尋</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/12/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>尋找會展場地</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>尋找會展場地</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/13/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>旅遊行程</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>旅遊行程</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/14/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>周邊業者</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>周邊業者</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/15/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>簽證資訊</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>簽證資訊</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/15/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <a href="#" class="more"><span>more</span></a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="content__wrapper">
-                <div class="info">
-                  <h2 class="mt-h2">台南</h2>
-                  <p>
-                    臺北位於臺灣北部，是臺灣的首都以及經濟，政治、教育和文化中心。是一個現代國際大都市與擁有活潑和多樣化的面孔，充滿活力。
-                    臺北一個充滿現代與傳統混合的城市，從古老歷史寺廟的靜謐巷弄到現代摩登的霓虹街道生活無縫融合。從世界頂級餐廳到人聲鼎沸的夜市，盡情品嚐各式美食。距離市中心幾分鐘車程，即可沐浴於臺北盆地鬱鬱蔥蔥山腳下的溫泉世界，亦或漫步於綠蔭清幽，沈浸在森林芬多精的洗禮。
-                    擁有多重風貌及友善微笑的臺北，等你來體驗發掘。
-                  </p>
-                  <a href="#" class="more">more</a>
-                </div>
-              </div>
-              <div class="mt-discover">
-                <div class="container">
-                  <h2 class="mt-h2">探索台南</h2>
-                  <div class="discover-feature">
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic.jpg" alt="" />
-                        <h3>龍山寺</h3>
-                        <p>
-                          艋舺龍山寺，也稱萬華龍山寺，是位於臺灣臺北市萬華區富民里的觀音寺，為清治時期臺北城三邑人的信仰與政治、軍事中心，戰後時期成為外國旅客觀光景點，今建築列為國定古蹟
-                        </p>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="discover-content">
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_02.jpg" alt="" />
-                        <h3>陽明山</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_03.jpg" alt="" />
-                        <h3>台北101</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_04.jpg" alt="" />
-                        <h3>饒河夜市</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_05.jpg" alt="" />
-                        <h3>關渡大橋</h3>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="discover-content">
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_02.jpg" alt="" />
-                        <h3>陽明山</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_03.jpg" alt="" />
-                        <h3>台北101</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_04.jpg" alt="" />
-                        <h3>饒河夜市</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_05.jpg" alt="" />
-                        <h3>關渡大橋</h3>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- mt-know -->
-              <div class="mt-know">
-                <div class="container">
-                  <h2 class="mt-h2">認識台南</h2>
-                  <div data-aos="fade-left" data-aos-delay="500" class="item">
-                    <a href="#">
-                      <h3>人口數</h3>
-                      <div class="info">262萬人</div>
-                      <img src="images/icon_know_people.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="600" class="item">
-                    <a href="#">
-                      <h3>住宿容量</h3>
-                      <div class="info">39間酒店 12152間套房</div>
-                      <img src="images/icon_know_hotel.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="700" class="item">
-                    <a href="#">
-                      <h3>便捷的交通</h3>
-                      <div class="info">機場、捷運、公車、Taxi</div>
-                      <img src="images/icon_know_bus.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="800" class="item">
-                    <a href="#">
-                      <h3>國際機場</h3>
-                      <div class="info">松山國際機場、桃園國際機場</div>
-                      <img src="images/icon_know_airplane.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="900" class="item">
-                    <a href="#">
-                      <h3>場地容量</h3>
-                      <div class="info">15,350人次/臺北小巨蛋</div>
-                      <img src="images/icon_know_sport.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="1000" class="item">
-                    <a href="#">
-                      <h3>時區</h3>
-                      <div class="info">GMT+8</div>
-                      <img src="images/icon_know_clock.svg" alt="" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- mt-table -->
-              <div class="mt-table">
-                <div class="container">
-                  <h2 class="mt-h2">平均溫度</h2>
-                  <table>
-                    <thead>
-                      <th></th>
-                      <th>1月</th>
-                      <th>2月</th>
-                      <th>3月</th>
-                      <th>4月</th>
-                      <th>5月</th>
-                      <th>6月</th>
-                      <th>7月</th>
-                      <th>8月</th>
-                      <th>9月</th>
-                      <th>10月</th>
-                      <th>11月</th>
-                      <th>12月</th>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>攝氏(°C)</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                      </tr>
-                      <tr>
-                        <td>華氏(°F)</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <!-- mt-plan -->
-              <div class="mt-plan">
-                <div class="container">
-                  <h2 class="mt-h2">規劃您的活動</h2>
-                  <div class="slider-plan">
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>住宿搜尋</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>住宿搜尋</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/12/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>尋找會展場地</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>尋找會展場地</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/13/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>旅遊行程</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>旅遊行程</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/14/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>周邊業者</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>周邊業者</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/15/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>簽證資訊</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>簽證資訊</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/15/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <a href="#" class="more"><span>more</span></a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="content__wrapper">
-                <div class="info">
-                  <h2 class="mt-h2">高雄</h2>
-                  <p>
-                    臺北位於臺灣北部，是臺灣的首都以及經濟，政治、教育和文化中心。是一個現代國際大都市與擁有活潑和多樣化的面孔，充滿活力。
-                    臺北一個充滿現代與傳統混合的城市，從古老歷史寺廟的靜謐巷弄到現代摩登的霓虹街道生活無縫融合。從世界頂級餐廳到人聲鼎沸的夜市，盡情品嚐各式美食。距離市中心幾分鐘車程，即可沐浴於臺北盆地鬱鬱蔥蔥山腳下的溫泉世界，亦或漫步於綠蔭清幽，沈浸在森林芬多精的洗禮。
-                    擁有多重風貌及友善微笑的臺北，等你來體驗發掘。
-                  </p>
-                  <a href="#" class="more">more</a>
-                </div>
-              </div>
-              <div class="mt-discover">
-                <div class="container">
-                  <h2 class="mt-h2">探索高雄</h2>
-                  <div class="discover-feature">
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic.jpg" alt="" />
-                        <h3>龍山寺</h3>
-                        <p>
-                          艋舺龍山寺，也稱萬華龍山寺，是位於臺灣臺北市萬華區富民里的觀音寺，為清治時期臺北城三邑人的信仰與政治、軍事中心，戰後時期成為外國旅客觀光景點，今建築列為國定古蹟
-                        </p>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="discover-content">
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_02.jpg" alt="" />
-                        <h3>陽明山</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_03.jpg" alt="" />
-                        <h3>台北101</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_04.jpg" alt="" />
-                        <h3>饒河夜市</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_05.jpg" alt="" />
-                        <h3>關渡大橋</h3>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="discover-content">
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_02.jpg" alt="" />
-                        <h3>陽明山</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_03.jpg" alt="" />
-                        <h3>台北101</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_04.jpg" alt="" />
-                        <h3>饒河夜市</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_05.jpg" alt="" />
-                        <h3>關渡大橋</h3>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- mt-know -->
-              <div class="mt-know">
-                <div class="container">
-                  <h2 class="mt-h2">認識高雄</h2>
-                  <div data-aos="fade-left" data-aos-delay="500" class="item">
-                    <a href="#">
-                      <h3>人口數</h3>
-                      <div class="info">262萬人</div>
-                      <img src="images/icon_know_people.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="600" class="item">
-                    <a href="#">
-                      <h3>住宿容量</h3>
-                      <div class="info">39間酒店 12152間套房</div>
-                      <img src="images/icon_know_hotel.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="700" class="item">
-                    <a href="#">
-                      <h3>便捷的交通</h3>
-                      <div class="info">機場、捷運、公車、Taxi</div>
-                      <img src="images/icon_know_bus.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="800" class="item">
-                    <a href="#">
-                      <h3>國際機場</h3>
-                      <div class="info">松山國際機場、桃園國際機場</div>
-                      <img src="images/icon_know_airplane.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="900" class="item">
-                    <a href="#">
-                      <h3>場地容量</h3>
-                      <div class="info">15,350人次/臺北小巨蛋</div>
-                      <img src="images/icon_know_sport.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="1000" class="item">
-                    <a href="#">
-                      <h3>時區</h3>
-                      <div class="info">GMT+8</div>
-                      <img src="images/icon_know_clock.svg" alt="" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- mt-table -->
-              <div class="mt-table">
-                <div class="container">
-                  <h2 class="mt-h2">平均溫度</h2>
-                  <table>
-                    <thead>
-                      <th></th>
-                      <th>1月</th>
-                      <th>2月</th>
-                      <th>3月</th>
-                      <th>4月</th>
-                      <th>5月</th>
-                      <th>6月</th>
-                      <th>7月</th>
-                      <th>8月</th>
-                      <th>9月</th>
-                      <th>10月</th>
-                      <th>11月</th>
-                      <th>12月</th>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>攝氏(°C)</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                      </tr>
-                      <tr>
-                        <td>華氏(°F)</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <!-- mt-plan -->
-              <div class="mt-plan">
-                <div class="container">
-                  <h2 class="mt-h2">規劃您的活動</h2>
-                  <div class="slider-plan">
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>住宿搜尋</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>住宿搜尋</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/12/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>尋找會展場地</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>尋找會展場地</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/13/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>旅遊行程</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>旅遊行程</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/14/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>周邊業者</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>周邊業者</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/15/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>簽證資訊</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>簽證資訊</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/15/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <a href="#" class="more"><span>more</span></a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="content__wrapper">
-                <div class="info">
-                  <h2 class="mt-h2">花蓮</h2>
-                  <p>
-                    臺北位於臺灣北部，是臺灣的首都以及經濟，政治、教育和文化中心。是一個現代國際大都市與擁有活潑和多樣化的面孔，充滿活力。
-                    臺北一個充滿現代與傳統混合的城市，從古老歷史寺廟的靜謐巷弄到現代摩登的霓虹街道生活無縫融合。從世界頂級餐廳到人聲鼎沸的夜市，盡情品嚐各式美食。距離市中心幾分鐘車程，即可沐浴於臺北盆地鬱鬱蔥蔥山腳下的溫泉世界，亦或漫步於綠蔭清幽，沈浸在森林芬多精的洗禮。
-                    擁有多重風貌及友善微笑的臺北，等你來體驗發掘。
-                  </p>
-                  <a href="#" class="more">more</a>
-                </div>
-              </div>
-              <div class="mt-discover">
-                <div class="container">
-                  <h2 class="mt-h2">探索花蓮</h2>
-                  <div class="discover-feature">
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic.jpg" alt="" />
-                        <h3>龍山寺</h3>
-                        <p>
-                          艋舺龍山寺，也稱萬華龍山寺，是位於臺灣臺北市萬華區富民里的觀音寺，為清治時期臺北城三邑人的信仰與政治、軍事中心，戰後時期成為外國旅客觀光景點，今建築列為國定古蹟
-                        </p>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="discover-content">
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_02.jpg" alt="" />
-                        <h3>陽明山</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_03.jpg" alt="" />
-                        <h3>台北101</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_04.jpg" alt="" />
-                        <h3>饒河夜市</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_05.jpg" alt="" />
-                        <h3>關渡大橋</h3>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="discover-content">
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_02.jpg" alt="" />
-                        <h3>陽明山</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_03.jpg" alt="" />
-                        <h3>台北101</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_04.jpg" alt="" />
-                        <h3>饒河夜市</h3>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="#">
-                        <img src="images/discover_pic_05.jpg" alt="" />
-                        <h3>關渡大橋</h3>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- mt-know -->
-              <div class="mt-know">
-                <div class="container">
-                  <h2 class="mt-h2">認識花蓮</h2>
-                  <div data-aos="fade-left" data-aos-delay="500" class="item">
-                    <a href="#">
-                      <h3>人口數</h3>
-                      <div class="info">262萬人</div>
-                      <img src="images/icon_know_people.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="600" class="item">
-                    <a href="#">
-                      <h3>住宿容量</h3>
-                      <div class="info">39間酒店 12152間套房</div>
-                      <img src="images/icon_know_hotel.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="700" class="item">
-                    <a href="#">
-                      <h3>便捷的交通</h3>
-                      <div class="info">機場、捷運、公車、Taxi</div>
-                      <img src="images/icon_know_bus.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="800" class="item">
-                    <a href="#">
-                      <h3>國際機場</h3>
-                      <div class="info">松山國際機場、桃園國際機場</div>
-                      <img src="images/icon_know_airplane.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="900" class="item">
-                    <a href="#">
-                      <h3>場地容量</h3>
-                      <div class="info">15,350人次/臺北小巨蛋</div>
-                      <img src="images/icon_know_sport.svg" alt="" />
-                    </a>
-                  </div>
-                  <div data-aos="fade-left" data-aos-delay="1000" class="item">
-                    <a href="#">
-                      <h3>時區</h3>
-                      <div class="info">GMT+8</div>
-                      <img src="images/icon_know_clock.svg" alt="" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- mt-table -->
-              <div class="mt-table">
-                <div class="container">
-                  <h2 class="mt-h2">平均溫度</h2>
-                  <table>
-                    <thead>
-                      <th></th>
-                      <th>1月</th>
-                      <th>2月</th>
-                      <th>3月</th>
-                      <th>4月</th>
-                      <th>5月</th>
-                      <th>6月</th>
-                      <th>7月</th>
-                      <th>8月</th>
-                      <th>9月</th>
-                      <th>10月</th>
-                      <th>11月</th>
-                      <th>12月</th>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>攝氏(°C)</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                        <td>16.5</td>
-                      </tr>
-                      <tr>
-                        <td>華氏(°F)</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                        <td>70</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <!-- mt-plan -->
-              <div class="mt-plan">
-                <div class="container">
-                  <h2 class="mt-h2">規劃您的活動</h2>
-                  <div class="slider-plan">
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>住宿搜尋</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>住宿搜尋</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/12/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>尋找會展場地</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>尋找會展場地</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/13/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>旅遊行程</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>旅遊行程</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/14/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>周邊業者</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>周邊業者</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/15/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="flip-box">
-                        <a href="#">
-                          <div class="flip-box-front">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>簽證資訊</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                          </div>
-                          <div class="flip-box-back">
-                            <div class="inner">
-                              <h3 class="flip-box-header">
-                                <span>簽證資訊</span>
-                              </h3>
-                              <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Sint odio repellat voluptatem
-                                eius fuga facere dignissimos ullam, voluptas
-                                beatae enim!
-                              </p>
-                            </div>
-                            <div class="img-container">
-                              <img
-                                src="https://lipsum.app/id/15/600x800"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <a href="#" class="more"><span>more</span></a>
-                </div>
-              </div>
-            </li>
+            <li>...2</li>
+            <li>...3</li>
+            <li>...4</li>
+            <li>...5</li>
+            <li>...6</li>
           </ul>
         </div>
+
         <script>
           $(document).ready(function () {
             // Variables
