@@ -4386,7 +4386,7 @@ select {
       .mt-header .menuBtn span:nth-child(4) {
         top: 37px; }
     .mt-header .menuBtn.open {
-      z-index: 99; }
+      z-index: 97; }
       .mt-header .menuBtn.open span:nth-child(1) {
         top: 21px;
         width: 0%;
@@ -11957,7 +11957,8 @@ select {
     border-bottom: 1px solid #ddd;
     -webkit-box-align: start;
         -ms-flex-align: start;
-            align-items: flex-start; }
+            align-items: flex-start;
+    position: relative; }
     .mt-main-content .lp_user_article ul li .img-container,
     .mt-main-content .lp_partner ul li .img-container,
     .mt-main-content .lp_award ul li .img-container {
@@ -12100,7 +12101,7 @@ select {
         position: absolute;
         width: 1.5em;
         height: 1.5em;
-        right: 2em;
+        right: 2.5em;
         top: 0.25em; }
         .mt-main-content .lp_user_article ul li .info .i_eco img,
         .mt-main-content .lp_partner ul li .info .i_eco img,
@@ -12110,7 +12111,8 @@ select {
           .mt-main-content .lp_user_article ul li .info .i_eco,
           .mt-main-content .lp_partner ul li .info .i_eco,
           .mt-main-content .lp_award ul li .info .i_eco {
-            top: 1.35em; } }
+            top: 1.35em;
+            right: 1em; } }
       .mt-main-content .lp_user_article ul li .info .i_bookmark,
       .mt-main-content .lp_partner ul li .info .i_bookmark,
       .mt-main-content .lp_award ul li .info .i_bookmark {
@@ -12130,6 +12132,28 @@ select {
           .mt-main-content .lp_partner ul li .info .i_bookmark,
           .mt-main-content .lp_award ul li .info .i_bookmark {
             top: 1.25em; } }
+    .mt-main-content .lp_user_article ul li a .i_partner,
+    .mt-main-content .lp_partner ul li a .i_partner,
+    .mt-main-content .lp_award ul li a .i_partner {
+      position: absolute;
+      width: auto;
+      right: 15px;
+      top: 1.2em;
+      z-index: 2;
+      font-size: 1.3em;
+      color: #ddd;
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0); }
+      @media screen and (max-width: 575px) {
+        .mt-main-content .lp_user_article ul li a .i_partner,
+        .mt-main-content .lp_partner ul li a .i_partner,
+        .mt-main-content .lp_award ul li a .i_partner {
+          color: #fff;
+          text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 3px;
+          top: 1.5em; } }
+    .mt-main-content .lp_user_article ul li a .active.i_partner,
+    .mt-main-content .lp_partner ul li a .active.i_partner,
+    .mt-main-content .lp_award ul li a .active.i_partner {
+      color: #e352b2; }
 
 .mt-main-content .lp_user_article h2.mt-h2 {
   font-size: 2em; }
@@ -12223,26 +12247,14 @@ select {
   margin: 1em 0;
   color: #333; }
 
-.mt-main-content .lp_partner ul > li .info h3 {
-  margin-bottom: 0.2em; }
-
-.mt-main-content .lp_partner ul > li .info .star {
-  color: #fcc211; }
-
-.mt-main-content .lp_partner ul > li .img-container {
+.mt-main-content .lp_partner ul > li {
   position: relative; }
-  .mt-main-content .lp_partner ul > li .img-container a .i_partner {
-    position: absolute;
-    width: auto;
-    right: 15px;
-    top: 15px;
-    z-index: 2;
-    font-size: 1.3em;
-    color: #fff;
-    text-shadow: rgba(0, 0, 0, 0.1) 0.1em 0.1em 0.1em;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0); }
-  .mt-main-content .lp_partner ul > li .img-container a.active .i_partner {
-    color: #e352b2; }
+  .mt-main-content .lp_partner ul > li .info h3 {
+    margin-bottom: 0.2em; }
+  .mt-main-content .lp_partner ul > li .info .star {
+    color: #fcc211; }
+  .mt-main-content .lp_partner ul > li .img-container {
+    position: relative; }
 
 .mt-main-content .lp_partner .mt-category {
   margin: 0; }
@@ -12257,6 +12269,10 @@ select {
 .mt-main-content .lp_partner.grid .mt-category ul > li {
   margin-bottom: 0;
   margin-left: 0; }
+
+.mt-main-content .lp_partner.grid a .i_partner {
+  color: #fff;
+  text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 3px; }
 
 .mt-main-content h3.mt-h3 {
   font-size: 1.5em;
@@ -12774,7 +12790,8 @@ select {
           align-self: stretch;
       overflow: hidden;
       position: relative;
-      background: #ccc; }
+      background: #ccc;
+      color: #fff; }
       .mt-main-content .cp_content .space_info .item .space_pic:before, .mt-main-content .signup_content .space_info .item .space_pic:before {
         display: block;
         content: '';
@@ -12806,6 +12823,43 @@ select {
           -ms-flex-preferred-size: 100%;
               flex-basis: 100%;
           margin-bottom: 0.5em; } }
+      .mt-main-content .cp_content .space_info .item .space_pic picture, .mt-main-content .signup_content .space_info .item .space_pic picture {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0; }
+      .mt-main-content .cp_content .space_info .item .space_pic .title, .mt-main-content .signup_content .space_info .item .space_pic .title {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: #3f3f3f;
+        padding: 2em;
+        z-index: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        .mt-main-content .cp_content .space_info .item .space_pic .title h4, .mt-main-content .signup_content .space_info .item .space_pic .title h4 {
+          font-size: 1.6em;
+          overflow: hidden;
+          text-overflow: -o-ellipsis-lastline;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 5;
+          -webkit-box-orient: vertical;
+          line-height: 1.45em;
+          height: auto;
+          max-height: calc(1.45em * 5); }
+      .mt-main-content .cp_content .space_info .item .space_pic .hide, .mt-main-content .signup_content .space_info .item .space_pic .hide {
+        display: none; }
     .mt-main-content .cp_content .space_info .item .space_info, .mt-main-content .signup_content .space_info .item .space_info {
       position: relative;
       padding: 2.5em 1em 1em;
@@ -15717,7 +15771,8 @@ p.error {
         -webkit-box-ordinal-group: 3;
             -ms-flex-order: 2;
                 order: 2;
-        min-height: 30em; } }
+        min-height: 30em;
+        display: none; } }
     .mt-main-content .sp_member .login_block .login_info h3,
     .mt-main-content .sp_member .login_block .forget_info h3 {
       line-height: 1.45em;

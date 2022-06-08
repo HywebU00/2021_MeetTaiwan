@@ -489,7 +489,9 @@
           min-width: 320px;
           align-self: stretch;
           @include aspect-ratio(4, 3);
-          background: #ccc;
+           background: #ccc;
+          // background:#3f3f3f ;
+          color:#fff;
 
           img {
             transition: 0.3s ease-out;
@@ -498,6 +500,33 @@
           @include screen('mobile') {
             flex-basis: 100%;
             margin-bottom: 0.5em;
+          }
+          picture{
+            z-index: 2;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+          }
+          .title{
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background: #3f3f3f;
+            padding: 2em;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          h4{     
+            font-size: 1.6em;    
+            @include text-line(5, 1.45em);
+          }
+          }
+          .hide{
+            display: none;
           }
         }
 

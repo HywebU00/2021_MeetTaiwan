@@ -1465,7 +1465,7 @@
 				padding: 1em 0;
 				border-bottom: 1px solid #ddd;
 				align-items: flex-start;
-
+				position: relative;
 				.img-container {
 					flex-grow: 0;
 					flex-shrink: 1;
@@ -1548,7 +1548,8 @@
 						position: absolute;
 						width: 1.5em;
 						height: 1.5em;
-						right: 2em;
+						right:2.5em;
+						// right: 2em;
 						top: 0.25em;
 
 						img {
@@ -1557,7 +1558,9 @@
 
 						@include screen('xs_mobile') {
 							top: 1.35em;
+							right:1em;
 						}
+						
 					}
 
 					.i_bookmark {
@@ -1578,8 +1581,30 @@
 						}
 					}
 				}
+				a .i_partner {
+					position: absolute;
+					width: auto;
+					right: 15px;
+					top: 1.2em;
+					z-index: 2;
+					font-size: 1.3em;
+					color: #ddd;
+					// text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 3px;
+		
+					-webkit-text-stroke: 1px rgba(255, 255, 255, 0);
+					@include screen('xs_mobile'){
+						color: #fff;
+						text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 3px;
+						top:1.5em;
+					}
+				}
+		
+				a .active.i_partner {
+					color: $secondaryColor;
+				}
 			}
 		}
+	
 	}
 
 	.lp_user_article {
@@ -1696,6 +1721,7 @@
 
 	.lp_partner {
 		ul>li {
+			position: relative;
 			.info {
 				h3 {
 					margin-bottom: 0.2em;
@@ -1709,24 +1735,43 @@
 			.img-container {
 				position: relative;
 
-				a .i_partner {
-					position: absolute;
-					width: auto;
-					right: 15px;
-					top: 15px;
-					z-index: 2;
-					font-size: 1.3em;
-					color: #fff;
-					text-shadow: rgba(0, 0, 0, 0.1) 0.1em 0.1em 0.1em;
-					-webkit-text-stroke: 1px rgba(255, 255, 255, 0);
-				}
+				// a .i_partner {
+				// 	position: absolute;
+				// 	width: auto;
+				// 	right: 15px;
+				// 	top: 15px;
+				// 	z-index: 2;
+				// 	font-size: 1.3em;
+				// 	color: #fff;
+				// 	text-shadow: rgba(0, 0, 0, 0.1) 0.1em 0.1em 0.1em;
+				// 	-webkit-text-stroke: 1px rgba(255, 255, 255, 0);
+				// }
 
-				a.active .i_partner {
-					color: $secondaryColor;
-					//color: $primaryColor;
-					// -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);
-				}
+				// a.active .i_partner {
+				// 	color: $secondaryColor;
+				// }
 			}
+			// a .i_partner {
+			// 	position: absolute;
+			// 	width: auto;
+			// 	right: 15px;
+			// 	top: 1.2em;
+			// 	z-index: 2;
+			// 	font-size: 1.3em;
+			// 	color: #ddd;
+			// 	// text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 3px;
+
+			// 	-webkit-text-stroke: 1px rgba(255, 255, 255, 0);
+			// 	@include screen('xs_mobile'){
+			// 		color: #fff;
+			// 		text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 3px;
+			// 		top:1.5em;
+			// 	}
+			// }
+
+			// a .active.i_partner {
+			// 	color: $secondaryColor;
+			// }
 		}
 
 		.mt-category {
@@ -1750,6 +1795,10 @@
 					margin-bottom: 0;
 					margin-left: 0;
 				}
+			}
+			a .i_partner{
+				color: #fff;
+				text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 3px;
 			}
 		}
 	}
