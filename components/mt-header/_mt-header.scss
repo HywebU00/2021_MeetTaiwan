@@ -8,7 +8,7 @@
     top: 0;
     left: 0;
     height: 4.8em;
-    z-index: 99;
+    z-index: 100;
     background-color: #fff;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     display: flex;
@@ -833,7 +833,7 @@
 
     &.sticky {
         height: 4.8em;
-
+        z-index: 100;
         // background: rgba(0, 0, 0, 0.75);
         h1 {
             max-width: 230px;
