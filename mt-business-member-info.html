@@ -212,12 +212,6 @@
               </div>
               <!-- form grid -->
               <div class="form_grid">
-                <!-- progress bar, btn -->
-                <!-- <div class="btn_grp">
-                  <div class="progress2 progress-moved">
-                    <div class="progress-bar2">完成度 xx %</div>
-                  </div>
-                </div> -->
                 <div class="form_grp">
                   <div class="field_name">
                     登入帳號<abbr
@@ -667,6 +661,65 @@
             </div>
           </div>
         </div>
+        <!-- mt-login -->
+        <div class="mt-signup">
+          <a href="#" class="close"><i class="fas fa-times"></i></a>
+          <div class="mt-main-content">
+            <div class="sp_member">
+              <div class="divider"><span>請輸入新的企業會員登入帳號</span></div>
+              <div class="signup_block">
+                <div class="signup_info"></div>
+                <div class="signup done">
+                  <h2 class="mt-h2">請輸入新的企業會員登入帳號</h2>
+                  <div class="form_grid">
+                    <div class="form_grp">
+                      <div class="form_content">
+                        <div class="form_style">
+                          <input type="text" id="" value="" />
+                          <label for="" class="form_title"
+                            >請輸入新的Email<abbr
+                              class="necessary"
+                              title="為必填(選)欄位,不能為空白。"
+                              >*</abbr
+                            ></label
+                          >
+                        </div>
+                        <p class="info">
+                          <i class="fas fa-info-circle"></i
+                          >此Email需是您可正常收信件的Email
+                        </p>
+                        <p class="error">
+                          <i class="fas fa-exclamation-triangle"></i
+                          >很抱歉，請輸入其他帳號此帳號無法變更
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn_grp">
+                    <button type="button" class="btn btn_submit">確認</button>
+                  </div>
+                </div>
+              </div>
+              <div class="divider"><span>重設密碼提醒</span></div>
+              <div class="signup_block">
+                <div class="signup_info"></div>
+                <div class="signup done">
+                  <!-- <h2 class="mt-h2">
+                    已發送Email身份驗證網址至新帳號信箱，請點擊網址後
+                    ，完成登入後，即成功更換企業會員帳號
+                  </h2> -->
+                  <h2 class="mt-h2">
+                    您已完成身份驗證，請登入會員， 即可成功更換企業會員帳號
+                  </h2>
+                  <!-- <h2 class="mt-h2">
+                    此帳號尚未註冊成為Meet
+                    Taiwan會員，系統已發送Email註冊網址至新帳號信箱，完成註冊且登入後，變更立即生效
+                  </h2> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- fat footer -->
@@ -691,6 +744,28 @@
       $("#mt_gototop").load("components/mt-gototop/mt-gototop.html");
       //$('#mt_cookie').load('components/mt-cookie/mt-cookie.html');
       $("#mt_userbar").load("components/mt-userbar/mt-userbar.html");
+
+      //mt-signup
+      if ($(".changeMember_btn").length > 0) {
+        var searchStatus = false;
+        $(".changeMember_btn")
+          .off()
+          .click(function (e) {
+            if (!searchStatus) {
+              $(".mt-signup").stop(true, true).addClass("open");
+              searchStatus = true;
+            }
+            e.preventDefault();
+          });
+        $(".mt-signup")
+          .find(".close")
+          .off()
+          .click(function (e) {
+            $(".mt-signup").stop(true, true).removeClass("open");
+            searchStatus = false;
+            e.preventDefault();
+          });
+      }
     });
   </script>
   <!-- 呼叫元件內的function -->
