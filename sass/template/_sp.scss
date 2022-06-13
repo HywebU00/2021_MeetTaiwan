@@ -2136,7 +2136,10 @@ p.error {
           padding: 0.5em 0 1em 0;
 
           span.allow,
-          span.not-allowed {
+          span.not-allowed ,
+          span.wait-allowed,
+          span.reject-allowed
+          {
             margin: 0 !important;
           }
 
@@ -3976,7 +3979,7 @@ p.error {
 .mt-score-btn {
   position: fixed;
   right: 10px;
-  bottom: 100px;
+  bottom: 145px;
   z-index: 99;
 
   button {

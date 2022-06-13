@@ -51,7 +51,26 @@
     <!-- mt-content -->
     <div class="mt-main-content">
       <div class="inner_img">
-        <img src="images/inner_05_member.jpg" />
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            data-srcset="images/inner_05_member.jpg"
+          />
+          <source
+            media="(min-width: 992px)"
+            data-srcset="images/inner_05_member.jpg"
+          />
+          <source
+            media="(min-width: 576px)"
+            data-srcset="images/inner_05_member.jpg"
+          />
+          <source
+            media="(max-width: 575px)"
+            data-srcset="images/inner_05_member.jpg"
+          />
+          <img data-src="images/inner_05_member.jpg" class="cover lazy" />
+          <noscript><img src="images/inner_05_member.jpg" /></noscript>
+        </picture>
       </div>
       <div class="container">
         <!-- 左側 -->
@@ -210,7 +229,7 @@
                   </div>
                 </div>
                 <!-- 表格 -->
-                <div class="table_list">
+                <div class="table_list  table_list-bolck">
                   <table>
                     <thead>
                       <tr>
@@ -223,9 +242,9 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td><a href="#"> X20211025001 </a></td>
-                        <td>台灣會展識別標誌 國貿局識別標誌</td>
-                        <td><time>2020/10/25</time></td>
+                        <td><span>編號:</span><a href="#"> X20211025001 </a></td>
+                        <td><span>活動名稱:</span>台灣會展識別標誌 國貿局識別標誌</td>
+                        <td><span>活動日期:</span><time>2020/10/25</time></td>
                         <td><span class="allow">核可</span></td>
                         <td>
                           <!-- 下拉式動作選單 -->
@@ -245,9 +264,9 @@
                         </td>
                       </tr>
                       <tr>
-                        <td><a href="#">B20211017023 </a></td>
-                        <td>台灣會展圖庫</td>
-                        <td><time>2020/10/17</time></td>
+                        <td><span>編號:</span><a href="#"> X20211025001 </a></td>
+                        <td><span>活動名稱:</span>台灣會展圖庫</td>
+                        <td><span>活動日期:</span><time>2020/10/25</time></td>
                         <td><span class="not-allowed">不核可</span></td>
                         <td>
                           <div class="action">
@@ -267,9 +286,9 @@
                         </td>
                       </tr>
                       <tr>
-                        <td><a href="#">B20211017023 </a></td>
-                        <td>台灣會展圖庫</td>
-                        <td><time>2020/10/17</time></td>
+                        <td><span>編號:</span><a href="#"> X20211025001 </a></td>
+                        <td><span>活動名稱:</span>台灣會展圖庫</td>
+                        <td><span>活動日期:</span><time>2020/10/25</time></td>
                         <td><span class="wait-allowed">待審核</span></td>
                         <td>
                           <div class="action">
@@ -289,9 +308,9 @@
                         </td>
                       </tr>
                       <tr>
-                        <td><a href="#">B20211017023 </a></td>
-                        <td>台灣會展圖庫</td>
-                        <td><time>2020/10/17</time></td>
+                        <td><span>編號:</span><a href="#"> X20211025001 </a></td>
+                        <td><span>活動名稱:</span>台灣會展圖庫</td>
+                        <td><span>活動日期:</span><time>2020/10/25</time></td>
                         <td><span class="reject-allowed">退回</span></td>
                         <td>
                           <!-- 下拉式動作選單 -->
@@ -316,6 +335,40 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <!-- 手機版menu -->
+      <div class="mt_bottom_menu">
+        <div class="member_block">
+          <ul>
+            <li>
+              <a href="#"
+                ><i class="fas fa-user"></i></i>
+                <span>一般會員基本資料</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >
+                <i class="fas fa-building"></i>
+                <span>企業會員基本資料</span></a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-paste"></i><span>申請服務</span></a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-info-square"></i><span>發佈訊息</span></a
+              >
+            </li>
+            <li>
+              <a class="btn-member-open" href="#">
+                <i class="fas fa-ellipsis-h"></i>
+                <span>More</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

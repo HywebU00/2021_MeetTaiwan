@@ -51,7 +51,26 @@
     <!-- mt-content -->
     <div class="mt-main-content">
       <div class="inner_img">
-        <img src="images/inner_04_night.jpg" />
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            data-srcset="images/inner_04_night.jpg"
+          />
+          <source
+            media="(min-width: 992px)"
+            data-srcset="images/inner_04_night.jpg"
+          />
+          <source
+            media="(min-width: 576px)"
+            data-srcset="images/inner_04_night.jpg"
+          />
+          <source
+            media="(max-width: 575px)"
+            data-srcset="images/inner_04_night.jpg"
+          />
+          <img data-src="images/inner_04_night.jpg" class="cover lazy" />
+          <noscript><img src="images/inner_04_night.jpg" /></noscript>
+        </picture>
       </div>
       <div class="container">
         <!-- 左側 -->

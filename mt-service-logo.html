@@ -51,7 +51,26 @@
     <!-- mt-content -->
     <div class="mt-main-content">
       <div class="inner_img">
-        <img src="images/inner_05_member.jpg" />
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            data-srcset="images/inner_05_member.jpg"
+          />
+          <source
+            media="(min-width: 992px)"
+            data-srcset="images/inner_05_member.jpg"
+          />
+          <source
+            media="(min-width: 576px)"
+            data-srcset="images/inner_05_member.jpg"
+          />
+          <source
+            media="(max-width: 575px)"
+            data-srcset="images/inner_05_member.jpg"
+          />
+          <img data-src="images/inner_05_member.jpg" class="cover lazy" />
+          <noscript><img src="images/inner_05_member.jpg" /></noscript>
+        </picture>
       </div>
       <div class="container">
         <!-- 左側 -->
@@ -183,15 +202,15 @@
                 <h2 class="mt-h2">
                   申請服務<small>臺灣會展識別標誌/國貿局識別標誌</small>
                 </h2>
-                <div class="member_info">
+                <!-- <div class="member_info">
                   <div class="member_id">Hi! <em>陳大明</em>您好</div>
-                  <!-- 左側有側欄請放這個 會員選單 -->
+                  左側有側欄請放這個 會員選單
                   <div class="btn_grp for-open-mobile-sidebar">
                     <a href="" class="btn btn-member-open"
                       ><i class="fas fa-bars"></i
                     ></a>
                   </div>
-                </div>
+                </div> -->
               </div>
               <!-- 會員專區內容 -->
               <div class="member_content">
@@ -500,6 +519,34 @@
           </div>
         </div>
       </div>
+          <!-- 手機版menu -->
+    <div class="mt_bottom_menu">
+      <div class="member_block">
+        <ul>
+          <li>
+            <a href="#"><i class="fas fa-user"></i></i>
+              <span>一般會員基本資料</span></a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-building"></i>
+              <span>企業會員基本資料</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-paste"></i><span>申請服務</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-info-square"></i><span>發佈訊息</span></a>
+          </li>
+          <li>
+            <a class="btn-member-open" href="#">
+              <i class="fas fa-ellipsis-h"></i>
+              <span>More</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
     </div>
     <!-- fat footer -->
     <div id="mt_fatfooter"></div>

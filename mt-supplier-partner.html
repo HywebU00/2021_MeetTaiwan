@@ -52,7 +52,26 @@
     <div class="mt-main-content mt-main-company-content">
       <!-- 套入飯店或飯店圖片 -->
       <div class="inner_img hotel">
-        <img src="images/hotel_bg.jpg" alt="" />
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            data-srcset="images/hotel_bg.jpg"
+          />
+          <source
+            media="(min-width: 992px)"
+            data-srcset="images/hotel_bg.jpg"
+          />
+          <source
+            media="(min-width: 576px)"
+            data-srcset="images/hotel_bg.jpg"
+          />
+          <source
+            media="(max-width: 575px)"
+            data-srcset="images/hotel_bg.jpg"
+          />
+          <img data-src="images/hotel_bg.jpg" class="cover lazy" />
+          <noscript><img src="images/hotel_bg.jpg" /></noscript>
+        </picture>
       </div>
       <div class="mt-banner-img">
         <div class="company_content">

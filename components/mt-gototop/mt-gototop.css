@@ -7,8 +7,9 @@
   line-height: 50px;
   text-decoration: none;
   position: fixed;
-  bottom: 10px;
+  bottom: 80px;
   right: 10px;
+  -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
   display: none;
   z-index: 999;
@@ -19,5 +20,6 @@
     margin-top: 0.5em; }
   .mt-scrollToTop:hover, .mt-scrollToTop:focus {
     background: #43517e;
-    box-shadow: none; }
-/*# sourceMappingURL=mt-gototop.css.map */
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+/*# sourceMappingURL=mt-gototop.min.css.map */

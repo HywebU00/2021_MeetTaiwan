@@ -40,7 +40,26 @@
   <!-- mt-content -->
   <div class="mt-main-content">
     <div class="inner_img">
-      <img src="images/inner_05_member.jpg" />
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          data-srcset="images/inner_05_member.jpg"
+        />
+        <source
+          media="(min-width: 992px)"
+          data-srcset="images/inner_05_member.jpg"
+        />
+        <source
+          media="(min-width: 576px)"
+          data-srcset="images/inner_05_member.jpg"
+        />
+        <source
+          media="(max-width: 575px)"
+          data-srcset="images/inner_05_member.jpg"
+        />
+        <img data-src="images/inner_05_member.jpg" class="cover lazy" />
+        <noscript><img src="images/inner_05_member.jpg" /></noscript>
+      </picture>
     </div>
     <div class="container">
       <!-- 左側 -->
@@ -202,7 +221,7 @@
                   <ul class="regulations-list">
                     <li>豐富且詳盡的活動圖文資訊可提升宣傳效果</li>
                     <li>台灣會展網保留對您提供之活動訊息修改標題及內文的權利</li>
-                    <li>您可到會員專區查看發佈審核情形</li> 
+                    <li>您可到會員專區查看發佈審核情形</li>
                   </ul>
                   <h3 class="pop_subtitle">刊登服務流程</h3>
                   <ul class="icon-list">
@@ -318,6 +337,34 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <!-- 手機版menu -->
+    <div class="mt_bottom_menu">
+      <div class="member_block">
+        <ul>
+          <li>
+            <a href="#"><i class="fas fa-user"></i></i>
+              <span>一般會員基本資料</span></a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-building"></i>
+              <span>企業會員基本資料</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-paste"></i><span>申請服務</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-info-square"></i><span>發佈訊息</span></a>
+          </li>
+          <li>
+            <a class="btn-member-open" href="#">
+              <i class="fas fa-ellipsis-h"></i>
+              <span>More</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
