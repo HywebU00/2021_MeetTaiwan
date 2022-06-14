@@ -14913,6 +14913,38 @@ p.error {
         width: auto; }
         .form_grid .form_grp .field_name .info i {
           color: #ddd; }
+    .form_grid .form_grp .form_btnlist {
+      display: block;
+      margin: 0 0.25em 1em 0.25em;
+      width: 100%; }
+      .form_grid .form_grp .form_btnlist ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        width: 100%; }
+        .form_grid .form_grp .form_btnlist ul li {
+          margin: 0 0.25em 0.5em 0.2em;
+          min-width: 63px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; }
+        .form_grid .form_grp .form_btnlist ul a {
+          padding: 0.25em 1em;
+          background: #f1f1f1;
+          border: 1px solid #ccc;
+          border-radius: 2em;
+          -webkit-transition: all 0.5s;
+          transition: all 0.5s; }
+          .form_grid .form_grp .form_btnlist ul a:hover {
+            background: #e4e4e4; }
+      .form_grid .form_grp .form_btnlist .active {
+        background: #e352b2;
+        border: 1px solid #e352b2;
+        color: #fff; }
+        .form_grid .form_grp .form_btnlist .active:hover {
+          background: #dc269e; }
     .form_grid .form_grp .form_title {
       -ms-flex-preferred-size: 30%;
           flex-basis: 30%;
