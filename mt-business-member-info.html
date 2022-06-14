@@ -193,6 +193,12 @@
                   <div class="progress-bar2">完成度 xx %</div>
                 </div>
               </div>
+              <div class="btn_submit_grp">
+                <button type="button" class="btn">預覽</button>
+                <button type="button" class="btn btn_submit">
+                  送出待審
+                </button>
+              </div>
             </div>
             <!-- 成為企業會員 -->
             <div class="member_content">
@@ -270,6 +276,74 @@
                   </div>
                 </div>
               </div>
+              <h3 class="grp_title"><span>企業資料</span></h3>
+              <button type="button" class="btn btn-japanese">
+                增加日文欄位
+              </button>
+              <div class="form_grp">
+                <div class="field_name">
+                  公司/單位名稱(中文)
+                </div>
+                <div class="form_content">
+                  <input type="text" id="" value="" placeholder="請填寫公司/單位名稱(中文)" />
+                </div>
+              </div>
+              <div class="form_grp">
+                <div class="field_name">
+                  公司/單位名稱(英文)
+                </div>
+                <div class="form_content">
+                  <input type="text" id="" value="" placeholder="請填寫公司/單位名稱(英文)" />
+                </div>
+              </div>
+              <div class="form_grp">
+                <div class="field_name">
+                  公司/單位名稱(日文)
+                </div>
+                <div class="form_content">
+                  <input type="text" id="" value="" disabled placeholder="請填寫公司/單位名稱(日文)" />
+                </div>
+              </div>
+              <div class="form_grp">
+                <div class="field_name">
+                  公司/單位地址(中文)
+                </div>
+                <div class="form_content">
+                  <div class="address_grp">
+                    <span class="county">
+                      <select name="" id="">
+                        <option value="台北市">台北市</option>
+                        <option value="新竹縣">新竹縣</option>
+                      </select>
+                    </span>
+                    <span class="township">
+                      <select name="" id="">
+                        <option value="中正區">中正區</option>
+                        <option value="中山區">中山區</option>
+                      </select>
+                    </span>
+                    <span class="street">
+                      <input type="text" value="" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="form_grp">
+                <div class="field_name">
+                  公司/單位地址(英文)
+                </div>
+                <div class="form_content">
+                  <input type="text" id="" value="" placeholder="請填寫公司/單位地址(英文)" />
+                </div>
+              </div>
+              <div class="form_grp">
+                <div class="field_name">
+                  公司/單位地址(日文)
+                </div>
+                <div class="form_content">
+                  <input type="text" id="" value="" disabled placeholder="請填寫公司/單位地址(日文)" />
+                </div>
+              </div>
               <div class="form_grp">
                 <div class="field_name">
                   公司簡介<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
@@ -282,6 +356,10 @@
                   <div class="form_style">
                     <textarea name="" id="" cols="30" rows="10"></textarea>
                     <label for="" class="form_title">英文</label>
+                  </div>
+                  <div class="form_style">
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <label for="" class="form_title">日文</label>
                   </div>
                 </div>
               </div>
@@ -297,6 +375,10 @@
                   <div class="form_style">
                     <textarea name="" id="" cols="30" rows="10"></textarea>
                     <label for="" class="form_title">英文</label>
+                  </div>
+                  <div class="form_style">
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <label for="" class="form_title">日文</label>
                   </div>
                 </div>
               </div>
@@ -413,7 +495,189 @@
               <div class="form_grp">
                 <div class="field_name">Youtube影片介紹</div>
                 <div class="form_content">
-                  <textarea name="" id="" cols="30" rows="10" placeholder=""></textarea>
+                  <div class="form_style">
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <label for="" class="form_title">中文</label>
+                  </div>
+                  <div class="form_style">
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <label for="" class="form_title">英文</label>
+                  </div>
+                  <div class="form_style">
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <label for="" class="form_title">日文</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form_grp">
+                <div class="field_name">
+                  服務設施<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                </div>
+                <div class="form_content">
+                  <div class="checkbox_grp">
+                    <label>
+                      <input type="checkbox" name="sampleRadio5" value="" />投影設備</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />會議音響</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />對講系統</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />旅館</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />無線麥克風</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />同步翻譯</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />視訊會議系統</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />免治馬桶</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />WIFI</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />電子看板</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />貴賓室及新聞中心</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />餐飲服務</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />臨時廣告物設置</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />展館公共藝術</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />臨時空間</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />祈禱室（需預約）</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />商務服務</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />麥加指標</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />祈禱室</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />健身房</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />SPA</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />浴缸</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />游泳池</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />酒吧</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />機場接送</label>
+                  </div>
+                </div>
+              </div>
+              <h3 class="grp_title"><span>展覽館業者服務資訊</span></h3>
+              <!-- apply form -->
+              <div class="apply_form">
+                <h3><span>各展館資訊</span></h3>
+                <div class="btn_grp">
+                  <a href="#" class="btn btn-add"><i class="fas fa-plus"></i>新增參選單位</a>
+                </div>
+                <div class="form_grp">
+                  <div class="field_name">
+                    展覽館名(中文)
+                    <abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                  </div>
+                  <div class="form_content">
+                    <input type="text" id="" value="" placeholder="請填寫展覽館名(中文)">
+                  </div>
+                </div>
+                <div class="form_grp">
+                  <div class="field_name">
+                    展覽館名(英文)
+                    <abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                  </div>
+                  <div class="form_content">
+                    <input type="text" id="" value="" placeholder="請填寫展覽館名(英文)">
+                  </div>
+                </div>
+                <div class="form_grp">
+                  <div class="field_name">
+                    展覽館名(日文)
+                    <abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                  </div>
+                  <div class="form_content">
+                    <input type="text" id="" value="" placeholder="請填寫展覽館名(日文)">
+                  </div>
+                </div>
+                <div class="form_grp">
+                  <div class="field_name">
+                    可容納攤位數
+                    <abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                  </div>
+                  <div class="form_content form_inline">
+                    <input type="text" id="" value="" /> <span>攤(3M*3M/攤)</span>
+                  </div>
+                </div>
+                <div class="form_grp">
+                  <div class="field_name">
+                    照片<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                  </div>
+                  <div class="form_content">
+                    <div class="upload_grp">
+                      <input class="upload_file" type="text" readonly="" />
+                      <div class="upload_btn">
+                        <span><i class="fas fa-paper-plane"></i></span>
+                        <input type="file" class="check_file" />
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="form_grp">
+                  <div class="field_name">
+                    展覽館介紹<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                  </div>
+                  <div class="form_content">
+                    <div class="form_style">
+                      <textarea name="" id="" cols="30" rows="10"></textarea>
+                      <label for="" class="form_title">中文</label>
+                    </div>
+                    <div class="form_style">
+                      <textarea name="" id="" cols="30" rows="10"></textarea>
+                      <label for="" class="form_title">英文</label>
+                    </div>
+                    <div class="form_style">
+                      <textarea name="" id="" cols="30" rows="10"></textarea>
+                      <label for="" class="form_title">日文</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn_grp">
+                  <button type="button" class="btn btn_submit">
+                    保存
+                  </button>
+                  <button type="button" class="btn">取消</button>
+                </div>
+
+              </div>
+              <h3 class="grp_title"><span>旅館業者服務資訊</span></h3>
+              <div class="form_grp">
+                <div class="field_name">
+                  旅館星級<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                </div>
+                <div class="form_content">
+                  <div class="checkbox_grp">
+                    <label>
+                      <input type="checkbox" name="sampleRadio5" value="" />三星級</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" />四星級</label>
+                    <label>
+                      <input type="checkbox" name="samplecheckbox5" value="" checked="" />五星級</label>
+                  </div>
+                  <p class="info">
+                    <i class="fas fa-info-circle"></i>可複選
+                  </p>
+                </div>
+              </div>
+              <div class="form_grp">
+                <div class="field_name">
+                  房間數量
+                </div>
+                <div class="form_content form_inline">
+                  <input type="text" id="" value="" /> <span>間</span>
                 </div>
               </div>
               <!-- 會員專區內容 -->
@@ -426,12 +690,12 @@
                     <li>經濟部會展專案辦公室保留修改資料之權利。</li>
                   </ul>
                 </div>
-                <div class="btn_grp">
+                <!-- <div class="btn_grp">
                   <button type="button" class="btn btn_submit">
                     送出待審
                   </button>
                   <button type="button" class="btn">預覽</button>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>

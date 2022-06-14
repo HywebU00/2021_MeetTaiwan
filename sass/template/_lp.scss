@@ -64,6 +64,7 @@
 		flex-basis: 50%;
 		padding-bottom: 1em;
 		overflow: hidden;
+		// background: #fff;
 		// box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 		margin-bottom: 4em;
 
@@ -121,7 +122,8 @@
 			background: #fff;
 			padding: 1em 2em 1em;
 			min-height: 50em;
-
+			// min-height: 80em;
+			// min-height: 92em;
 			@include screen('xs_mobile') {
 				padding: 1em 0.5em 1em;
 			}
