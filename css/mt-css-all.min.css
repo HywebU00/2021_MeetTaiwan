@@ -18121,8 +18121,43 @@ p.error {
 
 .signup_content .file_download {
   padding-bottom: 2em; }
+  .signup_content .file_download .all-download {
+    margin-bottom: 0.5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+    .signup_content .file_download .all-download .btn {
+      -webkit-transition: all 0.5s;
+      transition: all 0.5s; }
+      .signup_content .file_download .all-download .btn:hover {
+        background: #55679f;
+        color: #fff; }
   .signup_content .file_download h3 {
     font-size: 1.5em; }
+  .signup_content .file_download a {
+    margin: 0 0.25em; }
+  .signup_content .file_download table td {
+    min-width: 200px;
+    text-align: center; }
+    .signup_content .file_download table td:first-child {
+      text-align: start;
+      max-width: 300px; }
+    .signup_content .file_download table td .action {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: end; }
+      .signup_content .file_download table td .action i {
+        position: relative;
+        left: unset;
+        top: 30%; }
+      .signup_content .file_download table td .action a:hover i {
+        color: #fff; }
 
 .signup_content .cp_pics {
   margin-bottom: 2em; }
