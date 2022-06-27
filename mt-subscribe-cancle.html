@@ -73,12 +73,11 @@
         </picture>
       </div>
       <div class="container">
-
         <!-- 中間內容 -->
         <div class="center_block">
           <div class="mt-page-title">
-            <h2>會員中心</h2>
-            <small>member center</small>
+            <h2>電子報訂閱</h2>
+            <small>Subscribe</small>
           </div>
           <div class="mt-content">
             <!-- breadcrumb -->
@@ -150,69 +149,31 @@
                 </ul>
               </div> -->
             </div>
-            <div class="sp_member">
-              <!-- 會員功能表頭 -->
-              <div class="member-heading">
-                <h2 class="mt-h2">申請服務<small>申請服務介紹</small></h2>
-                <!-- <div class="member_info">
-                  <div class="member_id">Hi! <em>陳大明</em>您好</div>
-                  左側有側欄請放這個 會員選單
-                  <div class="btn_grp for-open-mobile-sidebar">
-                    <a href="" class="btn btn-member-open"
-                      ><i class="fas fa-bars"></i
-                    ></a>
-                  </div>
-                </div> -->
-              </div>
+            <div class="sp_epaper">
+              <h2 class="mt-h2">取消訂閱電子報</h2>
               <!-- 會員專區內容 -->
-              <div class="member_content">
-                <div class="service_info">
-                  <div class="item" data-aos="fade-up" data-aos-delay="500">
-                    <a href="#">
-                      <h3>會議活動網站建置與QR Code報到服務</h3>
-                      <p>
-                        109年度會議活動網站服務、QR
-                        Code現場報到服務，已開放申請，敬請提早上網申請。提供我國業者在臺辦理各項會議
-                      </p>
-                    </a>
+              <div class="epaper_content">
+                <div class="form_grid">
+                  <div class="form_grp">
+                    <div class="field_name">Email</div>
+                    <div class="form_content">
+                      <input
+                        type="password"
+                        placeholder="請輸入電子信箱"
+                        id=""
+                        value=""
+                      />
+                    </div>
                   </div>
-                  <div class="item" data-aos="fade-up" data-aos-delay="600">
-                    <a href="#">
-                      <h3>臺灣會展識別標誌 國貿局識別標誌</h3>
-                      <p>
-                        歡迎申請使用臺灣會展識別標誌，透過於國際會展市場上已具知名度之
-                        MEET TAIWAN 臺灣會展識別標誌的使用
-                      </p>
-                    </a>
-                  </div>
-                  <div class="item" data-aos="fade-up" data-aos-delay="700">
-                    <a href="#">
-                      <h3>會展圖庫</h3>
-                      <p>
-                        歡迎使用臺灣會展圖庫，MEET
-                        TAIWAN挑選了臺灣各地具代表性之會展場地，
-                        以及觀光旅遊相關圖片
-                      </p>
-                    </a>
-                  </div>
-                  <div class="item" data-aos="fade-up" data-aos-delay="800">
-                    <a href="#">
-                      <h3>會展文宣品暨贈品</h3>
-                      <p>
-                        為協助國內會展籌辦單位至國外爭取會展來臺舉辦、推廣會展及其他既定在臺辦理之會展活動，貿易局特委請本室彙整
-                      </p>
-                    </a>
-                  </div>
-                  <div class="item" data-aos="fade-up" data-aos-delay="900">
-                    <a href="#">
-                      <h3>amet consectetur adipisicing</h3>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Facere, eligendi. Quos repellat eum dolor, illo dicta
-                        eaque tempora iste ipsa ullam. Impedit repudiandae
-                        incidunt vitae neque non. Laudantium, dolore facilis?
-                      </p>
-                    </a>
+                  <div class="btn_grp">
+                    <button
+                      data-fancybox
+                      data-src="#alert-content"
+                      type="button"
+                      class="btn btn_submit"
+                    >
+                      取消訂位
+                    </button>
                   </div>
                 </div>
               </div>
@@ -220,34 +181,31 @@
           </div>
         </div>
       </div>
-          <!-- 手機版menu -->
-    <div class="mt_bottom_menu">
-      <div class="member_block">
-        <ul>
-          <li>
-            <a href="#"><i class="fas fa-user"></i></i>
-              <span>一般會員基本資料</span></a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fas fa-building"></i>
-              <span>企業會員基本資料</span></a>
-          </li>
-          <li>
-            <a href="#"><i class="fas fa-paste"></i><span>申請服務</span></a>
-          </li>
-          <li>
-            <a href="#"><i class="fas fa-info-square"></i><span>發佈訊息</span></a>
-          </li>
-          <li>
-            <a class="btn-member-open" href="#">
-              <i class="fas fa-ellipsis-h"></i>
-              <span>More</span>
-            </a>
-          </li>
-        </ul>
+      <!-- 取消訂閱燈箱 -->
+      <div class="pop_style pop_alert" style="display: none" id="alert-content">
+        <h2>
+          <img src="images/mt_logo.png" alt="" />
+        </h2>
+        <div class="pop_content">
+          <p>請問您確定要取消訂閱電子報嗎？</p>
+        </div>
+        <div class="btn_grp">
+          <button type="button" class="btn">取消</button>
+          <button type="button" class="btn btn-primary">確定</button>
+        </div>
       </div>
-    </div>
+      <!-- 確認取消燈箱 -->
+      <div class="pop_style pop_alert" style="display: none" id="alert-content">
+        <h2>
+          <img src="images/mt_logo.png" alt="" />
+        </h2>
+        <div class="pop_content">
+          <p>您已完成取消訂閱，謝謝</p>
+        </div>
+        <div class="btn_grp">
+          <button type="button" class="btn btn-primary">確定</button>
+        </div>
+      </div>
     </div>
     <!-- fat footer -->
     <div id="mt_fatfooter"></div>

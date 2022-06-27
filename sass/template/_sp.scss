@@ -1069,6 +1069,9 @@ p.error {
 
 .mt-main-content {
   .sp_epaper {
+    display: flex;
+    flex-wrap: wrap;
+    height: 22em;
     .subscribe {
       display: flex;
       justify-content: flex-end;
@@ -1498,6 +1501,10 @@ p.error {
           }
         }
       }
+    }
+    .epaper_content{
+      width: 50%;
+      margin:0 auto;
     }
   }
 
@@ -3782,6 +3789,17 @@ p.error {
   max-height: 585px !important;
   max-width: 450px !important;
 
+  h2 {
+    border-bottom: unset;
+    padding: 0;
+  }
+}
+.pop_alert {
+  max-height: 320px !important;
+  max-width: 450px !important;
+  p{
+    text-align: center;
+  }
   h2 {
     border-bottom: unset;
     padding: 0;
