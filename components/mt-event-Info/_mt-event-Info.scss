@@ -22,8 +22,8 @@
         @include screen('xs_mobile') {
             .slick-dots{
                 position: relative !important;
-               top: 15px !important;
-               bottom:0 !important;
+                top: 15px !important;
+                bottom:0 !important;
             }
         }
         .item {
@@ -47,9 +47,9 @@
             &:nth-child(4).effect {
                 animation: fadeInRight 1s 1.1s both $cubic;
             }
-          
+            
             @include screen('tablet') {
-                flex-basis: 47%;
+                flex-basis: 40%;
                 margin: 0 1em 1em;
             }
             @include screen('xs_mobile') {
