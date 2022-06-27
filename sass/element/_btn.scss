@@ -189,19 +189,19 @@ $btn-radius: 0.2em;
         transform: none;
     }
 }
-.btn-subscribe{
-    background: $primaryColor;
+ .btn.btn-subscribe{
+    // background: $primaryColor;
+    background: $logo-purple;
     color:#fff;
     z-index: 5; 
-    // border: darken($secondaryColor,5%) 1px solid;
-    border: 20px #fff solid;
-    border-top: 0;
-    border-bottom: 0;
+    border: 0px;
+    border-radius: 50%;
+    height: 68px;
+    span{
+        font-size: 0.9em;
+    }
     &:hover,&:focus{
-        border: 20px #fff solid;
-        border-top: 0;
-        border-bottom: 0;
-      
+        border: 0px;
         background: $secondaryColor;
         color:#fff;
     }
