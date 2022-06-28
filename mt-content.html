@@ -38,22 +38,10 @@
   <div class="mt-main-content">
     <div class="inner_img">
       <picture>
-        <source
-          media="(min-width: 1200px)"
-          data-srcset="images/inner_01_ballon.jpg"
-        />
-        <source
-          media="(min-width: 992px)"
-          data-srcset="images/inner_01_ballon.jpg"
-        />
-        <source
-          media="(min-width: 576px)"
-          data-srcset="images/inner_01_ballon.jpg"
-        />
-        <source
-          media="(max-width: 575px)"
-          data-srcset="images/inner_01_ballon.jpg"
-        />
+        <source media="(min-width: 1200px)" data-srcset="images/inner_01_ballon.jpg" />
+        <source media="(min-width: 992px)" data-srcset="images/inner_01_ballon.jpg" />
+        <source media="(min-width: 576px)" data-srcset="images/inner_01_ballon.jpg" />
+        <source media="(max-width: 575px)" data-srcset="images/inner_01_ballon.jpg" />
         <img data-src="images/inner_01_ballon.jpg" class="cover lazy" />
         <noscript><img src="images/inner_01_ballon.jpg" /></noscript>
       </picture>
@@ -242,6 +230,116 @@
                   <td>td 資料</td>
                 </tr>
               </table>
+              <!-- 左圖右文 圖片在左側文字整體高度置中 -->
+              <h3>左圖右文 </h3>
+              <div class="mt-pic_block">
+                <div class="pic">
+                  <a href="https://source.unsplash.com/800x600" data-fancybox="gallery" data-caption="圖說">
+                    <!-- 此範例為4:3比例 -->
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="https://source.unsplash.com/800x600" />
+                      <source media="(max-width: 767px)" srcset="https://source.unsplash.com/random/800x600" />
+                      <img data-src="https://source.unsplash.com/random/800x600" class="lazy" />
+                      <noscript><img src="https://source.unsplash.com/random/800x600" /></noscript>
+                    </picture>
+                    <span>圖說</span>
+                  </a>
+                </div>
+                <p>
+                  會展場館為提供各界舉辦會展及活動之重要場所，因應國內疫情變化，為確保會展場館從業人員、會展活動主辦單位、參展商、參加者及其家屬之健康，避免群聚感染、致疫情擴大，爰訂定本管理措施，提供場館管理單位、會展場館從業人員及參加者於中央流行疫情指揮中心成立期間，訂定各會展活動之管理措施，以降低疫情於會展場館發生機率與規模，以及社區傳播風險。
+                </p>
+              </div>
+              <h3>右圖左文 </h3>
+              <!-- 右圖左文 圖片在右側文字整體高度置中 -->
+              <div class="mt-pic_block mt-pic_block-right">
+                <div class="pic">
+                  <a href="https://source.unsplash.com/800x600" data-fancybox="gallery" data-caption="圖說">
+                    <!-- 此範例為4:3比例 -->
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="https://source.unsplash.com/800x600" />
+                      <source media="(max-width: 767px)" srcset="https://source.unsplash.com/random/800x600" />
+                      <img data-src="https://source.unsplash.com/random/800x600" class="lazy" />
+                      <noscript><img src="https://source.unsplash.com/random/800x600" /></noscript>
+                    </picture>
+                    <span>圖說</span>
+                  </a>
+                </div>
+                <p>
+                  會展場館為提供各界舉辦會展及活動之重要場所，因應國內疫情變化，為確保會展場館從業人員、會展活動主辦單位、參展商、參加者及其家屬之健康，避免群聚感染、致疫情擴大，爰訂定本管理措施，提供場館管理單位、會展場館從業人員及參加者於中央流行疫情指揮中心成立期間，訂定各會展活動之管理措施，以降低疫情於會展場館發生機率與規模，以及社區傳播風險。
+                </p>
+              </div>
+              <!-- 上圖下文：圖片置中，文字滿版 -->
+              <h3>上圖下文</h3>
+              <div class="mt-pic_block mt-pic_block-top">
+                <div class="pic">
+                  <a href="https://source.unsplash.com/800x600" data-fancybox="gallery" data-caption="圖說">
+                    <!-- 此範例為4:3比例 -->
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="https://source.unsplash.com/800x600" />
+                      <source media="(max-width: 767px)" srcset="https://source.unsplash.com/random/800x600" />
+                      <img data-src="https://source.unsplash.com/random/800x600" class="lazy" />
+                      <noscript><img src="https://source.unsplash.com/random/800x600" /></noscript>
+                    </picture>
+                    <span>圖說</span>
+                  </a>
+                </div>
+                <p>
+                  會展場館為提供各界舉辦會展及活動之重要場所，因應國內疫情變化，為確保會展場館從業人員、會展活動主辦單位、參展商、參加者及其家屬之健康，避免群聚感染、致疫情擴大，爰訂定本管理措施，提供場館管理單位、會展場館從業人員及參加者於中央流行疫情指揮中心成立期間，訂定各會展活動之管理措施，以降低疫情於會展場館發生機率與規模，以及社區傳播風險。
+                </p>
+              </div>
+              <!-- 2欄圖文:圖片寬度=文字寬度 -->
+              <h3>2欄圖文</h3>
+              <div class="mt-pic_db-block">
+                <div class="item">
+                  <div class="pic">
+                    <a href="https://source.unsplash.com/800x600" data-fancybox="gallery" data-caption="圖說">
+                      <!-- 此範例為4:3比例 -->
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="https://source.unsplash.com/800x600" />
+                        <source media="(max-width: 767px)" srcset="https://source.unsplash.com/random/800x600" />
+                        <img data-src="https://source.unsplash.com/random/800x600" class="lazy" />
+                        <noscript><img src="https://source.unsplash.com/random/800x600" /></noscript>
+                      </picture>
+                      <span>圖說</span>
+                    </a>
+                  </div>
+                  <p>
+                    會展場館為提供各界舉辦會展及活動之重要場所，因應國內疫情變化，為確保會展場館從業人員、會展活動主辦單位、參展商、參加者及其家屬之健康，避免群聚感染、致疫情擴大，爰訂定本管理措施，提供場館管理單位、會展場館從業人員及參加者於中央流行疫情指揮中心成立期間，訂定各會展活動之管理措施，以降低疫情於會展場館發生機率與規模，以及社區傳播風險。
+                  </p>
+                </div>
+                <div class="item">
+                  <div class="pic">
+                    <a href="https://source.unsplash.com/800x600" data-fancybox="gallery" data-caption="圖說">
+                      <!-- 此範例為4:3比例 -->
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="https://source.unsplash.com/800x600" />
+                        <source media="(max-width: 767px)" srcset="https://source.unsplash.com/random/800x600" />
+                        <img data-src="https://source.unsplash.com/random/800x600" class="lazy" />
+                        <noscript><img src="https://source.unsplash.com/random/800x600" /></noscript>
+                      </picture>
+                      <span>圖說</span>
+                    </a>
+                  </div>
+                  <p>
+                    會展場館為提供各界舉辦會展及活動之重要場所，因應國內疫情變化，為確保會展場館從業人員、會展活動主辦單位、參展商、參加者及其家屬之健康，避免群聚感染、致疫情擴大，爰訂定本管理措施，提供場館管理單位、會展場館從業人員及參加者於中央流行疫情指揮中心成立期間，訂定各會展活動之管理措施，以降低疫情於會展場館發生機率與規模，以及社區傳播風險。
+                  </p>
+                </div>
+              </div>
+              <!-- 圖片滿版 -->
+              <h3>圖片滿版</h3>
+              <div class="mt-pic_full">
+                <div class="pic">
+                  <a href="https://source.unsplash.com/800x600" data-fancybox="gallery" data-caption="圖說">
+                    <!-- 此範例為2:1比例 -->
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="https://source.unsplash.com/800x400" />
+                      <source media="(max-width: 767px)" srcset="https://source.unsplash.com/random/800x400" />
+                      <img data-src="https://source.unsplash.com/random/800x400" class="lazy" />
+                      <noscript><img src="https://source.unsplash.com/random/800x400" /></noscript>
+                    </picture>
+                  </a>
+                </div>
+              </div>
             </div>
             <!-- 其他照片 -->
             <div class="cp_pics">
@@ -317,7 +415,7 @@
                       settings: {
                         slidesToShow: 1.5,
                         slidesToScroll: 1,
-                        arrows:false,
+                        arrows: false,
                       },
                     }, ],
                   });

@@ -757,6 +757,67 @@
       }
     }
 
+    // pic-block 模組化切版
+    .mt-pic_block{
+      display: flex;
+      margin:1.5em 0;
+      align-items: center;
+      justify-content: space-between;
+      .pic{
+        min-width: 50%;
+      }
+      p{
+        padding-left: 2em;
+      }
+    }
+    .mt-pic_block-right{
+      flex-direction: row-reverse;
+      p{
+        padding: 0 2em 0 0;
+      }
+    }
+    .mt-pic_block-top{
+      display: block;
+      .pic{
+        float: unset;
+        margin: 0 auto;
+      }
+      p{
+        padding: 0;
+        margin:2em 0 0 0;
+      }
+    }
+    .mt-pic_db-block{
+      display: flex;
+      .item{
+        padding: 0 1.5em;
+        &:first-child{
+          padding-left: 0;
+        }
+        &:last-child{
+          padding-right: 0;
+        }
+      }
+      .pic{
+        width: 100%;
+    float: unset;
+    max-width: unset;
+      }
+      p{
+        margin-top: 2em;
+      }
+    }
+    .mt-pic_full{
+      .pic{
+        margin: 1.5em 0;
+        padding: 0.5em;
+        max-width: unset;
+        width: 100%;
+        picture{
+          max-height:400px;
+        }
+      }
+    }
     // 檔案下載
     .file_download {
       width: 100%;

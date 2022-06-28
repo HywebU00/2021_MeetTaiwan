@@ -50,6 +50,7 @@ body {
     overflow-y: auto !important;
     -webkit-text-size-adjust: none;
     background: url(../images/body_bg.jpg) no-repeat 0% 0% #fff;
+    // background-attachment: fixed;
     // padding-top: 6em;
     padding-top: 4.8em;
     @include screen('tablet') {
