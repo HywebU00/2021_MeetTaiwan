@@ -288,6 +288,7 @@ p.error {
       // flex-basis: 10em;
       flex-basis: 100%;
       padding: 0.75em 0.25em;
+      padding-bottom: 0.3em;
       font-weight: bold;
       align-self: flex-start;
       color: $primaryColor;
@@ -364,7 +365,6 @@ p.error {
       flex-basis: 50%;
       display: flex;
       flex-flow: row wrap;
-
       .inlineTitle {
         flex-grow: 0;
         flex-shrink: 1;
@@ -5703,7 +5703,6 @@ p.error {
                   width: 100%;
                 }
 
-                img {}
               }
             }
 
