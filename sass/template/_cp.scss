@@ -756,7 +756,32 @@
         margin-bottom: 0.5em;
       }
     }
-
+    .data_function{
+      display: flex;
+      justify-content: flex-end;
+      .btn_apply{
+        display: block;
+        width: 12em;
+        padding: 0.5em 2em;
+        background: $primaryColor;
+        color: #fff;
+        text-align: center;
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        height: 2.5em;
+        z-index: 8;
+        position: relative;
+        @include screen('xs_mobile') {
+            width: 100%;
+        }
+       
+      }
+      @include screen('xs_mobile') {
+        justify-content: center;
+        margin: 1.5em 0;
+      }
+    }
     // pic-block 模組化切版
     .mt-pic_block{
       display: flex;
@@ -1379,7 +1404,7 @@
     padding: 0;
     padding-bottom: 1.5%;
   
-
+    
     .slider-cp-pics {
       padding: 0 2.5em;
 

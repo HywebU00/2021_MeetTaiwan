@@ -213,8 +213,9 @@
     }
 
     padding: 1em 2.5em;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 0px 16px -8px;
+    // box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 27px -5px,
+    // rgba(0, 0, 0, 0.3) 0px 0px 16px -8px;
+    border: 1px solid #e0e0e0;
   }
 
   .btn_submit_grp {
@@ -226,7 +227,11 @@
     color: #fff;
     margin-left: calc(100% - 138px);
   }
-
+  .btn-changeMember {
+    background: $primaryColor;
+    color: #fff;
+    margin-left: calc(100% - 192px);
+  }
   h3+.btn_grp {
     text-align: end;
     padding: 0;
@@ -2183,11 +2188,7 @@ p.error {
       }
     }
 
-    .changeMember_btn {
-      background: $primaryColor;
-      color: #fff;
-      margin-left: calc(100% - 192px);
-    }
+
 
     //         //data
     span.allow,
@@ -3039,6 +3040,7 @@ p.error {
       .form_grid {
         // max-width: 45em;
         margin: 0 auto;
+    
       }
 
       .service_info {
@@ -4965,8 +4967,9 @@ p.error {
   top: 76px;
   background-color: #fff;
   padding-top: 1em;
+  padding-bottom: 1em;
   z-index: 70;
-
+  box-shadow: rgba(33, 35, 38, 0.2) 0px 10px 10px -10px;
   @include screen('tablet') {
     top: 60px;
   }
