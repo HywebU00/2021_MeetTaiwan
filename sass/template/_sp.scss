@@ -6103,7 +6103,8 @@ p.error {
 
   .container {
     max-width: $container-max;
-    background: #fff;
+    // background: #fff;
+    background: linear-gradient(to bottom, #fff 10%, transparent 40%);
     margin: 0 auto;
     display: flex;
     flex-flow: row wrap;
@@ -6192,8 +6193,9 @@ p.error {
           font-size: 3em;
           right: 0.5em;
           pointer-events: none;
-
-          color: #999;
+          font-size: 2.5em;
+          color: #bbb;
+          // color: #999;
 
         }
       }
@@ -6627,7 +6629,7 @@ p.error {
         width: 100%;
         -webkit-transform: translateY(5px);
         transform: translateY(5px);
-
+        margin-bottom:5em;
         @include screen('xs_mobile') {
           overflow: hidden;
           overflow-x: auto;
@@ -6649,12 +6651,12 @@ p.error {
           font-weight: bold;
           background: #fff;
 
-          img {
-            width: 5em;
-            height: 5em;
+          img,i {
+            // width: 4em;
+            height: 1.5em;
             object-fit: contain;
             opacity: 0.5;
-
+            font-size: 2.5em;
             @include screen('xs_mobile') {
               width: 3em;
               height: 3em;
@@ -6700,7 +6702,7 @@ p.error {
             color: $primaryColor;
             border-bootom: 2px solid $primaryColor;
 
-            img {
+            img,i {
               opacity: 1;
             }
 
@@ -6745,7 +6747,8 @@ p.error {
 
           &.airport_map {
             .map {
-              background: url(../images/transport_map.jpg) no-repeat center center;
+              // background: url(../images/transport_map.jpg) no-repeat center center;
+              background: url(../images/airport_map.jpg) no-repeat center center;
               background-size: 100%;
             }
           }
