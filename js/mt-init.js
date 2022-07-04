@@ -713,10 +713,10 @@ $(window).on("load", function () {
     dots: false,
     infinite: true,
     speed: 300,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
-    arrow: true,
+    autoplay: false,
+    arrows: false,
     lazyLoaded: true,
     lazyLoad: "ondemand",
     ease: "ease",
@@ -724,25 +724,35 @@ $(window).on("load", function () {
       {
         breakpoint: 1200,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          arrows: true,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
           arrows: true,
         },
       },
       {
-        breakpoint: 200,
+        breakpoint: 992,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           arrows: true,
+        },
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 2.5,
+          slidesToScroll: 1,
+          arrows: false,
+          autoplay: false,
+        },
+      },
+      {
+        breakpoint: 200,
+        settings: {
+          slidesToShow: 1.5,
+          slidesToScroll: 1,
+          arrows: false,
+          autoplay: false,
         },
       },
     ],
