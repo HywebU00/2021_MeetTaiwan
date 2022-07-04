@@ -1251,9 +1251,9 @@ textarea {
     height: 5em;
     overflow-y: scroll;
 
-    @include screen('xs_mobile') {
-        width: 100%;
-    }
+    // @include screen('xs_mobile') {
+    //     width: 100%;
+    // }
 }
 
 input[type='text']:focus,

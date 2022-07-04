@@ -219,13 +219,13 @@
   }
 
   .btn_submit_grp {
-    margin-left: calc(100% - 192px);
+    margin-left: calc(100% - 340px);
   }
 
   .btn-japanese {
     background: $primaryColor;
     color: #fff;
-    margin-left: calc(100% - 138px);
+    // margin-left: calc(100% - 138px);
   }
   .btn-changeMember {
     background: $primaryColor;
@@ -2073,6 +2073,15 @@ p.error {
           color: $primaryColor;
           display: inline-block;
           margin: 0 0.25em;
+        }
+      }
+    }
+    .business_info{
+      align-items: center;
+      .member_id{
+        span{
+          font-weight: 600;
+          margin-right: 0.5em;
         }
       }
     }
