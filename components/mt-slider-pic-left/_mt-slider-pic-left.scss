@@ -123,6 +123,7 @@
                 }
                 .more {
                     margin: 0.25em 0.25em 0.25em auto;
+                    z-index: 1;
                 }
                 h2.mt-h2 {
                     text-align: left;
@@ -187,6 +188,21 @@
                     }
                 }
             }
+        }
+        .info-bg {
+            position: absolute;
+            bottom: 0;
+            left: unset;
+            right: 0;
+            width: 68%;
+            height: 160px;
+            background: url(../../images/mt_slider.png);
+            background-position: bottom;
+            background-size: contain;
+            background-repeat: no-repeat;   
+        }
+        .info-bg-none{
+            display: none;
         }
     }
 }
