@@ -1415,7 +1415,25 @@
 
 
 	}
-
+	.lp_cetificate{
+		display: flex;
+		.search-function{
+			max-width: 234px;
+			margin-right: 1em;
+			top: 2em;
+			.btn-clear{
+				font-size: 1em;
+   			  height: auto;
+			}
+			
+			.check_grp{
+				display: block;
+			}
+			@include screen('mobile') {
+			display: none;
+			}
+		}
+	}
 	// lp partner lp_award
 	.lp_user_article,
 	.lp_partner,
