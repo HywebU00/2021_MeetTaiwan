@@ -240,6 +240,267 @@
     text-align: end;
     padding: 0;
   }
+   // 檔案下載
+   .file_download {
+    width: 100%;
+    margin: 0 auto 2em;
+    @extend %clearfix;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      display: flex;
+      position: relative;
+      padding: 0.15em 0 0.15em 0.25em;
+      border-bottom: solid 1px #eee;
+      align-items: center;
+      overflow: hidden;
+
+      @include screen('tablet') {
+        flex-flow: row wrap;
+      }
+
+     
+
+      .file_name {
+        line-height: 1.8em;
+        margin: 0.2em 0.5em 0.2em 0;
+        color: #222;
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 50%;
+
+        @include screen('tablet') {
+          flex-basis: 100%;
+        }
+
+        ~span {
+          // flex: 0 0 100%;
+          margin: 0.2em;
+          font-size: 0.875em;
+          line-height: 1.5em;
+          vertical-align: middle;
+          color: #666;
+          flex-grow: 1;
+          flex-shrink: 1;
+          flex-basis: 30%;
+          min-width: 150px;
+          align-items: flex-start;
+
+          a {
+            color: #fff;
+            display: inline-block;
+            margin-right: 8px;
+          }
+        }
+      }
+
+      .file_type {
+        display: flex;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        padding: 0.25em 0;
+        margin-left: 0.5em;
+        span {
+          flex-grow: 0;
+          flex-shrink: 1;
+          flex-basis: auto;
+
+          @include screen('mobile') {
+            margin: 0 auto 0.25em 0;
+            display: inline-block;
+            min-width: 80px;
+
+            a {
+              display: block;
+            }
+          }
+        }
+
+        @include screen('mobile') {
+          display: block;
+          flex-basis: 100%;
+          text-align: left;
+        }
+      }
+
+      $fileType: doc,
+      docx,
+      odt,
+      xls,
+      xlsx,
+      csv,
+      ods,
+      ppt,
+      pptx,
+      odp,
+      zip,
+      txt,
+      mov,
+      mp3,
+      jpg,
+      wmv,
+      mp4,
+      pdf,
+      other;
+
+      @each $fileType in $fileType {
+        span.file_#{$fileType} {
+          flex-grow: 0;
+          flex-shrink: 1;
+          flex-basis: 300px;
+          font-size: 0.875rem;
+
+          a {
+            color: #fff;
+            font-weight: bold;
+            padding: 0em 1em;
+            line-height: 1.5em;
+            border-radius: 3px;
+            min-width: 5em;
+            text-align: center;
+            font-size: 0.938rem;
+
+            &:hover,
+            &:focus {
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        margin-right: 0.5em;
+
+        &.file_doc,
+        &.file_docx,
+        &.file_odt {
+          a {
+            background: #275cb7;
+
+            &:hover,
+            &:focus {
+              background: darken(#275cb7, 5%);
+            }
+          }
+        }
+
+        &.file_xls,
+        &.file_xlsx,
+        &.file_csv,
+        &.file_ods {
+          a {
+            background: #387947;
+
+            &:hover,
+            &:focus {
+              background: darken(#387947, 5%);
+            }
+          }
+        }
+
+        &.file_ppt,
+        &.file_pptx,
+        &.file_odp,
+        &.file_pdf {
+          a {
+            background: #c55a3b;
+
+            &:hover,
+            &:focus {
+              background: darken(#c55a3b, 5%);
+            }
+          }
+        }
+
+        &.file_pdf {
+          a {
+            background: #c00;
+
+            &:hover,
+            &:focus {
+              background: darken(#c00, 5%);
+            }
+          }
+        }
+
+        &.file_zip {
+          a {
+            background: #eb712e;
+
+            &:hover,
+            &:focus {
+              background: darken(#eb712e, 5%);
+            }
+          }
+        }
+
+        &.file_txt,
+        &.file_other {
+          a {
+            background: #555;
+
+            &:hover,
+            &:focus {
+              background: darken(#555, 5%);
+            }
+          }
+        }
+
+        &.file_mov {
+          a {
+            background: #009999;
+
+            &:hover,
+            &:focus {
+              background: darken(#009999, 5%);
+            }
+          }
+        }
+
+        &.file_mp3,
+        &.file_mp4 {
+          a {
+            background: #088ecc;
+
+            &:hover,
+            &:focus {
+              background: darken(#088ecc, 5%);
+            }
+          }
+        }
+
+        &.file_jpg {
+          a {
+            background: #6c29a4;
+
+            &:hover,
+            &:focus {
+              background: darken(#6c29a4, 5%);
+            }
+          }
+        }
+
+        &.file_wmv {
+          a {
+            background: #430a1f;
+
+            &:hover,
+            &:focus {
+              background: darken(#430a1f, 5%);
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 p.info {
@@ -343,16 +604,16 @@ p.error {
 
     .form_btnlist {
       display: block;
-      margin: 0 0.25em 1em 0.25em;
+      margin:0.5em 0.25em 1em 0.25em;
       width: 100%;
 
       ul {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-
+        align-items: center;
         li {
-          margin: 0 0.25em 0.5em 0.2em;
+          margin: 0 0.25em 0em 0.2em;
           min-width: 63px;
           display: flex;
         }
