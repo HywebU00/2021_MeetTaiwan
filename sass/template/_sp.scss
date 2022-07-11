@@ -217,7 +217,9 @@
     // rgba(0, 0, 0, 0.3) 0px 0px 16px -8px;
     border: 1px solid #e0e0e0;
   }
-
+  .apply_form_meetingroom{
+    margin-top: 2em;
+  }
   .btn_submit_grp {
     margin-left: calc(100% - 340px);
   }
@@ -705,7 +707,21 @@ p.error {
           }
         }
       }
-
+      .checkboxAndInput_grp{
+        .input-text{
+          margin-left: 0.5em;
+        }
+        label{
+          display: flex;
+          align-items: center;
+        }
+        input[type="checkbox"]+span{
+          min-width: 65px;
+        }
+        input[type="number"]{
+          max-width: 100px ;
+        }
+      }
       .form_style {
         flex-grow: 1;
         flex-shrink: 1;
@@ -1222,7 +1238,7 @@ p.error {
                 white-space: nowrap;
               }
             }
-
+            
             .datepick {
               i {
                 &:before {
