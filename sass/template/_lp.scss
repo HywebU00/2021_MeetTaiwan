@@ -291,6 +291,9 @@
 							}
 						}
 					}
+					@include screen('xs_mobile'){
+						display: none;
+					}
 				}
 
 				&.form_result {
