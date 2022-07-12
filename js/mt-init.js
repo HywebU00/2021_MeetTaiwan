@@ -759,6 +759,55 @@ $(window).on("load", function () {
   });
   $(".commonSlider").slick("refresh");
 
+  $(".citySlider").slick({
+    mobileFirst: true,
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: false,
+    arrows: true,
+    lazyLoaded: true,
+    ease: "ease",
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          arrows: true,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: true,
+        },
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 2.5,
+          slidesToScroll: 1,
+          arrows: false,
+          autoplay: false,
+        },
+      },
+      {
+        breakpoint: 200,
+        settings: {
+          slidesToShow: 1.5,
+          slidesToScroll: 1,
+          arrows: false,
+          autoplay: false,
+        },
+      },
+    ],
+  });
+  $(".citySlider").slick("refresh");
   //------ 書籤蒐藏 如有蒐藏則顯示使用者書簽亮燈 ---------
   var i_bookmark = $("ul .i_bookmark.active");
   function addClass() {
