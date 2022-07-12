@@ -176,6 +176,12 @@ table {
                 th {
                     border-bottom: 1px solid #ddd;
                     border-top: 0px;
+                   a{
+                    color: darken( $primaryColor, 10%);
+                    &:hover{
+                        color: $secondaryColor;
+                    }
+                   } 
                 }
 
                 td {
