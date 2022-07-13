@@ -2358,11 +2358,24 @@ p.error {
 
     .business_info {
       align-items: center;
-
+      
       .member_id {
         span {
           font-weight: 600;
           margin-right: 0.5em;
+        }
+        +a{
+          padding: 0 0.5em;
+        }
+      }
+      @include screen('mobile'){
+        flex-wrap: wrap;
+
+        .member_id {
+          +a{
+            margin-top: 0.5em;
+            padding: 0 0.5em;
+          }
         }
       }
     }
@@ -2614,6 +2627,7 @@ p.error {
   }
 
   @include screen('mobile') {
+    padding: 0 1em;
     table {
       thead {
         display: none;
@@ -4166,7 +4180,59 @@ p.error {
     padding: 0;
   }
 }
-
+.pop_business{
+  padding: 0 44px 0 0 !important;
+  max-width: 800px !important;
+  max-height: 500px !important;
+  width: unset;
+  @include screen('mobile') {
+    width: 80% !important;
+    height: 50% !important;
+    padding: 44px !important;
+  }
+  .pop_content{
+    display: flex;
+    height: 100%;
+  }
+  .business_img{
+    background: url(../images/signup_img.jpg) no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    width: 40%;
+    height: 100%;
+    @include screen('mobile') {
+      display: none;
+    }
+  }
+  .business_info{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 44px;
+    .form_style{
+      display: flex;
+     .btn{
+      margin: 0 0.5em ;
+     }
+     .btn_submit{
+      background-color: $primaryColor;
+      color: #fff;
+     }
+    }
+    p{
+      color: #999;
+      font-size: 0.813rem;
+    }
+    p.error{
+      color: $importantColor;
+    }
+    @include screen('mobile') {
+      width: 100%;
+      padding-left: 0px;
+    }
+  }
+}
 .pop_alert {
   max-height: 320px !important;
   max-width: 450px !important;
