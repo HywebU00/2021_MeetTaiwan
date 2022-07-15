@@ -5656,31 +5656,40 @@ span{
 }
 
 .mt-awards {
-  // padding: 2em 0 4em;
+  background: url(../images/mt-slider-grid.jpg) ;
+  background-size: cover;
+  background-position: center center;
   padding: 0 0 4em;
-  // background-color: #fff;
   overflow: hidden;
-
+.mt-slider-award{
+  background-color: unset;
+}
   .award-content {
     display: flex;
-    height: 40em;
-  
+    height: 45em;
+    max-width: 1600px;
+    margin: 0 auto;
     .award-img {
       width: 50%;
       height: 100%;
+      padding: 0 2em;
       .item{
         display: flex;
-        // padding-top:5%;
         align-items: center;
         justify-content: center;
-        height: 40em;
-
+        height: 45em;
+       picture{
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+       }
+      }
+      @include screen('tablet'){
+        display: none;
       }
     }
   }
 
   .slider-marquee {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.6);
     margin: 0 auto;
     border-radius: 0.25em;
     backdrop-filter: blur(15px);
@@ -5713,6 +5722,7 @@ span{
       margin-bottom: 4em;
     }
     li{
+      cursor: pointer;
       h3{
         margin-bottom: 0.1em;
       }
@@ -5720,6 +5730,12 @@ span{
         display: flex;
         justify-content: center;
       }
+      &:hover{
+        color: $color-hr;
+      }
+    }
+    .slick-center{
+      color: $primaryColor;
     }
   }
 }

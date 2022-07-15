@@ -117,18 +117,17 @@
       <!-- mt-slider-grid -->
       <div class="mt-slider-grid mt-slider-award">
         <!-- container -->
-        <div class="img-container">
-          <!-- <img src="images/awards_bg.jpg" /> -->
-          <!-- 請針對縮圖產出尺寸使用不同解析度 src -->
-          <!-- <picture>
+        <!-- <div class="img-container">        
+          請針對縮圖產出尺寸使用不同解析度 src
+          <picture>
             <source media="(min-width: 1200px)" srcset="images/awards_bg.jpg" />
             <source media="(min-width: 992px)" srcset="images/awards_bg.jpg" />
             <source media="(min-width: 576px)" srcset="images/awards_bg.jpg" />
             <source media="(max-width: 575px)" srcset="images/awards_bg.jpg" />
-            <img data-src="images/awards_bg.jpg" class="lazy" />
+            <img data-src="images/mt-slider-grid.jpg" class="lazy" />
             <noscript><img src="images/awards_bg.jpg" /></noscript>
-          </picture> -->
-        </div>
+          </picture>
+        </div> -->
         <div class="award-content" data-aos="fade-up"
         data-aos-delay="500"">
           <!-- slider-grid -->
@@ -161,44 +160,66 @@
               <picture>
                 <source
                   media="(min-width: 1200px)"
-                  data-srcset="images/marquee_05.jpg"
+                  data-srcset="images/marquee_02.jpg"
                 />
                 <source
                   media="(min-width: 992px)"
-                  data-srcset="images/marquee_05.jpg"
+                  data-srcset="images/marquee_02.jpg"
                 />
                 <source
                   media="(min-width: 576px)"
-                  data-srcset="images/marquee_05.jpg"
+                  data-srcset="images/marquee_02.jpg"
                 />
                 <source
                   media="(max-width: 575px)"
-                  data-srcset="images/marquee_05.jpg"
+                  data-srcset="images/marquee_02.jpg"
                 />
-                <img data-src="images/marquee_05.jpg" class="lazy" />
-                <noscript> <img src="images/marquee_05.jpg" alt="" /></noscript>
+                <img data-src="images/marquee_02.jpg" class="lazy" />
+                <noscript> <img src="images/marquee_02.jpg" alt="" /></noscript>
               </picture>
             </div>
             <div class="item">
               <picture>
                 <source
                   media="(min-width: 1200px)"
-                  data-srcset="images/marquee_01.jpg"
+                  data-srcset="images/marquee_03.jpg"
                 />
                 <source
                   media="(min-width: 992px)"
-                  data-srcset="images/marquee_01.jpg"
+                  data-srcset="images/marquee_03.jpg"
                 />
                 <source
                   media="(min-width: 576px)"
-                  data-srcset="images/marquee_01.jpg"
+                  data-srcset="images/marquee_03.jpg"
                 />
                 <source
                   media="(max-width: 575px)"
-                  data-srcset="images/marquee_01.jpg"
+                  data-srcset="images/marquee_03.jpg"
                 />
-                <img data-src="images/marquee_01.jpg" class="lazy" />
-                <noscript> <img src="images/marquee_01.jpg" alt="" /></noscript>
+                <img data-src="images/marquee_03.jpg" class="lazy" />
+                <noscript> <img src="images/marquee_03.jpg" alt="" /></noscript>
+              </picture>
+            </div>
+            <div class="item">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  data-srcset="images/marquee_04.jpg"
+                />
+                <source
+                  media="(min-width: 992px)"
+                  data-srcset="images/marquee_04.jpg"
+                />
+                <source
+                  media="(min-width: 576px)"
+                  data-srcset="images/marquee_04.jpg"
+                />
+                <source
+                  media="(max-width: 575px)"
+                  data-srcset="images/marquee_04.jpg"
+                />
+                <img data-src="images/marquee_04.jpg" class="lazy" />
+                <noscript> <img src="images/marquee_04.jpg" alt="" /></noscript>
               </picture>
             </div>
             <div class="item">
@@ -250,35 +271,38 @@
                 </li>
               </ul>
             </div>
-            <!-- <li>
-                <h3><span>2020 台灣抗疫表現全球第1</span></h3>
-                <small>2020 Stella Awards,M&C Asia</small>
-              </li>
-              <li>
-                <h3><span>2020 全球第2安全的國家</span></h3>
-                <small>2020 Stella Awards,M&C Asia</small>
-              </li>
-              <li>
-                <h3><span>2020 亞洲最佳會議獎旅目的地獎</span></h3>
-                <small>2020 Stella Awards,M&C Asia</small>
-              </li>
-              <li>
-                <h3><span>2020 最佳創新目的地行銷特別獎</span></h3>
-                <small>2020 Stella Awards,M&C Asia</small>
-              </li>
-              <li>
-                <h3><span>2020 台灣抗疫表現全球第1</span></h3>
-                <small>2020 Stella Awards,M&C Asia</small>
-              </li>
-              <li>
-                <h3><span>2020 全球第2安全的國家</span></h3>
-                <small>2020 Stella Awards,M&C Asia</small>
-              </li> -->
           </div>
         </div>
       </div>
     </div>
+    <script>
+      // for Demo load components
+  
+      $(document).ready(function () {
 
+        $(".slider-marquee ul").slick({
+          slidesToShow: 3,
+           centerMode: true,
+          pauseOnHover: true,
+          slidesToScroll: 1,
+          autoplay: true,
+          dots: false,
+          arrows: false,
+          centerMode: true,
+          focusOnSelect: true,
+          vertical: true,
+          speed: 500,
+          asNavFor: ".award-img",
+        });
+        $(".award-img").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: true,
+          asNavFor: ".slider-marquee ul",
+        });
+      });
+    </script>
     <!-- mt-success-case -->
     <div id="mt_success_case"></div>
     <!-- mt-content-list -->
@@ -437,34 +461,26 @@
       $("#mt_userbar").load("components/mt-userbar/mt-userbar.html");
       //Direction upward
 
-      // $(".slider-marquee").marquee({
-      //   direction: "up",
-      //   speed: 70,
-      //   gap: 50,
-      //   delayBeforeStart: 0,
-      //   duplicated: true,
+      // $(".slider-marquee ul").slick({
+      //   slidesToShow: 3,
       //   pauseOnHover: true,
+      //   slidesToScroll: 1,
+      //   autoplay: false,
+      //   dots: false,
+      //   arrows: false,
+      //   centerMode: true,
+      //   focusOnSelect: true,
+      //   vertical: true,
+      //   speed: 500,
+      //   asNavFor: ".award-img",
       // });
-      $(".slider-marquee ul").slick({
-        slidesToShow: 3,
-        pauseOnHover: true,
-        slidesToScroll: 1,
-        autoplay: true,
-        dots: false,
-        arrows: false,
-        centerMode: true,
-        focusOnSelect: true,
-        vertical: true,
-        speed: 500,
-        asNavFor: ".award-img",
-      });
-      $(".award-img").slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: ".slider-marquee ul",
-      });
+      // $(".award-img").slick({
+      //   slidesToShow: 1,
+      //   slidesToScroll: 1,
+      //   arrows: false,
+      //   fade: true,
+      //   asNavFor: ".slider-marquee ul",
+      // });
     });
   </script>
   <!-- 呼叫元件內的function -->
