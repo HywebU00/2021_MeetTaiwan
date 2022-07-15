@@ -1,0 +1,37 @@
+<!-- css -->
+<link rel="stylesheet" href="components/mt-alert/mt-alert.css" />
+<!-- alert -->
+<div class="mt-alert">
+  <div class="container">
+    <div class="alert">
+      <div class="alert-icon">
+        <i class="fas fa-exclamation"></i>
+      </div>
+      <div class="alert-content">
+        <p>
+          110年第三季會展業薪資補貼與營運資金補貼即日起受理申請，Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Iure consequuntur sunt
+          eveniet, ratione nobis nostrum totam expedita officiis eligendi
+          placeat amet vitae nisi corporis laboriosam praesentium animi,
+          possimus, quasi nesciunt.
+        </p>
+        <a href="#" class="more"><span>more</span></a>
+      </div>
+      <a href="#" class="close"><i class="fas fa-times"></i></a>
+    </div>
+  </div>
+</div>
+<!-- JS -->
+<script>
+  $(function () {
+    // mt-alert-slider
+    $(".alert-container").slick({
+      slidesToShow: 1,
+      autoplay: true,
+      arrows: false,
+      lazyLoaded: true,
+      vertical: true,
+      dots: true,
+    });
+  });
+</script>

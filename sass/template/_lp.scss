@@ -145,20 +145,20 @@
 		@include screen('mobile') {
 			display: flex;
 			margin-bottom: 1em;
+			justify-content: end;
+			// .btn {
+			// 	display: block;
+			// 	width: 90%;
+			// 	margin: 0 auto;
 
-			.btn {
-				display: block;
-				width: 90%;
-				margin: 0 auto;
-
-				i {
-					margin-right: 0.5em;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					height: 100%;
-				}
-			}
+			// 	i {
+			// 		margin-right: 0.5em;
+			// 		display: flex;
+			// 		justify-content: center;
+			// 		align-items: center;
+			// 		height: 100%;
+			// 	}
+			// }
 		}
 	}
 
@@ -233,6 +233,7 @@
 					flex-grow: 1;
 					flex-basis: auto;
 					justify-content: flex-end;
+					
 				}
 
 				.form-content {
@@ -347,6 +348,13 @@
 						margin-right: 0;
 					}
 				}
+			}
+			.for-open-mobile-sidebar{
+				@include screen('mobile'){
+					display: flex;
+					justify-content: flex-start;
+				}
+				
 			}
 		}
 
@@ -1199,9 +1207,42 @@
 					}
 				}
 			}
+			// &>ul {
+			// 	li {
+			// 		padding-right: 10em;
+
+			// 		@include screen('tablet') {
+			// 			padding-right: 1em;
+			// 		}
+
+			// 		.reporter {
+			// 			position: absolute;
+			// 			top: 2em;
+			// 			right: 1em;
+			// 			font-size: 0.813em;
+			// 			width: 8rem;
+			// 			color: #888;
+
+			// 			@include screen('tablet') {
+			// 				position: relative;
+			// 				top: 0;
+			// 				right: 0;
+			// 				width: auto;
+			// 			}
+
+			// 			a {
+			// 				display: block;
+
+			// 				@include screen('tablet') {
+			// 					display: inline-block;
+			// 				}
+			// 			}
+			// 		}
+			// 	}
+			// }
 		}
 
-		&>ul,
+		&>div>ul, &>ul,
 		ol {
 			list-style-type: none;
 			padding: 0;
@@ -1570,7 +1611,7 @@
 						margin: 0 0 0.5em;
 						font-size: 1.5em;
 						line-height: 1.45em;
-						margin-right: 2.75em;
+						margin-right: 3em;
 
 						a {
 							color: #333;
@@ -1606,7 +1647,19 @@
 						}
 
 					}
-
+					.i_muslim {
+						position: absolute;
+						width: 1.5em;
+						height: 1.5em;
+						right: 3.8em;
+						top: 0.25em;
+						line-height: 1.5em;
+						color: $primaryColor;
+						@include screen('xs_mobile') {
+							top: 1.35em;
+							right: 2.5em;
+						}
+					}
 					.i_bookmark {
 						position: absolute;
 						width: 1em;

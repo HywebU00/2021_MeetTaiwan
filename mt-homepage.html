@@ -398,6 +398,46 @@
       </div>
     </div>
   </div>
+  <div class="mt-alert-slider">
+    <div class="container alert-container">
+      <div class="alert-item">
+        <div class="alert-icon">
+          <i class="fas fa-exclamation"></i>
+        </div>
+        <div class="alert-content">
+          <h3>重要消息</h3>
+          <p> 110年第三季會展業薪資補貼與營運資金補貼即日起受理申請，Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+            consequuntur sunt eveniet, ratione nobis nostrum totam expedita officiis eligendi placeat amet
+            vitae nisi corporis laboriosam praesentium animi, possimus, quasi nesciunt.</p>
+          <a href="#" class="more"><span>more</span></a>
+        </div>
+      </div>
+      <div class="alert-item">
+        <div class="alert-icon">
+          <i class="fas fa-exclamation"></i>
+        </div>
+        <div class="alert-content">
+          <h3>重要消息</h3>
+          <p> 110年第三季會展業薪資補貼與營運資金補貼即日起受理申請，Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+            consequuntur sunt eveniet, ratione nobis nostrum totam expedita officiis eligendi placeat amet
+            vitae nisi corporis laboriosam praesentium animi, possimus, quasi nesciunt.</p>
+          <a href="#" class="more"><span>more</span></a>
+        </div>
+      </div>
+      <div class="alert-item">
+        <div class="alert-icon">
+          <i class="fas fa-exclamation"></i>
+        </div>
+        <div class="alert-content">
+          <h3>重要消息</h3>
+          <p> 110年第三季會展業薪資補貼與營運資金補貼即日起受理申請，Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+            consequuntur sunt eveniet, ratione nobis nostrum totam expedita officiis eligendi placeat amet
+            vitae nisi corporis laboriosam praesentium animi, possimus, quasi nesciunt.</p>
+          <a href="#" class="more"><span>more</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- JS -->
   <script>
     $(function () {
@@ -408,6 +448,17 @@
           $('.mt-alert').stop().hide();
           e.preventDefault();
         });
+
+      // mt-alert-slider
+      $('.alert-container').slick({
+        slidesToShow: 1,
+        autoplay: true,
+        arrows: false,
+        lazyLoaded: true,  
+        vertical: true,
+        dots: true,
+       
+      });
     })
   </script>
   <!-- mt-event-Info -->
@@ -418,7 +469,7 @@
         <div data-aos="fade-left" data-aos-delay="500" class="item">
           <a href="#">
             <div class="mt-tag">Exhibition</div>
-            <h3><span>2035 E-Mobility Taiwan</span></h3>
+            <div class="title"><h3><span>2035 E-Mobility Taiwan</span></h3></div>
             <div class="date"><time>2021/10/20</time> - <time>2021/10/22</time></div>
             <div class="info">
               <p>Organized by Taiwan External Trade Development</p>
@@ -428,7 +479,7 @@
         <div data-aos="fade-left" data-aos-delay="750" class="item">
           <a href="#">
             <div class="mt-tag">Exhibition</div>
-            <h3><span>Contemporary Curating Rethink</span></h3>
+            <div class="title"> <h3><span>Contemporary Curating Rethink</span></h3></div>
             <div class="date"><time>2021/10/20</time> - <time>2021/10/22</time></div>
             <div class="info">
               <p> “Aging in Place” is the ultimate desire for all the human beings. However, social
@@ -439,7 +490,7 @@
         <div data-aos="fade-left" data-aos-delay="1000" class="item">
           <a href="#">
             <div class="mt-tag">Meeting</div>
-            <h3><span>A New Era of Care Industry – Innovative Technology</span></h3>
+            <div class="title"> <h3><span>A New Era of Care Industry – Innovative Technology </span></h3></div>
             <div class="date"><time>2021/10/20</time> - <time>2021/10/22</time></div>
             <div class="info">
               <p>Lorem ipsum dolor sit amet consectetur aaepe in expeditatis dicta tenetur, commodi ad?
@@ -450,7 +501,7 @@
         <div data-aos="fade-left" data-aos-delay="1250" class="item">
           <a href="#">
             <div class="mt-tag">Others</div>
-            <h3><span>2035 E-Mobility Taiwan</span></h3>
+        <div class="title"><h3><span>2035 E-Mobility Taiwan</span></h3></div>
             <div class="date"><time>2021/10/20</time> - <time>2021/10/22</time></div>
             <div class="info">
               <p> Organized by Taiwan External Trade Development Council (TAITRA), "2035 E-Mobility
