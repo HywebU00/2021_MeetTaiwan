@@ -4,7 +4,6 @@
 // mt-news-tab-1
 .mt-news-tab-2 {
     position: relative;
-    // overflow: auto;
     overflow: hidden;
 
     .container {
@@ -41,22 +40,48 @@
             width: 80%;
             margin: 0 auto 0 0;
             position: relative;
-
-            &:after {
-                position: absolute;
-                content: '';
-                width: 600px;
-                height: 70%;
-                background: url(../images/tabs-2-bg.jpg) no-repeat center center;
-                background-size: cover;
-                z-index: -1;
-                right: calc(-20% - 2.9em);
-                bottom: -10%;
-
-                @include screen('tablet') {
-                    display: none;
+          
+            .feature {
+                .img-container {
+         
+                    z-index: 1;
+                    width: 650px;
+                    height: 460px;
+                    position: absolute !important;
+                    right: -25%;
+                    bottom: -10%;
+                    @include aspect-ratio(4, 5);
+                    img {
+                        object-fit: cover;
+                        transition: .3s ease-out;
+                    }
+                    a{
+                        display:block;
+    
+                    }
+                    @include screen('tablet') {
+                        display: none;
+                    }
+                    
                 }
+
+                
+             
             }
+            // &:after {
+            //     position: absolute;
+            //     content: '';
+            //     width: 600px;
+            //     height: 70%;
+            //     background: url(../images/tabs-2-bg.jpg) no-repeat center center;
+            //     background-size: cover;
+            //     z-index: -1;
+            //     right: calc(-20% - 2.9em);
+            //     bottom: -10%;
+            //     @include screen('tablet') {
+            //         display: none;
+            //     }
+            // }
 
             @include screen('tablet') {
                 width: auto;
@@ -79,7 +104,8 @@
                 flex-flow: row wrap;
                 flex: 1;
                 overflow: hidden;
-
+                position: relative;
+                z-index: 2;
                 @include screen('xs_mobile') {
                     padding: 1em 2em;
                 }
@@ -194,4 +220,14 @@
     }
 
 
+}
+.mt-news-tab-2.no-img{
+.feature{
+    display: none;
+}
+.container {
+    .news-tab-2{
+        width: 100%;
+    }
+}
 }

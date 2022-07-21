@@ -454,10 +454,10 @@
         slidesToShow: 1,
         autoplay: true,
         arrows: false,
-        lazyLoaded: true,  
+        lazyLoaded: true,
         vertical: true,
         dots: true,
-       
+
       });
     })
   </script>
@@ -469,7 +469,9 @@
         <div data-aos="fade-left" data-aos-delay="500" class="item">
           <a href="#">
             <div class="mt-tag">Exhibition</div>
-            <div class="title"><h3><span>2035 E-Mobility Taiwan</span></h3></div>
+            <div class="title">
+              <h3><span>2035 E-Mobility Taiwan</span></h3>
+            </div>
             <div class="date"><time>2021/10/20</time> - <time>2021/10/22</time></div>
             <div class="info">
               <p>Organized by Taiwan External Trade Development</p>
@@ -479,7 +481,9 @@
         <div data-aos="fade-left" data-aos-delay="750" class="item">
           <a href="#">
             <div class="mt-tag">Exhibition</div>
-            <div class="title"> <h3><span>Contemporary Curating Rethink</span></h3></div>
+            <div class="title">
+              <h3><span>Contemporary Curating Rethink</span></h3>
+            </div>
             <div class="date"><time>2021/10/20</time> - <time>2021/10/22</time></div>
             <div class="info">
               <p> “Aging in Place” is the ultimate desire for all the human beings. However, social
@@ -490,7 +494,9 @@
         <div data-aos="fade-left" data-aos-delay="1000" class="item">
           <a href="#">
             <div class="mt-tag">Meeting</div>
-            <div class="title"> <h3><span>A New Era of Care Industry – Innovative Technology </span></h3></div>
+            <div class="title">
+              <h3><span>A New Era of Care Industry – Innovative Technology </span></h3>
+            </div>
             <div class="date"><time>2021/10/20</time> - <time>2021/10/22</time></div>
             <div class="info">
               <p>Lorem ipsum dolor sit amet consectetur aaepe in expeditatis dicta tenetur, commodi ad?
@@ -501,7 +507,9 @@
         <div data-aos="fade-left" data-aos-delay="1250" class="item">
           <a href="#">
             <div class="mt-tag">Others</div>
-        <div class="title"><h3><span>2035 E-Mobility Taiwan</span></h3></div>
+            <div class="title">
+              <h3><span>2035 E-Mobility Taiwan</span></h3>
+            </div>
             <div class="date"><time>2021/10/20</time> - <time>2021/10/22</time></div>
             <div class="info">
               <p> Organized by Taiwan External Trade Development Council (TAITRA), "2035 E-Mobility
@@ -584,15 +592,15 @@
       <div class="slider-pic-right">
         <div class="item">
           <div class="slider-pic">
-            <div class="info ">             
+            <div class="info ">
               <h2 class="mt-h2">
                 <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, voluptates.</span>
               </h2>
               <p> Brouse our platform of over 100 venues and find the best event place for your needs.
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati totam at molestiae
                 doloremque suscipit odit consequatur error placeat asperiores veritatis! </p>
-              <a href="#" class="more"><span>more</span></a>        
-            <div class="info-bg "></div>
+              <a href="#" class="more"><span>more</span></a>
+              <div class="info-bg "></div>
             </div>
             <div class="img-container">
               <!-- 請針對縮圖產出尺寸使用不同解析度 src -->
@@ -1075,7 +1083,7 @@
               <img src="https://lipsum.app/id/18/800x400" alt="" />
             </div>
           </a>
-        </div>    
+        </div>
       </div>
       <a href="#" class="more"><span>more</span></a>
     </div>
@@ -1097,52 +1105,149 @@
         lazyLoad: 'ondemand',
         ease: 'ease',
         responsive: [{
-          breakpoint: 1200,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            arrows: true,
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              arrows: true,
+            },
           },
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            arrows: true,
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              arrows: true,
+            },
           },
-        },
-        {
-          breakpoint: 575,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            arrows: false,
+          {
+            breakpoint: 575,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              arrows: false,
+            },
           },
-        },
-        {
-          breakpoint: 375,
-          settings: {
-            slidesToShow: 1.5,
-            slidesToScroll: 1,
-            arrows: false,
+          {
+            breakpoint: 375,
+            settings: {
+              slidesToShow: 1.5,
+              slidesToScroll: 1,
+              arrows: false,
+            },
           },
-        },
-        {
-          breakpoint: 200,
-          settings: {
-            slidesToShow: 1.5,
-            slidesToScroll: 1,
-            arrows: false,
-          },
-        }
-      ],
+          {
+            breakpoint: 200,
+            settings: {
+              slidesToShow: 1.5,
+              slidesToScroll: 1,
+              arrows: false,
+            },
+          }
+        ],
       });
       $('.slider-col-2.slider-col-2-pc').slick('refresh');
     })
   </script>
   <!-- mt-news-tab-1 -->
   <div class="mt-news-tab-1">
+    <div class="container">
+      <div class="news-tab-1">
+        <!-- feature news -->
+        <div class="feature">
+          <div class="img-container">
+            <a href="#" title="">
+              <picture>
+                <source media="(min-width: 1200px)" data-srcset="images/news-pic01.jpg" />
+                <source media="(min-width: 992px)" data-srcset="images/news-pic01.jpg" />
+                <source media="(min-width: 576px)" data-srcset="images/news-pic01.jpg" />
+                <source media="(max-width: 575px)" data-srcset="images/news-pic01.jpg" />
+                <img data-src="images/news-pic01.jpg" class="lazy" />
+                <noscript><img src="images/news-pic01.jpg" /></noscript>
+              </picture>
+              <div class="caption">
+                <time>2022-01-01</time>
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quidem maxime,
+                  autem nulla, vel ipsum numquam, in quae nostrum non pariatur blanditiis voluptate
+                  error illo suscipit eligendi! Voluptate, voluptatum soluta.</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- tab Start -->
+        <div class="tabSet">
+          <h2 class="mt-h2">News</h2>
+          <div class="nav-tab nav-tab1">
+            <ul class="nav nav-list" role="tablist">
+              <li class="nav-item">
+                <button class="nav-link active">重大公告</button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link">新聞專區</button>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active">
+                <ul>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto
+                      explicabo ipsum vel dolorum, accusamus iusto natus earum aut praesentium culpa a
+                      odio excepturi dolor nemo quisquam maxime reiciendis itaque modi.</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">的了才有樹位示法這綠以是記盡排的景</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">個外的隊個人學全一畫調臺常如市車……自於根決想輪你信</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">也只標物學。許最可舞長這小幾五價黃識算們也護……中</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">麼子有著他市在大思兒個一力車一房去生</a>
+                  </li>
+                </ul>
+                <a href="#" class="more"><span>more</span></a>
+              </div>
+              <div class="tab-pane">
+                <ul>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">比工說態他候紀全整使直裡，標以呢間的本切離風……我的鄉從國動經產從男面鄉錯我也了</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">父未的了，我面筆地完體相，們朋今然帶，望一這記經行原總山人與地相觀時水了打、少旅歌月定男子們過念</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">電走男我所合說親的教不：個以到得：石度本；</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">用習別線營傳。之也洋玩心的明開但現受師</a>
+                  </li>
+                  <li>
+                    <time>2021/1/1</time>
+                    <a href="#">同不辦情為越裡信臉了羅懷空主張文商然明的源教規坡</a>
+                  </li>
+                </ul>
+                <a href="#" class="more"><span>more</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- mt-news-tab-1 no-img -->
+  <!-- 沒有照片時 多 class no-img  -->
+  <div class="mt-news-tab-1 no-img ">
     <div class="container">
       <div class="news-tab-1">
         <!-- feature news -->
@@ -1302,9 +1407,109 @@
           </ul>
           <a href="#" class="more"><span>more</span></a>
         </div>
+        <!-- feature news -->
+        <div class="feature">
+          <div class="img-container">
+            <a href="#" title="">
+              <picture>
+                <source media="(min-width: 1200px)" data-srcset="images/tabs-2-bg.jpg" />
+                <source media="(min-width: 992px)" data-srcset="images/tabs-2-bg.jpg" />
+                <source media="(min-width: 576px)" data-srcset="images/tabs-2-bg.jpg" />
+                <source media="(max-width: 575px)" data-srcset="images/tabs-2-bg.jpg" />
+                <img data-src="images/tabs-2-bg.jpg" class="lazy" />
+                <noscript><img src="images/tabs-2-bg.jpg" /></noscript>
+              </picture>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
+    <!-- mt-news-tab-2 -->
+      <!-- 沒有照片時 多 class no-img  -->
+    <div class="mt-news-tab-2 no-img">
+      <div class="container">
+        <div class="news-tab-2">
+          <div class="newsContent">
+            <h2 class="mt-h2">News</h2>
+            <ul>
+              <li>
+                <time>2021/1/1</time>
+                <!-- category -->
+                <div class="mt-tab-category">
+                  <ul>
+                    <li><a href="#">新聞</a></li>
+                    <!-- <li><a href="#">展覽</a></li> -->
+                  </ul>
+                </div>
+                <a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto explicabo
+                  ipsum vel dolorum, accusamus iusto natus earum aut praesentium culpa a odio excepturi
+                  dolor nemo quisquam maxime reiciendis itaque modi.</a>
+              </li>
+              <li>
+                <time>2021/1/1</time>
+                <!-- category -->
+                <div class="mt-tab-category">
+                  <ul>
+                    <li><a href="#">活動資訊</a></li>
+  
+                  </ul>
+                </div>
+                <a href="#">的了才有樹位示法這綠以是記盡排的景</a>
+              </li>
+              <li>
+                <time>2021/1/1</time>
+                <!-- category -->
+                <div class="mt-tab-category">
+                  <ul>
+                    <li><a href="#">活動資訊</a></li>
+  
+                  </ul>
+                </div>
+                <a href="#">個外的隊個人學全一畫調臺常如市車……自於根決想輪你信</a>
+              </li>
+              <li>
+                <time>2021/1/1</time>
+                <!-- category -->
+                <div class="mt-tab-category">
+                  <ul>
+                    <li><a href="#">活動資訊</a></li>
+                  </ul>
+                </div>
+                <a href="#">也只標物學。許最可舞長這小幾五價黃識算們也護……中</a>
+              </li>
+              <li>
+                <time>2021/1/1</time>
+                <!-- category -->
+                <div class="mt-tab-category">
+                  <ul>
+                    <li><a href="#">重要公告</a></li>
+                  </ul>
+                </div>
+                <a href="#">麼子有著他市在大思兒個一力車一房去生</a>
+              </li>
+            </ul>
+            <a href="#" class="more"><span>more</span></a>
+          </div>
+          <!-- feature news -->
+          <div class="feature">
+            <div class="img-container">
+              <a href="#" title="">
+                <picture>
+                  <source media="(min-width: 1200px)" data-srcset="images/tabs-2-bg.jpg" />
+                  <source media="(min-width: 992px)" data-srcset="images/tabs-2-bg.jpg" />
+                  <source media="(min-width: 576px)" data-srcset="images/tabs-2-bg.jpg" />
+                  <source media="(max-width: 575px)" data-srcset="images/tabs-2-bg.jpg" />
+                  <img data-src="images/tabs-2-bg.jpg" class="lazy" />
+                  <noscript><img src="images/tabs-2-bg.jpg" /></noscript>
+                </picture>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   <!-- mt-news-tab-3 -->
   <div class="mt-news-tab-3">
@@ -1488,73 +1693,73 @@
       <a href="#" class="more"><span>more</span></a>
     </div>
   </div>
-    <!-- JS -->
-    <script>
-      $(function () {
-        //slick
-        $('.mt-epaper .epaper').slick({
-          // mobileFirst: true,
-          // dots: false,
-          // infinite: true,
-          // speed: 300,
-          slidesToShow: 3,
-          // slidesToScroll: 1,
-          autoplay: false,
-          arrow: false,
-          lazyLoaded: true,
-          lazyLoad: 'ondemand',
-          ease: 'ease',
-          responsive: [{
-              breakpoint: 1200,
-              settings: {
-                slidesToShow: 2.5,
-                slidesToScroll: 1,
-                arrows: false,
-                autoplay: false,
-              },
+  <!-- JS -->
+  <script>
+    $(function () {
+      //slick
+      $('.mt-epaper .epaper').slick({
+        // mobileFirst: true,
+        // dots: false,
+        // infinite: true,
+        // speed: 300,
+        slidesToShow: 3,
+        // slidesToScroll: 1,
+        autoplay: false,
+        arrow: false,
+        lazyLoaded: true,
+        lazyLoad: 'ondemand',
+        ease: 'ease',
+        responsive: [{
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 2.5,
+              slidesToScroll: 1,
+              arrows: false,
+              autoplay: false,
             },
-            {
-              breakpoint: 991,
-              settings: {
-                slidesToShow: 2.5,
-                slidesToScroll: 1,
-                arrows: false,
-                autoplay: false,
-              },
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 2.5,
+              slidesToScroll: 1,
+              arrows: false,
+              autoplay: false,
             },
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 1.5,
-                slidesToScroll: 1,
-                arrows: false,
-                autoplay: false,
-              },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1.5,
+              slidesToScroll: 1,
+              arrows: false,
+              autoplay: false,
             },
-            {
-              breakpoint: 575,
-              settings: {
-                slidesToShow: 1.5,
-                slidesToScroll: 1,
-                arrows: false,
-                autoplay: false,
-              },
+          },
+          {
+            breakpoint: 575,
+            settings: {
+              slidesToShow: 1.5,
+              slidesToScroll: 1,
+              arrows: false,
+              autoplay: false,
             },
-            {
-              breakpoint: 375,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false,
-                dots: true, //顯示圓點
-                autoplay: false,
-              },
+          },
+          {
+            breakpoint: 375,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false,
+              dots: true, //顯示圓點
+              autoplay: false,
             },
-          ],
-        });
-        $('.mt-epaper .epaper').slick('refresh');
-      })
-    </script>
+          },
+        ],
+      });
+      $('.mt-epaper .epaper').slick('refresh');
+    })
+  </script>
   <!-- mt-slider-card -->
   <div class="mt-slider-card">
     <div class="container">
