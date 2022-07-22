@@ -20,13 +20,13 @@
             .item {
                 flex-grow: 0;
                 flex-shrink: 1;
-                flex-basis: 28.3333%;
-                margin: 0 1em 1em;
-        
+                // flex-basis: 28.3333%;
+                flex-basis: calc(33% - 2em);
+                margin: 0 1em 1em;  
                 // margin: 0 2.5% 1em;
         
                 @include screen('tablet') {
-                  flex-basis: 45%;
+                  flex-basis: calc(50% - 2em);
                 }
         
                 @include screen('xs_mobile') {
