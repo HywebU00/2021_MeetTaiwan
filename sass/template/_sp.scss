@@ -748,8 +748,8 @@ p.error {
         .item {
           flex-grow: 0;
           flex-shrink: 1;
-          // flex-basis: 24%;
-          flex-basis: 19%;
+          flex-basis: 24%;
+          //flex-basis: 19%;
           margin: 0 0.5% 1%;
           background: #f1f1f1;
           @include aspect-ratio(1, 1);
@@ -6442,8 +6442,8 @@ span{
   }
 
   .item {
-    margin: 0 0.5em;
-
+    // margin: 0 0.5em;
+    margin:0;
     @include screen('mobile') {
       margin: 0 1em;
     }
@@ -6658,7 +6658,7 @@ span{
         flex-grow: 0;
         flex-shrink: 1;
         flex-basis: 50%;
-
+        
         
       }
 
